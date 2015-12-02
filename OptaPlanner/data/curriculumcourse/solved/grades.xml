@@ -1,0 +1,250 @@
+<CourseSchedule id="1">
+  <id>0</id>
+  <name>Assignments</name>
+  <teacherList id="2">
+    <Teacher id="3">
+      <id>0</id>
+      <code>14</code>
+    </Teacher>
+    <Teacher id="4">
+      <id>2</id>
+      <code>26</code>
+    </Teacher>
+    <Teacher id="5">
+      <id>1</id>
+      <code>29</code>
+    </Teacher>
+  </teacherList>
+  <studentList id="6">
+    <Student id="7">
+      <id>5</id>
+      <code>10081</code>
+    </Student>
+    <Student id="8">
+      <id>8</id>
+      <code>10092</code>
+    </Student>
+    <Student id="9">
+      <id>1</id>
+      <code>10053</code>
+    </Student>
+    <Student id="10">
+      <id>0</id>
+      <code>10052</code>
+    </Student>
+    <Student id="11">
+      <id>4</id>
+      <code>10074</code>
+    </Student>
+    <Student id="12">
+      <id>6</id>
+      <code>10085</code>
+    </Student>
+    <Student id="13">
+      <id>9</id>
+      <code>10110</code>
+    </Student>
+    <Student id="14">
+      <id>3</id>
+      <code>10065</code>
+    </Student>
+    <Student id="15">
+      <id>7</id>
+      <code>10087</code>
+    </Student>
+    <Student id="16">
+      <id>2</id>
+      <code>10057</code>
+    </Student>
+    <Student id="17">
+      <id>10</id>
+      <code>10056</code>
+    </Student>
+  </studentList>
+  <curriculumList id="18">
+    <Curriculum id="19">
+      <id>1</id>
+    </Curriculum>
+  </curriculumList>
+  <courseList id="20">
+    <Course id="21">
+      <id>0</id>
+      <code>Exam on Functions (If you still need to submit Scratchwork, please do so via email now)</code>
+      <teacher reference="3"/>
+      <student id="22">
+        <Student reference="10"/>
+        <Student reference="9"/>
+        <Student reference="16"/>
+        <Student reference="14"/>
+        <Student reference="11"/>
+        <Student reference="7"/>
+        <Student reference="12"/>
+        <Student reference="15"/>
+        <Student reference="8"/>
+        <Student reference="13"/>
+      </student>
+      <lectureSize>1</lectureSize>
+      <minWorkingDaySize>1</minWorkingDaySize>
+      <curriculumList id="23">
+        <Curriculum reference="19"/>
+      </curriculumList>
+      <studentSize>10</studentSize>
+    </Course>
+    <Course id="24">
+      <id>10</id>
+      <code>Submit Unit Exam Here</code>
+      <teacher reference="5"/>
+      <student id="25">
+        <Student reference="10"/>
+        <Student reference="17"/>
+      </student>
+      <lectureSize>1</lectureSize>
+      <minWorkingDaySize>1</minWorkingDaySize>
+      <curriculumList id="26">
+        <Curriculum reference="19"/>
+      </curriculumList>
+      <studentSize>2</studentSize>
+    </Course>
+    <Course id="27">
+      <id>12</id>
+      <code>Activities</code>
+      <teacher reference="4"/>
+      <student id="28">
+        <Student reference="17"/>
+      </student>
+      <lectureSize>1</lectureSize>
+      <minWorkingDaySize>1</minWorkingDaySize>
+      <curriculumList id="29">
+        <Curriculum reference="19"/>
+      </curriculumList>
+      <studentSize>1</studentSize>
+    </Course>
+  </courseList>
+  <dayList id="30">
+    <Day id="31">
+      <id>0</id>
+      <dayIndex>0</dayIndex>
+      <periodList id="32">
+        <Period id="33">
+          <id>0</id>
+          <day reference="31"/>
+          <timeslot id="34">
+            <id>0</id>
+            <timeslotIndex>0</timeslotIndex>
+          </timeslot>
+        </Period>
+        <Period id="35">
+          <id>1</id>
+          <day reference="31"/>
+          <timeslot id="36">
+            <id>1</id>
+            <timeslotIndex>1</timeslotIndex>
+          </timeslot>
+        </Period>
+        <Period id="37">
+          <id>2</id>
+          <day reference="31"/>
+          <timeslot id="38">
+            <id>2</id>
+            <timeslotIndex>2</timeslotIndex>
+          </timeslot>
+        </Period>
+        <Period id="39">
+          <id>3</id>
+          <day reference="31"/>
+          <timeslot id="40">
+            <id>3</id>
+            <timeslotIndex>3</timeslotIndex>
+          </timeslot>
+        </Period>
+      </periodList>
+    </Day>
+    <Day id="41">
+      <id>1</id>
+      <dayIndex>1</dayIndex>
+      <periodList id="42">
+        <Period id="43">
+          <id>4</id>
+          <day reference="41"/>
+          <timeslot reference="34"/>
+        </Period>
+        <Period id="44">
+          <id>5</id>
+          <day reference="41"/>
+          <timeslot reference="36"/>
+        </Period>
+        <Period id="45">
+          <id>6</id>
+          <day reference="41"/>
+          <timeslot reference="38"/>
+        </Period>
+        <Period id="46">
+          <id>7</id>
+          <day reference="41"/>
+          <timeslot reference="40"/>
+        </Period>
+      </periodList>
+    </Day>
+  </dayList>
+  <timeslotList id="47">
+    <Timeslot reference="34"/>
+    <Timeslot reference="36"/>
+    <Timeslot reference="38"/>
+    <Timeslot reference="40"/>
+  </timeslotList>
+  <periodList id="48">
+    <Period reference="33"/>
+    <Period reference="35"/>
+    <Period reference="37"/>
+    <Period reference="39"/>
+    <Period reference="43"/>
+    <Period reference="44"/>
+    <Period reference="45"/>
+    <Period reference="46"/>
+  </periodList>
+  <roomList id="49">
+    <Room id="50">
+      <id>0</id>
+      <code>A</code>
+      <capacity>20</capacity>
+    </Room>
+    <Room id="51">
+      <id>1</id>
+      <code>B</code>
+      <capacity>20</capacity>
+    </Room>
+    <Room id="52">
+      <id>2</id>
+      <code>C</code>
+      <capacity>20</capacity>
+    </Room>
+  </roomList>
+  <unavailablePeriodPenaltyList id="53"/>
+  <lectureList id="54">
+    <Lecture id="55">
+      <id>0</id>
+      <course reference="21"/>
+      <lectureIndexInCourse>0</lectureIndexInCourse>
+      <locked>false</locked>
+      <period reference="33"/>
+      <room reference="50"/>
+    </Lecture>
+    <Lecture id="56">
+      <id>1</id>
+      <course reference="24"/>
+      <lectureIndexInCourse>0</lectureIndexInCourse>
+      <locked>false</locked>
+      <period reference="35"/>
+      <room reference="50"/>
+    </Lecture>
+    <Lecture id="57">
+      <id>2</id>
+      <course reference="27"/>
+      <lectureIndexInCourse>0</lectureIndexInCourse>
+      <locked>false</locked>
+      <period reference="33"/>
+      <room reference="51"/>
+    </Lecture>
+  </lectureList>
+  <score id="58">0hard/0soft</score>
+</CourseSchedule>

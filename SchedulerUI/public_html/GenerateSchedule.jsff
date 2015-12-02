@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelGroupLayout id="pgl4">
+    <af:panelStretchLayout id="psl1">
+      <f:facet name="bottom"/>
+      <f:facet name="center">
+        <af:panelGroupLayout id="pgl1" halign="center">
+          <af:panelGroupLayout id="pgl2" halign="end" layout="horizontal"
+                               valign="bottom" styleClass="AFStretchWidth">
+            <af:commandButton text="Parameters" id="cb2">
+              <af:showPopupBehavior triggerType="click"
+                                    popupId="ParametersPopup"/>
+            </af:commandButton>
+          </af:panelGroupLayout>
+          <af:spacer width="10" height="50" id="s1"/>
+          <af:inputFile label="Choose Grade Input File : " id="if1"
+                        inlineStyle="text-align:center;"/>
+          <af:inputDate label="Start Date" id="id1"/>
+          <af:inputDate label="End Date" id="id2"/>
+          <af:commandButton text="Generate Schedule" id="cb1"/>
+        </af:panelGroupLayout>
+      </f:facet>
+      <f:facet name="start"/>
+      <f:facet name="end"/>
+      <f:facet name="top">
+        <af:outputText value="DTech Scheduler" id="ot1"
+                       inlineStyle="color:Blue; font-family:'Arial Rounded MT Bold'; font-size:x-large; text-align:center;"/>
+      </f:facet>
+    </af:panelStretchLayout>
+    <af:popup id="ParametersPopup">
+      <af:panelWindow id="pw1" title="Parameters" modal="true"
+                      contentWidth="350">
+        <af:panelGroupLayout id="pgl3" layout="vertical">
+          <af:panelTabbed id="pt1">
+            <af:showDetailItem text="Time Slots" id="sdi1">
+              <af:commandButton actionListener="#{bindings.saveSlots.execute}"
+                                text="saveSlots"
+                                disabled="#{!bindings.saveSlots.enabled}"
+                                id="cb4"/>
+              <af:table value="#{bindings.slots.collectionModel}" var="row"
+                        rows="#{bindings.slots.rangeSize}"
+                        emptyText="#{bindings.slots.viewable ? 'No data to display.' : 'Access Denied.'}"
+                        fetchSize="#{bindings.slots.rangeSize}"
+                        rowBandingInterval="0" id="t3">
+                <af:column sortProperty="#{bindings.slots.hints.slotTime.name}"
+                           sortable="false"
+                           headerText="#{bindings.slots.hints.slotTime.label}"
+                           id="c7">
+                  <af:outputText value="#{row.slotTime}" id="ot2"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.slots.hints.thurs.name}"
+                           sortable="false"
+                           headerText="#{bindings.slots.hints.thurs.label}"
+                           id="c8">
+                  <af:selectBooleanCheckbox value="#{row.bindings.thurs.inputValue}"
+                                            label="#{row.bindings.thurs.label}"
+                                            shortDesc="#{bindings.slots.hints.thurs.tooltip}"
+                                            id="sbc4"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.slots.hints.fri.name}"
+                           sortable="false"
+                           headerText="#{bindings.slots.hints.fri.label}"
+                           id="c6">
+                  <af:selectBooleanCheckbox value="#{row.bindings.fri.inputValue}"
+                                            label="#{row.bindings.fri.label}"
+                                            shortDesc="#{bindings.slots.hints.fri.tooltip}"
+                                            id="sbc3"/>
+                </af:column>
+              </af:table>
+              </af:showDetailItem>
+            <af:showDetailItem text="Rooms" id="sdi2">
+              <af:commandButton actionListener="#{bindings.Create.execute}"
+                                text="Create"
+                                disabled="#{!bindings.Create.enabled}"
+                                id="cb5"/>
+              <af:commandButton actionListener="#{bindings.saveRooms.execute}"
+                                text="saveRooms"
+                                disabled="#{!bindings.saveRooms.enabled}"
+                                id="cb3"/>
+              <af:table value="#{bindings.rooms.collectionModel}" var="row"
+                        rows="#{bindings.rooms.rangeSize}"
+                        emptyText="#{bindings.rooms.viewable ? 'No data to display.' : 'Access Denied.'}"
+                        fetchSize="#{bindings.rooms.rangeSize}"
+                        rowBandingInterval="0" id="t1" partialTriggers="::cb5">
+                <af:column sortProperty="#{bindings.rooms.hints.name.name}"
+                           sortable="false"
+                           headerText="#{bindings.rooms.hints.name.label}"
+                           id="c2">
+                  <af:inputText value="#{row.bindings.name.inputValue}"
+                                label="#{bindings.rooms.hints.name.label}"
+                                required="#{bindings.rooms.hints.name.mandatory}"
+                                columns="#{bindings.rooms.hints.name.displayWidth}"
+                                maximumLength="#{bindings.rooms.hints.name.precision}"
+                                shortDesc="#{bindings.rooms.hints.name.tooltip}"
+                                id="it2">
+                    <f:validator binding="#{row.bindings.name.validator}"/>
+                  </af:inputText>
+                </af:column>
+                <af:column sortProperty="#{bindings.rooms.hints.capacity.name}"
+                           sortable="false"
+                           headerText="#{bindings.rooms.hints.capacity.label}"
+                           id="c1">
+                  <af:inputText value="#{row.bindings.capacity.inputValue}"
+                                label="#{bindings.rooms.hints.capacity.label}"
+                                required="#{bindings.rooms.hints.capacity.mandatory}"
+                                columns="#{bindings.rooms.hints.capacity.displayWidth}"
+                                maximumLength="#{bindings.rooms.hints.capacity.precision}"
+                                shortDesc="#{bindings.rooms.hints.capacity.tooltip}"
+                                id="it1">
+                    <f:validator binding="#{row.bindings.capacity.validator}"/>
+                  </af:inputText>
+                </af:column>
+              </af:table>
+            </af:showDetailItem>
+          </af:panelTabbed>
+          <!--<af:panelGroupLayout id="pgl4" layout="horizontal">
+              <af:button text="OK" id="b2"/>
+              <af:button text="Cancel" id="b1"/>
+            </af:panelGroupLayout> -->
+        </af:panelGroupLayout>
+      </af:panelWindow>
+    </af:popup>
+  </af:panelGroupLayout>
+</jsp:root>

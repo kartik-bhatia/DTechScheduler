@@ -1,0 +1,227 @@
+/*
+ * Copyright 2010 JBoss Inc
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package org.optaplanner.examples.curriculumcourse.solver;
+    dialect "java"
+
+import org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScoreHolder;
+
+import org.optaplanner.examples.curriculumcourse.domain.Course;
+import org.optaplanner.examples.curriculumcourse.domain.Curriculum;
+import org.optaplanner.examples.curriculumcourse.domain.CourseSchedule;
+import org.optaplanner.examples.curriculumcourse.domain.Day;
+import org.optaplanner.examples.curriculumcourse.domain.Lecture;
+import org.optaplanner.examples.curriculumcourse.domain.Period;
+import org.optaplanner.examples.curriculumcourse.domain.Room;
+import org.optaplanner.examples.curriculumcourse.domain.Teacher;
+import org.optaplanner.examples.curriculumcourse.domain.Timeslot;
+import org.optaplanner.examples.curriculumcourse.domain.UnavailablePeriodPenalty;
+import org.optaplanner.examples.curriculumcourse.domain.solver.CourseConflict;
+
+import java.util.List
+import java.util.Set
+import java.util.HashMap
+import java.util.Map
+import java.util.HashSet
+import org.optaplanner.examples.curriculumcourse.domain.Student
+import java.util.ArrayList;
+
+global HardSoftScoreHolder scoreHolder;
+
+// ############################################################################
+// Hard constraints
+// ############################################################################
+
+// Lectures: A missing or extra lecture of a course.
+// This hard constraint is build-in: the correct number of Lecture's is created
+
+// Conflicts: Two conflicting lectures in the same period.
+// Three conflicting lectures count as 3 violations: one for each pair.
+/*rule "conflictingLecturesDifferentCourseInSamePeriod"
+    when
+        $courseConflict : CourseConflict($leftCourse : leftCourse, $rightCourse : rightCourse)
+        $leftLecture : Lecture(course == $leftCourse, $period : period, period != null)
+        $rightLecture : Lecture(course == $rightCourse, period == $period, this != $leftLecture)
+    then
+    	System.out.println("in conflictingLecturesDifferentCourseInSamePeriod");
+        scoreHolder.addHardConstraintMatch(kcontext, - $courseConflict.getConflictCount());
+end
+*/
+/*rule "conflictingLecturesSameCourseInSamePeriod"
+    when
+        $leftLecture : Lecture($leftId : id, $leftCourse : course, $period : period, period != null)
+        $rightLecture : Lecture(course == $leftCourse, period == $period, id > $leftId)
+    then
+    	System.out.println("in conflictingLecturesSameCourseInSamePeriod");
+        scoreHolder.addHardConstraintMatch(kcontext, - (1 + $leftCourse.getCurriculumList().size()));
+end*/
+
+// RoomOccupancy: Two lectures in the same room at the same period.
+// Any extra lecture in the same period and room counts as one more violation.
+rule "roomOccupancy"
+    when
+        $leftLecture : Lecture($leftId : id, period != null, $period : period, room != null, $room : room)
+        // $leftLecture has lowest id of the period+room combo
+        not Lecture(period == $period, room == $room, id < $leftId)
+        // rightLecture has the same period
+        $rightLecture : Lecture(period == $period, room == $room, id > $leftId, $rightId : id)
+    then
+  		scoreHolder.addHardConstraintMatch(kcontext, -1);
+end
+
+// TeacherConflict: One teacher cannot teach 2 courses in the same period
+
+rule "TeacherConflict"
+    when
+        $leftLecture : Lecture($leftId : id, period != null, $period : period, $teacher : course.teacher )
+        // $leftLecture has lowest id of the period+room combo
+        not Lecture(period == $period, id < $leftId)
+        // rightLecture has the same period
+        $rightLecture : Lecture(period == $period, course.teacher == $teacher, id > $leftId, $rightId : id)
+    then
+  		System.out.println("in TeacherConflict");
+        scoreHolder.addHardConstraintMatch(kcontext, -1);
+end
+
+// Availabilities: Each lecture in a period unavailable for that course.
+rule "unavailablePeriodPenalty"
+    when
+        $unavailablePeriodPenalty : UnavailablePeriodPenalty($course : course, $period : period)
+        $lecture : Lecture(course == $course, period == $period)
+    then
+    	System.out.println("in unavailablePeriodPenalty");
+        scoreHolder.addHardConstraintMatch(kcontext, -10);
+end
+
+
+// Studentconflict: one student cannot attend 2 lectures in the same period
+rule "conflictingLecturesSameStudentInSamePeriod"
+    when
+        //$leftLecture : Lecture($leftId : id, period != null,  $period : period)
+        //not Lecture(period == $period, id < $leftId)
+        //$rightLecture : Lecture(period == $period, id > $leftId,$rightId : id)
+        $courseConflict : CourseConflict($leftCourse : leftCourse, $rightCourse : rightCourse)
+        $leftLecture : Lecture(course == $leftCourse, $period : period, period != null)
+        $rightLecture : Lecture(course == $rightCourse, period == $period, this != $leftLecture)
+        eval(isPeriodConflictForStudent($leftLecture, $rightLecture))
+    then
+    	System.out.println("REACHED HERE STUDENT CLASH");
+        scoreHolder.addHardConstraintMatch(kcontext, - (1 + $leftCourse.getStudentList().size()));
+end
+
+
+function boolean isPeriodConflictForStudent(Lecture l1, Lecture l2) {
+        List<Lecture> lectureList = new ArrayList<>();
+        lectureList.add(l1);
+        lectureList.add(l2);
+        Map<String, Set<Period>> studentPeriodSetMap = new HashMap<>();
+        Set<Period> studentPeriod =  new HashSet<>();
+        int conflictCount = 0;
+        for (Lecture lecture : lectureList) {
+            List<Student> studentList = lecture.getStudentList();
+            studentPeriod.add(lecture.getPeriod());
+
+            for (Student student : studentList) {
+                if (studentPeriodSetMap.containsKey(student.getCode())){
+                    Set<Period> periodSet = studentPeriodSetMap.get(student.getCode());
+                    if (periodSet.contains(lecture.getPeriod())) {
+                        conflictCount++;
+                    } else {
+                        if (periodSet != null) {
+                            periodSet.add(lecture.getPeriod());
+                        } else {
+                            periodSet = new HashSet<>();
+                            periodSet.add(lecture.getPeriod());
+                        }
+                    }
+                }
+                Set<Period> periodSet = new HashSet<>();
+                periodSet.add(lecture.getPeriod());
+                studentPeriodSetMap.put(student.getCode(), periodSet);
+            }
+        }
+
+        if (conflictCount > 0) return true;
+        else return false;
+}
+// RoomCapacity: For each lecture, the number of students that attend the course should be less or equal
+// than the number of seats of all the rooms that host its lectures.
+// Each student above the capacity counts as 1 point of penalty.
+rule "roomCapacity"
+    when
+        $room : Room($capacity : capacity)
+        $lecture : Lecture(room == $room, studentSize > $capacity, $studentSize : studentSize)
+    then
+        scoreHolder.addHardConstraintMatch(kcontext, ($capacity - $studentSize));
+end
+
+// ############################################################################
+// Soft constraints
+// ############################################################################
+
+
+
+// MinimumWorkingDays: The lectures of each course should be spread into a minimum number of days.
+// Each day below the minimum counts as 5 points of penalty.
+/*rule "minimumWorkingDays"
+    when
+        $course : Course($minWorkingDaySize : minWorkingDaySize)
+        $dayCount : Number(intValue < $minWorkingDaySize) from accumulate(
+            $day : Day()
+            and exists Lecture(course == $course, day == $day),
+            count($day)
+        )
+        // An uninitialized schedule should have no constraints broken
+        exists Lecture(course == $course, period != null)
+    then
+        scoreHolder.addSoftConstraintMatch(kcontext, (($dayCount.intValue() - $minWorkingDaySize) * 5));
+end*/
+
+// CurriculumCompactness: Lectures belonging to a curriculum should be adjacent
+// to each other (i.e., in consecutive periods).
+// For a given curriculum we account for a violation every time there is one lecture not adjacent
+// to any other lecture within the same day.
+// Each isolated lecture in a curriculum counts as 2 points of penalty.
+/*rule "curriculumCompactness"
+    when
+        $curriculum : Curriculum()
+
+        $lecture : Lecture(curriculumList contains $curriculum,
+            $day : day, $timeslotIndex : timeslotIndex, period != null
+        )
+        not Lecture(curriculumList contains $curriculum,
+            day == $day, timeslotIndex == ($timeslotIndex - 1)
+        )
+        not Lecture(curriculumList contains $curriculum,
+            day == $day, timeslotIndex == ($timeslotIndex + 1)
+        )
+    then
+        scoreHolder.addSoftConstraintMatch(kcontext, -2);
+end*/ //rule commented by Kartik as we dont care abt the curricula
+
+// RoomStability: All lectures of a course should be given in the same room.
+// Each distinct room used for the lectures of a course, but the first, counts as 1 point of penalty.
+/*rule "roomStability"
+    when
+        $course : Course()
+        $roomCount : Number(intValue > 1) from accumulate(
+            $room : Room()
+            and exists Lecture(course == $course, room == $room),
+            count($room)
+        )
+    then
+        scoreHolder.addSoftConstraintMatch(kcontext, -($roomCount.intValue() - 1));
+end*/ //rule commented by Kartik 

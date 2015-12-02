@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="SlotCollection" Package="dtech.scheduler.model.pojo"
+          BeanClass="dtech.scheduler.model.pojo.SlotCollection"
+          isJavaBased="true">
+  <Attribute Name="transactionDirty" IsUpdateable="0" Type="boolean"/>
+  <AccessorAttribute id="slots" IsCollection="true"
+                     BeanClass="dtech.scheduler.model.pojo.Slot"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <MethodAccessor IsCollection="false" Type="void" id="saveSlots"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.io.Serializable"
+                  BeanClass="java.io.Serializable" id="createSnapshot"
+                  ReturnNodeName="Serializable"/>
+  <MethodAccessor IsCollection="false" Type="void" id="restoreSnapshot"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="java.io.Serializable" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeSnapshot"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="java.io.Serializable" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="rollbackTransaction"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="commitTransaction"
+                  ReturnNodeName="Return"/>
+  <ConstructorMethod IsCollection="true"
+                     Type="dtech.scheduler.model.pojo.SlotCollection"
+                     BeanClass="dtech.scheduler.model.pojo.SlotCollection"
+                     id="SlotCollection"/>
+</JavaBean>

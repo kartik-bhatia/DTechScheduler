@@ -1,0 +1,17 @@
+Name: Assignments
+Rooms: 3
+Days: 2
+Periods_per_day: 4
+Constraints: 3
+
+ROOMS:
+A	20
+B	20
+C   20
+
+UNAVAILABILITY_CONSTRAINTS:
+Activities;0;0
+Submit Unit Exam Here;0;3
+*;0;1
+
+END.
