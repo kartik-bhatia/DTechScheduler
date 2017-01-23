@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="JobAttributes" Package="java.awt"
+          BeanClass="java.awt.JobAttributes" isJavaBased="true">
+  <Attribute Name="copies" Type="int"/>
+  <Attribute Name="fileName" Type="java.lang.String"/>
+  <Attribute Name="fromPage" Type="int"/>
+  <Attribute Name="maxPage" Type="int"/>
+  <Attribute Name="minPage" Type="int"/>
+  <Attribute Name="printer" Type="java.lang.String"/>
+  <Attribute Name="toPage" Type="int"/>
+  <AccessorAttribute id="defaultSelection" IsCollection="false"
+                     BeanClass="java.awt.JobAttributes.DefaultSelectionType"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="destination" IsCollection="false"
+                     BeanClass="java.awt.JobAttributes.DestinationType"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="dialog" IsCollection="false"
+                     BeanClass="java.awt.JobAttributes.DialogType"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="multipleDocumentHandling" IsCollection="false"
+                     BeanClass="java.awt.JobAttributes.MultipleDocumentHandlingType"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="pageRanges" IsCollection="true" Type="int[][]"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="int"/>
+  </AccessorAttribute>
+  <AccessorAttribute id="sides" IsCollection="false"
+                     BeanClass="java.awt.JobAttributes.SidesType"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object" id="clone"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="set"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="obj" Type="java.awt.JobAttributes" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setCopiesToDefault"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="setMultipleDocumentHandlingToDefault"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setSidesToDefault"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="obj" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="hashCode"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <ConstructorMethod IsCollection="true" Type="java.awt.JobAttributes"
+                     BeanClass="java.awt.JobAttributes" id="JobAttributes">
+    <ParameterInfo id="copies" Type="int" isStructured="false"/>
+    <ParameterInfo id="defaultSelection"
+                   Type="java.awt.JobAttributes.DefaultSelectionType"
+                   isStructured="true"/>
+    <ParameterInfo id="destination"
+                   Type="java.awt.JobAttributes.DestinationType"
+                   isStructured="true"/>
+    <ParameterInfo id="dialog" Type="java.awt.JobAttributes.DialogType"
+                   isStructured="true"/>
+    <ParameterInfo id="fileName" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="maxPage" Type="int" isStructured="false"/>
+    <ParameterInfo id="minPage" Type="int" isStructured="false"/>
+    <ParameterInfo id="multipleDocumentHandling"
+                   Type="java.awt.JobAttributes.MultipleDocumentHandlingType"
+                   isStructured="true"/>
+    <ParameterInfo id="pageRanges" Type="int[][]" isStructured="false"/>
+    <ParameterInfo id="printer" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="sides" Type="java.awt.JobAttributes.SidesType"
+                   isStructured="true"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.JobAttributes"
+                     BeanClass="java.awt.JobAttributes" id="JobAttributes">
+    <ParameterInfo id="obj" Type="java.awt.JobAttributes" isStructured="true"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.JobAttributes"
+                     BeanClass="java.awt.JobAttributes" id="JobAttributes"/>
+</JavaBean>

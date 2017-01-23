@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="ValueRangeDescriptor"
+          Package="org.optaplanner.core.impl.domain.valuerange.descriptor"
+          BeanClass="org.optaplanner.core.impl.domain.valuerange.descriptor.ValueRangeDescriptor"
+          isJavaBased="true">
+  <Attribute Name="countable" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="entityIndependent" IsUpdateable="0" Type="boolean"/>
+  <AccessorAttribute id="variableDescriptor" IsCollection="false"
+                     BeanClass="org.optaplanner.core.impl.domain.variable.descriptor.GenuineVariableDescriptor"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="mightContainEntity"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="true"
+                  Type="org.optaplanner.core.api.domain.valuerange.ValueRange&lt;?>"
+                  id="extractValueRange" ReturnNodeName="ValueRange&lt;?>"
+                  CollectionBeanClass="ReadOnlySingleValue">
+    <ParameterInfo id="solution"
+                   Type="org.optaplanner.core.api.domain.solution.Solution"
+                   isStructured="true"/>
+    <ParameterInfo id="entity" Type="java.lang.Object" isStructured="false"/>
+    <Attribute Name="element"
+               Type="org.optaplanner.core.api.domain.valuerange.ValueRange&lt;?>"/>
+  </MethodAccessor>
+</JavaBean>

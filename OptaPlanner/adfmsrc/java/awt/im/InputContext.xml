@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="InputContext" Package="java.awt.im"
+          BeanClass="java.awt.im.InputContext" isJavaBased="true">
+  <Attribute Name="locale" IsUpdateable="0" Type="java.util.Locale"/>
+  <Attribute Name="compositionEnabled" Type="boolean"/>
+  <Attribute Name="inputMethodControlObject" IsUpdateable="0"
+             Type="java.lang.Object"/>
+  <AccessorAttribute id="instance" IsCollection="false"
+                     BeanClass="java.awt.im.InputContext"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="selectInputMethod"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="locale" Type="java.util.Locale" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setCharacterSubsets"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="subsets" Type="java.lang.Character.Subset[]"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="reconvert"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="dispatchEvent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="event" Type="java.awt.AWTEvent" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeNotify"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="client" Type="java.awt.Component" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="endComposition"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="dispose"
+                  ReturnNodeName="Return"/>
+</JavaBean>

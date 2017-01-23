@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="AccessibleAction" Package="javax.accessibility"
+          BeanClass="javax.accessibility.AccessibleAction" isJavaBased="true">
+  <Attribute Name="accessibleActionCount" IsUpdateable="0" Type="int"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String"
+                  id="getAccessibleActionDescription" ReturnNodeName="Return">
+    <ParameterInfo id="i" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="doAccessibleAction"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="i" Type="int" isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

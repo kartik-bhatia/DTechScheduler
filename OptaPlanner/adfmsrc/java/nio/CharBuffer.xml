@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="CharBuffer" Package="java.nio" BeanClass="java.nio.CharBuffer"
+          isJavaBased="true">
+  <Attribute Name="direct" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="readOnly" IsUpdateable="0" Type="boolean"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.CharBuffer"
+                  BeanClass="java.nio.CharBuffer" id="allocate"
+                  ReturnNodeName="CharBuffer">
+    <ParameterInfo id="capacity" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.CharBuffer"
+                  BeanClass="java.nio.CharBuffer" id="wrap"
+                  ReturnNodeName="CharBuffer">
+    <ParameterInfo id="array" Type="char[]" isStructured="false"/>
+    <ParameterInfo id="offset" Type="int" isStructured="false"/>
+    <ParameterInfo id="length" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.CharBuffer"
+                  BeanClass="java.nio.CharBuffer" id="wrap"
+                  ReturnNodeName="CharBuffer">
+    <ParameterInfo id="array" Type="char[]" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.CharBuffer"
+                  BeanClass="java.nio.CharBuffer" id="wrap"
+                  ReturnNodeName="CharBuffer">
+    <ParameterInfo id="csq" Type="java.lang.CharSequence" isStructured="false"/>
+    <ParameterInfo id="start" Type="int" isStructured="false"/>
+    <ParameterInfo id="end" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.CharBuffer"
+                  BeanClass="java.nio.CharBuffer" id="wrap"
+                  ReturnNodeName="CharBuffer">
+    <ParameterInfo id="csq" Type="java.lang.CharSequence" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="read"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="target" Type="java.nio.CharBuffer" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.CharBuffer"
+                  BeanClass="java.nio.CharBuffer" id="slice"
+                  ReturnNodeName="CharBuffer"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.CharBuffer"
+                  BeanClass="java.nio.CharBuffer" id="duplicate"
+                  ReturnNodeName="CharBuffer"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.CharBuffer"
+                  BeanClass="java.nio.CharBuffer" id="asReadOnlyBuffer"
+                  ReturnNodeName="CharBuffer"/>
+  <MethodAccessor IsCollection="false" Type="char" id="get"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="char" id="get"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.CharBuffer"
+                  BeanClass="java.nio.CharBuffer" id="get"
+                  ReturnNodeName="CharBuffer">
+    <ParameterInfo id="dst" Type="char[]" isStructured="false"/>
+    <ParameterInfo id="offset" Type="int" isStructured="false"/>
+    <ParameterInfo id="length" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.CharBuffer"
+                  BeanClass="java.nio.CharBuffer" id="get"
+                  ReturnNodeName="CharBuffer">
+    <ParameterInfo id="dst" Type="char[]" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.CharBuffer"
+                  BeanClass="java.nio.CharBuffer" id="put"
+                  ReturnNodeName="CharBuffer">
+    <ParameterInfo id="c" Type="char" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.CharBuffer"
+                  BeanClass="java.nio.CharBuffer" id="put"
+                  ReturnNodeName="CharBuffer">
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+    <ParameterInfo id="c" Type="char" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.CharBuffer"
+                  BeanClass="java.nio.CharBuffer" id="put"
+                  ReturnNodeName="CharBuffer">
+    <ParameterInfo id="src" Type="java.nio.CharBuffer" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.CharBuffer"
+                  BeanClass="java.nio.CharBuffer" id="put"
+                  ReturnNodeName="CharBuffer">
+    <ParameterInfo id="src" Type="char[]" isStructured="false"/>
+    <ParameterInfo id="offset" Type="int" isStructured="false"/>
+    <ParameterInfo id="length" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.CharBuffer"
+                  BeanClass="java.nio.CharBuffer" id="put"
+                  ReturnNodeName="CharBuffer">
+    <ParameterInfo id="src" Type="char[]" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.CharBuffer"
+                  BeanClass="java.nio.CharBuffer" id="put"
+                  ReturnNodeName="CharBuffer">
+    <ParameterInfo id="src" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="start" Type="int" isStructured="false"/>
+    <ParameterInfo id="end" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.CharBuffer"
+                  BeanClass="java.nio.CharBuffer" id="put"
+                  ReturnNodeName="CharBuffer">
+    <ParameterInfo id="src" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="hasArray"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="true" Type="java.lang.Object" id="array"
+                  ReturnNodeName="char"
+                  CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="char"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="arrayOffset"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.CharBuffer"
+                  BeanClass="java.nio.CharBuffer" id="compact"
+                  ReturnNodeName="CharBuffer"/>
+  <MethodAccessor IsCollection="false" Type="int" id="hashCode"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="ob" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="compareTo"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="that" Type="java.nio.CharBuffer" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="int" id="length"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="char" id="charAt"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.CharBuffer"
+                  BeanClass="java.nio.CharBuffer" id="append"
+                  ReturnNodeName="CharBuffer">
+    <ParameterInfo id="csq" Type="java.lang.CharSequence" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.CharBuffer"
+                  BeanClass="java.nio.CharBuffer" id="append"
+                  ReturnNodeName="CharBuffer">
+    <ParameterInfo id="csq" Type="java.lang.CharSequence" isStructured="false"/>
+    <ParameterInfo id="start" Type="int" isStructured="false"/>
+    <ParameterInfo id="end" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.CharBuffer"
+                  BeanClass="java.nio.CharBuffer" id="append"
+                  ReturnNodeName="CharBuffer">
+    <ParameterInfo id="c" Type="char" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.ByteOrder"
+                  BeanClass="java.nio.ByteOrder" id="order"
+                  ReturnNodeName="ByteOrder"/>
+  <MethodAccessor IsCollection="false" Type="int" id="capacity"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="int" id="position"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.Buffer"
+                  BeanClass="java.nio.Buffer" id="position"
+                  ReturnNodeName="Buffer">
+    <ParameterInfo id="newPosition" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="limit"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.Buffer"
+                  BeanClass="java.nio.Buffer" id="limit"
+                  ReturnNodeName="Buffer">
+    <ParameterInfo id="newLimit" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.Buffer"
+                  BeanClass="java.nio.Buffer" id="mark"
+                  ReturnNodeName="Buffer"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.Buffer"
+                  BeanClass="java.nio.Buffer" id="reset"
+                  ReturnNodeName="Buffer"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.Buffer"
+                  BeanClass="java.nio.Buffer" id="clear"
+                  ReturnNodeName="Buffer"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.Buffer"
+                  BeanClass="java.nio.Buffer" id="flip"
+                  ReturnNodeName="Buffer"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.Buffer"
+                  BeanClass="java.nio.Buffer" id="rewind"
+                  ReturnNodeName="Buffer"/>
+  <MethodAccessor IsCollection="false" Type="int" id="remaining"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="hasRemaining"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.CharBuffer"
+                  BeanClass="java.nio.CharBuffer" id="subSequence"
+                  ReturnNodeName="CharBuffer">
+    <ParameterInfo id="start" Type="int" isStructured="false"/>
+    <ParameterInfo id="end" Type="int" isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

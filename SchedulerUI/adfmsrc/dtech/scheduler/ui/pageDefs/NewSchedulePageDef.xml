@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.66.73" id="NewSchedulePageDef"
+                Package="dtech.scheduler.ui.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="CourseSchedule"
+              id="CourseScheduleIterator" ChangeEventPolicy="ppr"
+              CacheResults="false"/>
+    <accessorIterator MasterBinding="CourseScheduleIterator" Binds="lectureList"
+                      RangeSize="25" DataControl="CourseSchedule"
+                      BeanClass="org.optaplanner.examples.curriculumcourse.domain.Lecture"
+                      id="lectureListIterator" ChangeEventPolicy="ppr"/>
+    <accessorIterator MasterBinding="lectureListIterator" Binds="course"
+                      RangeSize="25" DataControl="CourseSchedule"
+                      BeanClass="org.optaplanner.examples.curriculumcourse.domain.Course"
+                      id="courseIterator" ChangeEventPolicy="ppr"/>
+    <accessorIterator MasterBinding="lectureListIterator" Binds="period"
+                      RangeSize="25" DataControl="CourseSchedule"
+                      BeanClass="org.optaplanner.examples.curriculumcourse.domain.Period"
+                      id="periodIterator" ChangeEventPolicy="ppr"/>
+    <accessorIterator MasterBinding="lectureListIterator" Binds="room"
+                      RangeSize="25" DataControl="CourseSchedule"
+                      BeanClass="org.optaplanner.examples.curriculumcourse.domain.Room"
+                      id="roomIterator" ChangeEventPolicy="ppr"/>
+    <accessorIterator MasterBinding="lectureListIterator" Binds="teacher"
+                      RangeSize="25" DataControl="CourseSchedule"
+                      BeanClass="org.optaplanner.examples.curriculumcourse.domain.Teacher"
+                      id="teacherIterator" ChangeEventPolicy="ppr"/>
+    <accessorIterator MasterBinding="lectureListIterator" Binds="day"
+                      RangeSize="25" DataControl="CourseSchedule"
+                      BeanClass="org.optaplanner.examples.curriculumcourse.domain.Day"
+                      id="dayIterator" ChangeEventPolicy="ppr"/>
+    <methodIterator Binds="run.result" DataControl="RunScheduler" RangeSize="25"
+                    BeanClass="org.optaplanner.examples.curriculumcourse.domain.CourseSchedule"
+                    id="runIterator"/>
+    <accessorIterator MasterBinding="runIterator" Binds="lectureList"
+                      RangeSize="25" DataControl="RunScheduler"
+                      BeanClass="org.optaplanner.examples.curriculumcourse.domain.Lecture"
+                      id="lectureListIterator1"/>
+    <accessorIterator MasterBinding="lectureListIterator1" Binds="studentList"
+                      RangeSize="25" DataControl="RunScheduler"
+                      BeanClass="org.optaplanner.examples.curriculumcourse.domain.Student"
+                      id="studentListIterator1"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="lectureListIterator" id="label">
+      <AttrNames>
+        <Item Value="label"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="courseIterator" id="code">
+      <AttrNames>
+        <Item Value="code"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="periodIterator" id="label1">
+      <AttrNames>
+        <Item Value="label"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="roomIterator" id="code1">
+      <AttrNames>
+        <Item Value="code"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="roomIterator" id="label2">
+      <AttrNames>
+        <Item Value="label"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="teacherIterator" id="code2">
+      <AttrNames>
+        <Item Value="code"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="teacherIterator" id="label3">
+      <AttrNames>
+        <Item Value="label"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="dayIterator" id="label4">
+      <AttrNames>
+        <Item Value="label"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="lectureListIterator" id="First"
+            RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="lectureListIterator" id="Previous"
+            RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="lectureListIterator" id="Next"
+            RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="lectureListIterator" id="Last"
+            RequiresUpdateModel="true" Action="last"/>
+    <methodAction id="run" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="run" IsViewObjectMethod="false"
+                  DataControl="RunScheduler"
+                  InstanceName="RunScheduler.dataProvider"
+                  ReturnName="data.RunScheduler.methodResults.run_RunScheduler_dataProvider_run_result"/>
+    <tree IterBinding="lectureListIterator1" id="lectureList">
+      <nodeDefinition DefName="org.optaplanner.examples.curriculumcourse.domain.Lecture"
+                      Name="lectureList0">
+        <AttrNames>
+          <Item Value="label"/>
+        </AttrNames>
+        <Accessors>
+          <Item Value="course"/>
+          <Item Value="period"/>
+          <Item Value="room"/>
+          <Item Value="teacher"/>
+          <Item Value="day"/>
+        </Accessors>
+      </nodeDefinition>
+      <nodeDefinition DefName="org.optaplanner.examples.curriculumcourse.domain.Course">
+        <AttrNames>
+          <Item Value="code"/>
+          <Item Value="lectureSize"/>
+          <Item Value="minWorkingDaySize"/>
+          <Item Value="studentSize"/>
+          <Item Value="id"/>
+          <Item Value="courseName"/>
+        </AttrNames>
+      </nodeDefinition>
+      <nodeDefinition DefName="org.optaplanner.examples.curriculumcourse.domain.Period">
+        <AttrNames>
+          <Item Value="label"/>
+          <Item Value="id"/>
+        </AttrNames>
+      </nodeDefinition>
+      <nodeDefinition DefName="org.optaplanner.examples.curriculumcourse.domain.Room">
+        <AttrNames>
+          <Item Value="code"/>
+          <Item Value="capacity"/>
+          <Item Value="label"/>
+          <Item Value="id"/>
+        </AttrNames>
+      </nodeDefinition>
+      <nodeDefinition DefName="org.optaplanner.examples.curriculumcourse.domain.Teacher">
+        <AttrNames>
+          <Item Value="code"/>
+          <Item Value="label"/>
+          <Item Value="id"/>
+          <Item Value="name"/>
+        </AttrNames>
+      </nodeDefinition>
+      <nodeDefinition DefName="org.optaplanner.examples.curriculumcourse.domain.Day">
+        <AttrNames>
+          <Item Value="dayIndex"/>
+          <Item Value="label"/>
+          <Item Value="id"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="studentListIterator1" id="studentList">
+      <nodeDefinition DefName="org.optaplanner.examples.curriculumcourse.domain.Student"
+                      Name="studentList0">
+        <AttrNames>
+          <Item Value="code"/>
+          <Item Value="name"/>
+          <Item Value="label"/>
+          <Item Value="id"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="Rectangle2D" Package="java.awt.geom"
+          BeanClass="java.awt.geom.Rectangle2D" isJavaBased="true">
+  <Attribute Name="x" IsUpdateable="0" Type="double"/>
+  <Attribute Name="y" IsUpdateable="0" Type="double"/>
+  <Attribute Name="width" IsUpdateable="0" Type="double"/>
+  <Attribute Name="height" IsUpdateable="0" Type="double"/>
+  <Attribute Name="minX" IsUpdateable="0" Type="double"/>
+  <Attribute Name="minY" IsUpdateable="0" Type="double"/>
+  <Attribute Name="maxX" IsUpdateable="0" Type="double"/>
+  <Attribute Name="maxY" IsUpdateable="0" Type="double"/>
+  <Attribute Name="centerX" IsUpdateable="0" Type="double"/>
+  <Attribute Name="centerY" IsUpdateable="0" Type="double"/>
+  <Attribute Name="empty" IsUpdateable="0" Type="boolean"/>
+  <AccessorAttribute id="bounds2D" IsCollection="false"
+                     BeanClass="java.awt.geom.Rectangle2D"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="frame" IsCollection="false"
+                     BeanClass="java.awt.geom.Rectangle2D"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="bounds" IsCollection="false"
+                     BeanClass="java.awt.Rectangle"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setRect"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="double" isStructured="false"/>
+    <ParameterInfo id="y" Type="double" isStructured="false"/>
+    <ParameterInfo id="w" Type="double" isStructured="false"/>
+    <ParameterInfo id="h" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setRect"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="r" Type="java.awt.geom.Rectangle2D" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="intersectsLine"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x1" Type="double" isStructured="false"/>
+    <ParameterInfo id="y1" Type="double" isStructured="false"/>
+    <ParameterInfo id="x2" Type="double" isStructured="false"/>
+    <ParameterInfo id="y2" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="intersectsLine"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.geom.Line2D" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="outcode"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="double" isStructured="false"/>
+    <ParameterInfo id="y" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="outcode"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p" Type="java.awt.geom.Point2D" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setFrame"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="double" isStructured="false"/>
+    <ParameterInfo id="y" Type="double" isStructured="false"/>
+    <ParameterInfo id="w" Type="double" isStructured="false"/>
+    <ParameterInfo id="h" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="contains"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="double" isStructured="false"/>
+    <ParameterInfo id="y" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="contains"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="double" isStructured="false"/>
+    <ParameterInfo id="y" Type="double" isStructured="false"/>
+    <ParameterInfo id="w" Type="double" isStructured="false"/>
+    <ParameterInfo id="h" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="intersects"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="double" isStructured="false"/>
+    <ParameterInfo id="y" Type="double" isStructured="false"/>
+    <ParameterInfo id="w" Type="double" isStructured="false"/>
+    <ParameterInfo id="h" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.Rectangle2D"
+                  BeanClass="java.awt.geom.Rectangle2D" id="createIntersection"
+                  ReturnNodeName="Rectangle2D">
+    <ParameterInfo id="r" Type="java.awt.geom.Rectangle2D" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="intersect"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="src1" Type="java.awt.geom.Rectangle2D"
+                   isStructured="true"/>
+    <ParameterInfo id="src2" Type="java.awt.geom.Rectangle2D"
+                   isStructured="true"/>
+    <ParameterInfo id="dest" Type="java.awt.geom.Rectangle2D"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.Rectangle2D"
+                  BeanClass="java.awt.geom.Rectangle2D" id="createUnion"
+                  ReturnNodeName="Rectangle2D">
+    <ParameterInfo id="r" Type="java.awt.geom.Rectangle2D" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="union"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="src1" Type="java.awt.geom.Rectangle2D"
+                   isStructured="true"/>
+    <ParameterInfo id="src2" Type="java.awt.geom.Rectangle2D"
+                   isStructured="true"/>
+    <ParameterInfo id="dest" Type="java.awt.geom.Rectangle2D"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="add"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="newx" Type="double" isStructured="false"/>
+    <ParameterInfo id="newy" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="add"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="pt" Type="java.awt.geom.Point2D" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="add"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="r" Type="java.awt.geom.Rectangle2D" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.PathIterator"
+                  BeanClass="java.awt.geom.PathIterator" id="getPathIterator"
+                  ReturnNodeName="PathIterator">
+    <ParameterInfo id="at" Type="java.awt.geom.AffineTransform"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.PathIterator"
+                  BeanClass="java.awt.geom.PathIterator" id="getPathIterator"
+                  ReturnNodeName="PathIterator">
+    <ParameterInfo id="at" Type="java.awt.geom.AffineTransform"
+                   isStructured="true"/>
+    <ParameterInfo id="flatness" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="hashCode"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="obj" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setFrame"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="loc" Type="java.awt.geom.Point2D" isStructured="true"/>
+    <ParameterInfo id="size" Type="java.awt.geom.Dimension2D"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setFrameFromDiagonal"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x1" Type="double" isStructured="false"/>
+    <ParameterInfo id="y1" Type="double" isStructured="false"/>
+    <ParameterInfo id="x2" Type="double" isStructured="false"/>
+    <ParameterInfo id="y2" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setFrameFromDiagonal"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p1" Type="java.awt.geom.Point2D" isStructured="true"/>
+    <ParameterInfo id="p2" Type="java.awt.geom.Point2D" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setFrameFromCenter"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="centerX" Type="double" isStructured="false"/>
+    <ParameterInfo id="centerY" Type="double" isStructured="false"/>
+    <ParameterInfo id="cornerX" Type="double" isStructured="false"/>
+    <ParameterInfo id="cornerY" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setFrameFromCenter"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="center" Type="java.awt.geom.Point2D"
+                   isStructured="true"/>
+    <ParameterInfo id="corner" Type="java.awt.geom.Point2D"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="contains"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p" Type="java.awt.geom.Point2D" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="contains"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="r" Type="java.awt.geom.Rectangle2D" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="intersects"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="r" Type="java.awt.geom.Rectangle2D" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object" id="clone"
+                  ReturnNodeName="Return"/>
+</JavaBean>

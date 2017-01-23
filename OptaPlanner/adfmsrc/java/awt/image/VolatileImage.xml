@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="VolatileImage" Package="java.awt.image"
+          BeanClass="java.awt.image.VolatileImage" isJavaBased="true">
+  <Attribute Name="width" IsUpdateable="0" Type="int"/>
+  <Attribute Name="height" IsUpdateable="0" Type="int"/>
+  <Attribute Name="transparency" IsUpdateable="0" Type="int"/>
+  <Attribute Name="accelerationPriority" Type="float"/>
+  <AccessorAttribute id="snapshot" IsCollection="false"
+                     BeanClass="java.awt.image.BufferedImage"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="source" IsCollection="false"
+                     BeanClass="java.awt.image.ImageProducer"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="graphics" IsCollection="false"
+                     BeanClass="java.awt.Graphics"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="capabilities" IsCollection="false"
+                     BeanClass="java.awt.ImageCapabilities"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.Graphics2D"
+                  BeanClass="java.awt.Graphics2D" id="createGraphics"
+                  ReturnNodeName="Graphics2D"/>
+  <MethodAccessor IsCollection="false" Type="int" id="validate"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="gc" Type="java.awt.GraphicsConfiguration"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="contentsLost"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="int" id="getWidth"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="observer" Type="java.awt.image.ImageObserver"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getHeight"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="observer" Type="java.awt.image.ImageObserver"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object" id="getProperty"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="name" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="observer" Type="java.awt.image.ImageObserver"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Image"
+                  BeanClass="java.awt.Image" id="getScaledInstance"
+                  ReturnNodeName="Image">
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+    <ParameterInfo id="hints" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="flush"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.ImageCapabilities"
+                  BeanClass="java.awt.ImageCapabilities" id="getCapabilities"
+                  ReturnNodeName="ImageCapabilities">
+    <ParameterInfo id="gc" Type="java.awt.GraphicsConfiguration"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true" Type="java.awt.image.VolatileImage"
+                     BeanClass="java.awt.image.VolatileImage"
+                     id="VolatileImage"/>
+</JavaBean>

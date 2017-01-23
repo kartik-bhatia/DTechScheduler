@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="ScoreDefinition"
+          Package="org.optaplanner.core.impl.score.definition"
+          BeanClass="org.optaplanner.core.impl.score.definition.ScoreDefinition"
+          isJavaBased="true">
+  <Attribute Name="levelsSize" IsUpdateable="0" Type="int"/>
+  <Attribute Name="scoreClass" IsUpdateable="0" Type="java.lang.Class&lt;S>"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="formatScore"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="score" Type="S" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="S" id="parseScore"
+                  ReturnNodeName="returnValue"
+                  CollectionBeanClass="ReadOnlySingleValue">
+    <ParameterInfo id="scoreString" Type="java.lang.String"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.api.score.holder.ScoreHolder"
+                  BeanClass="org.optaplanner.core.api.score.holder.ScoreHolder"
+                  id="buildScoreHolder" ReturnNodeName="ScoreHolder">
+    <ParameterInfo id="constraintMatchEnabled" Type="boolean"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="S" id="buildOptimisticBound"
+                  ReturnNodeName="returnValue"
+                  CollectionBeanClass="ReadOnlySingleValue">
+    <ParameterInfo id="initializingScoreTrend"
+                   Type="org.optaplanner.core.impl.score.trend.InitializingScoreTrend"
+                   isStructured="true"/>
+    <ParameterInfo id="score" Type="S" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="S" id="buildPessimisticBound"
+                  ReturnNodeName="returnValue"
+                  CollectionBeanClass="ReadOnlySingleValue">
+    <ParameterInfo id="initializingScoreTrend"
+                   Type="org.optaplanner.core.impl.score.trend.InitializingScoreTrend"
+                   isStructured="true"/>
+    <ParameterInfo id="score" Type="S" isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

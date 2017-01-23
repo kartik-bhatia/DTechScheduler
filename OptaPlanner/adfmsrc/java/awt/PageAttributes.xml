@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="PageAttributes" Package="java.awt"
+          BeanClass="java.awt.PageAttributes" isJavaBased="true">
+  <AccessorAttribute id="color" IsCollection="false"
+                     BeanClass="java.awt.PageAttributes.ColorType"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="media" IsCollection="false"
+                     BeanClass="java.awt.PageAttributes.MediaType"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="orientationRequested" IsCollection="false"
+                     BeanClass="java.awt.PageAttributes.OrientationRequestedType"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="origin" IsCollection="false"
+                     BeanClass="java.awt.PageAttributes.OriginType"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="printQuality" IsCollection="false"
+                     BeanClass="java.awt.PageAttributes.PrintQualityType"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="printerResolution" IsCollection="true" Type="int[]"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="int"/>
+  </AccessorAttribute>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object" id="clone"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="set"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="obj" Type="java.awt.PageAttributes" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setMediaToDefault"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setOrientationRequested"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="orientationRequested" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="setOrientationRequestedToDefault"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setPrintQuality"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="printQuality" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setPrintQualityToDefault"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setPrinterResolution"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="printerResolution" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="setPrinterResolutionToDefault" ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="obj" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="hashCode"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <ConstructorMethod IsCollection="true" Type="java.awt.PageAttributes"
+                     BeanClass="java.awt.PageAttributes" id="PageAttributes">
+    <ParameterInfo id="color" Type="java.awt.PageAttributes.ColorType"
+                   isStructured="true"/>
+    <ParameterInfo id="media" Type="java.awt.PageAttributes.MediaType"
+                   isStructured="true"/>
+    <ParameterInfo id="orientationRequested"
+                   Type="java.awt.PageAttributes.OrientationRequestedType"
+                   isStructured="true"/>
+    <ParameterInfo id="origin" Type="java.awt.PageAttributes.OriginType"
+                   isStructured="true"/>
+    <ParameterInfo id="printQuality"
+                   Type="java.awt.PageAttributes.PrintQualityType"
+                   isStructured="true"/>
+    <ParameterInfo id="printerResolution" Type="int[]" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.PageAttributes"
+                     BeanClass="java.awt.PageAttributes" id="PageAttributes">
+    <ParameterInfo id="obj" Type="java.awt.PageAttributes" isStructured="true"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.PageAttributes"
+                     BeanClass="java.awt.PageAttributes" id="PageAttributes"/>
+</JavaBean>

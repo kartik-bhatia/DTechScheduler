@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="MenuElement" Package="javax.swing"
+          BeanClass="javax.swing.MenuElement" isJavaBased="true">
+  <AccessorAttribute id="subElements" IsCollection="true"
+                     BeanClass="javax.swing.MenuElement"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="component" IsCollection="false"
+                     BeanClass="java.awt.Component"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="void" id="processMouseEvent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="event" Type="java.awt.event.MouseEvent"
+                   isStructured="true"/>
+    <ParameterInfo id="path" Type="javax.swing.MenuElement[]"
+                   isStructured="false"/>
+    <ParameterInfo id="manager" Type="javax.swing.MenuSelectionManager"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="processKeyEvent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="event" Type="java.awt.event.KeyEvent"
+                   isStructured="true"/>
+    <ParameterInfo id="path" Type="javax.swing.MenuElement[]"
+                   isStructured="false"/>
+    <ParameterInfo id="manager" Type="javax.swing.MenuSelectionManager"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="menuSelectionChanged"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="isIncluded" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

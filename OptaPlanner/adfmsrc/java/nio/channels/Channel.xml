@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="Channel" Package="java.nio.channels"
+          BeanClass="java.nio.channels.Channel" isJavaBased="true">
+  <Attribute Name="open" IsUpdateable="0" Type="boolean"/>
+  <MethodAccessor IsCollection="false" Type="void" id="close"
+                  ReturnNodeName="Return"/>
+</JavaBean>

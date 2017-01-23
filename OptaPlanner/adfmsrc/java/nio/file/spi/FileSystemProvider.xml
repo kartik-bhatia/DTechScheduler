@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="FileSystemProvider" Package="java.nio.file.spi"
+          BeanClass="java.nio.file.spi.FileSystemProvider" isJavaBased="true">
+  <Attribute Name="scheme" IsUpdateable="0" Type="java.lang.String"/>
+  <MethodAccessor IsCollection="true"
+                  Type="java.nio.file.spi.FileSystemProvider"
+                  BeanClass="java.nio.file.spi.FileSystemProvider"
+                  id="installedProviders" ReturnNodeName="FileSystemProvider"
+                  CollectionBeanClass="UpdateableCollection"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.file.FileSystem"
+                  BeanClass="java.nio.file.FileSystem" id="newFileSystem"
+                  ReturnNodeName="FileSystem">
+    <ParameterInfo id="uri" Type="java.net.URI" isStructured="true"/>
+    <ParameterInfo id="env" Type="java.util.Map" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.file.FileSystem"
+                  BeanClass="java.nio.file.FileSystem" id="getFileSystem"
+                  ReturnNodeName="FileSystem">
+    <ParameterInfo id="uri" Type="java.net.URI" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.file.Path"
+                  BeanClass="java.nio.file.Path" id="getPath"
+                  ReturnNodeName="Path">
+    <ParameterInfo id="uri" Type="java.net.URI" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.file.FileSystem"
+                  BeanClass="java.nio.file.FileSystem" id="newFileSystem"
+                  ReturnNodeName="FileSystem">
+    <ParameterInfo id="path" Type="java.nio.file.Path" isStructured="true"/>
+    <ParameterInfo id="env" Type="java.util.Map" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.io.InputStream"
+                  BeanClass="java.io.InputStream" id="newInputStream"
+                  ReturnNodeName="InputStream">
+    <ParameterInfo id="path" Type="java.nio.file.Path" isStructured="true"/>
+    <ParameterInfo id="options" Type="java.nio.file.OpenOption[]"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.io.OutputStream"
+                  BeanClass="java.io.OutputStream" id="newOutputStream"
+                  ReturnNodeName="OutputStream">
+    <ParameterInfo id="path" Type="java.nio.file.Path" isStructured="true"/>
+    <ParameterInfo id="options" Type="java.nio.file.OpenOption[]"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.channels.FileChannel"
+                  BeanClass="java.nio.channels.FileChannel" id="newFileChannel"
+                  ReturnNodeName="FileChannel">
+    <ParameterInfo id="path" Type="java.nio.file.Path" isStructured="true"/>
+    <ParameterInfo id="options" Type="java.util.Set" isStructured="false"/>
+    <ParameterInfo id="attrs"
+                   Type="java.nio.file.attribute.FileAttribute&lt;?>[]"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="java.nio.channels.AsynchronousFileChannel"
+                  BeanClass="java.nio.channels.AsynchronousFileChannel"
+                  id="newAsynchronousFileChannel"
+                  ReturnNodeName="AsynchronousFileChannel">
+    <ParameterInfo id="path" Type="java.nio.file.Path" isStructured="true"/>
+    <ParameterInfo id="options" Type="java.util.Set" isStructured="false"/>
+    <ParameterInfo id="executor" Type="java.util.concurrent.ExecutorService"
+                   isStructured="false"/>
+    <ParameterInfo id="attrs"
+                   Type="java.nio.file.attribute.FileAttribute&lt;?>[]"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="java.nio.channels.SeekableByteChannel"
+                  BeanClass="java.nio.channels.SeekableByteChannel"
+                  id="newByteChannel" ReturnNodeName="SeekableByteChannel">
+    <ParameterInfo id="path" Type="java.nio.file.Path" isStructured="true"/>
+    <ParameterInfo id="options" Type="java.util.Set" isStructured="false"/>
+    <ParameterInfo id="attrs"
+                   Type="java.nio.file.attribute.FileAttribute&lt;?>[]"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true"
+                  Type="java.nio.file.DirectoryStream&lt;java.nio.file.Path>"
+                  id="newDirectoryStream"
+                  ReturnNodeName="DirectoryStream&lt;Path>"
+                  CollectionBeanClass="ReadOnlySingleValue">
+    <ParameterInfo id="dir" Type="java.nio.file.Path" isStructured="true"/>
+    <ParameterInfo id="filter"
+                   Type="java.nio.file.DirectoryStream.Filter&lt;? super java.nio.file.Path>"
+                   isStructured="false"/>
+    <Attribute Name="element"
+               Type="java.nio.file.DirectoryStream&lt;java.nio.file.Path>"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="createDirectory"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dir" Type="java.nio.file.Path" isStructured="true"/>
+    <ParameterInfo id="attrs"
+                   Type="java.nio.file.attribute.FileAttribute&lt;?>[]"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="createSymbolicLink"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="link" Type="java.nio.file.Path" isStructured="true"/>
+    <ParameterInfo id="target" Type="java.nio.file.Path" isStructured="true"/>
+    <ParameterInfo id="attrs"
+                   Type="java.nio.file.attribute.FileAttribute&lt;?>[]"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="createLink"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="link" Type="java.nio.file.Path" isStructured="true"/>
+    <ParameterInfo id="existing" Type="java.nio.file.Path" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="delete"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="path" Type="java.nio.file.Path" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="deleteIfExists"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="path" Type="java.nio.file.Path" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.file.Path"
+                  BeanClass="java.nio.file.Path" id="readSymbolicLink"
+                  ReturnNodeName="Path">
+    <ParameterInfo id="link" Type="java.nio.file.Path" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="copy"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="source" Type="java.nio.file.Path" isStructured="true"/>
+    <ParameterInfo id="target" Type="java.nio.file.Path" isStructured="true"/>
+    <ParameterInfo id="options" Type="java.nio.file.CopyOption[]"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="move"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="source" Type="java.nio.file.Path" isStructured="true"/>
+    <ParameterInfo id="target" Type="java.nio.file.Path" isStructured="true"/>
+    <ParameterInfo id="options" Type="java.nio.file.CopyOption[]"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isSameFile"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="path" Type="java.nio.file.Path" isStructured="true"/>
+    <ParameterInfo id="path2" Type="java.nio.file.Path" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isHidden"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="path" Type="java.nio.file.Path" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.file.FileStore"
+                  BeanClass="java.nio.file.FileStore" id="getFileStore"
+                  ReturnNodeName="FileStore">
+    <ParameterInfo id="path" Type="java.nio.file.Path" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="checkAccess"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="path" Type="java.nio.file.Path" isStructured="true"/>
+    <ParameterInfo id="modes" Type="java.nio.file.AccessMode[]"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="V" id="getFileAttributeView"
+                  ReturnNodeName="V" CollectionBeanClass="ReadOnlySingleValue">
+    <ParameterInfo id="path" Type="java.nio.file.Path" isStructured="true"/>
+    <ParameterInfo id="type" Type="java.lang.Class&lt;V>" isStructured="false"/>
+    <ParameterInfo id="options" Type="java.nio.file.LinkOption[]"
+                   isStructured="false"/>
+    <Attribute Name="element" Type="V"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="A" id="readAttributes"
+                  ReturnNodeName="A" CollectionBeanClass="ReadOnlySingleValue">
+    <ParameterInfo id="path" Type="java.nio.file.Path" isStructured="true"/>
+    <ParameterInfo id="type" Type="java.lang.Class&lt;A>" isStructured="false"/>
+    <ParameterInfo id="options" Type="java.nio.file.LinkOption[]"
+                   isStructured="false"/>
+    <Attribute Name="element" Type="A"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="java.util.Map" id="readAttributes"
+                  ReturnNodeName="Object"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="path" Type="java.nio.file.Path" isStructured="true"/>
+    <ParameterInfo id="attributes" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="options" Type="java.nio.file.LinkOption[]"
+                   isStructured="false"/>
+    <Attribute Name="element" Type="java.lang.String, java.lang.Object"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setAttribute"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="path" Type="java.nio.file.Path" isStructured="true"/>
+    <ParameterInfo id="attribute" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="value" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="options" Type="java.nio.file.LinkOption[]"
+                   isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

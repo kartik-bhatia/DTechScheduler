@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="PathMatcher" Package="java.nio.file"
+          BeanClass="java.nio.file.PathMatcher" isJavaBased="true">
+  <MethodAccessor IsCollection="false" Type="boolean" id="matches"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="path" Type="java.nio.file.Path" isStructured="true"/>
+  </MethodAccessor>
+</JavaBean>

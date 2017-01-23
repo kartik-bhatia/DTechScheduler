@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="DropTargetEvent" Package="java.awt.dnd"
+          BeanClass="java.awt.dnd.DropTargetEvent" isJavaBased="true">
+  <AccessorAttribute id="dropTargetContext" IsCollection="false"
+                     BeanClass="java.awt.dnd.DropTargetContext"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <ConstructorMethod IsCollection="true" Type="java.awt.dnd.DropTargetEvent"
+                     BeanClass="java.awt.dnd.DropTargetEvent"
+                     id="DropTargetEvent">
+    <ParameterInfo id="dtc" Type="java.awt.dnd.DropTargetContext"
+                   isStructured="true"/>
+  </ConstructorMethod>
+</JavaBean>

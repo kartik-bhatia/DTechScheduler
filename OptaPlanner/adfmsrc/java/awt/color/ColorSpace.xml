@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="ColorSpace" Package="java.awt.color"
+          BeanClass="java.awt.color.ColorSpace" isJavaBased="true">
+  <Attribute Name="CS_sRGB" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="type" IsUpdateable="0" Type="int"/>
+  <Attribute Name="numComponents" IsUpdateable="0" Type="int"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.color.ColorSpace"
+                  BeanClass="java.awt.color.ColorSpace" id="getInstance"
+                  ReturnNodeName="ColorSpace">
+    <ParameterInfo id="colorspace" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="float[]" id="toRGB"
+                  ReturnNodeName="float"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="colorvalue" Type="float[]" isStructured="false"/>
+    <Attribute Name="element" Type="float"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="float[]" id="fromRGB"
+                  ReturnNodeName="float"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="rgbvalue" Type="float[]" isStructured="false"/>
+    <Attribute Name="element" Type="float"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="float[]" id="toCIEXYZ"
+                  ReturnNodeName="float"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="colorvalue" Type="float[]" isStructured="false"/>
+    <Attribute Name="element" Type="float"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="float[]" id="fromCIEXYZ"
+                  ReturnNodeName="float"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="colorvalue" Type="float[]" isStructured="false"/>
+    <Attribute Name="element" Type="float"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="getName"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="idx" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="float" id="getMinValue"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="component" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="float" id="getMaxValue"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="component" Type="int" isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

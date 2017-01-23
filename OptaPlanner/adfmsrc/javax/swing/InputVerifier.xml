@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="InputVerifier" Package="javax.swing"
+          BeanClass="javax.swing.InputVerifier" isJavaBased="true">
+  <MethodAccessor IsCollection="false" Type="boolean" id="verify"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="input" Type="javax.swing.JComponent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="shouldYieldFocus"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="input" Type="javax.swing.JComponent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true" Type="javax.swing.InputVerifier"
+                     BeanClass="javax.swing.InputVerifier" id="InputVerifier"/>
+</JavaBean>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="Paint" Package="java.awt" BeanClass="java.awt.Paint"
+          isJavaBased="true">
+  <Attribute Name="transparency" IsUpdateable="0" Type="int"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.PaintContext"
+                  BeanClass="java.awt.PaintContext" id="createContext"
+                  ReturnNodeName="PaintContext">
+    <ParameterInfo id="cm" Type="java.awt.image.ColorModel"
+                   isStructured="true"/>
+    <ParameterInfo id="deviceBounds" Type="java.awt.Rectangle"
+                   isStructured="true"/>
+    <ParameterInfo id="userBounds" Type="java.awt.geom.Rectangle2D"
+                   isStructured="true"/>
+    <ParameterInfo id="xform" Type="java.awt.geom.AffineTransform"
+                   isStructured="true"/>
+    <ParameterInfo id="hints" Type="java.awt.RenderingHints"
+                   isStructured="true"/>
+  </MethodAccessor>
+</JavaBean>

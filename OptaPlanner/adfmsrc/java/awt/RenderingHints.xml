@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="RenderingHints" Package="java.awt"
+          BeanClass="java.awt.RenderingHints" isJavaBased="true">
+  <Attribute Name="empty" IsUpdateable="0" Type="boolean"/>
+  <MethodAccessor IsCollection="false" Type="int" id="size"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="containsKey"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="key" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="containsValue"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="value" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object" id="get"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="key" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object" id="put"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="key" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="value" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="add"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="hints" Type="java.awt.RenderingHints"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="clear"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object" id="remove"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="key" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="putAll"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="m" Type="java.util.Map" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="java.util.Set" id="keySet"
+                  ReturnNodeName="Object"
+                  CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="java.lang.Object"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="java.util.Collection" id="values"
+                  ReturnNodeName="Object"
+                  CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="java.lang.Object"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="java.util.Set" id="entrySet"
+                  ReturnNodeName="Entry&lt;Object>"
+                  CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element"
+               Type="java.util.Map.Entry&lt;java.lang.Object, java.lang.Object>"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="o" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="hashCode"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object" id="clone"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <ConstructorMethod IsCollection="true" Type="java.awt.RenderingHints"
+                     BeanClass="java.awt.RenderingHints" id="RenderingHints">
+    <ParameterInfo id="key" Type="java.awt.RenderingHints.Key"
+                   isStructured="true"/>
+    <ParameterInfo id="value" Type="java.lang.Object" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.RenderingHints"
+                     BeanClass="java.awt.RenderingHints" id="RenderingHints">
+    <ParameterInfo id="init" Type="java.util.Map" isStructured="false"/>
+  </ConstructorMethod>
+</JavaBean>

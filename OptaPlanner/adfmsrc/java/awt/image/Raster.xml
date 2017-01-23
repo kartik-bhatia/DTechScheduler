@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="Raster" Package="java.awt.image" BeanClass="java.awt.image.Raster"
+          isJavaBased="true">
+  <Attribute Name="sampleModelTranslateX" IsUpdateable="0" Type="int"/>
+  <Attribute Name="sampleModelTranslateY" IsUpdateable="0" Type="int"/>
+  <Attribute Name="minX" IsUpdateable="0" Type="int"/>
+  <Attribute Name="minY" IsUpdateable="0" Type="int"/>
+  <Attribute Name="width" IsUpdateable="0" Type="int"/>
+  <Attribute Name="height" IsUpdateable="0" Type="int"/>
+  <Attribute Name="numBands" IsUpdateable="0" Type="int"/>
+  <Attribute Name="numDataElements" IsUpdateable="0" Type="int"/>
+  <Attribute Name="transferType" IsUpdateable="0" Type="int"/>
+  <AccessorAttribute id="parent" IsCollection="false"
+                     BeanClass="java.awt.image.Raster"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="bounds" IsCollection="false"
+                     BeanClass="java.awt.Rectangle"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="dataBuffer" IsCollection="false"
+                     BeanClass="java.awt.image.DataBuffer"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="sampleModel" IsCollection="false"
+                     BeanClass="java.awt.image.SampleModel"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.WritableRaster"
+                  BeanClass="java.awt.image.WritableRaster"
+                  id="createInterleavedRaster" ReturnNodeName="WritableRaster">
+    <ParameterInfo id="dataType" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="bands" Type="int" isStructured="false"/>
+    <ParameterInfo id="location" Type="java.awt.Point" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.WritableRaster"
+                  BeanClass="java.awt.image.WritableRaster"
+                  id="createInterleavedRaster" ReturnNodeName="WritableRaster">
+    <ParameterInfo id="dataType" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="scanlineStride" Type="int" isStructured="false"/>
+    <ParameterInfo id="pixelStride" Type="int" isStructured="false"/>
+    <ParameterInfo id="bandOffsets" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="location" Type="java.awt.Point" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.WritableRaster"
+                  BeanClass="java.awt.image.WritableRaster"
+                  id="createInterleavedRaster" ReturnNodeName="WritableRaster">
+    <ParameterInfo id="dataBuffer" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="scanlineStride" Type="int" isStructured="false"/>
+    <ParameterInfo id="pixelStride" Type="int" isStructured="false"/>
+    <ParameterInfo id="bandOffsets" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="location" Type="java.awt.Point" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.WritableRaster"
+                  BeanClass="java.awt.image.WritableRaster"
+                  id="createBandedRaster" ReturnNodeName="WritableRaster">
+    <ParameterInfo id="dataType" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="bands" Type="int" isStructured="false"/>
+    <ParameterInfo id="location" Type="java.awt.Point" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.WritableRaster"
+                  BeanClass="java.awt.image.WritableRaster"
+                  id="createBandedRaster" ReturnNodeName="WritableRaster">
+    <ParameterInfo id="dataType" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="scanlineStride" Type="int" isStructured="false"/>
+    <ParameterInfo id="bankIndices" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="bandOffsets" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="location" Type="java.awt.Point" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.WritableRaster"
+                  BeanClass="java.awt.image.WritableRaster"
+                  id="createBandedRaster" ReturnNodeName="WritableRaster">
+    <ParameterInfo id="dataBuffer" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="scanlineStride" Type="int" isStructured="false"/>
+    <ParameterInfo id="bankIndices" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="bandOffsets" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="location" Type="java.awt.Point" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.WritableRaster"
+                  BeanClass="java.awt.image.WritableRaster"
+                  id="createPackedRaster" ReturnNodeName="WritableRaster">
+    <ParameterInfo id="dataType" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="bandMasks" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="location" Type="java.awt.Point" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.WritableRaster"
+                  BeanClass="java.awt.image.WritableRaster"
+                  id="createPackedRaster" ReturnNodeName="WritableRaster">
+    <ParameterInfo id="dataType" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="bands" Type="int" isStructured="false"/>
+    <ParameterInfo id="bitsPerBand" Type="int" isStructured="false"/>
+    <ParameterInfo id="location" Type="java.awt.Point" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.WritableRaster"
+                  BeanClass="java.awt.image.WritableRaster"
+                  id="createPackedRaster" ReturnNodeName="WritableRaster">
+    <ParameterInfo id="dataBuffer" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="scanlineStride" Type="int" isStructured="false"/>
+    <ParameterInfo id="bandMasks" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="location" Type="java.awt.Point" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.WritableRaster"
+                  BeanClass="java.awt.image.WritableRaster"
+                  id="createPackedRaster" ReturnNodeName="WritableRaster">
+    <ParameterInfo id="dataBuffer" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="bitsPerPixel" Type="int" isStructured="false"/>
+    <ParameterInfo id="location" Type="java.awt.Point" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.Raster"
+                  BeanClass="java.awt.image.Raster" id="createRaster"
+                  ReturnNodeName="Raster">
+    <ParameterInfo id="sm" Type="java.awt.image.SampleModel"
+                   isStructured="true"/>
+    <ParameterInfo id="db" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+    <ParameterInfo id="location" Type="java.awt.Point" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.WritableRaster"
+                  BeanClass="java.awt.image.WritableRaster"
+                  id="createWritableRaster" ReturnNodeName="WritableRaster">
+    <ParameterInfo id="sm" Type="java.awt.image.SampleModel"
+                   isStructured="true"/>
+    <ParameterInfo id="location" Type="java.awt.Point" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.WritableRaster"
+                  BeanClass="java.awt.image.WritableRaster"
+                  id="createWritableRaster" ReturnNodeName="WritableRaster">
+    <ParameterInfo id="sm" Type="java.awt.image.SampleModel"
+                   isStructured="true"/>
+    <ParameterInfo id="db" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+    <ParameterInfo id="location" Type="java.awt.Point" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.WritableRaster"
+                  BeanClass="java.awt.image.WritableRaster"
+                  id="createCompatibleWritableRaster"
+                  ReturnNodeName="WritableRaster"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.WritableRaster"
+                  BeanClass="java.awt.image.WritableRaster"
+                  id="createCompatibleWritableRaster"
+                  ReturnNodeName="WritableRaster">
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.WritableRaster"
+                  BeanClass="java.awt.image.WritableRaster"
+                  id="createCompatibleWritableRaster"
+                  ReturnNodeName="WritableRaster">
+    <ParameterInfo id="rect" Type="java.awt.Rectangle" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.WritableRaster"
+                  BeanClass="java.awt.image.WritableRaster"
+                  id="createCompatibleWritableRaster"
+                  ReturnNodeName="WritableRaster">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.Raster"
+                  BeanClass="java.awt.image.Raster" id="createTranslatedChild"
+                  ReturnNodeName="Raster">
+    <ParameterInfo id="childMinX" Type="int" isStructured="false"/>
+    <ParameterInfo id="childMinY" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.Raster"
+                  BeanClass="java.awt.image.Raster" id="createChild"
+                  ReturnNodeName="Raster">
+    <ParameterInfo id="parentX" Type="int" isStructured="false"/>
+    <ParameterInfo id="parentY" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+    <ParameterInfo id="childMinX" Type="int" isStructured="false"/>
+    <ParameterInfo id="childMinY" Type="int" isStructured="false"/>
+    <ParameterInfo id="bandList" Type="int[]" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object"
+                  id="getDataElements" ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="outData" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object"
+                  id="getDataElements" ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="outData" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="int[]" id="getPixel"
+                  ReturnNodeName="int"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="iArray" Type="int[]" isStructured="false"/>
+    <Attribute Name="element" Type="int"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="float[]" id="getPixel"
+                  ReturnNodeName="float"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="fArray" Type="float[]" isStructured="false"/>
+    <Attribute Name="element" Type="float"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="double[]" id="getPixel"
+                  ReturnNodeName="double"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="dArray" Type="double[]" isStructured="false"/>
+    <Attribute Name="element" Type="double"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="int[]" id="getPixels"
+                  ReturnNodeName="int"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="iArray" Type="int[]" isStructured="false"/>
+    <Attribute Name="element" Type="int"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="float[]" id="getPixels"
+                  ReturnNodeName="float"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="fArray" Type="float[]" isStructured="false"/>
+    <Attribute Name="element" Type="float"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="double[]" id="getPixels"
+                  ReturnNodeName="double"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="dArray" Type="double[]" isStructured="false"/>
+    <Attribute Name="element" Type="double"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getSample"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="b" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="float" id="getSampleFloat"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="b" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="double" id="getSampleDouble"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="b" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="int[]" id="getSamples"
+                  ReturnNodeName="int"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="b" Type="int" isStructured="false"/>
+    <ParameterInfo id="iArray" Type="int[]" isStructured="false"/>
+    <Attribute Name="element" Type="int"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="float[]" id="getSamples"
+                  ReturnNodeName="float"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="b" Type="int" isStructured="false"/>
+    <ParameterInfo id="fArray" Type="float[]" isStructured="false"/>
+    <Attribute Name="element" Type="float"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="double[]" id="getSamples"
+                  ReturnNodeName="double"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="b" Type="int" isStructured="false"/>
+    <ParameterInfo id="dArray" Type="double[]" isStructured="false"/>
+    <Attribute Name="element" Type="double"/>
+  </MethodAccessor>
+</JavaBean>

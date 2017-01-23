@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="AccessibleValue" Package="javax.accessibility"
+          BeanClass="javax.accessibility.AccessibleValue" isJavaBased="true">
+  <Attribute Name="currentAccessibleValue" IsUpdateable="0"
+             Type="java.lang.Number"/>
+  <Attribute Name="minimumAccessibleValue" IsUpdateable="0"
+             Type="java.lang.Number"/>
+  <Attribute Name="maximumAccessibleValue" IsUpdateable="0"
+             Type="java.lang.Number"/>
+  <MethodAccessor IsCollection="false" Type="boolean"
+                  id="setCurrentAccessibleValue" ReturnNodeName="Return">
+    <ParameterInfo id="n" Type="java.lang.Number" isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

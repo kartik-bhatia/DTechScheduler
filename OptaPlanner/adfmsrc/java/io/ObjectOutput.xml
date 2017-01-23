@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="ObjectOutput" Package="java.io" BeanClass="java.io.ObjectOutput"
+          isJavaBased="true">
+  <MethodAccessor IsCollection="false" Type="void" id="writeObject"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="obj" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="write"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="b" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="write"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="b" Type="byte[]" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="write"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="b" Type="byte[]" isStructured="false"/>
+    <ParameterInfo id="off" Type="int" isStructured="false"/>
+    <ParameterInfo id="len" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="flush"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="close"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="writeBoolean"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="v" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="writeByte"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="v" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="writeShort"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="v" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="writeChar"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="v" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="writeInt"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="v" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="writeLong"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="v" Type="long" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="writeFloat"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="v" Type="float" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="writeDouble"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="v" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="writeBytes"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="s" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="writeChars"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="s" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="writeUTF"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="s" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

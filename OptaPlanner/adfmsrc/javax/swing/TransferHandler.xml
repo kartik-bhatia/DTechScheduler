@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="TransferHandler" Package="javax.swing"
+          BeanClass="javax.swing.TransferHandler" isJavaBased="true">
+  <AccessorAttribute id="cutAction" IsCollection="false"
+                     BeanClass="javax.swing.Action"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="copyAction" IsCollection="false"
+                     BeanClass="javax.swing.Action"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="pasteAction" IsCollection="false"
+                     BeanClass="javax.swing.Action"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="dragImage" IsCollection="false"
+                     BeanClass="java.awt.Image"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="dragImageOffset" IsCollection="false"
+                     BeanClass="java.awt.Point"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="void" id="exportAsDrag"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="comp" Type="javax.swing.JComponent" isStructured="true"/>
+    <ParameterInfo id="e" Type="java.awt.event.InputEvent" isStructured="true"/>
+    <ParameterInfo id="action" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="exportToClipboard"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="comp" Type="javax.swing.JComponent" isStructured="true"/>
+    <ParameterInfo id="clip" Type="java.awt.datatransfer.Clipboard"
+                   isStructured="true"/>
+    <ParameterInfo id="action" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="importData"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="support"
+                   Type="javax.swing.TransferHandler.TransferSupport"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="importData"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="comp" Type="javax.swing.JComponent" isStructured="true"/>
+    <ParameterInfo id="t" Type="java.awt.datatransfer.Transferable"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="canImport"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="support"
+                   Type="javax.swing.TransferHandler.TransferSupport"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="canImport"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="comp" Type="javax.swing.JComponent" isStructured="true"/>
+    <ParameterInfo id="transferFlavors"
+                   Type="java.awt.datatransfer.DataFlavor[]"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getSourceActions"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="c" Type="javax.swing.JComponent" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="javax.swing.Icon"
+                  BeanClass="javax.swing.Icon" id="getVisualRepresentation"
+                  ReturnNodeName="Icon">
+    <ParameterInfo id="t" Type="java.awt.datatransfer.Transferable"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true" Type="javax.swing.TransferHandler"
+                     BeanClass="javax.swing.TransferHandler"
+                     id="TransferHandler">
+    <ParameterInfo id="property" Type="java.lang.String" isStructured="false"/>
+  </ConstructorMethod>
+</JavaBean>

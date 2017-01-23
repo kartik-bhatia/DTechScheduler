@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="AffineTransform" Package="java.awt.geom"
+          BeanClass="java.awt.geom.AffineTransform" isJavaBased="true">
+  <Attribute Name="type" IsUpdateable="0" Type="int"/>
+  <Attribute Name="determinant" IsUpdateable="0" Type="double"/>
+  <Attribute Name="scaleX" IsUpdateable="0" Type="double"/>
+  <Attribute Name="scaleY" IsUpdateable="0" Type="double"/>
+  <Attribute Name="shearX" IsUpdateable="0" Type="double"/>
+  <Attribute Name="shearY" IsUpdateable="0" Type="double"/>
+  <Attribute Name="translateX" IsUpdateable="0" Type="double"/>
+  <Attribute Name="translateY" IsUpdateable="0" Type="double"/>
+  <Attribute Name="identity" IsUpdateable="0" Type="boolean"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.AffineTransform"
+                  BeanClass="java.awt.geom.AffineTransform"
+                  id="getTranslateInstance" ReturnNodeName="AffineTransform">
+    <ParameterInfo id="tx" Type="double" isStructured="false"/>
+    <ParameterInfo id="ty" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.AffineTransform"
+                  BeanClass="java.awt.geom.AffineTransform"
+                  id="getRotateInstance" ReturnNodeName="AffineTransform">
+    <ParameterInfo id="theta" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.AffineTransform"
+                  BeanClass="java.awt.geom.AffineTransform"
+                  id="getRotateInstance" ReturnNodeName="AffineTransform">
+    <ParameterInfo id="theta" Type="double" isStructured="false"/>
+    <ParameterInfo id="anchorx" Type="double" isStructured="false"/>
+    <ParameterInfo id="anchory" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.AffineTransform"
+                  BeanClass="java.awt.geom.AffineTransform"
+                  id="getRotateInstance" ReturnNodeName="AffineTransform">
+    <ParameterInfo id="vecx" Type="double" isStructured="false"/>
+    <ParameterInfo id="vecy" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.AffineTransform"
+                  BeanClass="java.awt.geom.AffineTransform"
+                  id="getRotateInstance" ReturnNodeName="AffineTransform">
+    <ParameterInfo id="vecx" Type="double" isStructured="false"/>
+    <ParameterInfo id="vecy" Type="double" isStructured="false"/>
+    <ParameterInfo id="anchorx" Type="double" isStructured="false"/>
+    <ParameterInfo id="anchory" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.AffineTransform"
+                  BeanClass="java.awt.geom.AffineTransform"
+                  id="getQuadrantRotateInstance"
+                  ReturnNodeName="AffineTransform">
+    <ParameterInfo id="numquadrants" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.AffineTransform"
+                  BeanClass="java.awt.geom.AffineTransform"
+                  id="getQuadrantRotateInstance"
+                  ReturnNodeName="AffineTransform">
+    <ParameterInfo id="numquadrants" Type="int" isStructured="false"/>
+    <ParameterInfo id="anchorx" Type="double" isStructured="false"/>
+    <ParameterInfo id="anchory" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.AffineTransform"
+                  BeanClass="java.awt.geom.AffineTransform"
+                  id="getScaleInstance" ReturnNodeName="AffineTransform">
+    <ParameterInfo id="sx" Type="double" isStructured="false"/>
+    <ParameterInfo id="sy" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.AffineTransform"
+                  BeanClass="java.awt.geom.AffineTransform"
+                  id="getShearInstance" ReturnNodeName="AffineTransform">
+    <ParameterInfo id="shx" Type="double" isStructured="false"/>
+    <ParameterInfo id="shy" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="getMatrix"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="flatmatrix" Type="double[]" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="translate"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="tx" Type="double" isStructured="false"/>
+    <ParameterInfo id="ty" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="rotate"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="theta" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="rotate"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="theta" Type="double" isStructured="false"/>
+    <ParameterInfo id="anchorx" Type="double" isStructured="false"/>
+    <ParameterInfo id="anchory" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="rotate"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="vecx" Type="double" isStructured="false"/>
+    <ParameterInfo id="vecy" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="rotate"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="vecx" Type="double" isStructured="false"/>
+    <ParameterInfo id="vecy" Type="double" isStructured="false"/>
+    <ParameterInfo id="anchorx" Type="double" isStructured="false"/>
+    <ParameterInfo id="anchory" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="quadrantRotate"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="numquadrants" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="quadrantRotate"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="numquadrants" Type="int" isStructured="false"/>
+    <ParameterInfo id="anchorx" Type="double" isStructured="false"/>
+    <ParameterInfo id="anchory" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="scale"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="sx" Type="double" isStructured="false"/>
+    <ParameterInfo id="sy" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="shear"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="shx" Type="double" isStructured="false"/>
+    <ParameterInfo id="shy" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setToIdentity"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setToTranslation"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="tx" Type="double" isStructured="false"/>
+    <ParameterInfo id="ty" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setToRotation"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="theta" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setToRotation"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="theta" Type="double" isStructured="false"/>
+    <ParameterInfo id="anchorx" Type="double" isStructured="false"/>
+    <ParameterInfo id="anchory" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setToRotation"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="vecx" Type="double" isStructured="false"/>
+    <ParameterInfo id="vecy" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setToRotation"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="vecx" Type="double" isStructured="false"/>
+    <ParameterInfo id="vecy" Type="double" isStructured="false"/>
+    <ParameterInfo id="anchorx" Type="double" isStructured="false"/>
+    <ParameterInfo id="anchory" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setToQuadrantRotation"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="numquadrants" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setToQuadrantRotation"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="numquadrants" Type="int" isStructured="false"/>
+    <ParameterInfo id="anchorx" Type="double" isStructured="false"/>
+    <ParameterInfo id="anchory" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setToScale"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="sx" Type="double" isStructured="false"/>
+    <ParameterInfo id="sy" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setToShear"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="shx" Type="double" isStructured="false"/>
+    <ParameterInfo id="shy" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setTransform"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="Tx" Type="java.awt.geom.AffineTransform"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setTransform"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="m00" Type="double" isStructured="false"/>
+    <ParameterInfo id="m10" Type="double" isStructured="false"/>
+    <ParameterInfo id="m01" Type="double" isStructured="false"/>
+    <ParameterInfo id="m11" Type="double" isStructured="false"/>
+    <ParameterInfo id="m02" Type="double" isStructured="false"/>
+    <ParameterInfo id="m12" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="concatenate"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="Tx" Type="java.awt.geom.AffineTransform"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="preConcatenate"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="Tx" Type="java.awt.geom.AffineTransform"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.AffineTransform"
+                  BeanClass="java.awt.geom.AffineTransform" id="createInverse"
+                  ReturnNodeName="AffineTransform"/>
+  <MethodAccessor IsCollection="false" Type="void" id="invert"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.Point2D"
+                  BeanClass="java.awt.geom.Point2D" id="transform"
+                  ReturnNodeName="Point2D">
+    <ParameterInfo id="ptSrc" Type="java.awt.geom.Point2D" isStructured="true"/>
+    <ParameterInfo id="ptDst" Type="java.awt.geom.Point2D" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="transform"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="ptSrc" Type="java.awt.geom.Point2D[]"
+                   isStructured="false"/>
+    <ParameterInfo id="srcOff" Type="int" isStructured="false"/>
+    <ParameterInfo id="ptDst" Type="java.awt.geom.Point2D[]"
+                   isStructured="false"/>
+    <ParameterInfo id="dstOff" Type="int" isStructured="false"/>
+    <ParameterInfo id="numPts" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="transform"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="srcPts" Type="float[]" isStructured="false"/>
+    <ParameterInfo id="srcOff" Type="int" isStructured="false"/>
+    <ParameterInfo id="dstPts" Type="float[]" isStructured="false"/>
+    <ParameterInfo id="dstOff" Type="int" isStructured="false"/>
+    <ParameterInfo id="numPts" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="transform"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="srcPts" Type="double[]" isStructured="false"/>
+    <ParameterInfo id="srcOff" Type="int" isStructured="false"/>
+    <ParameterInfo id="dstPts" Type="double[]" isStructured="false"/>
+    <ParameterInfo id="dstOff" Type="int" isStructured="false"/>
+    <ParameterInfo id="numPts" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="transform"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="srcPts" Type="float[]" isStructured="false"/>
+    <ParameterInfo id="srcOff" Type="int" isStructured="false"/>
+    <ParameterInfo id="dstPts" Type="double[]" isStructured="false"/>
+    <ParameterInfo id="dstOff" Type="int" isStructured="false"/>
+    <ParameterInfo id="numPts" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="transform"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="srcPts" Type="double[]" isStructured="false"/>
+    <ParameterInfo id="srcOff" Type="int" isStructured="false"/>
+    <ParameterInfo id="dstPts" Type="float[]" isStructured="false"/>
+    <ParameterInfo id="dstOff" Type="int" isStructured="false"/>
+    <ParameterInfo id="numPts" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.Point2D"
+                  BeanClass="java.awt.geom.Point2D" id="inverseTransform"
+                  ReturnNodeName="Point2D">
+    <ParameterInfo id="ptSrc" Type="java.awt.geom.Point2D" isStructured="true"/>
+    <ParameterInfo id="ptDst" Type="java.awt.geom.Point2D" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="inverseTransform"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="srcPts" Type="double[]" isStructured="false"/>
+    <ParameterInfo id="srcOff" Type="int" isStructured="false"/>
+    <ParameterInfo id="dstPts" Type="double[]" isStructured="false"/>
+    <ParameterInfo id="dstOff" Type="int" isStructured="false"/>
+    <ParameterInfo id="numPts" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.Point2D"
+                  BeanClass="java.awt.geom.Point2D" id="deltaTransform"
+                  ReturnNodeName="Point2D">
+    <ParameterInfo id="ptSrc" Type="java.awt.geom.Point2D" isStructured="true"/>
+    <ParameterInfo id="ptDst" Type="java.awt.geom.Point2D" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="deltaTransform"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="srcPts" Type="double[]" isStructured="false"/>
+    <ParameterInfo id="srcOff" Type="int" isStructured="false"/>
+    <ParameterInfo id="dstPts" Type="double[]" isStructured="false"/>
+    <ParameterInfo id="dstOff" Type="int" isStructured="false"/>
+    <ParameterInfo id="numPts" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Shape"
+                  BeanClass="java.awt.Shape" id="createTransformedShape"
+                  ReturnNodeName="Shape">
+    <ParameterInfo id="pSrc" Type="java.awt.Shape" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object" id="clone"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="int" id="hashCode"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="obj" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true" Type="java.awt.geom.AffineTransform"
+                     BeanClass="java.awt.geom.AffineTransform"
+                     id="AffineTransform">
+    <ParameterInfo id="flatmatrix" Type="double[]" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.geom.AffineTransform"
+                     BeanClass="java.awt.geom.AffineTransform"
+                     id="AffineTransform">
+    <ParameterInfo id="m00" Type="double" isStructured="false"/>
+    <ParameterInfo id="m10" Type="double" isStructured="false"/>
+    <ParameterInfo id="m01" Type="double" isStructured="false"/>
+    <ParameterInfo id="m11" Type="double" isStructured="false"/>
+    <ParameterInfo id="m02" Type="double" isStructured="false"/>
+    <ParameterInfo id="m12" Type="double" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.geom.AffineTransform"
+                     BeanClass="java.awt.geom.AffineTransform"
+                     id="AffineTransform">
+    <ParameterInfo id="flatmatrix" Type="float[]" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.geom.AffineTransform"
+                     BeanClass="java.awt.geom.AffineTransform"
+                     id="AffineTransform">
+    <ParameterInfo id="m00" Type="float" isStructured="false"/>
+    <ParameterInfo id="m10" Type="float" isStructured="false"/>
+    <ParameterInfo id="m01" Type="float" isStructured="false"/>
+    <ParameterInfo id="m11" Type="float" isStructured="false"/>
+    <ParameterInfo id="m02" Type="float" isStructured="false"/>
+    <ParameterInfo id="m12" Type="float" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.geom.AffineTransform"
+                     BeanClass="java.awt.geom.AffineTransform"
+                     id="AffineTransform">
+    <ParameterInfo id="Tx" Type="java.awt.geom.AffineTransform"
+                   isStructured="true"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.geom.AffineTransform"
+                     BeanClass="java.awt.geom.AffineTransform"
+                     id="AffineTransform"/>
+</JavaBean>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="DragGestureRecognizer" Package="java.awt.dnd"
+          BeanClass="java.awt.dnd.DragGestureRecognizer" isJavaBased="true">
+  <Attribute Name="sourceActions" Type="int"/>
+  <AccessorAttribute id="dragSource" IsCollection="false"
+                     BeanClass="java.awt.dnd.DragSource"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="component" IsCollection="false"
+                     BeanClass="java.awt.Component"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="triggerEvent" IsCollection="false"
+                     BeanClass="java.awt.event.InputEvent"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="void" id="resetRecognizer"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="addDragGestureListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dgl" Type="java.awt.dnd.DragGestureListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="removeDragGestureListener" ReturnNodeName="Return">
+    <ParameterInfo id="dgl" Type="java.awt.dnd.DragGestureListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+</JavaBean>

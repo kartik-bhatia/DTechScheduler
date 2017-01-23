@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="Path" Package="java.nio.file" BeanClass="java.nio.file.Path"
+          isJavaBased="true">
+  <Attribute Name="absolute" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="nameCount" IsUpdateable="0" Type="int"/>
+  <AccessorAttribute id="fileSystem" IsCollection="false"
+                     BeanClass="java.nio.file.FileSystem"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="root" IsCollection="false"
+                     BeanClass="java.nio.file.Path"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="fileName" IsCollection="false"
+                     BeanClass="java.nio.file.Path"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="parent" IsCollection="false"
+                     BeanClass="java.nio.file.Path"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.file.Path"
+                  BeanClass="java.nio.file.Path" id="getName"
+                  ReturnNodeName="Path">
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.file.Path"
+                  BeanClass="java.nio.file.Path" id="subpath"
+                  ReturnNodeName="Path">
+    <ParameterInfo id="beginIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="endIndex" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="startsWith"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="other" Type="java.nio.file.Path" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="startsWith"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="other" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="endsWith"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="other" Type="java.nio.file.Path" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="endsWith"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="other" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.file.Path"
+                  BeanClass="java.nio.file.Path" id="normalize"
+                  ReturnNodeName="Path"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.file.Path"
+                  BeanClass="java.nio.file.Path" id="resolve"
+                  ReturnNodeName="Path">
+    <ParameterInfo id="other" Type="java.nio.file.Path" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.file.Path"
+                  BeanClass="java.nio.file.Path" id="resolve"
+                  ReturnNodeName="Path">
+    <ParameterInfo id="other" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.file.Path"
+                  BeanClass="java.nio.file.Path" id="resolveSibling"
+                  ReturnNodeName="Path">
+    <ParameterInfo id="other" Type="java.nio.file.Path" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.file.Path"
+                  BeanClass="java.nio.file.Path" id="resolveSibling"
+                  ReturnNodeName="Path">
+    <ParameterInfo id="other" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.file.Path"
+                  BeanClass="java.nio.file.Path" id="relativize"
+                  ReturnNodeName="Path">
+    <ParameterInfo id="other" Type="java.nio.file.Path" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.net.URI"
+                  BeanClass="java.net.URI" id="toUri" ReturnNodeName="URI"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.file.Path"
+                  BeanClass="java.nio.file.Path" id="toAbsolutePath"
+                  ReturnNodeName="Path"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.file.Path"
+                  BeanClass="java.nio.file.Path" id="toRealPath"
+                  ReturnNodeName="Path">
+    <ParameterInfo id="options" Type="java.nio.file.LinkOption[]"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.io.File"
+                  BeanClass="java.io.File" id="toFile" ReturnNodeName="File"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.file.WatchKey"
+                  BeanClass="java.nio.file.WatchKey" id="register"
+                  ReturnNodeName="WatchKey">
+    <ParameterInfo id="watcher" Type="java.nio.file.WatchService"
+                   isStructured="true"/>
+    <ParameterInfo id="events" Type="java.nio.file.WatchEvent.Kind&lt;?>[]"
+                   isStructured="false"/>
+    <ParameterInfo id="modifiers" Type="java.nio.file.WatchEvent.Modifier[]"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.file.WatchKey"
+                  BeanClass="java.nio.file.WatchKey" id="register"
+                  ReturnNodeName="WatchKey">
+    <ParameterInfo id="watcher" Type="java.nio.file.WatchService"
+                   isStructured="true"/>
+    <ParameterInfo id="events" Type="java.nio.file.WatchEvent.Kind&lt;?>[]"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="java.util.Iterator&lt;java.nio.file.Path>" id="iterator"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="int" id="compareTo"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="other" Type="java.nio.file.Path" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="other" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="hashCode"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+</JavaBean>

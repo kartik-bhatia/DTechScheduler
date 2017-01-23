@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="PropertyChangeEvent" Package="java.beans"
+          BeanClass="java.beans.PropertyChangeEvent" isJavaBased="true">
+  <Attribute Name="propertyName" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="newValue" IsUpdateable="0" Type="java.lang.Object"/>
+  <Attribute Name="oldValue" IsUpdateable="0" Type="java.lang.Object"/>
+  <Attribute Name="propagationId" Type="java.lang.Object"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <ConstructorMethod IsCollection="true" Type="java.beans.PropertyChangeEvent"
+                     BeanClass="java.beans.PropertyChangeEvent"
+                     id="PropertyChangeEvent">
+    <ParameterInfo id="source" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="propertyName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="oldValue" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="newValue" Type="java.lang.Object" isStructured="false"/>
+  </ConstructorMethod>
+</JavaBean>

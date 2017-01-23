@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="Lecture"
+          Package="org.optaplanner.examples.curriculumcourse.domain"
+          BeanClass="org.optaplanner.examples.curriculumcourse.domain.Lecture"
+          isJavaBased="true">
+  <Attribute Name="lectureIndexInCourse" Type="int"/>
+  <Attribute Name="locked" Type="boolean"/>
+  <Attribute Name="studentSize" IsUpdateable="0" Type="int"/>
+  <Attribute Name="timeslotIndex" IsUpdateable="0" Type="int"/>
+  <Attribute Name="label" IsUpdateable="0" Type="java.lang.String"
+             PrecisionRule="false" Precision="0" Scale="0">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL ResId="org.optaplanner.examples.curriculumcourse.domain.Lecture.label_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="id" Type="java.lang.Long"/>
+  <AccessorAttribute id="course" IsCollection="false"
+                     BeanClass="org.optaplanner.examples.curriculumcourse.domain.Course"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="period" IsCollection="false"
+                     BeanClass="org.optaplanner.examples.curriculumcourse.domain.Period"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="room" IsCollection="false"
+                     BeanClass="org.optaplanner.examples.curriculumcourse.domain.Room"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="teacher" IsCollection="false"
+                     BeanClass="org.optaplanner.examples.curriculumcourse.domain.Teacher"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="studentList" IsCollection="true"
+                     BeanClass="org.optaplanner.examples.curriculumcourse.domain.Student"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="curriculumList" IsCollection="true"
+                     BeanClass="org.optaplanner.examples.curriculumcourse.domain.Curriculum"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="day" IsCollection="false"
+                     BeanClass="org.optaplanner.examples.curriculumcourse.domain.Day"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="int" id="compareTo"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="other"
+                   Type="org.optaplanner.examples.common.domain.AbstractPersistable"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true"
+                     Type="org.optaplanner.examples.curriculumcourse.domain.Lecture"
+                     BeanClass="org.optaplanner.examples.curriculumcourse.domain.Lecture"
+                     id="Lecture"/>
+  <ResourceBundle>
+    <PropertiesBundle xmlns="http://xmlns.oracle.com/adfm/resourcebundle"
+                      PropertiesFile="org.OptaPlannerBundle"/>
+  </ResourceBundle>
+</JavaBean>

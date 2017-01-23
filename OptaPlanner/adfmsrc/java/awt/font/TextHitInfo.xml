@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="TextHitInfo" Package="java.awt.font"
+          BeanClass="java.awt.font.TextHitInfo" isJavaBased="true">
+  <Attribute Name="charIndex" IsUpdateable="0" Type="int"/>
+  <Attribute Name="leadingEdge" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="insertionIndex" IsUpdateable="0" Type="int"/>
+  <AccessorAttribute id="otherHit" IsCollection="false"
+                     BeanClass="java.awt.font.TextHitInfo"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="int" id="hashCode"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="obj" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="hitInfo" Type="java.awt.font.TextHitInfo"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.font.TextHitInfo"
+                  BeanClass="java.awt.font.TextHitInfo" id="leading"
+                  ReturnNodeName="TextHitInfo">
+    <ParameterInfo id="charIndex" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.font.TextHitInfo"
+                  BeanClass="java.awt.font.TextHitInfo" id="trailing"
+                  ReturnNodeName="TextHitInfo">
+    <ParameterInfo id="charIndex" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.font.TextHitInfo"
+                  BeanClass="java.awt.font.TextHitInfo" id="beforeOffset"
+                  ReturnNodeName="TextHitInfo">
+    <ParameterInfo id="offset" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.font.TextHitInfo"
+                  BeanClass="java.awt.font.TextHitInfo" id="afterOffset"
+                  ReturnNodeName="TextHitInfo">
+    <ParameterInfo id="offset" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.font.TextHitInfo"
+                  BeanClass="java.awt.font.TextHitInfo" id="getOffsetHit"
+                  ReturnNodeName="TextHitInfo">
+    <ParameterInfo id="delta" Type="int" isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

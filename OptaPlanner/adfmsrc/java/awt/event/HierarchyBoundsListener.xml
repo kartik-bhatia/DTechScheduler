@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="HierarchyBoundsListener" Package="java.awt.event"
+          BeanClass="java.awt.event.HierarchyBoundsListener" isJavaBased="true">
+  <MethodAccessor IsCollection="false" Type="void" id="ancestorMoved"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="e" Type="java.awt.event.HierarchyEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="ancestorResized"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="e" Type="java.awt.event.HierarchyEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+</JavaBean>

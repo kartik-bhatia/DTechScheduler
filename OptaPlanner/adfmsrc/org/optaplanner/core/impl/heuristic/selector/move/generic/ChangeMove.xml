@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="ChangeMove"
+          Package="org.optaplanner.core.impl.heuristic.selector.move.generic"
+          BeanClass="org.optaplanner.core.impl.heuristic.selector.move.generic.ChangeMove"
+          isJavaBased="true">
+  <Attribute Name="entity" IsUpdateable="0" Type="java.lang.Object"/>
+  <Attribute Name="toPlanningValue" IsUpdateable="0" Type="java.lang.Object"/>
+  <Attribute Name="simpleMoveTypeDescription" IsUpdateable="0"
+             Type="java.lang.String"/>
+  <AccessorAttribute id="planningEntities" IsCollection="true"
+                     Type="java.util.Collection"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="planningValues" IsCollection="true"
+                     Type="java.util.Collection"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isMoveDoable"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="scoreDirector"
+                   Type="org.optaplanner.core.impl.score.director.ScoreDirector"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.impl.heuristic.move.Move"
+                  BeanClass="org.optaplanner.core.impl.heuristic.move.Move"
+                  id="createUndoMove" ReturnNodeName="Move">
+    <ParameterInfo id="scoreDirector"
+                   Type="org.optaplanner.core.impl.score.director.ScoreDirector"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="doMove"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="scoreDirector"
+                   Type="org.optaplanner.core.impl.score.director.ScoreDirector"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="o" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="hashCode"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <ConstructorMethod IsCollection="true"
+                     Type="org.optaplanner.core.impl.heuristic.selector.move.generic.ChangeMove"
+                     BeanClass="org.optaplanner.core.impl.heuristic.selector.move.generic.ChangeMove"
+                     id="ChangeMove">
+    <ParameterInfo id="entity" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="variableDescriptor"
+                   Type="org.optaplanner.core.impl.domain.variable.descriptor.GenuineVariableDescriptor"
+                   isStructured="true"/>
+    <ParameterInfo id="toPlanningValue" Type="java.lang.Object"
+                   isStructured="false"/>
+  </ConstructorMethod>
+</JavaBean>

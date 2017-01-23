@@ -1,0 +1,1435 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="JMenu" Package="javax.swing" BeanClass="javax.swing.JMenu"
+          isJavaBased="true">
+  <Attribute Name="UIClassID" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="selected" Type="boolean"/>
+  <Attribute Name="popupMenuVisible" Type="boolean"/>
+  <Attribute Name="delay" Type="int"/>
+  <Attribute Name="itemCount" IsUpdateable="0" Type="int"/>
+  <Attribute Name="tearOff" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="menuComponentCount" IsUpdateable="0" Type="int"/>
+  <Attribute Name="topLevelMenu" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="armed" Type="boolean"/>
+  <Attribute Name="hideActionText" Type="boolean"/>
+  <Attribute Name="text" Type="java.lang.String"/>
+  <Attribute Name="verticalAlignment" Type="int"/>
+  <Attribute Name="horizontalAlignment" Type="int"/>
+  <Attribute Name="verticalTextPosition" Type="int"/>
+  <Attribute Name="horizontalTextPosition" Type="int"/>
+  <Attribute Name="iconTextGap" Type="int"/>
+  <Attribute Name="actionCommand" Type="java.lang.String"/>
+  <Attribute Name="borderPainted" Type="boolean"/>
+  <Attribute Name="focusPainted" Type="boolean"/>
+  <Attribute Name="contentAreaFilled" Type="boolean"/>
+  <Attribute Name="rolloverEnabled" Type="boolean"/>
+  <Attribute Name="mnemonic" Type="int"/>
+  <Attribute Name="displayedMnemonicIndex" Type="int"/>
+  <Attribute Name="multiClickThreshhold" Type="long"/>
+  <Attribute Name="label" Type="java.lang.String"/>
+  <Attribute Name="inheritsPopupMenu" Type="boolean"/>
+  <Attribute Name="paintingTile" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="paintingForPrint" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="managingFocus" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="requestFocusEnabled" Type="boolean"/>
+  <Attribute Name="verifyInputWhenFocusTarget" Type="boolean"/>
+  <Attribute Name="alignmentY" Type="float"/>
+  <Attribute Name="alignmentX" Type="float"/>
+  <Attribute Name="debugGraphicsOptions" Type="int"/>
+  <Attribute Name="defaultLocale" IsUpdateable="0" Type="java.util.Locale"/>
+  <Attribute Name="toolTipText" Type="java.lang.String"/>
+  <Attribute Name="autoscrolls" Type="boolean"/>
+  <Attribute Name="x" IsUpdateable="0" Type="int"/>
+  <Attribute Name="y" IsUpdateable="0" Type="int"/>
+  <Attribute Name="width" IsUpdateable="0" Type="int"/>
+  <Attribute Name="height" IsUpdateable="0" Type="int"/>
+  <Attribute Name="opaque" Type="boolean"/>
+  <Attribute Name="validateRoot" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="optimizedDrawingEnabled" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="doubleBuffered" Type="boolean"/>
+  <Attribute Name="componentCount" IsUpdateable="0" Type="int"/>
+  <Attribute Name="focusCycleRoot" Type="boolean"/>
+  <Attribute Name="focusTraversalPolicySet" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="focusTraversalPolicyProvider" Type="boolean"/>
+  <Attribute Name="name" Type="java.lang.String"/>
+  <Attribute Name="treeLock" IsUpdateable="0" Type="java.lang.Object"/>
+  <Attribute Name="valid" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="displayable" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="visible" Type="boolean"/>
+  <Attribute Name="showing" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="enabled" Type="boolean"/>
+  <Attribute Name="foregroundSet" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="backgroundSet" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="fontSet" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="locale" Type="java.util.Locale"/>
+  <Attribute Name="lightweight" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="preferredSizeSet" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="minimumSizeSet" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="maximumSizeSet" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="cursorSet" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="ignoreRepaint" Type="boolean"/>
+  <Attribute Name="focusTraversable" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="focusable" Type="boolean"/>
+  <Attribute Name="focusTraversalKeysEnabled" Type="boolean"/>
+  <Attribute Name="focusOwner" IsUpdateable="0" Type="boolean"/>
+  <AccessorAttribute id="menuComponents" IsCollection="true"
+                     BeanClass="java.awt.Component"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="popupMenu" IsCollection="false"
+                     BeanClass="javax.swing.JPopupMenu"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="menuListeners" IsCollection="true"
+                     RemoveMethod="removeMenuListener"
+                     AddMethod="addMenuListener"
+                     BeanClass="javax.swing.event.MenuListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeMenuListener"/>
+      <Property Name="AddMethod" Value="addMenuListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="subElements" IsCollection="true"
+                     BeanClass="javax.swing.MenuElement"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="component" IsCollection="false"
+                     BeanClass="java.awt.Component"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="accessibleContext" IsCollection="false"
+                     BeanClass="javax.accessibility.AccessibleContext"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="accelerator" IsCollection="false"
+                     BeanClass="javax.swing.KeyStroke"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="menuDragMouseListeners" IsCollection="true"
+                     RemoveMethod="removeMenuDragMouseListener"
+                     AddMethod="addMenuDragMouseListener"
+                     BeanClass="javax.swing.event.MenuDragMouseListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeMenuDragMouseListener"/>
+      <Property Name="AddMethod" Value="addMenuDragMouseListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="menuKeyListeners" IsCollection="true"
+                     RemoveMethod="removeMenuKeyListener"
+                     AddMethod="addMenuKeyListener"
+                     BeanClass="javax.swing.event.MenuKeyListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeMenuKeyListener"/>
+      <Property Name="AddMethod" Value="addMenuKeyListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="margin" IsCollection="false"
+                     BeanClass="java.awt.Insets"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="icon" IsCollection="false" BeanClass="javax.swing.Icon"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="pressedIcon" IsCollection="false"
+                     BeanClass="javax.swing.Icon"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="selectedIcon" IsCollection="false"
+                     BeanClass="javax.swing.Icon"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="rolloverIcon" IsCollection="false"
+                     BeanClass="javax.swing.Icon"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="rolloverSelectedIcon" IsCollection="false"
+                     BeanClass="javax.swing.Icon"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="disabledIcon" IsCollection="false"
+                     BeanClass="javax.swing.Icon"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="disabledSelectedIcon" IsCollection="false"
+                     BeanClass="javax.swing.Icon"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="action" IsCollection="false"
+                     BeanClass="javax.swing.Action"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="model" IsCollection="false"
+                     BeanClass="javax.swing.ButtonModel"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="UI" IsCollection="false"
+                     BeanClass="javax.swing.plaf.ButtonUI"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="changeListeners" IsCollection="true"
+                     RemoveMethod="removeChangeListener"
+                     AddMethod="addChangeListener"
+                     BeanClass="javax.swing.event.ChangeListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeChangeListener"/>
+      <Property Name="AddMethod" Value="addChangeListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="actionListeners" IsCollection="true"
+                     RemoveMethod="removeActionListener"
+                     AddMethod="addActionListener"
+                     BeanClass="java.awt.event.ActionListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeActionListener"/>
+      <Property Name="AddMethod" Value="addActionListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="itemListeners" IsCollection="true"
+                     RemoveMethod="removeItemListener"
+                     AddMethod="addItemListener"
+                     BeanClass="java.awt.event.ItemListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeItemListener"/>
+      <Property Name="AddMethod" Value="addItemListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="selectedObjects" IsCollection="true"
+                     Type="java.lang.Object[]"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="java.lang.Object"/>
+  </AccessorAttribute>
+  <AccessorAttribute id="componentPopupMenu" IsCollection="false"
+                     BeanClass="javax.swing.JPopupMenu"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="nextFocusableComponent" IsCollection="false"
+                     BeanClass="java.awt.Component"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="preferredSize" IsCollection="false"
+                     BeanClass="java.awt.Dimension"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="maximumSize" IsCollection="false"
+                     BeanClass="java.awt.Dimension"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="minimumSize" IsCollection="false"
+                     BeanClass="java.awt.Dimension"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="border" IsCollection="false"
+                     BeanClass="javax.swing.border.Border"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="insets" IsCollection="false"
+                     BeanClass="java.awt.Insets"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="inputVerifier" IsCollection="false"
+                     BeanClass="javax.swing.InputVerifier"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="graphics" IsCollection="false"
+                     BeanClass="java.awt.Graphics"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="registeredKeyStrokes" IsCollection="true"
+                     BeanClass="javax.swing.KeyStroke"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="inputMap" IsCollection="false"
+                     BeanClass="javax.swing.InputMap"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="actionMap" IsCollection="false"
+                     BeanClass="javax.swing.ActionMap"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="baselineResizeBehavior" IsCollection="false"
+                     BeanClass="java.awt.Component.BaselineResizeBehavior"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="transferHandler" IsCollection="false"
+                     BeanClass="javax.swing.TransferHandler"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="visibleRect" IsCollection="false"
+                     BeanClass="java.awt.Rectangle"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="vetoableChangeListeners" IsCollection="true"
+                     RemoveMethod="removeVetoableChangeListener"
+                     AddMethod="addVetoableChangeListener"
+                     BeanClass="java.beans.VetoableChangeListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeVetoableChangeListener"/>
+      <Property Name="AddMethod" Value="addVetoableChangeListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="topLevelAncestor" IsCollection="false"
+                     BeanClass="java.awt.Container"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="ancestorListeners" IsCollection="true"
+                     RemoveMethod="removeAncestorListener"
+                     AddMethod="addAncestorListener"
+                     BeanClass="javax.swing.event.AncestorListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeAncestorListener"/>
+      <Property Name="AddMethod" Value="addAncestorListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="rootPane" IsCollection="false"
+                     BeanClass="javax.swing.JRootPane"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="components" IsCollection="true"
+                     BeanClass="java.awt.Component"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="layout" IsCollection="false"
+                     BeanClass="java.awt.LayoutManager"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="containerListeners" IsCollection="true"
+                     RemoveMethod="removeContainerListener"
+                     AddMethod="addContainerListener"
+                     BeanClass="java.awt.event.ContainerListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeContainerListener"/>
+      <Property Name="AddMethod" Value="addContainerListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="focusTraversalPolicy" IsCollection="false"
+                     BeanClass="java.awt.FocusTraversalPolicy"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="parent" IsCollection="false"
+                     BeanClass="java.awt.Container"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="peer" IsCollection="false"
+                     BeanClass="java.awt.peer.ComponentPeer"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="dropTarget" IsCollection="false"
+                     BeanClass="java.awt.dnd.DropTarget"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="graphicsConfiguration" IsCollection="false"
+                     BeanClass="java.awt.GraphicsConfiguration"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="toolkit" IsCollection="false"
+                     BeanClass="java.awt.Toolkit"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="mousePosition" IsCollection="false"
+                     BeanClass="java.awt.Point"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="foreground" IsCollection="false"
+                     BeanClass="java.awt.Color"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="background" IsCollection="false"
+                     BeanClass="java.awt.Color"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="font" IsCollection="false" BeanClass="java.awt.Font"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="colorModel" IsCollection="false"
+                     BeanClass="java.awt.image.ColorModel"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="location" IsCollection="false"
+                     BeanClass="java.awt.Point"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="locationOnScreen" IsCollection="false"
+                     BeanClass="java.awt.Point"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="size" IsCollection="false"
+                     BeanClass="java.awt.Dimension"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="bounds" IsCollection="false"
+                     BeanClass="java.awt.Rectangle"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="cursor" IsCollection="false"
+                     BeanClass="java.awt.Cursor"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="componentListeners" IsCollection="true"
+                     RemoveMethod="removeComponentListener"
+                     AddMethod="addComponentListener"
+                     BeanClass="java.awt.event.ComponentListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeComponentListener"/>
+      <Property Name="AddMethod" Value="addComponentListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="focusListeners" IsCollection="true"
+                     RemoveMethod="removeFocusListener"
+                     AddMethod="addFocusListener"
+                     BeanClass="java.awt.event.FocusListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeFocusListener"/>
+      <Property Name="AddMethod" Value="addFocusListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="hierarchyListeners" IsCollection="true"
+                     RemoveMethod="removeHierarchyListener"
+                     AddMethod="addHierarchyListener"
+                     BeanClass="java.awt.event.HierarchyListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeHierarchyListener"/>
+      <Property Name="AddMethod" Value="addHierarchyListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="hierarchyBoundsListeners" IsCollection="true"
+                     RemoveMethod="removeHierarchyBoundsListener"
+                     AddMethod="addHierarchyBoundsListener"
+                     BeanClass="java.awt.event.HierarchyBoundsListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeHierarchyBoundsListener"/>
+      <Property Name="AddMethod" Value="addHierarchyBoundsListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="keyListeners" IsCollection="true"
+                     RemoveMethod="removeKeyListener" AddMethod="addKeyListener"
+                     BeanClass="java.awt.event.KeyListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeKeyListener"/>
+      <Property Name="AddMethod" Value="addKeyListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="mouseListeners" IsCollection="true"
+                     RemoveMethod="removeMouseListener"
+                     AddMethod="addMouseListener"
+                     BeanClass="java.awt.event.MouseListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeMouseListener"/>
+      <Property Name="AddMethod" Value="addMouseListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="mouseMotionListeners" IsCollection="true"
+                     RemoveMethod="removeMouseMotionListener"
+                     AddMethod="addMouseMotionListener"
+                     BeanClass="java.awt.event.MouseMotionListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeMouseMotionListener"/>
+      <Property Name="AddMethod" Value="addMouseMotionListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="mouseWheelListeners" IsCollection="true"
+                     RemoveMethod="removeMouseWheelListener"
+                     AddMethod="addMouseWheelListener"
+                     BeanClass="java.awt.event.MouseWheelListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeMouseWheelListener"/>
+      <Property Name="AddMethod" Value="addMouseWheelListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="inputMethodListeners" IsCollection="true"
+                     RemoveMethod="removeInputMethodListener"
+                     AddMethod="addInputMethodListener"
+                     BeanClass="java.awt.event.InputMethodListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeInputMethodListener"/>
+      <Property Name="AddMethod" Value="addInputMethodListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="inputMethodRequests" IsCollection="false"
+                     BeanClass="java.awt.im.InputMethodRequests"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="inputContext" IsCollection="false"
+                     BeanClass="java.awt.im.InputContext"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="focusCycleRootAncestor" IsCollection="false"
+                     BeanClass="java.awt.Container"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="propertyChangeListeners" IsCollection="true"
+                     RemoveMethod="removePropertyChangeListener"
+                     AddMethod="addPropertyChangeListener"
+                     BeanClass="java.beans.PropertyChangeListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removePropertyChangeListener"/>
+      <Property Name="AddMethod" Value="addPropertyChangeListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="componentOrientation" IsCollection="false"
+                     BeanClass="java.awt.ComponentOrientation"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="void" id="updateUI"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setMenuLocation"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="javax.swing.JMenuItem"
+                  BeanClass="javax.swing.JMenuItem" id="add"
+                  ReturnNodeName="JMenuItem">
+    <ParameterInfo id="menuItem" Type="javax.swing.JMenuItem"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Component"
+                  BeanClass="java.awt.Component" id="add"
+                  ReturnNodeName="Component">
+    <ParameterInfo id="comp" Type="java.awt.Component" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Component"
+                  BeanClass="java.awt.Component" id="add"
+                  ReturnNodeName="Component">
+    <ParameterInfo id="comp" Type="java.awt.Component" isStructured="true"/>
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="javax.swing.JMenuItem"
+                  BeanClass="javax.swing.JMenuItem" id="add"
+                  ReturnNodeName="JMenuItem">
+    <ParameterInfo id="s" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="javax.swing.JMenuItem"
+                  BeanClass="javax.swing.JMenuItem" id="add"
+                  ReturnNodeName="JMenuItem">
+    <ParameterInfo id="a" Type="javax.swing.Action" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addSeparator"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="insert"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="s" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="pos" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="javax.swing.JMenuItem"
+                  BeanClass="javax.swing.JMenuItem" id="insert"
+                  ReturnNodeName="JMenuItem">
+    <ParameterInfo id="mi" Type="javax.swing.JMenuItem" isStructured="true"/>
+    <ParameterInfo id="pos" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="javax.swing.JMenuItem"
+                  BeanClass="javax.swing.JMenuItem" id="insert"
+                  ReturnNodeName="JMenuItem">
+    <ParameterInfo id="a" Type="javax.swing.Action" isStructured="true"/>
+    <ParameterInfo id="pos" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="insertSeparator"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="javax.swing.JMenuItem"
+                  BeanClass="javax.swing.JMenuItem" id="getItem"
+                  ReturnNodeName="JMenuItem">
+    <ParameterInfo id="pos" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="remove"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="item" Type="javax.swing.JMenuItem" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="remove"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="remove"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="comp" Type="java.awt.Component" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeAll"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.Component"
+                  BeanClass="java.awt.Component" id="getMenuComponent"
+                  ReturnNodeName="Component">
+    <ParameterInfo id="n" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isMenuComponent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="c" Type="java.awt.Component" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addMenuListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="javax.swing.event.MenuListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeMenuListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="javax.swing.event.MenuListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="menuSelectionChanged"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="isIncluded" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="applyComponentOrientation" ReturnNodeName="Return">
+    <ParameterInfo id="orientation" Type="java.awt.ComponentOrientation"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="doClick"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="pressTime" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setUI"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="ui" Type="javax.swing.plaf.MenuItemUI"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="processMouseEvent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="e" Type="java.awt.event.MouseEvent" isStructured="true"/>
+    <ParameterInfo id="path" Type="javax.swing.MenuElement[]"
+                   isStructured="false"/>
+    <ParameterInfo id="manager" Type="javax.swing.MenuSelectionManager"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="processKeyEvent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="e" Type="java.awt.event.KeyEvent" isStructured="true"/>
+    <ParameterInfo id="path" Type="javax.swing.MenuElement[]"
+                   isStructured="false"/>
+    <ParameterInfo id="manager" Type="javax.swing.MenuSelectionManager"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="processMenuDragMouseEvent" ReturnNodeName="Return">
+    <ParameterInfo id="e" Type="javax.swing.event.MenuDragMouseEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="processMenuKeyEvent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="e" Type="javax.swing.event.MenuKeyEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addMenuDragMouseListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="javax.swing.event.MenuDragMouseListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="removeMenuDragMouseListener" ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="javax.swing.event.MenuDragMouseListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addMenuKeyListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="javax.swing.event.MenuKeyListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeMenuKeyListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="javax.swing.event.MenuKeyListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="doClick"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="removeNotify"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setMnemonic"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="mnemonic" Type="char" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addChangeListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="javax.swing.event.ChangeListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeChangeListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="javax.swing.event.ChangeListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addActionListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.ActionListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeActionListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.ActionListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addItemListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.ItemListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeItemListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.ItemListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="imageUpdate"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="img" Type="java.awt.Image" isStructured="true"/>
+    <ParameterInfo id="infoflags" Type="int" isStructured="false"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="update"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="g" Type="java.awt.Graphics" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="paint"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="g" Type="java.awt.Graphics" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="printAll"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="g" Type="java.awt.Graphics" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="print"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="g" Type="java.awt.Graphics" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="requestFocus"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="requestFocus"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="temporary" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="requestFocusInWindow"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="grabFocus"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.FontMetrics"
+                  BeanClass="java.awt.FontMetrics" id="getFontMetrics"
+                  ReturnNodeName="FontMetrics">
+    <ParameterInfo id="font" Type="java.awt.Font" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="contains"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Insets"
+                  BeanClass="java.awt.Insets" id="getInsets"
+                  ReturnNodeName="Insets">
+    <ParameterInfo id="insets" Type="java.awt.Insets" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="registerKeyboardAction"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="anAction" Type="java.awt.event.ActionListener"
+                   isStructured="true"/>
+    <ParameterInfo id="aCommand" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="aKeyStroke" Type="javax.swing.KeyStroke"
+                   isStructured="true"/>
+    <ParameterInfo id="aCondition" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="registerKeyboardAction"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="anAction" Type="java.awt.event.ActionListener"
+                   isStructured="true"/>
+    <ParameterInfo id="aKeyStroke" Type="javax.swing.KeyStroke"
+                   isStructured="true"/>
+    <ParameterInfo id="aCondition" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="unregisterKeyboardAction"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="aKeyStroke" Type="javax.swing.KeyStroke"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getConditionForKeyStroke"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="aKeyStroke" Type="javax.swing.KeyStroke"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.event.ActionListener"
+                  BeanClass="java.awt.event.ActionListener"
+                  id="getActionForKeyStroke" ReturnNodeName="ActionListener">
+    <ParameterInfo id="aKeyStroke" Type="javax.swing.KeyStroke"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="resetKeyboardActions"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setInputMap"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="condition" Type="int" isStructured="false"/>
+    <ParameterInfo id="map" Type="javax.swing.InputMap" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="javax.swing.InputMap"
+                  BeanClass="javax.swing.InputMap" id="getInputMap"
+                  ReturnNodeName="InputMap">
+    <ParameterInfo id="condition" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getBaseline"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="requestDefaultFocus"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setDefaultLocale"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.util.Locale" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String"
+                  id="getToolTipText" ReturnNodeName="Return">
+    <ParameterInfo id="event" Type="java.awt.event.MouseEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Point"
+                  BeanClass="java.awt.Point" id="getToolTipLocation"
+                  ReturnNodeName="Point">
+    <ParameterInfo id="event" Type="java.awt.event.MouseEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Point"
+                  BeanClass="java.awt.Point" id="getPopupLocation"
+                  ReturnNodeName="Point">
+    <ParameterInfo id="event" Type="java.awt.event.MouseEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="javax.swing.JToolTip"
+                  BeanClass="javax.swing.JToolTip" id="createToolTip"
+                  ReturnNodeName="JToolTip"/>
+  <MethodAccessor IsCollection="false" Type="void" id="scrollRectToVisible"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="aRect" Type="java.awt.Rectangle" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="enable"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="disable"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object"
+                  id="getClientProperty" ReturnNodeName="Return">
+    <ParameterInfo id="key" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="putClientProperty"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="key" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="value" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setFocusTraversalKeys"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="id" Type="int" isStructured="false"/>
+    <ParameterInfo id="keystrokes" Type="java.util.Set" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean"
+                  id="isLightweightComponent" ReturnNodeName="Return">
+    <ParameterInfo id="c" Type="java.awt.Component" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="reshape"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Rectangle"
+                  BeanClass="java.awt.Rectangle" id="getBounds"
+                  ReturnNodeName="Rectangle">
+    <ParameterInfo id="rv" Type="java.awt.Rectangle" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Dimension"
+                  BeanClass="java.awt.Dimension" id="getSize"
+                  ReturnNodeName="Dimension">
+    <ParameterInfo id="rv" Type="java.awt.Dimension" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Point"
+                  BeanClass="java.awt.Point" id="getLocation"
+                  ReturnNodeName="Point">
+    <ParameterInfo id="rv" Type="java.awt.Point" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="computeVisibleRect"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="visibleRect" Type="java.awt.Rectangle"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="firePropertyChange"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="propertyName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="oldValue" Type="boolean" isStructured="false"/>
+    <ParameterInfo id="newValue" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="firePropertyChange"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="propertyName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="oldValue" Type="int" isStructured="false"/>
+    <ParameterInfo id="newValue" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="firePropertyChange"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="propertyName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="oldValue" Type="char" isStructured="false"/>
+    <ParameterInfo id="newValue" Type="char" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="addVetoableChangeListener" ReturnNodeName="Return">
+    <ParameterInfo id="listener" Type="java.beans.VetoableChangeListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="removeVetoableChangeListener" ReturnNodeName="Return">
+    <ParameterInfo id="listener" Type="java.beans.VetoableChangeListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addAncestorListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="listener" Type="javax.swing.event.AncestorListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeAncestorListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="listener" Type="javax.swing.event.AncestorListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="T[]" id="getListeners"
+                  ReturnNodeName="T" CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="listenerType" Type="java.lang.Class&lt;T>"
+                   isStructured="false"/>
+    <Attribute Name="element" Type="T"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addNotify"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="repaint"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="tm" Type="long" isStructured="false"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="repaint"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="r" Type="java.awt.Rectangle" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="revalidate"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="paintImmediately"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="paintImmediately"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="r" Type="java.awt.Rectangle" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="countComponents"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.Component"
+                  BeanClass="java.awt.Component" id="getComponent"
+                  ReturnNodeName="Component">
+    <ParameterInfo id="n" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Insets"
+                  BeanClass="java.awt.Insets" id="insets"
+                  ReturnNodeName="Insets"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.Component"
+                  BeanClass="java.awt.Component" id="add"
+                  ReturnNodeName="Component">
+    <ParameterInfo id="name" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="comp" Type="java.awt.Component" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="add"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="comp" Type="java.awt.Component" isStructured="true"/>
+    <ParameterInfo id="constraints" Type="java.lang.Object"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="add"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="comp" Type="java.awt.Component" isStructured="true"/>
+    <ParameterInfo id="constraints" Type="java.lang.Object"
+                   isStructured="false"/>
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setComponentZOrder"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="comp" Type="java.awt.Component" isStructured="true"/>
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getComponentZOrder"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="comp" Type="java.awt.Component" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="doLayout"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="layout"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="invalidate"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="validate"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.Dimension"
+                  BeanClass="java.awt.Dimension" id="preferredSize"
+                  ReturnNodeName="Dimension"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.Dimension"
+                  BeanClass="java.awt.Dimension" id="minimumSize"
+                  ReturnNodeName="Dimension"/>
+  <MethodAccessor IsCollection="false" Type="void" id="paintComponents"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="g" Type="java.awt.Graphics" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="printComponents"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="g" Type="java.awt.Graphics" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addContainerListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.ContainerListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeContainerListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.ContainerListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="deliverEvent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="e" Type="java.awt.Event" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Component"
+                  BeanClass="java.awt.Component" id="getComponentAt"
+                  ReturnNodeName="Component">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Component"
+                  BeanClass="java.awt.Component" id="getComponentAt"
+                  ReturnNodeName="Component">
+    <ParameterInfo id="p" Type="java.awt.Point" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Component"
+                  BeanClass="java.awt.Component" id="locate"
+                  ReturnNodeName="Component">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Point"
+                  BeanClass="java.awt.Point" id="getMousePosition"
+                  ReturnNodeName="Point">
+    <ParameterInfo id="allowChildren" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Component"
+                  BeanClass="java.awt.Component" id="findComponentAt"
+                  ReturnNodeName="Component">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Component"
+                  BeanClass="java.awt.Component" id="findComponentAt"
+                  ReturnNodeName="Component">
+    <ParameterInfo id="p" Type="java.awt.Point" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isAncestorOf"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="c" Type="java.awt.Component" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="list"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="out" Type="java.io.PrintStream" isStructured="true"/>
+    <ParameterInfo id="indent" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="list"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="out" Type="java.io.PrintWriter" isStructured="true"/>
+    <ParameterInfo id="indent" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="java.awt.AWTKeyStroke"
+                  BeanClass="java.awt.AWTKeyStroke" id="getFocusTraversalKeys"
+                  ReturnNodeName="AWTKeyStroke"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="id" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean"
+                  id="areFocusTraversalKeysSet" ReturnNodeName="Return">
+    <ParameterInfo id="id" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isFocusCycleRoot"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="container" Type="java.awt.Container"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="transferFocusBackward"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="transferFocusDownCycle"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="addPropertyChangeListener" ReturnNodeName="Return">
+    <ParameterInfo id="listener" Type="java.beans.PropertyChangeListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="addPropertyChangeListener" ReturnNodeName="Return">
+    <ParameterInfo id="propertyName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="listener" Type="java.beans.PropertyChangeListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="enable"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="b" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="enableInputMethods"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="enable" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="show"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="show"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="b" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="hide"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.Point"
+                  BeanClass="java.awt.Point" id="location"
+                  ReturnNodeName="Point"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setLocation"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="move"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Dimension"
+                  BeanClass="java.awt.Dimension" id="size"
+                  ReturnNodeName="Dimension"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setSize"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="resize"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="resize"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="d" Type="java.awt.Dimension" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Rectangle"
+                  BeanClass="java.awt.Rectangle" id="bounds"
+                  ReturnNodeName="Rectangle"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setBounds"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="paintAll"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="g" Type="java.awt.Graphics" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="repaint"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="repaint"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="tm" Type="long" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="repaint"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Image"
+                  BeanClass="java.awt.Image" id="createImage"
+                  ReturnNodeName="Image">
+    <ParameterInfo id="producer" Type="java.awt.image.ImageProducer"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Image"
+                  BeanClass="java.awt.Image" id="createImage"
+                  ReturnNodeName="Image">
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.VolatileImage"
+                  BeanClass="java.awt.image.VolatileImage"
+                  id="createVolatileImage" ReturnNodeName="VolatileImage">
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.VolatileImage"
+                  BeanClass="java.awt.image.VolatileImage"
+                  id="createVolatileImage" ReturnNodeName="VolatileImage">
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+    <ParameterInfo id="caps" Type="java.awt.ImageCapabilities"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="prepareImage"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="image" Type="java.awt.Image" isStructured="true"/>
+    <ParameterInfo id="observer" Type="java.awt.image.ImageObserver"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="prepareImage"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="image" Type="java.awt.Image" isStructured="true"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+    <ParameterInfo id="observer" Type="java.awt.image.ImageObserver"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="checkImage"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="image" Type="java.awt.Image" isStructured="true"/>
+    <ParameterInfo id="observer" Type="java.awt.image.ImageObserver"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="checkImage"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="image" Type="java.awt.Image" isStructured="true"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+    <ParameterInfo id="observer" Type="java.awt.image.ImageObserver"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="contains"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p" Type="java.awt.Point" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="inside"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="dispatchEvent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="e" Type="java.awt.AWTEvent" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="postEvent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="e" Type="java.awt.Event" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addComponentListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.ComponentListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeComponentListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.ComponentListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addFocusListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.FocusListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeFocusListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.FocusListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addHierarchyListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.HierarchyListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeHierarchyListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.HierarchyListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="addHierarchyBoundsListener" ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.HierarchyBoundsListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="removeHierarchyBoundsListener" ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.HierarchyBoundsListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addKeyListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.KeyListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeKeyListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.KeyListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addMouseListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.MouseListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeMouseListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.MouseListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addMouseMotionListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.MouseMotionListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="removeMouseMotionListener" ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.MouseMotionListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addMouseWheelListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.MouseWheelListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeMouseWheelListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.MouseWheelListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addInputMethodListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.InputMethodListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="removeInputMethodListener" ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.InputMethodListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="handleEvent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="evt" Type="java.awt.Event" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="mouseDown"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="evt" Type="java.awt.Event" isStructured="true"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="mouseDrag"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="evt" Type="java.awt.Event" isStructured="true"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="mouseUp"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="evt" Type="java.awt.Event" isStructured="true"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="mouseMove"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="evt" Type="java.awt.Event" isStructured="true"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="mouseEnter"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="evt" Type="java.awt.Event" isStructured="true"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="mouseExit"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="evt" Type="java.awt.Event" isStructured="true"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="keyDown"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="evt" Type="java.awt.Event" isStructured="true"/>
+    <ParameterInfo id="key" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="keyUp"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="evt" Type="java.awt.Event" isStructured="true"/>
+    <ParameterInfo id="key" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="action"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="evt" Type="java.awt.Event" isStructured="true"/>
+    <ParameterInfo id="what" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="gotFocus"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="evt" Type="java.awt.Event" isStructured="true"/>
+    <ParameterInfo id="what" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="lostFocus"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="evt" Type="java.awt.Event" isStructured="true"/>
+    <ParameterInfo id="what" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="transferFocus"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="nextFocus"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="transferFocusUpCycle"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="hasFocus"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="add"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="popup" Type="java.awt.PopupMenu" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="remove"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="popup" Type="java.awt.MenuComponent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="list"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="list"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="out" Type="java.io.PrintStream" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="list"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="out" Type="java.io.PrintWriter" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="removePropertyChangeListener" ReturnNodeName="Return">
+    <ParameterInfo id="listener" Type="java.beans.PropertyChangeListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="removePropertyChangeListener" ReturnNodeName="Return">
+    <ParameterInfo id="propertyName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="listener" Type="java.beans.PropertyChangeListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="java.beans.PropertyChangeListener"
+                  BeanClass="java.beans.PropertyChangeListener"
+                  id="getPropertyChangeListeners"
+                  ReturnNodeName="PropertyChangeListener"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="propertyName" Type="java.lang.String"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="firePropertyChange"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="propertyName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="oldValue" Type="byte" isStructured="false"/>
+    <ParameterInfo id="newValue" Type="byte" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="firePropertyChange"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="propertyName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="oldValue" Type="short" isStructured="false"/>
+    <ParameterInfo id="newValue" Type="short" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="firePropertyChange"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="propertyName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="oldValue" Type="long" isStructured="false"/>
+    <ParameterInfo id="newValue" Type="long" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="firePropertyChange"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="propertyName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="oldValue" Type="float" isStructured="false"/>
+    <ParameterInfo id="newValue" Type="float" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="firePropertyChange"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="propertyName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="oldValue" Type="double" isStructured="false"/>
+    <ParameterInfo id="newValue" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true" Type="javax.swing.JMenu"
+                     BeanClass="javax.swing.JMenu" id="JMenu">
+    <ParameterInfo id="s" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="b" Type="boolean" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="javax.swing.JMenu"
+                     BeanClass="javax.swing.JMenu" id="JMenu">
+    <ParameterInfo id="a" Type="javax.swing.Action" isStructured="true"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="javax.swing.JMenu"
+                     BeanClass="javax.swing.JMenu" id="JMenu">
+    <ParameterInfo id="s" Type="java.lang.String" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="javax.swing.JMenu"
+                     BeanClass="javax.swing.JMenu" id="JMenu"/>
+</JavaBean>

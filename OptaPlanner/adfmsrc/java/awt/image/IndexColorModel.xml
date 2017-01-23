@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="IndexColorModel" Package="java.awt.image"
+          BeanClass="java.awt.image.IndexColorModel" isJavaBased="true">
+  <Attribute Name="transparency" IsUpdateable="0" Type="int"/>
+  <Attribute Name="mapSize" IsUpdateable="0" Type="int"/>
+  <Attribute Name="transparentPixel" IsUpdateable="0" Type="int"/>
+  <Attribute Name="valid" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="validPixels" IsUpdateable="0" Type="java.math.BigInteger"/>
+  <Attribute Name="alphaPremultiplied" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="transferType" IsUpdateable="0" Type="int"/>
+  <Attribute Name="pixelSize" IsUpdateable="0" Type="int"/>
+  <Attribute Name="numComponents" IsUpdateable="0" Type="int"/>
+  <Attribute Name="numColorComponents" IsUpdateable="0" Type="int"/>
+  <AccessorAttribute id="componentSize" IsCollection="true" Type="int[]"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="int"/>
+  </AccessorAttribute>
+  <AccessorAttribute id="RGBdefault" IsCollection="false"
+                     BeanClass="java.awt.image.ColorModel"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="colorSpace" IsCollection="false"
+                     BeanClass="java.awt.color.ColorSpace"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="void" id="getReds"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="r" Type="byte[]" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="getGreens"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="g" Type="byte[]" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="getBlues"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="b" Type="byte[]" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="getAlphas"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="a" Type="byte[]" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="getRGBs"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="rgb" Type="int[]" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getRed"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="pixel" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getGreen"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="pixel" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getBlue"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="pixel" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getAlpha"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="pixel" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getRGB"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="pixel" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object"
+                  id="getDataElements" ReturnNodeName="Return">
+    <ParameterInfo id="rgb" Type="int" isStructured="false"/>
+    <ParameterInfo id="pixel" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object"
+                  id="getDataElements" ReturnNodeName="Return">
+    <ParameterInfo id="components" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="offset" Type="int" isStructured="false"/>
+    <ParameterInfo id="obj" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="int[]" id="getComponents"
+                  ReturnNodeName="int"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="pixel" Type="int" isStructured="false"/>
+    <ParameterInfo id="components" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="offset" Type="int" isStructured="false"/>
+    <Attribute Name="element" Type="int"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="int[]" id="getComponents"
+                  ReturnNodeName="int"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="pixel" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="components" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="offset" Type="int" isStructured="false"/>
+    <Attribute Name="element" Type="int"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getDataElement"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="components" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="offset" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.WritableRaster"
+                  BeanClass="java.awt.image.WritableRaster"
+                  id="createCompatibleWritableRaster"
+                  ReturnNodeName="WritableRaster">
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isCompatibleRaster"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="raster" Type="java.awt.image.Raster"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.SampleModel"
+                  BeanClass="java.awt.image.SampleModel"
+                  id="createCompatibleSampleModel" ReturnNodeName="SampleModel">
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean"
+                  id="isCompatibleSampleModel" ReturnNodeName="Return">
+    <ParameterInfo id="sm" Type="java.awt.image.SampleModel"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.BufferedImage"
+                  BeanClass="java.awt.image.BufferedImage"
+                  id="convertToIntDiscrete" ReturnNodeName="BufferedImage">
+    <ParameterInfo id="raster" Type="java.awt.image.Raster"
+                   isStructured="true"/>
+    <ParameterInfo id="forceARGB" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isValid"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="pixel" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="finalize"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="hasAlpha"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="int" id="getComponentSize"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="componentIdx" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getRed"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="inData" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getGreen"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="inData" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getBlue"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="inData" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getAlpha"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="inData" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getRGB"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="inData" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object"
+                  id="getDataElements" ReturnNodeName="Return">
+    <ParameterInfo id="normComponents" Type="float[]" isStructured="false"/>
+    <ParameterInfo id="normOffset" Type="int" isStructured="false"/>
+    <ParameterInfo id="obj" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="int[]"
+                  id="getUnnormalizedComponents" ReturnNodeName="int"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="normComponents" Type="float[]" isStructured="false"/>
+    <ParameterInfo id="normOffset" Type="int" isStructured="false"/>
+    <ParameterInfo id="components" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="offset" Type="int" isStructured="false"/>
+    <Attribute Name="element" Type="int"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="float[]"
+                  id="getNormalizedComponents" ReturnNodeName="float"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="components" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="offset" Type="int" isStructured="false"/>
+    <ParameterInfo id="normComponents" Type="float[]" isStructured="false"/>
+    <ParameterInfo id="normOffset" Type="int" isStructured="false"/>
+    <Attribute Name="element" Type="float"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="float[]"
+                  id="getNormalizedComponents" ReturnNodeName="float"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="pixel" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="normComponents" Type="float[]" isStructured="false"/>
+    <ParameterInfo id="normOffset" Type="int" isStructured="false"/>
+    <Attribute Name="element" Type="float"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getDataElement"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="normComponents" Type="float[]" isStructured="false"/>
+    <ParameterInfo id="normOffset" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="obj" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="hashCode"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.ColorModel"
+                  BeanClass="java.awt.image.ColorModel" id="coerceData"
+                  ReturnNodeName="ColorModel">
+    <ParameterInfo id="raster" Type="java.awt.image.WritableRaster"
+                   isStructured="true"/>
+    <ParameterInfo id="isAlphaPremultiplied" Type="boolean"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.WritableRaster"
+                  BeanClass="java.awt.image.WritableRaster" id="getAlphaRaster"
+                  ReturnNodeName="WritableRaster">
+    <ParameterInfo id="raster" Type="java.awt.image.WritableRaster"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true" Type="java.awt.image.IndexColorModel"
+                     BeanClass="java.awt.image.IndexColorModel"
+                     id="IndexColorModel">
+    <ParameterInfo id="bits" Type="int" isStructured="false"/>
+    <ParameterInfo id="size" Type="int" isStructured="false"/>
+    <ParameterInfo id="cmap" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="start" Type="int" isStructured="false"/>
+    <ParameterInfo id="transferType" Type="int" isStructured="false"/>
+    <ParameterInfo id="validBits" Type="java.math.BigInteger"
+                   isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.image.IndexColorModel"
+                     BeanClass="java.awt.image.IndexColorModel"
+                     id="IndexColorModel">
+    <ParameterInfo id="bits" Type="int" isStructured="false"/>
+    <ParameterInfo id="size" Type="int" isStructured="false"/>
+    <ParameterInfo id="cmap" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="start" Type="int" isStructured="false"/>
+    <ParameterInfo id="hasalpha" Type="boolean" isStructured="false"/>
+    <ParameterInfo id="trans" Type="int" isStructured="false"/>
+    <ParameterInfo id="transferType" Type="int" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.image.IndexColorModel"
+                     BeanClass="java.awt.image.IndexColorModel"
+                     id="IndexColorModel">
+    <ParameterInfo id="bits" Type="int" isStructured="false"/>
+    <ParameterInfo id="size" Type="int" isStructured="false"/>
+    <ParameterInfo id="cmap" Type="byte[]" isStructured="false"/>
+    <ParameterInfo id="start" Type="int" isStructured="false"/>
+    <ParameterInfo id="hasalpha" Type="boolean" isStructured="false"/>
+    <ParameterInfo id="trans" Type="int" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.image.IndexColorModel"
+                     BeanClass="java.awt.image.IndexColorModel"
+                     id="IndexColorModel">
+    <ParameterInfo id="bits" Type="int" isStructured="false"/>
+    <ParameterInfo id="size" Type="int" isStructured="false"/>
+    <ParameterInfo id="cmap" Type="byte[]" isStructured="false"/>
+    <ParameterInfo id="start" Type="int" isStructured="false"/>
+    <ParameterInfo id="hasalpha" Type="boolean" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.image.IndexColorModel"
+                     BeanClass="java.awt.image.IndexColorModel"
+                     id="IndexColorModel">
+    <ParameterInfo id="bits" Type="int" isStructured="false"/>
+    <ParameterInfo id="size" Type="int" isStructured="false"/>
+    <ParameterInfo id="r" Type="byte[]" isStructured="false"/>
+    <ParameterInfo id="g" Type="byte[]" isStructured="false"/>
+    <ParameterInfo id="b" Type="byte[]" isStructured="false"/>
+    <ParameterInfo id="a" Type="byte[]" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.image.IndexColorModel"
+                     BeanClass="java.awt.image.IndexColorModel"
+                     id="IndexColorModel">
+    <ParameterInfo id="bits" Type="int" isStructured="false"/>
+    <ParameterInfo id="size" Type="int" isStructured="false"/>
+    <ParameterInfo id="r" Type="byte[]" isStructured="false"/>
+    <ParameterInfo id="g" Type="byte[]" isStructured="false"/>
+    <ParameterInfo id="b" Type="byte[]" isStructured="false"/>
+    <ParameterInfo id="trans" Type="int" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.image.IndexColorModel"
+                     BeanClass="java.awt.image.IndexColorModel"
+                     id="IndexColorModel">
+    <ParameterInfo id="bits" Type="int" isStructured="false"/>
+    <ParameterInfo id="size" Type="int" isStructured="false"/>
+    <ParameterInfo id="r" Type="byte[]" isStructured="false"/>
+    <ParameterInfo id="g" Type="byte[]" isStructured="false"/>
+    <ParameterInfo id="b" Type="byte[]" isStructured="false"/>
+  </ConstructorMethod>
+</JavaBean>

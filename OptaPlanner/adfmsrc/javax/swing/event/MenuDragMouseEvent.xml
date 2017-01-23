@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="MenuDragMouseEvent" Package="javax.swing.event"
+          BeanClass="javax.swing.event.MenuDragMouseEvent" isJavaBased="true">
+  <Attribute Name="XOnScreen" IsUpdateable="0" Type="int"/>
+  <Attribute Name="YOnScreen" IsUpdateable="0" Type="int"/>
+  <Attribute Name="x" IsUpdateable="0" Type="int"/>
+  <Attribute Name="y" IsUpdateable="0" Type="int"/>
+  <Attribute Name="clickCount" IsUpdateable="0" Type="int"/>
+  <Attribute Name="button" IsUpdateable="0" Type="int"/>
+  <Attribute Name="popupTrigger" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="shiftDown" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="controlDown" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="metaDown" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="altDown" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="altGraphDown" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="when" IsUpdateable="0" Type="long"/>
+  <Attribute Name="modifiers" IsUpdateable="0" Type="int"/>
+  <Attribute Name="modifiersEx" IsUpdateable="0" Type="int"/>
+  <Attribute Name="consumed" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="ID" IsUpdateable="0" Type="int"/>
+  <AccessorAttribute id="path" IsCollection="true"
+                     BeanClass="javax.swing.MenuElement"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="menuSelectionManager" IsCollection="false"
+                     BeanClass="javax.swing.MenuSelectionManager"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="locationOnScreen" IsCollection="false"
+                     BeanClass="java.awt.Point"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="point" IsCollection="false" BeanClass="java.awt.Point"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="component" IsCollection="false"
+                     BeanClass="java.awt.Component"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="void" id="translatePoint"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String"
+                  id="getMouseModifiersText" ReturnNodeName="Return">
+    <ParameterInfo id="modifiers" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="paramString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="consume"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String"
+                  id="getModifiersExText" ReturnNodeName="Return">
+    <ParameterInfo id="modifiers" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setSource"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="newSource" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="int" id="getMaskForButton"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="button" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true"
+                     Type="javax.swing.event.MenuDragMouseEvent"
+                     BeanClass="javax.swing.event.MenuDragMouseEvent"
+                     id="MenuDragMouseEvent">
+    <ParameterInfo id="source" Type="java.awt.Component" isStructured="true"/>
+    <ParameterInfo id="id" Type="int" isStructured="false"/>
+    <ParameterInfo id="when" Type="long" isStructured="false"/>
+    <ParameterInfo id="modifiers" Type="int" isStructured="false"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="xAbs" Type="int" isStructured="false"/>
+    <ParameterInfo id="yAbs" Type="int" isStructured="false"/>
+    <ParameterInfo id="clickCount" Type="int" isStructured="false"/>
+    <ParameterInfo id="popupTrigger" Type="boolean" isStructured="false"/>
+    <ParameterInfo id="p" Type="javax.swing.MenuElement[]"
+                   isStructured="false"/>
+    <ParameterInfo id="m" Type="javax.swing.MenuSelectionManager"
+                   isStructured="true"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true"
+                     Type="javax.swing.event.MenuDragMouseEvent"
+                     BeanClass="javax.swing.event.MenuDragMouseEvent"
+                     id="MenuDragMouseEvent">
+    <ParameterInfo id="source" Type="java.awt.Component" isStructured="true"/>
+    <ParameterInfo id="id" Type="int" isStructured="false"/>
+    <ParameterInfo id="when" Type="long" isStructured="false"/>
+    <ParameterInfo id="modifiers" Type="int" isStructured="false"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="clickCount" Type="int" isStructured="false"/>
+    <ParameterInfo id="popupTrigger" Type="boolean" isStructured="false"/>
+    <ParameterInfo id="p" Type="javax.swing.MenuElement[]"
+                   isStructured="false"/>
+    <ParameterInfo id="m" Type="javax.swing.MenuSelectionManager"
+                   isStructured="true"/>
+  </ConstructorMethod>
+</JavaBean>

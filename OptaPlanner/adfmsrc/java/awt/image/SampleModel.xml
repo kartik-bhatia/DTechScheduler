@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="SampleModel" Package="java.awt.image"
+          BeanClass="java.awt.image.SampleModel" isJavaBased="true">
+  <Attribute Name="width" IsUpdateable="0" Type="int"/>
+  <Attribute Name="height" IsUpdateable="0" Type="int"/>
+  <Attribute Name="numBands" IsUpdateable="0" Type="int"/>
+  <Attribute Name="numDataElements" IsUpdateable="0" Type="int"/>
+  <Attribute Name="dataType" IsUpdateable="0" Type="int"/>
+  <Attribute Name="transferType" IsUpdateable="0" Type="int"/>
+  <AccessorAttribute id="sampleSize" IsCollection="true" Type="int[]"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="int"/>
+  </AccessorAttribute>
+  <MethodAccessor IsCollection="true" Type="int[]" id="getPixel"
+                  ReturnNodeName="int"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="iArray" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+    <Attribute Name="element" Type="int"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="float[]" id="getPixel"
+                  ReturnNodeName="float"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="fArray" Type="float[]" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+    <Attribute Name="element" Type="float"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="double[]" id="getPixel"
+                  ReturnNodeName="double"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="dArray" Type="double[]" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+    <Attribute Name="element" Type="double"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object"
+                  id="getDataElements" ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="obj" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object"
+                  id="getDataElements" ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="obj" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setDataElements"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="obj" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setDataElements"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="obj" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="int[]" id="getPixels"
+                  ReturnNodeName="int"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="iArray" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+    <Attribute Name="element" Type="int"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="float[]" id="getPixels"
+                  ReturnNodeName="float"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="fArray" Type="float[]" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+    <Attribute Name="element" Type="float"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="double[]" id="getPixels"
+                  ReturnNodeName="double"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="dArray" Type="double[]" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+    <Attribute Name="element" Type="double"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getSample"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="b" Type="int" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="float" id="getSampleFloat"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="b" Type="int" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="double" id="getSampleDouble"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="b" Type="int" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="int[]" id="getSamples"
+                  ReturnNodeName="int"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="b" Type="int" isStructured="false"/>
+    <ParameterInfo id="iArray" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+    <Attribute Name="element" Type="int"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="float[]" id="getSamples"
+                  ReturnNodeName="float"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="b" Type="int" isStructured="false"/>
+    <ParameterInfo id="fArray" Type="float[]" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+    <Attribute Name="element" Type="float"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="double[]" id="getSamples"
+                  ReturnNodeName="double"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="b" Type="int" isStructured="false"/>
+    <ParameterInfo id="dArray" Type="double[]" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+    <Attribute Name="element" Type="double"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setPixel"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="iArray" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setPixel"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="fArray" Type="float[]" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setPixel"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="dArray" Type="double[]" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setPixels"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="iArray" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setPixels"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="fArray" Type="float[]" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setPixels"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="dArray" Type="double[]" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setSample"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="b" Type="int" isStructured="false"/>
+    <ParameterInfo id="s" Type="int" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setSample"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="b" Type="int" isStructured="false"/>
+    <ParameterInfo id="s" Type="float" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setSample"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="b" Type="int" isStructured="false"/>
+    <ParameterInfo id="s" Type="double" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setSamples"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="b" Type="int" isStructured="false"/>
+    <ParameterInfo id="iArray" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setSamples"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="b" Type="int" isStructured="false"/>
+    <ParameterInfo id="fArray" Type="float[]" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setSamples"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="b" Type="int" isStructured="false"/>
+    <ParameterInfo id="dArray" Type="double[]" isStructured="false"/>
+    <ParameterInfo id="data" Type="java.awt.image.DataBuffer"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.SampleModel"
+                  BeanClass="java.awt.image.SampleModel"
+                  id="createCompatibleSampleModel" ReturnNodeName="SampleModel">
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.SampleModel"
+                  BeanClass="java.awt.image.SampleModel"
+                  id="createSubsetSampleModel" ReturnNodeName="SampleModel">
+    <ParameterInfo id="bands" Type="int[]" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.DataBuffer"
+                  BeanClass="java.awt.image.DataBuffer" id="createDataBuffer"
+                  ReturnNodeName="DataBuffer"/>
+  <MethodAccessor IsCollection="false" Type="int" id="getSampleSize"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="band" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true" Type="java.awt.image.SampleModel"
+                     BeanClass="java.awt.image.SampleModel" id="SampleModel">
+    <ParameterInfo id="dataType" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="numBands" Type="int" isStructured="false"/>
+  </ConstructorMethod>
+</JavaBean>

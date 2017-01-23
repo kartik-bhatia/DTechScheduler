@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="ChangeEvent" Package="javax.swing.event"
+          BeanClass="javax.swing.event.ChangeEvent" isJavaBased="true">
+  <ConstructorMethod IsCollection="true" Type="javax.swing.event.ChangeEvent"
+                     BeanClass="javax.swing.event.ChangeEvent" id="ChangeEvent">
+    <ParameterInfo id="source" Type="java.lang.Object" isStructured="false"/>
+  </ConstructorMethod>
+</JavaBean>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="FileSystem" Package="java.nio.file"
+          BeanClass="java.nio.file.FileSystem" isJavaBased="true">
+  <Attribute Name="open" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="readOnly" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="separator" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="rootDirectories" IsUpdateable="0"
+             Type="java.lang.Iterable&lt;java.nio.file.Path>"/>
+  <Attribute Name="fileStores" IsUpdateable="0"
+             Type="java.lang.Iterable&lt;java.nio.file.FileStore>"/>
+  <AccessorAttribute id="userPrincipalLookupService" IsCollection="false"
+                     BeanClass="java.nio.file.attribute.UserPrincipalLookupService"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false"
+                  Type="java.nio.file.spi.FileSystemProvider"
+                  BeanClass="java.nio.file.spi.FileSystemProvider" id="provider"
+                  ReturnNodeName="FileSystemProvider"/>
+  <MethodAccessor IsCollection="false" Type="void" id="close"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="true" Type="java.util.Set"
+                  id="supportedFileAttributeViews" ReturnNodeName="String"
+                  CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="java.lang.String"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.file.Path"
+                  BeanClass="java.nio.file.Path" id="getPath"
+                  ReturnNodeName="Path">
+    <ParameterInfo id="first" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="more" Type="java.lang.String[]" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.file.PathMatcher"
+                  BeanClass="java.nio.file.PathMatcher" id="getPathMatcher"
+                  ReturnNodeName="PathMatcher">
+    <ParameterInfo id="syntaxAndPattern" Type="java.lang.String"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.file.WatchService"
+                  BeanClass="java.nio.file.WatchService" id="newWatchService"
+                  ReturnNodeName="WatchService"/>
+</JavaBean>

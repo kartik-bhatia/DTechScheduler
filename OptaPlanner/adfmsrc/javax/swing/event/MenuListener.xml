@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="MenuListener" Package="javax.swing.event"
+          BeanClass="javax.swing.event.MenuListener" isJavaBased="true">
+  <MethodAccessor IsCollection="false" Type="void" id="menuSelected"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="e" Type="javax.swing.event.MenuEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="menuDeselected"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="e" Type="javax.swing.event.MenuEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="menuCanceled"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="e" Type="javax.swing.event.MenuEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+</JavaBean>

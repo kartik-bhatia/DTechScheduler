@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="ShortBuffer" Package="java.nio" BeanClass="java.nio.ShortBuffer"
+          isJavaBased="true">
+  <Attribute Name="direct" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="readOnly" IsUpdateable="0" Type="boolean"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.ShortBuffer"
+                  BeanClass="java.nio.ShortBuffer" id="allocate"
+                  ReturnNodeName="ShortBuffer">
+    <ParameterInfo id="capacity" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.ShortBuffer"
+                  BeanClass="java.nio.ShortBuffer" id="wrap"
+                  ReturnNodeName="ShortBuffer">
+    <ParameterInfo id="array" Type="short[]" isStructured="false"/>
+    <ParameterInfo id="offset" Type="int" isStructured="false"/>
+    <ParameterInfo id="length" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.ShortBuffer"
+                  BeanClass="java.nio.ShortBuffer" id="wrap"
+                  ReturnNodeName="ShortBuffer">
+    <ParameterInfo id="array" Type="short[]" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.ShortBuffer"
+                  BeanClass="java.nio.ShortBuffer" id="slice"
+                  ReturnNodeName="ShortBuffer"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.ShortBuffer"
+                  BeanClass="java.nio.ShortBuffer" id="duplicate"
+                  ReturnNodeName="ShortBuffer"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.ShortBuffer"
+                  BeanClass="java.nio.ShortBuffer" id="asReadOnlyBuffer"
+                  ReturnNodeName="ShortBuffer"/>
+  <MethodAccessor IsCollection="false" Type="short" id="get"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.ShortBuffer"
+                  BeanClass="java.nio.ShortBuffer" id="put"
+                  ReturnNodeName="ShortBuffer">
+    <ParameterInfo id="s" Type="short" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="short" id="get"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.ShortBuffer"
+                  BeanClass="java.nio.ShortBuffer" id="put"
+                  ReturnNodeName="ShortBuffer">
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+    <ParameterInfo id="s" Type="short" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.ShortBuffer"
+                  BeanClass="java.nio.ShortBuffer" id="get"
+                  ReturnNodeName="ShortBuffer">
+    <ParameterInfo id="dst" Type="short[]" isStructured="false"/>
+    <ParameterInfo id="offset" Type="int" isStructured="false"/>
+    <ParameterInfo id="length" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.ShortBuffer"
+                  BeanClass="java.nio.ShortBuffer" id="get"
+                  ReturnNodeName="ShortBuffer">
+    <ParameterInfo id="dst" Type="short[]" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.ShortBuffer"
+                  BeanClass="java.nio.ShortBuffer" id="put"
+                  ReturnNodeName="ShortBuffer">
+    <ParameterInfo id="src" Type="java.nio.ShortBuffer" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.ShortBuffer"
+                  BeanClass="java.nio.ShortBuffer" id="put"
+                  ReturnNodeName="ShortBuffer">
+    <ParameterInfo id="src" Type="short[]" isStructured="false"/>
+    <ParameterInfo id="offset" Type="int" isStructured="false"/>
+    <ParameterInfo id="length" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.ShortBuffer"
+                  BeanClass="java.nio.ShortBuffer" id="put"
+                  ReturnNodeName="ShortBuffer">
+    <ParameterInfo id="src" Type="short[]" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="hasArray"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="true" Type="java.lang.Object" id="array"
+                  ReturnNodeName="short"
+                  CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="short"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="arrayOffset"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.ShortBuffer"
+                  BeanClass="java.nio.ShortBuffer" id="compact"
+                  ReturnNodeName="ShortBuffer"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="int" id="hashCode"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="ob" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="compareTo"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="that" Type="java.nio.ShortBuffer" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.ByteOrder"
+                  BeanClass="java.nio.ByteOrder" id="order"
+                  ReturnNodeName="ByteOrder"/>
+  <MethodAccessor IsCollection="false" Type="int" id="capacity"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="int" id="position"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.Buffer"
+                  BeanClass="java.nio.Buffer" id="position"
+                  ReturnNodeName="Buffer">
+    <ParameterInfo id="newPosition" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="limit"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.Buffer"
+                  BeanClass="java.nio.Buffer" id="limit"
+                  ReturnNodeName="Buffer">
+    <ParameterInfo id="newLimit" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.Buffer"
+                  BeanClass="java.nio.Buffer" id="mark"
+                  ReturnNodeName="Buffer"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.Buffer"
+                  BeanClass="java.nio.Buffer" id="reset"
+                  ReturnNodeName="Buffer"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.Buffer"
+                  BeanClass="java.nio.Buffer" id="clear"
+                  ReturnNodeName="Buffer"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.Buffer"
+                  BeanClass="java.nio.Buffer" id="flip"
+                  ReturnNodeName="Buffer"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.Buffer"
+                  BeanClass="java.nio.Buffer" id="rewind"
+                  ReturnNodeName="Buffer"/>
+  <MethodAccessor IsCollection="false" Type="int" id="remaining"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="hasRemaining"
+                  ReturnNodeName="Return"/>
+</JavaBean>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="MenuContainer" Package="java.awt"
+          BeanClass="java.awt.MenuContainer" isJavaBased="true">
+  <AccessorAttribute id="font" IsCollection="false" BeanClass="java.awt.Font"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="void" id="remove"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="comp" Type="java.awt.MenuComponent" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="postEvent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="evt" Type="java.awt.Event" isStructured="true"/>
+  </MethodAccessor>
+</JavaBean>

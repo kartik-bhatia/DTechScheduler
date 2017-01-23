@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="PaintContext" Package="java.awt" BeanClass="java.awt.PaintContext"
+          isJavaBased="true">
+  <AccessorAttribute id="colorModel" IsCollection="false"
+                     BeanClass="java.awt.image.ColorModel"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="void" id="dispose"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.Raster"
+                  BeanClass="java.awt.image.Raster" id="getRaster"
+                  ReturnNodeName="Raster">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

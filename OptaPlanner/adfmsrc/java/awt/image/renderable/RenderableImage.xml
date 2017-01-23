@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="RenderableImage" Package="java.awt.image.renderable"
+          BeanClass="java.awt.image.renderable.RenderableImage"
+          isJavaBased="true">
+  <Attribute Name="dynamic" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="width" IsUpdateable="0" Type="float"/>
+  <Attribute Name="height" IsUpdateable="0" Type="float"/>
+  <Attribute Name="minX" IsUpdateable="0" Type="float"/>
+  <Attribute Name="minY" IsUpdateable="0" Type="float"/>
+  <AccessorAttribute id="sources" IsCollection="true"
+                     BeanClass="java.awt.image.renderable.RenderableImage"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="propertyNames" IsCollection="true"
+                     Type="java.lang.String[]"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="java.lang.String"/>
+  </AccessorAttribute>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object" id="getProperty"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="name" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.RenderedImage"
+                  BeanClass="java.awt.image.RenderedImage"
+                  id="createScaledRendering" ReturnNodeName="RenderedImage">
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="hints" Type="java.awt.RenderingHints"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.RenderedImage"
+                  BeanClass="java.awt.image.RenderedImage"
+                  id="createDefaultRendering" ReturnNodeName="RenderedImage"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.RenderedImage"
+                  BeanClass="java.awt.image.RenderedImage" id="createRendering"
+                  ReturnNodeName="RenderedImage">
+    <ParameterInfo id="renderContext"
+                   Type="java.awt.image.renderable.RenderContext"
+                   isStructured="true"/>
+  </MethodAccessor>
+</JavaBean>

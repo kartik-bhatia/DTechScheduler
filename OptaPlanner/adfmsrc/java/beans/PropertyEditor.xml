@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="PropertyEditor" Package="java.beans"
+          BeanClass="java.beans.PropertyEditor" isJavaBased="true">
+  <Attribute Name="value" Type="java.lang.Object"/>
+  <Attribute Name="paintable" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="javaInitializationString" IsUpdateable="0"
+             Type="java.lang.String"/>
+  <Attribute Name="asText" Type="java.lang.String"/>
+  <AccessorAttribute id="tags" IsCollection="true" Type="java.lang.String[]"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="java.lang.String"/>
+  </AccessorAttribute>
+  <AccessorAttribute id="customEditor" IsCollection="false"
+                     BeanClass="java.awt.Component"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="void" id="paintValue"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="gfx" Type="java.awt.Graphics" isStructured="true"/>
+    <ParameterInfo id="box" Type="java.awt.Rectangle" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="supportsCustomEditor"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="addPropertyChangeListener" ReturnNodeName="Return">
+    <ParameterInfo id="listener" Type="java.beans.PropertyChangeListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="removePropertyChangeListener" ReturnNodeName="Return">
+    <ParameterInfo id="listener" Type="java.beans.PropertyChangeListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+</JavaBean>

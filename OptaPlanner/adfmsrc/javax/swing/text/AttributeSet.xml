@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="AttributeSet" Package="javax.swing.text"
+          BeanClass="javax.swing.text.AttributeSet" isJavaBased="true">
+  <Attribute Name="attributeCount" IsUpdateable="0" Type="int"/>
+  <Attribute Name="attributeNames" IsUpdateable="0"
+             Type="java.util.Enumeration&lt;?>"/>
+  <AccessorAttribute id="resolveParent" IsCollection="false"
+                     BeanClass="javax.swing.text.AttributeSet"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isDefined"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="attrName" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isEqual"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="attr" Type="javax.swing.text.AttributeSet"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="javax.swing.text.AttributeSet"
+                  BeanClass="javax.swing.text.AttributeSet" id="copyAttributes"
+                  ReturnNodeName="AttributeSet"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object" id="getAttribute"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="key" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="containsAttribute"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="name" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="value" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="containsAttributes"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="attributes" Type="javax.swing.text.AttributeSet"
+                   isStructured="true"/>
+  </MethodAccessor>
+</JavaBean>

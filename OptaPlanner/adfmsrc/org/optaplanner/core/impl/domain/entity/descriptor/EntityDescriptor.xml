@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="EntityDescriptor"
+          Package="org.optaplanner.core.impl.domain.entity.descriptor"
+          BeanClass="org.optaplanner.core.impl.domain.entity.descriptor.EntityDescriptor"
+          isJavaBased="true">
+  <Attribute Name="entityClass" IsUpdateable="0" Type="java.lang.Class&lt;?>"/>
+  <Attribute Name="variableCount" IsUpdateable="0" Type="long"/>
+  <AccessorAttribute id="solutionDescriptor" IsCollection="false"
+                     BeanClass="org.optaplanner.core.impl.domain.solution.descriptor.SolutionDescriptor"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="movableEntitySelectionFilter" IsCollection="false"
+                     BeanClass="org.optaplanner.core.impl.heuristic.selector.common.decorator.SelectionFilter"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="decreasingDifficultySorter" IsCollection="false"
+                     BeanClass="org.optaplanner.core.impl.heuristic.selector.common.decorator.SelectionSorter"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="genuineVariableNameSet" IsCollection="true"
+                     Type="java.util.Collection"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="java.lang.String"/>
+  </AccessorAttribute>
+  <AccessorAttribute id="genuineVariableDescriptorMap" IsCollection="true"
+                     Type="java.util.Map"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element"
+               Type="java.lang.String, org.optaplanner.core.impl.domain.variable.descriptor.GenuineVariableDescriptor"/>
+  </AccessorAttribute>
+  <AccessorAttribute id="shadowVariableDescriptorMap" IsCollection="true"
+                     Type="java.util.Map"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element"
+               Type="java.lang.String, org.optaplanner.core.impl.domain.variable.descriptor.ShadowVariableDescriptor"/>
+  </AccessorAttribute>
+  <AccessorAttribute id="genuineVariableDescriptors" IsCollection="true"
+                     BeanClass="org.optaplanner.core.impl.domain.variable.descriptor.GenuineVariableDescriptor"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="declaredGenuineVariableDescriptors" IsCollection="true"
+                     BeanClass="org.optaplanner.core.impl.domain.variable.descriptor.GenuineVariableDescriptor"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="declaredShadowVariableDescriptors" IsCollection="true"
+                     BeanClass="org.optaplanner.core.impl.domain.variable.descriptor.ShadowVariableDescriptor"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="declaredVariableDescriptors" IsCollection="true"
+                     BeanClass="org.optaplanner.core.impl.domain.variable.descriptor.VariableDescriptor"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <MethodAccessor IsCollection="false" Type="void" id="processAnnotations"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="descriptorPolicy"
+                   Type="org.optaplanner.core.impl.domain.policy.DescriptorPolicy"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="linkInheritedEntityDescriptors" ReturnNodeName="Return">
+    <ParameterInfo id="descriptorPolicy"
+                   Type="org.optaplanner.core.impl.domain.policy.DescriptorPolicy"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="linkShadowSources"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="descriptorPolicy"
+                   Type="org.optaplanner.core.impl.domain.policy.DescriptorPolicy"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="matchesEntity"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="entity" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean"
+                  id="hasMovableEntitySelectionFilter" ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="hasProperty"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="propertyName" Type="java.lang.String"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean"
+                  id="hasAnyDeclaredGenuineVariableDescriptor"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean"
+                  id="hasGenuineVariableDescriptor" ReturnNodeName="Return">
+    <ParameterInfo id="variableName" Type="java.lang.String"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.impl.domain.variable.descriptor.GenuineVariableDescriptor"
+                  BeanClass="org.optaplanner.core.impl.domain.variable.descriptor.GenuineVariableDescriptor"
+                  id="getGenuineVariableDescriptor"
+                  ReturnNodeName="GenuineVariableDescriptor">
+    <ParameterInfo id="variableName" Type="java.lang.String"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean"
+                  id="hasShadowVariableDescriptor" ReturnNodeName="Return">
+    <ParameterInfo id="variableName" Type="java.lang.String"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.impl.domain.variable.descriptor.ShadowVariableDescriptor"
+                  BeanClass="org.optaplanner.core.impl.domain.variable.descriptor.ShadowVariableDescriptor"
+                  id="getShadowVariableDescriptor"
+                  ReturnNodeName="ShadowVariableDescriptor">
+    <ParameterInfo id="variableName" Type="java.lang.String"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.impl.domain.variable.descriptor.VariableDescriptor"
+                  BeanClass="org.optaplanner.core.impl.domain.variable.descriptor.VariableDescriptor"
+                  id="getVariableDescriptor"
+                  ReturnNodeName="VariableDescriptor">
+    <ParameterInfo id="variableName" Type="java.lang.String"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String"
+                  id="buildInvalidVariableNameExceptionMessage"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="variableName" Type="java.lang.String"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean"
+                  id="hasAnyChainedGenuineVariables" ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="true" Type="java.util.List" id="extractEntities"
+                  ReturnNodeName="Object"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="solution"
+                   Type="org.optaplanner.core.api.domain.solution.Solution"
+                   isStructured="true"/>
+    <Attribute Name="element" Type="java.lang.Object"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="long" id="getProblemScale"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="solution"
+                   Type="org.optaplanner.core.api.domain.solution.Solution"
+                   isStructured="true"/>
+    <ParameterInfo id="entity" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int"
+                  id="countUninitializedVariables" ReturnNodeName="Return">
+    <ParameterInfo id="entity" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isInitialized"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="entity" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int"
+                  id="countReinitializableVariables" ReturnNodeName="Return">
+    <ParameterInfo id="scoreDirector"
+                   Type="org.optaplanner.core.impl.score.director.ScoreDirector"
+                   isStructured="true"/>
+    <ParameterInfo id="entity" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <ConstructorMethod IsCollection="true"
+                     Type="org.optaplanner.core.impl.domain.entity.descriptor.EntityDescriptor"
+                     BeanClass="org.optaplanner.core.impl.domain.entity.descriptor.EntityDescriptor"
+                     id="EntityDescriptor">
+    <ParameterInfo id="solutionDescriptor"
+                   Type="org.optaplanner.core.impl.domain.solution.descriptor.SolutionDescriptor"
+                   isStructured="true"/>
+    <ParameterInfo id="entityClass" Type="java.lang.Class&lt;?>"
+                   isStructured="false"/>
+  </ConstructorMethod>
+</JavaBean>

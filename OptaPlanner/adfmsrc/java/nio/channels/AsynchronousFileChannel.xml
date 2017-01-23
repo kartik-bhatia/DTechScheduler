@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="AsynchronousFileChannel" Package="java.nio.channels"
+          BeanClass="java.nio.channels.AsynchronousFileChannel"
+          isJavaBased="true">
+  <MethodAccessor IsCollection="false"
+                  Type="java.nio.channels.AsynchronousFileChannel"
+                  BeanClass="java.nio.channels.AsynchronousFileChannel"
+                  id="open" ReturnNodeName="AsynchronousFileChannel">
+    <ParameterInfo id="file" Type="java.nio.file.Path" isStructured="true"/>
+    <ParameterInfo id="options" Type="java.util.Set" isStructured="false"/>
+    <ParameterInfo id="executor" Type="java.util.concurrent.ExecutorService"
+                   isStructured="false"/>
+    <ParameterInfo id="attrs"
+                   Type="java.nio.file.attribute.FileAttribute&lt;?>[]"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="java.nio.channels.AsynchronousFileChannel"
+                  BeanClass="java.nio.channels.AsynchronousFileChannel"
+                  id="open" ReturnNodeName="AsynchronousFileChannel">
+    <ParameterInfo id="file" Type="java.nio.file.Path" isStructured="true"/>
+    <ParameterInfo id="options" Type="java.nio.file.OpenOption[]"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="long" id="size"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false"
+                  Type="java.nio.channels.AsynchronousFileChannel"
+                  BeanClass="java.nio.channels.AsynchronousFileChannel"
+                  id="truncate" ReturnNodeName="AsynchronousFileChannel">
+    <ParameterInfo id="size" Type="long" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="force"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="metaData" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="lock"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="position" Type="long" isStructured="false"/>
+    <ParameterInfo id="size" Type="long" isStructured="false"/>
+    <ParameterInfo id="shared" Type="boolean" isStructured="false"/>
+    <ParameterInfo id="attachment" Type="A" isStructured="false"/>
+    <ParameterInfo id="handler"
+                   Type="java.nio.channels.CompletionHandler&lt;java.nio.channels.FileLock, ? super A>"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="lock"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="attachment" Type="A" isStructured="false"/>
+    <ParameterInfo id="handler"
+                   Type="java.nio.channels.CompletionHandler&lt;java.nio.channels.FileLock, ? super A>"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true"
+                  Type="java.util.concurrent.Future&lt;java.nio.channels.FileLock>"
+                  id="lock" ReturnNodeName="Future&lt;FileLock>"
+                  CollectionBeanClass="ReadOnlySingleValue">
+    <ParameterInfo id="position" Type="long" isStructured="false"/>
+    <ParameterInfo id="size" Type="long" isStructured="false"/>
+    <ParameterInfo id="shared" Type="boolean" isStructured="false"/>
+    <Attribute Name="element"
+               Type="java.util.concurrent.Future&lt;java.nio.channels.FileLock>"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true"
+                  Type="java.util.concurrent.Future&lt;java.nio.channels.FileLock>"
+                  id="lock" ReturnNodeName="Future&lt;FileLock>"
+                  CollectionBeanClass="ReadOnlySingleValue">
+    <Attribute Name="element"
+               Type="java.util.concurrent.Future&lt;java.nio.channels.FileLock>"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.channels.FileLock"
+                  BeanClass="java.nio.channels.FileLock" id="tryLock"
+                  ReturnNodeName="FileLock">
+    <ParameterInfo id="position" Type="long" isStructured="false"/>
+    <ParameterInfo id="size" Type="long" isStructured="false"/>
+    <ParameterInfo id="shared" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.channels.FileLock"
+                  BeanClass="java.nio.channels.FileLock" id="tryLock"
+                  ReturnNodeName="FileLock"/>
+  <MethodAccessor IsCollection="false" Type="void" id="read"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dst" Type="java.nio.ByteBuffer" isStructured="true"/>
+    <ParameterInfo id="position" Type="long" isStructured="false"/>
+    <ParameterInfo id="attachment" Type="A" isStructured="false"/>
+    <ParameterInfo id="handler"
+                   Type="java.nio.channels.CompletionHandler&lt;java.lang.Integer, ? super A>"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true"
+                  Type="java.util.concurrent.Future&lt;java.lang.Integer>"
+                  id="read" ReturnNodeName="Future&lt;Integer>"
+                  CollectionBeanClass="ReadOnlySingleValue">
+    <ParameterInfo id="dst" Type="java.nio.ByteBuffer" isStructured="true"/>
+    <ParameterInfo id="position" Type="long" isStructured="false"/>
+    <Attribute Name="element"
+               Type="java.util.concurrent.Future&lt;java.lang.Integer>"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="write"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="src" Type="java.nio.ByteBuffer" isStructured="true"/>
+    <ParameterInfo id="position" Type="long" isStructured="false"/>
+    <ParameterInfo id="attachment" Type="A" isStructured="false"/>
+    <ParameterInfo id="handler"
+                   Type="java.nio.channels.CompletionHandler&lt;java.lang.Integer, ? super A>"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true"
+                  Type="java.util.concurrent.Future&lt;java.lang.Integer>"
+                  id="write" ReturnNodeName="Future&lt;Integer>"
+                  CollectionBeanClass="ReadOnlySingleValue">
+    <ParameterInfo id="src" Type="java.nio.ByteBuffer" isStructured="true"/>
+    <ParameterInfo id="position" Type="long" isStructured="false"/>
+    <Attribute Name="element"
+               Type="java.util.concurrent.Future&lt;java.lang.Integer>"/>
+  </MethodAccessor>
+</JavaBean>

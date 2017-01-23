@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="TransferSupport" Package="javax.swing.TransferHandler"
+          BeanClass="javax.swing.TransferHandler.TransferSupport"
+          isJavaBased="true">
+  <Attribute Name="drop" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="dropAction" Type="int"/>
+  <Attribute Name="userDropAction" IsUpdateable="0" Type="int"/>
+  <Attribute Name="sourceDropActions" IsUpdateable="0" Type="int"/>
+  <AccessorAttribute id="component" IsCollection="false"
+                     BeanClass="java.awt.Component"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="dropLocation" IsCollection="false"
+                     BeanClass="javax.swing.TransferHandler.DropLocation"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="dataFlavors" IsCollection="true"
+                     BeanClass="java.awt.datatransfer.DataFlavor"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="transferable" IsCollection="false"
+                     BeanClass="java.awt.datatransfer.Transferable"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setShowDropLocation"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="showDropLocation" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isDataFlavorSupported"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="df" Type="java.awt.datatransfer.DataFlavor"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true"
+                     Type="javax.swing.TransferHandler.TransferSupport"
+                     BeanClass="javax.swing.TransferHandler.TransferSupport"
+                     id="TransferSupport">
+    <ParameterInfo id="component" Type="java.awt.Component"
+                   isStructured="true"/>
+    <ParameterInfo id="transferable" Type="java.awt.datatransfer.Transferable"
+                   isStructured="true"/>
+  </ConstructorMethod>
+</JavaBean>

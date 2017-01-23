@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="ContainerPeer" Package="java.awt.peer"
+          BeanClass="java.awt.peer.ContainerPeer" isJavaBased="true">
+  <Attribute Name="obscured" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="focusable" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="reparentSupported" IsUpdateable="0" Type="boolean"/>
+  <AccessorAttribute id="insets" IsCollection="false"
+                     BeanClass="java.awt.Insets"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="locationOnScreen" IsCollection="false"
+                     BeanClass="java.awt.Point"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="preferredSize" IsCollection="false"
+                     BeanClass="java.awt.Dimension"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="minimumSize" IsCollection="false"
+                     BeanClass="java.awt.Dimension"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="colorModel" IsCollection="false"
+                     BeanClass="java.awt.image.ColorModel"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="toolkit" IsCollection="false"
+                     BeanClass="java.awt.Toolkit"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="graphics" IsCollection="false"
+                     BeanClass="java.awt.Graphics"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="graphicsConfiguration" IsCollection="false"
+                     BeanClass="java.awt.GraphicsConfiguration"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="backBuffer" IsCollection="false"
+                     BeanClass="java.awt.Image"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="void" id="beginValidate"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="endValidate"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="beginLayout"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="endLayout"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="canDetermineObscurity"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setVisible"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="v" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setEnabled"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="e" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="paint"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="g" Type="java.awt.Graphics" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="print"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="g" Type="java.awt.Graphics" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setBounds"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+    <ParameterInfo id="op" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="handleEvent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="e" Type="java.awt.AWTEvent" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="coalescePaintEvent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="e" Type="java.awt.event.PaintEvent" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.FontMetrics"
+                  BeanClass="java.awt.FontMetrics" id="getFontMetrics"
+                  ReturnNodeName="FontMetrics">
+    <ParameterInfo id="font" Type="java.awt.Font" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="dispose"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setForeground"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="c" Type="java.awt.Color" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setBackground"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="c" Type="java.awt.Color" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setFont"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="f" Type="java.awt.Font" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="updateCursorImmediately"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="requestFocus"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="lightweightChild" Type="java.awt.Component"
+                   isStructured="true"/>
+    <ParameterInfo id="temporary" Type="boolean" isStructured="false"/>
+    <ParameterInfo id="focusedWindowChangeAllowed" Type="boolean"
+                   isStructured="false"/>
+    <ParameterInfo id="time" Type="long" isStructured="false"/>
+    <ParameterInfo id="cause" Type="sun.awt.CausedFocusEvent.Cause"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Image"
+                  BeanClass="java.awt.Image" id="createImage"
+                  ReturnNodeName="Image">
+    <ParameterInfo id="producer" Type="java.awt.image.ImageProducer"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Image"
+                  BeanClass="java.awt.Image" id="createImage"
+                  ReturnNodeName="Image">
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.VolatileImage"
+                  BeanClass="java.awt.image.VolatileImage"
+                  id="createVolatileImage" ReturnNodeName="VolatileImage">
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="prepareImage"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="img" Type="java.awt.Image" isStructured="true"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="o" Type="java.awt.image.ImageObserver"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="checkImage"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="img" Type="java.awt.Image" isStructured="true"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="o" Type="java.awt.image.ImageObserver"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="handlesWheelScrolling"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="createBuffers"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="numBuffers" Type="int" isStructured="false"/>
+    <ParameterInfo id="caps" Type="java.awt.BufferCapabilities"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="flip"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x1" Type="int" isStructured="false"/>
+    <ParameterInfo id="y1" Type="int" isStructured="false"/>
+    <ParameterInfo id="x2" Type="int" isStructured="false"/>
+    <ParameterInfo id="y2" Type="int" isStructured="false"/>
+    <ParameterInfo id="flipAction"
+                   Type="java.awt.BufferCapabilities.FlipContents"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="destroyBuffers"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="reparent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="newContainer" Type="java.awt.peer.ContainerPeer"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="layout"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="applyShape"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="shape" Type="sun.java2d.pipe.Region"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setZOrder"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="above" Type="java.awt.peer.ComponentPeer"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="updateGraphicsData"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="gc" Type="java.awt.GraphicsConfiguration"
+                   isStructured="true"/>
+  </MethodAccessor>
+</JavaBean>

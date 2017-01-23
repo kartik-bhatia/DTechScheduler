@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="InputMethodRequests" Package="java.awt.im"
+          BeanClass="java.awt.im.InputMethodRequests" isJavaBased="true">
+  <Attribute Name="insertPositionOffset" IsUpdateable="0" Type="int"/>
+  <Attribute Name="committedTextLength" IsUpdateable="0" Type="int"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.Rectangle"
+                  BeanClass="java.awt.Rectangle" id="getTextLocation"
+                  ReturnNodeName="Rectangle">
+    <ParameterInfo id="offset" Type="java.awt.font.TextHitInfo"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.font.TextHitInfo"
+                  BeanClass="java.awt.font.TextHitInfo" id="getLocationOffset"
+                  ReturnNodeName="TextHitInfo">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="java.text.AttributedCharacterIterator"
+                  BeanClass="java.text.AttributedCharacterIterator"
+                  id="getCommittedText"
+                  ReturnNodeName="AttributedCharacterIterator">
+    <ParameterInfo id="beginIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="endIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="attributes"
+                   Type="java.text.AttributedCharacterIterator.Attribute[]"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="java.text.AttributedCharacterIterator"
+                  BeanClass="java.text.AttributedCharacterIterator"
+                  id="cancelLatestCommittedText"
+                  ReturnNodeName="AttributedCharacterIterator">
+    <ParameterInfo id="attributes"
+                   Type="java.text.AttributedCharacterIterator.Attribute[]"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="java.text.AttributedCharacterIterator"
+                  BeanClass="java.text.AttributedCharacterIterator"
+                  id="getSelectedText"
+                  ReturnNodeName="AttributedCharacterIterator">
+    <ParameterInfo id="attributes"
+                   Type="java.text.AttributedCharacterIterator.Attribute[]"
+                   isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

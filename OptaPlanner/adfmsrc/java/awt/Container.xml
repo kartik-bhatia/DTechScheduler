@@ -1,0 +1,899 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="Container" Package="java.awt" BeanClass="java.awt.Container"
+          isJavaBased="true">
+  <Attribute Name="componentCount" IsUpdateable="0" Type="int"/>
+  <Attribute Name="alignmentX" IsUpdateable="0" Type="float"/>
+  <Attribute Name="alignmentY" IsUpdateable="0" Type="float"/>
+  <Attribute Name="focusCycleRoot" Type="boolean"/>
+  <Attribute Name="focusTraversalPolicySet" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="focusTraversalPolicyProvider" Type="boolean"/>
+  <Attribute Name="name" Type="java.lang.String"/>
+  <Attribute Name="treeLock" IsUpdateable="0" Type="java.lang.Object"/>
+  <Attribute Name="valid" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="displayable" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="visible" Type="boolean"/>
+  <Attribute Name="showing" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="enabled" Type="boolean"/>
+  <Attribute Name="doubleBuffered" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="foregroundSet" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="backgroundSet" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="fontSet" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="locale" Type="java.util.Locale"/>
+  <Attribute Name="x" IsUpdateable="0" Type="int"/>
+  <Attribute Name="y" IsUpdateable="0" Type="int"/>
+  <Attribute Name="width" IsUpdateable="0" Type="int"/>
+  <Attribute Name="height" IsUpdateable="0" Type="int"/>
+  <Attribute Name="opaque" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="lightweight" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="preferredSizeSet" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="minimumSizeSet" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="maximumSizeSet" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="cursorSet" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="ignoreRepaint" Type="boolean"/>
+  <Attribute Name="focusTraversable" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="focusable" Type="boolean"/>
+  <Attribute Name="focusTraversalKeysEnabled" Type="boolean"/>
+  <Attribute Name="focusOwner" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="validateRoot" IsUpdateable="0" Type="boolean"/>
+  <AccessorAttribute id="components" IsCollection="true"
+                     BeanClass="java.awt.Component"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="insets" IsCollection="false"
+                     BeanClass="java.awt.Insets"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="layout" IsCollection="false"
+                     BeanClass="java.awt.LayoutManager"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="preferredSize" IsCollection="false"
+                     BeanClass="java.awt.Dimension"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="minimumSize" IsCollection="false"
+                     BeanClass="java.awt.Dimension"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="maximumSize" IsCollection="false"
+                     BeanClass="java.awt.Dimension"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="containerListeners" IsCollection="true"
+                     RemoveMethod="removeContainerListener"
+                     AddMethod="addContainerListener"
+                     BeanClass="java.awt.event.ContainerListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeContainerListener"/>
+      <Property Name="AddMethod" Value="addContainerListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="focusTraversalPolicy" IsCollection="false"
+                     BeanClass="java.awt.FocusTraversalPolicy"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="parent" IsCollection="false"
+                     BeanClass="java.awt.Container"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="peer" IsCollection="false"
+                     BeanClass="java.awt.peer.ComponentPeer"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="dropTarget" IsCollection="false"
+                     BeanClass="java.awt.dnd.DropTarget"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="graphicsConfiguration" IsCollection="false"
+                     BeanClass="java.awt.GraphicsConfiguration"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="toolkit" IsCollection="false"
+                     BeanClass="java.awt.Toolkit"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="mousePosition" IsCollection="false"
+                     BeanClass="java.awt.Point"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="foreground" IsCollection="false"
+                     BeanClass="java.awt.Color"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="background" IsCollection="false"
+                     BeanClass="java.awt.Color"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="font" IsCollection="false" BeanClass="java.awt.Font"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="colorModel" IsCollection="false"
+                     BeanClass="java.awt.image.ColorModel"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="location" IsCollection="false"
+                     BeanClass="java.awt.Point"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="locationOnScreen" IsCollection="false"
+                     BeanClass="java.awt.Point"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="size" IsCollection="false"
+                     BeanClass="java.awt.Dimension"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="bounds" IsCollection="false"
+                     BeanClass="java.awt.Rectangle"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="baselineResizeBehavior" IsCollection="false"
+                     BeanClass="java.awt.Component.BaselineResizeBehavior"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="graphics" IsCollection="false"
+                     BeanClass="java.awt.Graphics"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="cursor" IsCollection="false"
+                     BeanClass="java.awt.Cursor"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="componentListeners" IsCollection="true"
+                     RemoveMethod="removeComponentListener"
+                     AddMethod="addComponentListener"
+                     BeanClass="java.awt.event.ComponentListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeComponentListener"/>
+      <Property Name="AddMethod" Value="addComponentListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="focusListeners" IsCollection="true"
+                     RemoveMethod="removeFocusListener"
+                     AddMethod="addFocusListener"
+                     BeanClass="java.awt.event.FocusListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeFocusListener"/>
+      <Property Name="AddMethod" Value="addFocusListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="hierarchyListeners" IsCollection="true"
+                     RemoveMethod="removeHierarchyListener"
+                     AddMethod="addHierarchyListener"
+                     BeanClass="java.awt.event.HierarchyListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeHierarchyListener"/>
+      <Property Name="AddMethod" Value="addHierarchyListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="hierarchyBoundsListeners" IsCollection="true"
+                     RemoveMethod="removeHierarchyBoundsListener"
+                     AddMethod="addHierarchyBoundsListener"
+                     BeanClass="java.awt.event.HierarchyBoundsListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeHierarchyBoundsListener"/>
+      <Property Name="AddMethod" Value="addHierarchyBoundsListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="keyListeners" IsCollection="true"
+                     RemoveMethod="removeKeyListener" AddMethod="addKeyListener"
+                     BeanClass="java.awt.event.KeyListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeKeyListener"/>
+      <Property Name="AddMethod" Value="addKeyListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="mouseListeners" IsCollection="true"
+                     RemoveMethod="removeMouseListener"
+                     AddMethod="addMouseListener"
+                     BeanClass="java.awt.event.MouseListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeMouseListener"/>
+      <Property Name="AddMethod" Value="addMouseListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="mouseMotionListeners" IsCollection="true"
+                     RemoveMethod="removeMouseMotionListener"
+                     AddMethod="addMouseMotionListener"
+                     BeanClass="java.awt.event.MouseMotionListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeMouseMotionListener"/>
+      <Property Name="AddMethod" Value="addMouseMotionListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="mouseWheelListeners" IsCollection="true"
+                     RemoveMethod="removeMouseWheelListener"
+                     AddMethod="addMouseWheelListener"
+                     BeanClass="java.awt.event.MouseWheelListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeMouseWheelListener"/>
+      <Property Name="AddMethod" Value="addMouseWheelListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="inputMethodListeners" IsCollection="true"
+                     RemoveMethod="removeInputMethodListener"
+                     AddMethod="addInputMethodListener"
+                     BeanClass="java.awt.event.InputMethodListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeInputMethodListener"/>
+      <Property Name="AddMethod" Value="addInputMethodListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="inputMethodRequests" IsCollection="false"
+                     BeanClass="java.awt.im.InputMethodRequests"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="inputContext" IsCollection="false"
+                     BeanClass="java.awt.im.InputContext"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="focusCycleRootAncestor" IsCollection="false"
+                     BeanClass="java.awt.Container"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="propertyChangeListeners" IsCollection="true"
+                     RemoveMethod="removePropertyChangeListener"
+                     AddMethod="addPropertyChangeListener"
+                     BeanClass="java.beans.PropertyChangeListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removePropertyChangeListener"/>
+      <Property Name="AddMethod" Value="addPropertyChangeListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="componentOrientation" IsCollection="false"
+                     BeanClass="java.awt.ComponentOrientation"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="accessibleContext" IsCollection="false"
+                     BeanClass="javax.accessibility.AccessibleContext"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="int" id="countComponents"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.Component"
+                  BeanClass="java.awt.Component" id="getComponent"
+                  ReturnNodeName="Component">
+    <ParameterInfo id="n" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Insets"
+                  BeanClass="java.awt.Insets" id="insets"
+                  ReturnNodeName="Insets"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.Component"
+                  BeanClass="java.awt.Component" id="add"
+                  ReturnNodeName="Component">
+    <ParameterInfo id="comp" Type="java.awt.Component" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Component"
+                  BeanClass="java.awt.Component" id="add"
+                  ReturnNodeName="Component">
+    <ParameterInfo id="name" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="comp" Type="java.awt.Component" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Component"
+                  BeanClass="java.awt.Component" id="add"
+                  ReturnNodeName="Component">
+    <ParameterInfo id="comp" Type="java.awt.Component" isStructured="true"/>
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="add"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="comp" Type="java.awt.Component" isStructured="true"/>
+    <ParameterInfo id="constraints" Type="java.lang.Object"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="add"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="comp" Type="java.awt.Component" isStructured="true"/>
+    <ParameterInfo id="constraints" Type="java.lang.Object"
+                   isStructured="false"/>
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setComponentZOrder"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="comp" Type="java.awt.Component" isStructured="true"/>
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getComponentZOrder"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="comp" Type="java.awt.Component" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="remove"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="remove"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="comp" Type="java.awt.Component" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeAll"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="doLayout"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="layout"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="invalidate"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="validate"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.Dimension"
+                  BeanClass="java.awt.Dimension" id="preferredSize"
+                  ReturnNodeName="Dimension"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.Dimension"
+                  BeanClass="java.awt.Dimension" id="minimumSize"
+                  ReturnNodeName="Dimension"/>
+  <MethodAccessor IsCollection="false" Type="void" id="paint"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="g" Type="java.awt.Graphics" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="update"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="g" Type="java.awt.Graphics" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="print"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="g" Type="java.awt.Graphics" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="paintComponents"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="g" Type="java.awt.Graphics" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="printComponents"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="g" Type="java.awt.Graphics" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addContainerListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.ContainerListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeContainerListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.ContainerListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="T[]" id="getListeners"
+                  ReturnNodeName="T" CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="listenerType" Type="java.lang.Class&lt;T>"
+                   isStructured="false"/>
+    <Attribute Name="element" Type="T"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="deliverEvent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="e" Type="java.awt.Event" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Component"
+                  BeanClass="java.awt.Component" id="getComponentAt"
+                  ReturnNodeName="Component">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Component"
+                  BeanClass="java.awt.Component" id="getComponentAt"
+                  ReturnNodeName="Component">
+    <ParameterInfo id="p" Type="java.awt.Point" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Component"
+                  BeanClass="java.awt.Component" id="locate"
+                  ReturnNodeName="Component">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Point"
+                  BeanClass="java.awt.Point" id="getMousePosition"
+                  ReturnNodeName="Point">
+    <ParameterInfo id="allowChildren" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Component"
+                  BeanClass="java.awt.Component" id="findComponentAt"
+                  ReturnNodeName="Component">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Component"
+                  BeanClass="java.awt.Component" id="findComponentAt"
+                  ReturnNodeName="Component">
+    <ParameterInfo id="p" Type="java.awt.Point" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addNotify"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="removeNotify"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isAncestorOf"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="c" Type="java.awt.Component" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="list"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="out" Type="java.io.PrintStream" isStructured="true"/>
+    <ParameterInfo id="indent" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="list"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="out" Type="java.io.PrintWriter" isStructured="true"/>
+    <ParameterInfo id="indent" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setFocusTraversalKeys"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="id" Type="int" isStructured="false"/>
+    <ParameterInfo id="keystrokes" Type="java.util.Set" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="java.awt.AWTKeyStroke"
+                  BeanClass="java.awt.AWTKeyStroke" id="getFocusTraversalKeys"
+                  ReturnNodeName="AWTKeyStroke"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="id" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean"
+                  id="areFocusTraversalKeysSet" ReturnNodeName="Return">
+    <ParameterInfo id="id" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isFocusCycleRoot"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="container" Type="java.awt.Container"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="transferFocusBackward"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="transferFocusDownCycle"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="applyComponentOrientation" ReturnNodeName="Return">
+    <ParameterInfo id="orientation" Type="java.awt.ComponentOrientation"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="addPropertyChangeListener" ReturnNodeName="Return">
+    <ParameterInfo id="listener" Type="java.beans.PropertyChangeListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="addPropertyChangeListener" ReturnNodeName="Return">
+    <ParameterInfo id="propertyName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="listener" Type="java.beans.PropertyChangeListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="enable"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="enable"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="b" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="disable"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="enableInputMethods"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="enable" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="show"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="show"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="b" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="hide"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.Point"
+                  BeanClass="java.awt.Point" id="getLocation"
+                  ReturnNodeName="Point">
+    <ParameterInfo id="rv" Type="java.awt.Point" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Point"
+                  BeanClass="java.awt.Point" id="location"
+                  ReturnNodeName="Point"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setLocation"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="move"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Dimension"
+                  BeanClass="java.awt.Dimension" id="getSize"
+                  ReturnNodeName="Dimension">
+    <ParameterInfo id="rv" Type="java.awt.Dimension" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Dimension"
+                  BeanClass="java.awt.Dimension" id="size"
+                  ReturnNodeName="Dimension"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setSize"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="resize"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="resize"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="d" Type="java.awt.Dimension" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Rectangle"
+                  BeanClass="java.awt.Rectangle" id="getBounds"
+                  ReturnNodeName="Rectangle">
+    <ParameterInfo id="rv" Type="java.awt.Rectangle" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Rectangle"
+                  BeanClass="java.awt.Rectangle" id="bounds"
+                  ReturnNodeName="Rectangle"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setBounds"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="reshape"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getBaseline"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.FontMetrics"
+                  BeanClass="java.awt.FontMetrics" id="getFontMetrics"
+                  ReturnNodeName="FontMetrics">
+    <ParameterInfo id="font" Type="java.awt.Font" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="paintAll"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="g" Type="java.awt.Graphics" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="repaint"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="repaint"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="tm" Type="long" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="repaint"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="repaint"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="tm" Type="long" isStructured="false"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="printAll"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="g" Type="java.awt.Graphics" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="imageUpdate"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="img" Type="java.awt.Image" isStructured="true"/>
+    <ParameterInfo id="infoflags" Type="int" isStructured="false"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Image"
+                  BeanClass="java.awt.Image" id="createImage"
+                  ReturnNodeName="Image">
+    <ParameterInfo id="producer" Type="java.awt.image.ImageProducer"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Image"
+                  BeanClass="java.awt.Image" id="createImage"
+                  ReturnNodeName="Image">
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.VolatileImage"
+                  BeanClass="java.awt.image.VolatileImage"
+                  id="createVolatileImage" ReturnNodeName="VolatileImage">
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.VolatileImage"
+                  BeanClass="java.awt.image.VolatileImage"
+                  id="createVolatileImage" ReturnNodeName="VolatileImage">
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+    <ParameterInfo id="caps" Type="java.awt.ImageCapabilities"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="prepareImage"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="image" Type="java.awt.Image" isStructured="true"/>
+    <ParameterInfo id="observer" Type="java.awt.image.ImageObserver"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="prepareImage"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="image" Type="java.awt.Image" isStructured="true"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+    <ParameterInfo id="observer" Type="java.awt.image.ImageObserver"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="checkImage"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="image" Type="java.awt.Image" isStructured="true"/>
+    <ParameterInfo id="observer" Type="java.awt.image.ImageObserver"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="checkImage"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="image" Type="java.awt.Image" isStructured="true"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+    <ParameterInfo id="observer" Type="java.awt.image.ImageObserver"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="contains"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="contains"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p" Type="java.awt.Point" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="inside"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="dispatchEvent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="e" Type="java.awt.AWTEvent" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="postEvent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="e" Type="java.awt.Event" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addComponentListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.ComponentListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeComponentListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.ComponentListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addFocusListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.FocusListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeFocusListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.FocusListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addHierarchyListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.HierarchyListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeHierarchyListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.HierarchyListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="addHierarchyBoundsListener" ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.HierarchyBoundsListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="removeHierarchyBoundsListener" ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.HierarchyBoundsListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addKeyListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.KeyListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeKeyListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.KeyListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addMouseListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.MouseListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeMouseListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.MouseListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addMouseMotionListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.MouseMotionListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="removeMouseMotionListener" ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.MouseMotionListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addMouseWheelListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.MouseWheelListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeMouseWheelListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.MouseWheelListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addInputMethodListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.InputMethodListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="removeInputMethodListener" ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.InputMethodListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="handleEvent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="evt" Type="java.awt.Event" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="mouseDown"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="evt" Type="java.awt.Event" isStructured="true"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="mouseDrag"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="evt" Type="java.awt.Event" isStructured="true"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="mouseUp"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="evt" Type="java.awt.Event" isStructured="true"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="mouseMove"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="evt" Type="java.awt.Event" isStructured="true"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="mouseEnter"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="evt" Type="java.awt.Event" isStructured="true"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="mouseExit"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="evt" Type="java.awt.Event" isStructured="true"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="keyDown"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="evt" Type="java.awt.Event" isStructured="true"/>
+    <ParameterInfo id="key" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="keyUp"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="evt" Type="java.awt.Event" isStructured="true"/>
+    <ParameterInfo id="key" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="action"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="evt" Type="java.awt.Event" isStructured="true"/>
+    <ParameterInfo id="what" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="gotFocus"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="evt" Type="java.awt.Event" isStructured="true"/>
+    <ParameterInfo id="what" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="lostFocus"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="evt" Type="java.awt.Event" isStructured="true"/>
+    <ParameterInfo id="what" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="requestFocus"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="requestFocusInWindow"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="transferFocus"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="nextFocus"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="transferFocusUpCycle"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="hasFocus"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="add"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="popup" Type="java.awt.PopupMenu" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="remove"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="popup" Type="java.awt.MenuComponent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="list"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="list"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="out" Type="java.io.PrintStream" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="list"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="out" Type="java.io.PrintWriter" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="removePropertyChangeListener" ReturnNodeName="Return">
+    <ParameterInfo id="listener" Type="java.beans.PropertyChangeListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="removePropertyChangeListener" ReturnNodeName="Return">
+    <ParameterInfo id="propertyName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="listener" Type="java.beans.PropertyChangeListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="java.beans.PropertyChangeListener"
+                  BeanClass="java.beans.PropertyChangeListener"
+                  id="getPropertyChangeListeners"
+                  ReturnNodeName="PropertyChangeListener"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="propertyName" Type="java.lang.String"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="firePropertyChange"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="propertyName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="oldValue" Type="byte" isStructured="false"/>
+    <ParameterInfo id="newValue" Type="byte" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="firePropertyChange"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="propertyName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="oldValue" Type="char" isStructured="false"/>
+    <ParameterInfo id="newValue" Type="char" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="firePropertyChange"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="propertyName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="oldValue" Type="short" isStructured="false"/>
+    <ParameterInfo id="newValue" Type="short" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="firePropertyChange"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="propertyName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="oldValue" Type="long" isStructured="false"/>
+    <ParameterInfo id="newValue" Type="long" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="firePropertyChange"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="propertyName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="oldValue" Type="float" isStructured="false"/>
+    <ParameterInfo id="newValue" Type="float" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="firePropertyChange"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="propertyName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="oldValue" Type="double" isStructured="false"/>
+    <ParameterInfo id="newValue" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="revalidate"
+                  ReturnNodeName="Return"/>
+  <ConstructorMethod IsCollection="true" Type="java.awt.Container"
+                     BeanClass="java.awt.Container" id="Container"/>
+</JavaBean>

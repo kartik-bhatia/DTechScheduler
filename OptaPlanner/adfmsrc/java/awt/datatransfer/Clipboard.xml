@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="Clipboard" Package="java.awt.datatransfer"
+          BeanClass="java.awt.datatransfer.Clipboard" isJavaBased="true">
+  <Attribute Name="name" IsUpdateable="0" Type="java.lang.String"/>
+  <AccessorAttribute id="availableDataFlavors" IsCollection="true"
+                     BeanClass="java.awt.datatransfer.DataFlavor"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="flavorListeners" IsCollection="true"
+                     RemoveMethod="removeFlavorListener"
+                     AddMethod="addFlavorListener"
+                     BeanClass="java.awt.datatransfer.FlavorListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeFlavorListener"/>
+      <Property Name="AddMethod" Value="addFlavorListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <MethodAccessor IsCollection="false" Type="void" id="setContents"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="contents" Type="java.awt.datatransfer.Transferable"
+                   isStructured="true"/>
+    <ParameterInfo id="owner" Type="java.awt.datatransfer.ClipboardOwner"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.datatransfer.Transferable"
+                  BeanClass="java.awt.datatransfer.Transferable"
+                  id="getContents" ReturnNodeName="Transferable">
+    <ParameterInfo id="requestor" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isDataFlavorAvailable"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="flavor" Type="java.awt.datatransfer.DataFlavor"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object" id="getData"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="flavor" Type="java.awt.datatransfer.DataFlavor"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addFlavorListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="listener" Type="java.awt.datatransfer.FlavorListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeFlavorListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="listener" Type="java.awt.datatransfer.FlavorListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true" Type="java.awt.datatransfer.Clipboard"
+                     BeanClass="java.awt.datatransfer.Clipboard" id="Clipboard">
+    <ParameterInfo id="name" Type="java.lang.String" isStructured="false"/>
+  </ConstructorMethod>
+</JavaBean>

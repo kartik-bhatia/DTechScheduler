@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="Move" Package="org.optaplanner.core.impl.heuristic.move"
+          BeanClass="org.optaplanner.core.impl.heuristic.move.Move"
+          isJavaBased="true">
+  <Attribute Name="simpleMoveTypeDescription" IsUpdateable="0"
+             Type="java.lang.String"/>
+  <AccessorAttribute id="planningEntities" IsCollection="true"
+                     Type="java.util.Collection"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="planningValues" IsCollection="true"
+                     Type="java.util.Collection"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isMoveDoable"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="scoreDirector"
+                   Type="org.optaplanner.core.impl.score.director.ScoreDirector"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.impl.heuristic.move.Move"
+                  BeanClass="org.optaplanner.core.impl.heuristic.move.Move"
+                  id="createUndoMove" ReturnNodeName="Move">
+    <ParameterInfo id="scoreDirector"
+                   Type="org.optaplanner.core.impl.score.director.ScoreDirector"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="doMove"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="scoreDirector"
+                   Type="org.optaplanner.core.impl.score.director.ScoreDirector"
+                   isStructured="true"/>
+  </MethodAccessor>
+</JavaBean>

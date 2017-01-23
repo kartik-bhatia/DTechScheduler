@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="SolutionBusiness"
+          Package="org.optaplanner.examples.common.business"
+          BeanClass="org.optaplanner.examples.common.business.SolutionBusiness"
+          isJavaBased="true">
+  <Attribute Name="appName" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="appDescription" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="appIconResource" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="dirName" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="importFileDirectory" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="importFileSuffix" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="exportFileSuffix" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="solutionFileName" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="solving" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="constraintMatchEnabled" IsUpdateable="0" Type="boolean"/>
+  <AccessorAttribute id="importDataDir" IsCollection="false"
+                     BeanClass="java.io.File"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="unsolvedDataDir" IsCollection="false"
+                     BeanClass="java.io.File"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="solvedDataDir" IsCollection="false"
+                     BeanClass="java.io.File"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="exportDataDir" IsCollection="false"
+                     BeanClass="java.io.File"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="unsolvedFileList" IsCollection="true"
+                     BeanClass="java.io.File"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="solvedFileList" IsCollection="true"
+                     BeanClass="java.io.File"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="solution" IsCollection="false"
+                     BeanClass="org.optaplanner.core.api.domain.solution.Solution"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="score" IsCollection="false"
+                     BeanClass="org.optaplanner.core.api.score.Score"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="constraintMatchTotalList" IsCollection="true"
+                     BeanClass="org.optaplanner.core.api.score.constraint.ConstraintMatchTotal"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setSolutionDao"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="solutionDao"
+                   Type="org.optaplanner.examples.common.persistence.SolutionDao"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setImporter"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="importer"
+                   Type="org.optaplanner.examples.common.persistence.AbstractSolutionImporter"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setExporter"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="exporter"
+                   Type="org.optaplanner.examples.common.persistence.AbstractSolutionExporter"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="hasImporter"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="hasExporter"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="updateDataDirs"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="acceptImportFile"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="file" Type="java.io.File" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setSolver"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="solver" Type="org.optaplanner.core.api.solver.Solver"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="registerForBestSolutionChanges" ReturnNodeName="Return">
+    <ParameterInfo id="solverAndPersistenceFrame"
+                   Type="org.optaplanner.examples.common.swingui.SolverAndPersistenceFrame"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="importSolution"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="file" Type="java.io.File" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="openSolution"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="file" Type="java.io.File" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="saveSolution"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="file" Type="java.io.File" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="exportSolution"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="file" Type="java.io.File" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="doMove"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="move"
+                   Type="org.optaplanner.core.impl.heuristic.move.Move"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="doProblemFactChange"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="problemFactChange"
+                   Type="org.optaplanner.core.impl.solver.ProblemFactChange"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.api.domain.solution.Solution"
+                  BeanClass="org.optaplanner.core.api.domain.solution.Solution"
+                  id="solve" ReturnNodeName="Solution">
+    <ParameterInfo id="planningProblem"
+                   Type="org.optaplanner.core.api.domain.solution.Solution"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="terminateSolvingEarly"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.impl.heuristic.selector.move.generic.ChangeMove"
+                  BeanClass="org.optaplanner.core.impl.heuristic.selector.move.generic.ChangeMove"
+                  id="createChangeMove" ReturnNodeName="ChangeMove">
+    <ParameterInfo id="entity" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="variableName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="toPlanningValue" Type="java.lang.Object"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="doChangeMove"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="entity" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="variableName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="toPlanningValue" Type="java.lang.Object"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.impl.heuristic.selector.move.generic.SwapMove"
+                  BeanClass="org.optaplanner.core.impl.heuristic.selector.move.generic.SwapMove"
+                  id="createSwapMove" ReturnNodeName="SwapMove">
+    <ParameterInfo id="leftEntity" Type="java.lang.Object"
+                   isStructured="false"/>
+    <ParameterInfo id="rightEntity" Type="java.lang.Object"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="doSwapMove"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="leftEntity" Type="java.lang.Object"
+                   isStructured="false"/>
+    <ParameterInfo id="rightEntity" Type="java.lang.Object"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true"
+                     Type="org.optaplanner.examples.common.business.SolutionBusiness"
+                     BeanClass="org.optaplanner.examples.common.business.SolutionBusiness"
+                     id="SolutionBusiness">
+    <ParameterInfo id="app" Type="org.optaplanner.examples.common.app.CommonApp"
+                   isStructured="true"/>
+  </ConstructorMethod>
+</JavaBean>

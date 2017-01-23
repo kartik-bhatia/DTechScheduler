@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="ButtonModel" Package="javax.swing"
+          BeanClass="javax.swing.ButtonModel" isJavaBased="true">
+  <Attribute Name="armed" Type="boolean"/>
+  <Attribute Name="selected" Type="boolean"/>
+  <Attribute Name="enabled" Type="boolean"/>
+  <Attribute Name="pressed" Type="boolean"/>
+  <Attribute Name="rollover" Type="boolean"/>
+  <Attribute Name="mnemonic" Type="int"/>
+  <Attribute Name="actionCommand" Type="java.lang.String"/>
+  <AccessorAttribute id="selectedObjects" IsCollection="true"
+                     Type="java.lang.Object[]"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="java.lang.Object"/>
+  </AccessorAttribute>
+  <MethodAccessor IsCollection="false" Type="void" id="setGroup"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="group" Type="javax.swing.ButtonGroup"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addActionListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.ActionListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeActionListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.ActionListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addItemListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.ItemListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeItemListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.ItemListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addChangeListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="javax.swing.event.ChangeListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeChangeListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="javax.swing.event.ChangeListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+</JavaBean>

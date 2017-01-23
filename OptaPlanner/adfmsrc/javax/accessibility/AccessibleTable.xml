@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="AccessibleTable" Package="javax.accessibility"
+          BeanClass="javax.accessibility.AccessibleTable" isJavaBased="true">
+  <Attribute Name="accessibleRowCount" IsUpdateable="0" Type="int"/>
+  <Attribute Name="accessibleColumnCount" IsUpdateable="0" Type="int"/>
+  <AccessorAttribute id="accessibleCaption" IsCollection="false"
+                     BeanClass="javax.accessibility.Accessible"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="accessibleSummary" IsCollection="false"
+                     BeanClass="javax.accessibility.Accessible"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="accessibleRowHeader" IsCollection="false"
+                     BeanClass="javax.accessibility.AccessibleTable"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="accessibleColumnHeader" IsCollection="false"
+                     BeanClass="javax.accessibility.AccessibleTable"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="selectedAccessibleRows" IsCollection="true"
+                     Type="int[]" CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="int"/>
+  </AccessorAttribute>
+  <AccessorAttribute id="selectedAccessibleColumns" IsCollection="true"
+                     Type="int[]" CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="int"/>
+  </AccessorAttribute>
+  <MethodAccessor IsCollection="false" Type="javax.accessibility.Accessible"
+                  BeanClass="javax.accessibility.Accessible"
+                  id="getAccessibleAt" ReturnNodeName="Accessible">
+    <ParameterInfo id="r" Type="int" isStructured="false"/>
+    <ParameterInfo id="c" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getAccessibleRowExtentAt"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="r" Type="int" isStructured="false"/>
+    <ParameterInfo id="c" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int"
+                  id="getAccessibleColumnExtentAt" ReturnNodeName="Return">
+    <ParameterInfo id="r" Type="int" isStructured="false"/>
+    <ParameterInfo id="c" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="javax.accessibility.Accessible"
+                  BeanClass="javax.accessibility.Accessible"
+                  id="getAccessibleRowDescription" ReturnNodeName="Accessible">
+    <ParameterInfo id="r" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="setAccessibleRowDescription" ReturnNodeName="Return">
+    <ParameterInfo id="r" Type="int" isStructured="false"/>
+    <ParameterInfo id="a" Type="javax.accessibility.Accessible"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="javax.accessibility.Accessible"
+                  BeanClass="javax.accessibility.Accessible"
+                  id="getAccessibleColumnDescription"
+                  ReturnNodeName="Accessible">
+    <ParameterInfo id="c" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="setAccessibleColumnDescription" ReturnNodeName="Return">
+    <ParameterInfo id="c" Type="int" isStructured="false"/>
+    <ParameterInfo id="a" Type="javax.accessibility.Accessible"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isAccessibleSelected"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="r" Type="int" isStructured="false"/>
+    <ParameterInfo id="c" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean"
+                  id="isAccessibleRowSelected" ReturnNodeName="Return">
+    <ParameterInfo id="r" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean"
+                  id="isAccessibleColumnSelected" ReturnNodeName="Return">
+    <ParameterInfo id="c" Type="int" isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

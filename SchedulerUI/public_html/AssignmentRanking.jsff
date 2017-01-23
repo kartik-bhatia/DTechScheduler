@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+  <af:panelGroupLayout id="pgl4" styleClass="AFStretchWidth" layout="scroll">
+  
+    <af:panelStretchLayout id="psl1" styleClass="AFStretchWidth"
+                           dimensionsFrom="children">
+      <f:facet name="bottom">
+        <af:panelStretchLayout id="psl3">
+          <f:facet name="bottom"/>
+          <f:facet name="center"/>
+          <f:facet name="start"/>
+          <f:facet name="end">
+            <af:commandButton text="Done" id="cb1" action="done"/>
+          </f:facet>
+          <f:facet name="top"/>
+        </af:panelStretchLayout>
+      </f:facet>
+      <f:facet name="center">
+        <af:panelGroupLayout layout="scroll"
+                             xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                             id="pgl1">
+          <af:panelHeader text="Assignment Rankings" id="ph1">
+            <f:facet name="context"/>
+            <f:facet name="menuBar"/>
+            <f:facet name="toolbar"/>
+            <f:facet name="legend"/>
+            <f:facet name="info"/>
+          </af:panelHeader>
+        
+          <af:treeTable value="#{bindings.subjects.treeModel}" var="node"
+                        selectionListener="#{bindings.subjects.treeModel.makeCurrent}"
+                        rowSelection="single" id="tt1" width="100%"
+                        columnStretching="last" scrollPolicy="scroll"
+                        disableColumnReordering="true" fetchSize="200"
+                        autoHeightRows="0"
+                        binding="#{backingBeanScope.AssignmentRankingBean.assignmentTreeTable}"
+                        >
+            <f:facet name="nodeStamp">
+              <af:column id="c1">
+                <af:outputText value="#{node.subjectName}" id="ot3"/>
+              </af:column>
+            </f:facet>
+            <f:facet name="pathStamp">
+              <af:outputText value="#{node}" id="ot2"/>
+            </f:facet>
+            <af:column id="c2">
+              <af:outputText value="#{node.assignmentTitle}" id="ot4">
+                <af:clientAttribute name="title" value="#{node.assignmentTitle}"/>
+                <af:attributeDragSource attribute="title"/>
+                <af:dropTarget dropListener="#{backingBeanScope.AssignmentRankingBean.dropAssignment}">
+                  <af:dataFlavor flavorClass="java.lang.Object"/>
+                </af:dropTarget>
+              </af:outputText>
+            </af:column>
+          </af:treeTable>
+        </af:panelGroupLayout>
+      </f:facet>
+      <f:facet name="start">
+        <af:spacer width="10" height="10" id="s1"/>
+      </f:facet>
+      <f:facet name="end">
+         <af:spacer width="10" height="10" id="s2"/>
+      </f:facet>
+      <f:facet name="top">
+          <af:panelStretchLayout id="psl2" endWidth="200px">
+            <f:facet name="bottom"/>
+            <f:facet name="center"/>
+            <f:facet name="start"/>
+            <f:facet name="end">
+                <af:commandButton text="Back" id="back" action="toHome"/>
+            </f:facet>
+            <f:facet name="top">
+                <af:outputText value="DTech Scheduler" id="ot1"
+                         inlineStyle="color:Blue; font-family:'Arial Rounded MT Bold'; font-size:x-large; text-align:center;"/>
+            </f:facet>
+          </af:panelStretchLayout>    
+      </f:facet>
+     </af:panelStretchLayout>
+  </af:panelGroupLayout>
+</jsp:root>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="KeyStroke" Package="javax.swing" BeanClass="javax.swing.KeyStroke"
+          isJavaBased="true">
+  <Attribute Name="keyChar" IsUpdateable="0" Type="char"/>
+  <Attribute Name="keyCode" IsUpdateable="0" Type="int"/>
+  <Attribute Name="modifiers" IsUpdateable="0" Type="int"/>
+  <Attribute Name="onKeyRelease" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="keyEventType" IsUpdateable="0" Type="int"/>
+  <MethodAccessor IsCollection="false" Type="javax.swing.KeyStroke"
+                  BeanClass="javax.swing.KeyStroke" id="getKeyStroke"
+                  ReturnNodeName="KeyStroke">
+    <ParameterInfo id="keyChar" Type="char" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="javax.swing.KeyStroke"
+                  BeanClass="javax.swing.KeyStroke" id="getKeyStroke"
+                  ReturnNodeName="KeyStroke">
+    <ParameterInfo id="keyChar" Type="char" isStructured="false"/>
+    <ParameterInfo id="onKeyRelease" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="javax.swing.KeyStroke"
+                  BeanClass="javax.swing.KeyStroke" id="getKeyStroke"
+                  ReturnNodeName="KeyStroke">
+    <ParameterInfo id="keyChar" Type="java.lang.Character"
+                   isStructured="false"/>
+    <ParameterInfo id="modifiers" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="javax.swing.KeyStroke"
+                  BeanClass="javax.swing.KeyStroke" id="getKeyStroke"
+                  ReturnNodeName="KeyStroke">
+    <ParameterInfo id="keyCode" Type="int" isStructured="false"/>
+    <ParameterInfo id="modifiers" Type="int" isStructured="false"/>
+    <ParameterInfo id="onKeyRelease" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="javax.swing.KeyStroke"
+                  BeanClass="javax.swing.KeyStroke" id="getKeyStroke"
+                  ReturnNodeName="KeyStroke">
+    <ParameterInfo id="keyCode" Type="int" isStructured="false"/>
+    <ParameterInfo id="modifiers" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="javax.swing.KeyStroke"
+                  BeanClass="javax.swing.KeyStroke" id="getKeyStroke"
+                  ReturnNodeName="KeyStroke">
+    <ParameterInfo id="s" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="javax.swing.KeyStroke"
+                  BeanClass="javax.swing.KeyStroke" id="getKeyStrokeForEvent"
+                  ReturnNodeName="KeyStroke">
+    <ParameterInfo id="anEvent" Type="java.awt.event.KeyEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.AWTKeyStroke"
+                  BeanClass="java.awt.AWTKeyStroke" id="getAWTKeyStroke"
+                  ReturnNodeName="AWTKeyStroke">
+    <ParameterInfo id="keyChar" Type="char" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.AWTKeyStroke"
+                  BeanClass="java.awt.AWTKeyStroke" id="getAWTKeyStroke"
+                  ReturnNodeName="AWTKeyStroke">
+    <ParameterInfo id="keyChar" Type="java.lang.Character"
+                   isStructured="false"/>
+    <ParameterInfo id="modifiers" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.AWTKeyStroke"
+                  BeanClass="java.awt.AWTKeyStroke" id="getAWTKeyStroke"
+                  ReturnNodeName="AWTKeyStroke">
+    <ParameterInfo id="keyCode" Type="int" isStructured="false"/>
+    <ParameterInfo id="modifiers" Type="int" isStructured="false"/>
+    <ParameterInfo id="onKeyRelease" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.AWTKeyStroke"
+                  BeanClass="java.awt.AWTKeyStroke" id="getAWTKeyStroke"
+                  ReturnNodeName="AWTKeyStroke">
+    <ParameterInfo id="keyCode" Type="int" isStructured="false"/>
+    <ParameterInfo id="modifiers" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.AWTKeyStroke"
+                  BeanClass="java.awt.AWTKeyStroke" id="getAWTKeyStroke"
+                  ReturnNodeName="AWTKeyStroke">
+    <ParameterInfo id="s" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.AWTKeyStroke"
+                  BeanClass="java.awt.AWTKeyStroke" id="getAWTKeyStrokeForEvent"
+                  ReturnNodeName="AWTKeyStroke">
+    <ParameterInfo id="anEvent" Type="java.awt.event.KeyEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="hashCode"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="anObject" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+</JavaBean>

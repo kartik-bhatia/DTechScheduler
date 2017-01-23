@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="HardSoftScore"
+          Package="org.optaplanner.core.api.score.buildin.hardsoft"
+          BeanClass="org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore"
+          isJavaBased="true">
+  <Attribute Name="hardScore" IsUpdateable="0" Type="int"/>
+  <Attribute Name="softScore" IsUpdateable="0" Type="int"/>
+  <Attribute Name="feasible" IsUpdateable="0" Type="boolean"/>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore"
+                  BeanClass="org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore"
+                  id="parseScore" ReturnNodeName="HardSoftScore">
+    <ParameterInfo id="scoreString" Type="java.lang.String"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore"
+                  BeanClass="org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore"
+                  id="valueOf" ReturnNodeName="HardSoftScore">
+    <ParameterInfo id="hardScore" Type="int" isStructured="false"/>
+    <ParameterInfo id="softScore" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore"
+                  BeanClass="org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore"
+                  id="add" ReturnNodeName="HardSoftScore">
+    <ParameterInfo id="augment"
+                   Type="org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore"
+                  BeanClass="org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore"
+                  id="subtract" ReturnNodeName="HardSoftScore">
+    <ParameterInfo id="subtrahend"
+                   Type="org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore"
+                  BeanClass="org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore"
+                  id="multiply" ReturnNodeName="HardSoftScore">
+    <ParameterInfo id="multiplicand" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore"
+                  BeanClass="org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore"
+                  id="divide" ReturnNodeName="HardSoftScore">
+    <ParameterInfo id="divisor" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore"
+                  BeanClass="org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore"
+                  id="power" ReturnNodeName="HardSoftScore">
+    <ParameterInfo id="exponent" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore"
+                  BeanClass="org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore"
+                  id="negate" ReturnNodeName="HardSoftScore"/>
+  <MethodAccessor IsCollection="true" Type="java.lang.Number[]"
+                  id="toLevelNumbers" ReturnNodeName="Number"
+                  CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="java.lang.Number"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="o" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="hashCode"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="int" id="compareTo"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="other"
+                   Type="org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean"
+                  id="isCompatibleArithmeticArgument" ReturnNodeName="Return">
+    <ParameterInfo id="otherScore" Type="org.optaplanner.core.api.score.Score"
+                   isStructured="true"/>
+  </MethodAccessor>
+</JavaBean>

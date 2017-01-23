@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subjects>
+  <Econ1>
+    <assignment rank="0">
+      <name>PT 1.3 Dream Career Price Tag Poster</name>
+    </assignment>
+    <assignment rank="1">
+      <name>UE 1.2 Unit 1 Exam Part 2</name>
+    </assignment>
+    <assignment rank="2">
+      <name>The Invention of Money Podcast</name>
+    </assignment>
+    <assignment rank="3">
+      <name>PT 1.2 Dream Career Resume</name>
+    </assignment>
+    <assignment rank="4">
+      <name>CC 1.4 Why Do People Trade?</name>
+    </assignment>
+    <assignment rank="5">
+      <name>UE 1.1 Unit 1 Exam Part 1</name>
+    </assignment>
+  </Econ1>
+  <Algebra1>
+    <assignment rank="0">
+      <name>5.1-5.3 Quiz</name>
+    </assignment>
+    <assignment rank="1">
+      <name>cc5.3 - Slope-Intercept Form</name>
+    </assignment>
+    <assignment rank="2">
+      <name>CC2.10 - Unit 2 Review</name>
+    </assignment>
+    <assignment rank="3">
+      <name>CC1.6 - Multiplying and Dividing Integers</name>
+    </assignment>
+    <assignment rank="4">
+      <name>CC1.7 - The Distributive Property</name>
+    </assignment>
+    <assignment rank="5">
+      <name>CC1.10 - Unit 1 Review</name>
+    </assignment>
+    <assignment rank="6">
+      <name>CC1.9 - Patterns, Equations, and Graphs</name>
+    </assignment>
+    <assignment rank="7">
+      <name>CC1.8 - Equations and Inverse Operations</name>
+    </assignment>
+    <assignment rank="8">
+      <name>CC1.5 - Adding and Subtracting Integers</name>
+    </assignment>
+    <assignment rank="9">
+      <name>CC1.3 - Real Numbers and the Number Line</name>
+    </assignment>
+    <assignment rank="10">
+      <name>CC1.4 - Properties of Real Numbers</name>
+    </assignment>
+    <assignment rank="11">
+      <name>CC1.1-1.2 - Variables, Expressions and Order of Operations</name>
+    </assignment>
+    <assignment rank="12">
+      <name>cc5.2 - Direct Variation</name>
+    </assignment>
+    <assignment rank="13">
+      <name>cc5.1 - Rate of Change and Slope</name>
+    </assignment>
+    <assignment rank="14">
+      <name>Unit 1 Discussion Board</name>
+    </assignment>
+    <assignment rank="15">
+      <name>CC2.1 - Solving One-Step Equations</name>
+    </assignment>
+    <assignment rank="16">
+      <name>CC2.9 - Percents</name>
+    </assignment>
+    <assignment rank="17">
+      <name>3.4, 3.6, 3.9 Notebook Check</name>
+    </assignment>
+    <assignment rank="18">
+      <name>3.1-3.3 Notebook Check</name>
+    </assignment>
+    <assignment rank="19">
+      <name>2.10 - Notebook Check</name>
+    </assignment>
+    <assignment rank="20">
+      <name>2.6-2.9 - Notebook Check</name>
+    </assignment>
+    <assignment rank="21">
+      <name>2.2-2.4 - Notebook Check</name>
+    </assignment>
+    <assignment rank="22">
+      <name>2.1 - Notebook Check</name>
+    </assignment>
+    <assignment rank="23">
+      <name>1.7-1.10 Notebook Check</name>
+    </assignment>
+    <assignment rank="24">
+      <name>1.1-1.6 Notebook Check</name>
+    </assignment>
+    <assignment rank="25">
+      <name>ue4 - Unit 4 Exam</name>
+    </assignment>
+    <assignment rank="26">
+      <name>4.1-4.4 Quiz</name>
+    </assignment>
+    <assignment rank="27">
+      <name>ue3 - Unit 3 Exam</name>
+    </assignment>
+    <assignment rank="28">
+      <name>3.1-3.4 Quiz</name>
+    </assignment>
+    <assignment rank="29">
+      <name>ue2 - Unit 2 Exam</name>
+    </assignment>
+    <assignment rank="30">
+      <name>Unit 2 Performance Task</name>
+    </assignment>
+    <assignment rank="31">
+      <name>Pick your Performance Task Problem</name>
+    </assignment>
+    <assignment rank="32">
+      <name>ue1 - Unit 1 Exam</name>
+    </assignment>
+    <assignment rank="33">
+      <name>cc4.4 - Graphing a Function Rule</name>
+    </assignment>
+    <assignment rank="34">
+      <name>cc4.7 - Arithmetic Sequences</name>
+    </assignment>
+    <assignment rank="35">
+      <name>cc4.3 - Patterns and Nonlinear Functions</name>
+    </assignment>
+    <assignment rank="36">
+      <name>cc4.6 - Formalizing Relations and Functions</name>
+    </assignment>
+    <assignment rank="37">
+      <name>cc4.2 - Patterns and Linear Functions</name>
+    </assignment>
+    <assignment rank="38">
+      <name>cc4.5 - Writing a Function Rule</name>
+    </assignment>
+    <assignment rank="39">
+      <name>cc4.1 - Using Graphs to Relate Two Quantities</name>
+    </assignment>
+    <assignment rank="40">
+      <name>cc3.6 - Compound Inequalities</name>
+    </assignment>
+    <assignment rank="41">
+      <name>cc3.3 - Solving Inequalities Using Multiplication or Division</name>
+    </assignment>
+    <assignment rank="42">
+      <name>cc3.4 - Solving Multi-Step Inequalities</name>
+    </assignment>
+    <assignment rank="43">
+      <name>cc3.2 - Solving Inequalities Using Addition and Subtraction</name>
+    </assignment>
+    <assignment rank="44">
+      <name>cc3.9 - Unit 3 Review</name>
+    </assignment>
+    <assignment rank="45">
+      <name>cc3.1 - Inequalities and Their Graphs</name>
+    </assignment>
+    <assignment rank="46">
+      <name>2.1-2.2 Quiz</name>
+    </assignment>
+    <assignment rank="47">
+      <name>CC2.7 - Solving Proportions</name>
+    </assignment>
+    <assignment rank="48">
+      <name>CC2.6 - Ratios, Rates, and Conversions</name>
+    </assignment>
+    <assignment rank="49">
+      <name>CC2.4 - Solving Equations with Variables on Both Sides</name>
+    </assignment>
+    <assignment rank="50">
+      <name>CC2.3 - Solving Multi-Step Equations</name>
+    </assignment>
+    <assignment rank="51">
+      <name>CC2.2 - Solving Two-step Equations</name>
+    </assignment>
+    <assignment rank="52">
+      <name>PT2 - Functions Performance Task</name>
+    </assignment>
+    <assignment rank="53">
+      <name>1.3.4 - Number Classifications</name>
+    </assignment>
+  </Algebra1>
+  <English1>
+    <assignment rank="0">
+      <name>Socratic Seminar</name>
+    </assignment>
+    <assignment rank="1">
+      <name>UE2.2 (Book Journal Writes- Classic Novel)</name>
+    </assignment>
+    <assignment rank="2">
+      <name>UE2.1 (Argumentative Essay)</name>
+    </assignment>
+    <assignment rank="3">
+      <name>PT2.1</name>
+    </assignment>
+    <assignment rank="4">
+      <name>Final Exam</name>
+    </assignment>
+    <assignment rank="5">
+      <name>Multimedia Storytelling</name>
+    </assignment>
+    <assignment rank="6">
+      <name>Final Book Club Write Up</name>
+    </assignment>
+    <assignment rank="7">
+      <name>Multimedia Vignette OR Fictional Narrative Synopsis</name>
+    </assignment>
+    <assignment rank="8">
+      <name>ghgh</name>
+    </assignment>
+    <assignment rank="9">
+      <name>huh</name>
+    </assignment>
+    <assignment rank="10">
+      <name>Bob</name>
+    </assignment>
+    <assignment rank="11">
+      <name>Lorem Ipsum II</name>
+    </assignment>
+    <assignment rank="12">
+      <name>Lorem Ipsum</name>
+    </assignment>
+  </English1>
+  <Physics1>
+    <assignment rank="0">
+      <name>ss2.1 three ring binder check</name>
+    </assignment>
+    <assignment rank="1">
+      <name>ue4 Test Rotational Mechanics</name>
+    </assignment>
+    <assignment rank="2">
+      <name>pt4.1 The flying Pig Lab</name>
+    </assignment>
+    <assignment rank="3">
+      <name>ue3.1 f=ma</name>
+    </assignment>
+    <assignment rank="4">
+      <name>pt3.1 Rocket Lab</name>
+    </assignment>
+    <assignment rank="5">
+      <name>pt2.1 Launch Angles Lab</name>
+    </assignment>
+    <assignment rank="6">
+      <name>ue1.2 Kinematics Solo Quiz</name>
+    </assignment>
+    <assignment rank="7">
+      <name>ue1.1 Kinematics Group Quiz</name>
+    </assignment>
+    <assignment rank="8">
+      <name>pt1.1 Graph Your Motion</name>
+    </assignment>
+    <assignment rank="9">
+      <name>CC4.1 For 2nd and 3rd laws, pressure and rotation</name>
+    </assignment>
+    <assignment rank="10">
+      <name>ss3.1 Binder Lab-Book Calculator Check</name>
+    </assignment>
+    <assignment rank="11">
+      <name>ss4.1 Binder Lab-Book Calculator Check</name>
+    </assignment>
+  </Physics1>
+  <Geometry1>
+    <assignment rank="0">
+      <name>Exit Ticket 7.1 Proportions</name>
+    </assignment>
+    <assignment rank="1">
+      <name>Exam on Trigonometry</name>
+    </assignment>
+    <assignment rank="2">
+      <name>Exam on Similarity</name>
+    </assignment>
+    <assignment rank="3">
+      <name>Exit Ticket 6.4 Rhombuses</name>
+    </assignment>
+    <assignment rank="4">
+      <name>4.7 Distance Formula</name>
+    </assignment>
+    <assignment rank="5">
+      <name>Exit Ticket 4.6</name>
+    </assignment>
+    <assignment rank="6">
+      <name>Lauch Activity Exit Ticket: The Sum of Exterior and Interior Angles</name>
+    </assignment>
+    <assignment rank="7">
+      <name>Algebra Refresher 4.4</name>
+    </assignment>
+    <assignment rank="8">
+      <name>Exit Ticket for Congruence and Triangulation 4.3</name>
+    </assignment>
+    <assignment rank="9">
+      <name>Community Grade</name>
+    </assignment>
+    <assignment rank="10">
+      <name>Exit Ticket Prove Triangles are Congruent 4.1</name>
+    </assignment>
+    <assignment rank="11">
+      <name>Comprehension Check Notes</name>
+    </assignment>
+    <assignment rank="12">
+      <name>Exam on Quadrilaterals</name>
+    </assignment>
+    <assignment rank="13">
+      <name>Performance Task 4: Logo Design Project - Submission</name>
+    </assignment>
+    <assignment rank="14">
+      <name>Exam on Parallel Properties</name>
+    </assignment>
+    <assignment rank="15">
+      <name>Exam on Logic</name>
+    </assignment>
+    <assignment rank="16">
+      <name>Upload Your Scratch Work for Unit 2 Here</name>
+    </assignment>
+    <assignment rank="17">
+      <name>2.6 Proving Angles are Congruent</name>
+    </assignment>
+    <assignment rank="18">
+      <name>Exam Corrections</name>
+    </assignment>
+    <assignment rank="19">
+      <name>2.5 Reasoning</name>
+    </assignment>
+    <assignment rank="20">
+      <name>2.4 Deductive</name>
+    </assignment>
+    <assignment rank="21">
+      <name>2.3 Biconditionals</name>
+    </assignment>
+    <assignment rank="22">
+      <name>2.2 Conditional Statements</name>
+    </assignment>
+    <assignment rank="23">
+      <name>2.1 Patterns and Inductive Reasoning</name>
+    </assignment>
+    <assignment rank="24">
+      <name>FINAL CITY PROJECT Upload here</name>
+    </assignment>
+    <assignment rank="25">
+      <name>First Draft</name>
+    </assignment>
+    <assignment rank="26">
+      <name>cc 4.6 Congruence in Right Triangles</name>
+    </assignment>
+    <assignment rank="27">
+      <name>cc4.5 Isosceles and Equilateral Triangles</name>
+    </assignment>
+    <assignment rank="28">
+      <name>cc4.4 Corresponding Parts of Congruent Triangles</name>
+    </assignment>
+    <assignment rank="29">
+      <name>cc4.3 Triangle Congruence by ASA and SAA</name>
+    </assignment>
+  </Geometry1>
+  <English3>
+    <assignment rank="0">
+      <name>cc1.1 Summary Practice #1 (8/25) [credit/no-credit]</name>
+    </assignment>
+    <assignment rank="1">
+      <name>cc1.4 Summary Practice #4 (9/21) [4 point scale]</name>
+    </assignment>
+    <assignment rank="2">
+      <name>Informal annotated bibliography for Feedly [15 point scale]</name>
+    </assignment>
+    <assignment rank="3">
+      <name>pt1.1 Turn in the essay and project here.</name>
+    </assignment>
+    <assignment rank="4">
+      <name>cc1.5 Summary Practice #5 (9/28) [4 point scale]</name>
+    </assignment>
+    <assignment rank="5">
+      <name>Summary Practice #3 volume-adjusted (9/2) [4 point scale]</name>
+    </assignment>
+    <assignment rank="6">
+      <name>cc1.2 Summary Practice #2 (8/27) [4 point scale]</name>
+    </assignment>
+    <assignment rank="7">
+      <name>cc1.3 Summary Practice #3 volume-adjusted (9/2)</name>
+    </assignment>
+    <assignment rank="8">
+      <name>ss1.1 Informal annotated bibliography for Feedly</name>
+    </assignment>
+    <assignment rank="9">
+      <name>In-class writing: Counterargument practice</name>
+    </assignment>
+    <assignment rank="10">
+      <name>In-class writing: Introduction practice</name>
+    </assignment>
+    <assignment rank="11">
+      <name>In-class writing assignment: Should you be allowed to vote?</name>
+    </assignment>
+    <assignment rank="12">
+      <name>Individual Word Spectrum</name>
+    </assignment>
+    <assignment rank="13">
+      <name>Unit Quiz 12/9</name>
+    </assignment>
+    <assignment rank="14">
+      <name>pt1.2 Turn in the project here</name>
+    </assignment>
+    <assignment rank="15">
+      <name>pt1.1 Turn in the essay w/ annotated bibliography</name>
+    </assignment>
+    <assignment rank="16">
+      <name>Argument Analysis #3 (12/14)</name>
+    </assignment>
+    <assignment rank="17">
+      <name>Argument Analysis #2 (12/7)</name>
+    </assignment>
+    <assignment rank="18">
+      <name>Argument Analysis #1 (12/2)</name>
+    </assignment>
+    <assignment rank="19">
+      <name>pt2.1 Write an argumentative essay</name>
+    </assignment>
+  </English3>
+  <WorldHistory1>
+    <assignment rank="0">
+      <name>PT2 : Submit Your Performance Task Here</name>
+    </assignment>
+    <assignment rank="1">
+      <name>UE2 : Submit Final Draft of UE2 Here</name>
+    </assignment>
+    <assignment rank="2">
+      <name>UE1 : Submit Unit One Exam Here</name>
+    </assignment>
+    <assignment rank="3">
+      <name>PT2: Submit Unit Two Performance Task Here</name>
+    </assignment>
+    <assignment rank="4">
+      <name>Submit Unit 3 Exam Here</name>
+    </assignment>
+    <assignment rank="5">
+      <name>UE2 : Submit Final Draft Here</name>
+    </assignment>
+    <assignment rank="6">
+      <name>Semester One: Self-Awareness</name>
+    </assignment>
+    <assignment rank="7">
+      <name>Submit Unit Four Exam Here</name>
+    </assignment>
+    <assignment rank="8">
+      <name>4.3</name>
+    </assignment>
+    <assignment rank="9">
+      <name>4.2</name>
+    </assignment>
+    <assignment rank="10">
+      <name>4.1</name>
+    </assignment>
+  </WorldHistory1>
+  <Chemistry1>
+    <assignment rank="0">
+      <name>Unit 2 Nuclear Chemistry Exam</name>
+    </assignment>
+    <assignment rank="1">
+      <name>Radiometric Dating Activity PT 2.3</name>
+    </assignment>
+    <assignment rank="2">
+      <name>PT 2.2 Half-life Simulation</name>
+    </assignment>
+    <assignment rank="3">
+      <name>PT 2.1 Building an Atom Simulation</name>
+    </assignment>
+    <assignment rank="4">
+      <name>Activities</name>
+    </assignment>
+    <assignment rank="5">
+      <name>WCIA 1</name>
+    </assignment>
+    <assignment rank="6">
+      <name>Unit 1 Exam</name>
+    </assignment>
+    <assignment rank="7">
+      <name>PT 1.1 Determining Percent Composition of a mixture</name>
+    </assignment>
+    <assignment rank="8">
+      <name>PT 3.2 WCIA 3</name>
+    </assignment>
+    <assignment rank="9">
+      <name>PT 3.1 Molecule Building Lab</name>
+    </assignment>
+    <assignment rank="10">
+      <name>WCIA 2</name>
+    </assignment>
+    <assignment rank="11">
+      <name>UE 5 The mole and chemical equations</name>
+    </assignment>
+    <assignment rank="12">
+      <name>PT 5.1 WCIA 5</name>
+    </assignment>
+    <assignment rank="13">
+      <name>UE 4 ionic and metallic substances</name>
+    </assignment>
+    <assignment rank="14">
+      <name>PT 4.2 WCIA 4</name>
+    </assignment>
+    <assignment rank="15">
+      <name>PT 4.1 Formula of an Ionic Compound Lab</name>
+    </assignment>
+    <assignment rank="16">
+      <name>UE 3 Molecular Substances and Lewis Structures</name>
+    </assignment>
+  </Chemistry1>
+  <Pre-calc1>
+    <assignment rank="0">
+      <name>R.2-R.6 Notebook Check</name>
+    </assignment>
+    <assignment rank="1">
+      <name>Pick your Performance Task Problem</name>
+    </assignment>
+    <assignment rank="2">
+      <name>cc2.9 - Unit 2 Review</name>
+    </assignment>
+    <assignment rank="3">
+      <name>cc2.7 - Graphing Techniques</name>
+    </assignment>
+    <assignment rank="4">
+      <name>2.1-2.4 Quiz</name>
+    </assignment>
+    <assignment rank="5">
+      <name>cc3.5 - Rational Functions: Graphs, Applications and Models</name>
+    </assignment>
+    <assignment rank="6">
+      <name>cc2.6 - Graphs of Basic (Parent) Functions</name>
+    </assignment>
+    <assignment rank="7">
+      <name>cc2.4 - Linear Functions</name>
+    </assignment>
+    <assignment rank="8">
+      <name>3.1-3.4 - Quiz</name>
+    </assignment>
+    <assignment rank="9">
+      <name>cc2.3 - Functions</name>
+    </assignment>
+    <assignment rank="10">
+      <name>cc3.3 - Zeros of Polynomial Functions</name>
+    </assignment>
+    <assignment rank="11">
+      <name>cc2.2 - Circles</name>
+    </assignment>
+    <assignment rank="12">
+      <name>ueR - Unit R Exam</name>
+    </assignment>
+    <assignment rank="13">
+      <name>cc3.2 - Synthetic Division</name>
+    </assignment>
+    <assignment rank="14">
+      <name>cc3.1 - Quadratic Functions and Models</name>
+    </assignment>
+    <assignment rank="15">
+      <name>CC1.7 - Inequalities</name>
+    </assignment>
+    <assignment rank="16">
+      <name>cc2.1 - Rectangular Coordinates and Graphs</name>
+    </assignment>
+    <assignment rank="17">
+      <name>1.1-1.2 Quiz</name>
+    </assignment>
+    <assignment rank="18">
+      <name>CC1.9 - Unit 1 Review</name>
+    </assignment>
+    <assignment rank="19">
+      <name>1.9 - Notebook Check</name>
+    </assignment>
+    <assignment rank="20">
+      <name>1.5-1.8 - Notebook Check</name>
+    </assignment>
+    <assignment rank="21">
+      <name>1.2-1.4 - Notebook Check</name>
+    </assignment>
+    <assignment rank="22">
+      <name>1.1 - Notebook Check</name>
+    </assignment>
+    <assignment rank="23">
+      <name>Unit R Discussion</name>
+    </assignment>
+    <assignment rank="24">
+      <name>R.7-R.8 Notebook Check</name>
+    </assignment>
+    <assignment rank="25">
+      <name>Unit 1 Performance Task</name>
+    </assignment>
+    <assignment rank="26">
+      <name>cc3.4 - Polynomial Functions: Graphs, Applications and Models</name>
+    </assignment>
+    <assignment rank="27">
+      <name>CCR.4 - Factoring Polynomials</name>
+    </assignment>
+    <assignment rank="28">
+      <name>CCR.3 - Polynomials</name>
+    </assignment>
+    <assignment rank="29">
+      <name>CCR.2 - Real Numbers and their Properties</name>
+    </assignment>
+    <assignment rank="30">
+      <name>R.2 - Number Classifications</name>
+    </assignment>
+    <assignment rank="31">
+      <name>CC1.8 - Absolute Value Equations and Inequalities</name>
+    </assignment>
+    <assignment rank="32">
+      <name>CC1.6 - Other Types of Equations and Applications</name>
+    </assignment>
+    <assignment rank="33">
+      <name>CC1.5 - Applications and Modeling with Quadratic Equations</name>
+    </assignment>
+    <assignment rank="34">
+      <name>CC1.4 - Quadratic Equations</name>
+    </assignment>
+    <assignment rank="35">
+      <name>CC1.3 - Complex Numbers</name>
+    </assignment>
+    <assignment rank="36">
+      <name>CC1.2 - Application and Modeling with Linear Equations</name>
+    </assignment>
+    <assignment rank="37">
+      <name>CC1.1 - Linear equations</name>
+    </assignment>
+    <assignment rank="38">
+      <name>CCR.8 - Review</name>
+    </assignment>
+    <assignment rank="39">
+      <name>CCR.7 - Radical Expressions</name>
+    </assignment>
+    <assignment rank="40">
+      <name>CCR.6 - Rational Exponents</name>
+    </assignment>
+    <assignment rank="41">
+      <name>CCR.5 - Simplifying Rational Expressions</name>
+    </assignment>
+    <assignment rank="42">
+      <name>pt2 - Function Art Performance Task</name>
+    </assignment>
+    <assignment rank="43">
+      <name>ue3 - Unit 3 Exam</name>
+    </assignment>
+    <assignment rank="44">
+      <name>ue2 - Unit 2 Exam</name>
+    </assignment>
+    <assignment rank="45">
+      <name>ue1 - Unit 1 Exam</name>
+    </assignment>
+  </Pre-calc1>
+  <Algebra3>
+    <assignment rank="0">
+      <name>cc2.5 Absolute Value Functions</name>
+    </assignment>
+    <assignment rank="1">
+      <name>cc4.7 Complex and Imaginary</name>
+    </assignment>
+    <assignment rank="2">
+      <name>Exit Ticket 3.1 Solving Systems</name>
+    </assignment>
+    <assignment rank="3">
+      <name>Exit Ticket 2.5 Graphing Absolute Value</name>
+    </assignment>
+    <assignment rank="4">
+      <name>Exit Ticket 2.3 Review Linear Equations</name>
+    </assignment>
+    <assignment rank="5">
+      <name>Exit Ticket 2.1 Functions Launch</name>
+    </assignment>
+    <assignment rank="6">
+      <name>Build Your Own (Passion)</name>
+    </assignment>
+    <assignment rank="7">
+      <name>Exam on Quadratics</name>
+    </assignment>
+    <assignment rank="8">
+      <name>Candy Catapult Performance Task - Lab Packet</name>
+    </assignment>
+    <assignment rank="9">
+      <name>Dirt Bike Challenge Packet</name>
+    </assignment>
+    <assignment rank="10">
+      <name>Linear Programming Poster</name>
+    </assignment>
+    <assignment rank="11">
+      <name>Exam on Functions</name>
+    </assignment>
+    <assignment rank="12">
+      <name>Quiz on Expressions and Patterns</name>
+    </assignment>
+    <assignment rank="13">
+      <name>cc2.3</name>
+    </assignment>
+    <assignment rank="14">
+      <name>cc2.2</name>
+    </assignment>
+    <assignment rank="15">
+      <name>cc2.1</name>
+    </assignment>
+    <assignment rank="16">
+      <name>cc3.4 Linear Programming</name>
+    </assignment>
+    <assignment rank="17">
+      <name>cc4.5 Quadratic Equations</name>
+    </assignment>
+    <assignment rank="18">
+      <name>1.5 Solving Inequalities</name>
+    </assignment>
+    <assignment rank="19">
+      <name>Exit Ticket 4.7 Imaginary</name>
+    </assignment>
+    <assignment rank="20">
+      <name>Exit Ticket 4.6 Quadratic Formula</name>
+    </assignment>
+    <assignment rank="21">
+      <name>Exit Ticket 4.5 Al-Khwarizmi and Completing the Square</name>
+    </assignment>
+    <assignment rank="22">
+      <name>Notebook Check</name>
+    </assignment>
+    <assignment rank="23">
+      <name>Exit Ticket 3.3 Systems of Inequalities</name>
+    </assignment>
+    <assignment rank="24">
+      <name>Graph of Trajectory</name>
+    </assignment>
+    <assignment rank="25">
+      <name>Exam 2 on Functions</name>
+    </assignment>
+    <assignment rank="26">
+      <name>cc4.3 Modeling with Quadratic Functions</name>
+    </assignment>
+    <assignment rank="27">
+      <name>Corrections for Exam: Upload Here</name>
+    </assignment>
+    <assignment rank="28">
+      <name>cc2.6 Two Variable Inequalities</name>
+    </assignment>
+    <assignment rank="29">
+      <name>cc2.4 Families of Functions</name>
+    </assignment>
+    <assignment rank="30">
+      <name>cc4.6 The Quadratic Formula</name>
+    </assignment>
+    <assignment rank="31">
+      <name>cc1.5 Solving Inequalities</name>
+    </assignment>
+    <assignment rank="32">
+      <name>cc4.1 Quadratic Transformations</name>
+    </assignment>
+    <assignment rank="33">
+      <name>Community Grade 1</name>
+    </assignment>
+    <assignment rank="34">
+      <name>Midterm</name>
+    </assignment>
+    <assignment rank="35">
+      <name>Quiz on Quadratics</name>
+    </assignment>
+    <assignment rank="36">
+      <name>Candy Catapult Performance Task - Packet Submission</name>
+    </assignment>
+    <assignment rank="37">
+      <name>cc4.7 The Quadratic Formula</name>
+    </assignment>
+    <assignment rank="38">
+      <name>Exam on Functions (If you still need to submit Scratchwork, please do so via email now)</name>
+    </assignment>
+    <assignment rank="39">
+      <name>Comprehension Check Work 1.1-1.3</name>
+    </assignment>
+  </Algebra3>
+</subjects>

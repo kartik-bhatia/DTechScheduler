@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="DataBuffer" Package="java.awt.image"
+          BeanClass="java.awt.image.DataBuffer" isJavaBased="true">
+  <Attribute Name="dataType" IsUpdateable="0" Type="int"/>
+  <Attribute Name="size" IsUpdateable="0" Type="int"/>
+  <Attribute Name="offset" IsUpdateable="0" Type="int"/>
+  <Attribute Name="numBanks" IsUpdateable="0" Type="int"/>
+  <AccessorAttribute id="offsets" IsCollection="true" Type="int[]"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="int"/>
+  </AccessorAttribute>
+  <MethodAccessor IsCollection="false" Type="int" id="getDataTypeSize"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="type" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getElem"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="i" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getElem"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="bank" Type="int" isStructured="false"/>
+    <ParameterInfo id="i" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setElem"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="i" Type="int" isStructured="false"/>
+    <ParameterInfo id="val" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setElem"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="bank" Type="int" isStructured="false"/>
+    <ParameterInfo id="i" Type="int" isStructured="false"/>
+    <ParameterInfo id="val" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="float" id="getElemFloat"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="i" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="float" id="getElemFloat"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="bank" Type="int" isStructured="false"/>
+    <ParameterInfo id="i" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setElemFloat"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="i" Type="int" isStructured="false"/>
+    <ParameterInfo id="val" Type="float" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setElemFloat"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="bank" Type="int" isStructured="false"/>
+    <ParameterInfo id="i" Type="int" isStructured="false"/>
+    <ParameterInfo id="val" Type="float" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="double" id="getElemDouble"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="i" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="double" id="getElemDouble"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="bank" Type="int" isStructured="false"/>
+    <ParameterInfo id="i" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setElemDouble"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="i" Type="int" isStructured="false"/>
+    <ParameterInfo id="val" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setElemDouble"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="bank" Type="int" isStructured="false"/>
+    <ParameterInfo id="i" Type="int" isStructured="false"/>
+    <ParameterInfo id="val" Type="double" isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

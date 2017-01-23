@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="ObjectInput" Package="java.io" BeanClass="java.io.ObjectInput"
+          isJavaBased="true">
+  <MethodAccessor IsCollection="false" Type="java.lang.Object" id="readObject"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="int" id="read"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="int" id="read"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="b" Type="byte[]" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="read"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="b" Type="byte[]" isStructured="false"/>
+    <ParameterInfo id="off" Type="int" isStructured="false"/>
+    <ParameterInfo id="len" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="long" id="skip"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="n" Type="long" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="available"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="close"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="readFully"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="b" Type="byte[]" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="readFully"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="b" Type="byte[]" isStructured="false"/>
+    <ParameterInfo id="off" Type="int" isStructured="false"/>
+    <ParameterInfo id="len" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="skipBytes"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="n" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="readBoolean"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="byte" id="readByte"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="int" id="readUnsignedByte"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="short" id="readShort"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="int" id="readUnsignedShort"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="char" id="readChar"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="int" id="readInt"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="long" id="readLong"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="float" id="readFloat"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="double" id="readDouble"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="readLine"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="readUTF"
+                  ReturnNodeName="Return"/>
+</JavaBean>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="UnavailablePeriodPenalty"
+          Package="org.optaplanner.examples.curriculumcourse.domain"
+          BeanClass="org.optaplanner.examples.curriculumcourse.domain.UnavailablePeriodPenalty"
+          isJavaBased="true">
+  <Attribute Name="id" Type="java.lang.Long"/>
+  <AccessorAttribute id="course" IsCollection="false"
+                     BeanClass="org.optaplanner.examples.curriculumcourse.domain.Course"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="period" IsCollection="false"
+                     BeanClass="org.optaplanner.examples.curriculumcourse.domain.Period"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="int" id="compareTo"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="other"
+                   Type="org.optaplanner.examples.common.domain.AbstractPersistable"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true"
+                     Type="org.optaplanner.examples.curriculumcourse.domain.UnavailablePeriodPenalty"
+                     BeanClass="org.optaplanner.examples.curriculumcourse.domain.UnavailablePeriodPenalty"
+                     id="UnavailablePeriodPenalty"/>
+</JavaBean>

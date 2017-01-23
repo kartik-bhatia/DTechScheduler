@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="Accessible" Package="javax.accessibility"
+          BeanClass="javax.accessibility.Accessible" isJavaBased="true">
+  <AccessorAttribute id="accessibleContext" IsCollection="false"
+                     BeanClass="javax.accessibility.AccessibleContext"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+</JavaBean>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="TileObserver" Package="java.awt.image"
+          BeanClass="java.awt.image.TileObserver" isJavaBased="true">
+  <MethodAccessor IsCollection="false" Type="void" id="tileUpdate"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="source" Type="java.awt.image.WritableRenderedImage"
+                   isStructured="true"/>
+    <ParameterInfo id="tileX" Type="int" isStructured="false"/>
+    <ParameterInfo id="tileY" Type="int" isStructured="false"/>
+    <ParameterInfo id="willBeWritable" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

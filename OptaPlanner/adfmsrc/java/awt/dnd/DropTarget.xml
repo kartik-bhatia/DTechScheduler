@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="DropTarget" Package="java.awt.dnd"
+          BeanClass="java.awt.dnd.DropTarget" isJavaBased="true">
+  <Attribute Name="defaultActions" Type="int"/>
+  <Attribute Name="active" Type="boolean"/>
+  <AccessorAttribute id="component" IsCollection="false"
+                     BeanClass="java.awt.Component"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="flavorMap" IsCollection="false"
+                     BeanClass="java.awt.datatransfer.FlavorMap"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="dropTargetContext" IsCollection="false"
+                     BeanClass="java.awt.dnd.DropTargetContext"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="void" id="addDropTargetListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dtl" Type="java.awt.dnd.DropTargetListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeDropTargetListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dtl" Type="java.awt.dnd.DropTargetListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="dragEnter"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dtde" Type="java.awt.dnd.DropTargetDragEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="dragOver"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dtde" Type="java.awt.dnd.DropTargetDragEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="dropActionChanged"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dtde" Type="java.awt.dnd.DropTargetDragEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="dragExit"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dte" Type="java.awt.dnd.DropTargetEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="drop"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dtde" Type="java.awt.dnd.DropTargetDropEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addNotify"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="peer" Type="java.awt.peer.ComponentPeer"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeNotify"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="peer" Type="java.awt.peer.ComponentPeer"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true" Type="java.awt.dnd.DropTarget"
+                     BeanClass="java.awt.dnd.DropTarget" id="DropTarget">
+    <ParameterInfo id="c" Type="java.awt.Component" isStructured="true"/>
+    <ParameterInfo id="ops" Type="int" isStructured="false"/>
+    <ParameterInfo id="dtl" Type="java.awt.dnd.DropTargetListener"
+                   isStructured="true"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.dnd.DropTarget"
+                     BeanClass="java.awt.dnd.DropTarget" id="DropTarget">
+    <ParameterInfo id="c" Type="java.awt.Component" isStructured="true"/>
+    <ParameterInfo id="dtl" Type="java.awt.dnd.DropTargetListener"
+                   isStructured="true"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.dnd.DropTarget"
+                     BeanClass="java.awt.dnd.DropTarget" id="DropTarget"/>
+  <ConstructorMethod IsCollection="true" Type="java.awt.dnd.DropTarget"
+                     BeanClass="java.awt.dnd.DropTarget" id="DropTarget">
+    <ParameterInfo id="c" Type="java.awt.Component" isStructured="true"/>
+    <ParameterInfo id="ops" Type="int" isStructured="false"/>
+    <ParameterInfo id="dtl" Type="java.awt.dnd.DropTargetListener"
+                   isStructured="true"/>
+    <ParameterInfo id="act" Type="boolean" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.dnd.DropTarget"
+                     BeanClass="java.awt.dnd.DropTarget" id="DropTarget">
+    <ParameterInfo id="c" Type="java.awt.Component" isStructured="true"/>
+    <ParameterInfo id="ops" Type="int" isStructured="false"/>
+    <ParameterInfo id="dtl" Type="java.awt.dnd.DropTargetListener"
+                   isStructured="true"/>
+    <ParameterInfo id="act" Type="boolean" isStructured="false"/>
+    <ParameterInfo id="fm" Type="java.awt.datatransfer.FlavorMap"
+                   isStructured="true"/>
+  </ConstructorMethod>
+</JavaBean>

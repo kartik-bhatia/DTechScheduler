@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="Buffer" Package="java.nio" BeanClass="java.nio.Buffer"
+          isJavaBased="true">
+  <Attribute Name="readOnly" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="direct" IsUpdateable="0" Type="boolean"/>
+  <MethodAccessor IsCollection="false" Type="int" id="capacity"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="int" id="position"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.Buffer"
+                  BeanClass="java.nio.Buffer" id="position"
+                  ReturnNodeName="Buffer">
+    <ParameterInfo id="newPosition" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="limit"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.Buffer"
+                  BeanClass="java.nio.Buffer" id="limit"
+                  ReturnNodeName="Buffer">
+    <ParameterInfo id="newLimit" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.nio.Buffer"
+                  BeanClass="java.nio.Buffer" id="mark"
+                  ReturnNodeName="Buffer"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.Buffer"
+                  BeanClass="java.nio.Buffer" id="reset"
+                  ReturnNodeName="Buffer"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.Buffer"
+                  BeanClass="java.nio.Buffer" id="clear"
+                  ReturnNodeName="Buffer"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.Buffer"
+                  BeanClass="java.nio.Buffer" id="flip"
+                  ReturnNodeName="Buffer"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.Buffer"
+                  BeanClass="java.nio.Buffer" id="rewind"
+                  ReturnNodeName="Buffer"/>
+  <MethodAccessor IsCollection="false" Type="int" id="remaining"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="hasRemaining"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="hasArray"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object" id="array"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="int" id="arrayOffset"
+                  ReturnNodeName="Return"/>
+</JavaBean>

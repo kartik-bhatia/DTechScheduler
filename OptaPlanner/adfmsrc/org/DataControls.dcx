@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration"
+                    version="11.1.1.66.73" id="DataControls" Package="org">
+  <AdapterDataControl id="CourseSchedule"
+                      FactoryClass="oracle.adf.model.adapter.bean.BeanDCFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.bean.BeanDefinition"
+                      SupportsTransactions="false" SupportsSortCollection="true"
+                      SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true"
+                      Definition="org.optaplanner.examples.curriculumcourse.domain.CourseSchedule"
+                      BeanClass="org.optaplanner.examples.curriculumcourse.domain.CourseSchedule"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <CreatableTypes>
+      <TypeInfo FullName="org.optaplanner.examples.curriculumcourse.domain.Teacher"/>
+      <TypeInfo FullName="org.optaplanner.examples.curriculumcourse.domain.Student"/>
+      <TypeInfo FullName="org.optaplanner.examples.curriculumcourse.domain.Curriculum"/>
+      <TypeInfo FullName="org.optaplanner.examples.curriculumcourse.domain.Course"/>
+      <TypeInfo FullName="org.optaplanner.examples.curriculumcourse.domain.Timeslot"/>
+      <TypeInfo FullName="org.optaplanner.examples.curriculumcourse.domain.Period"/>
+      <TypeInfo FullName="org.optaplanner.examples.curriculumcourse.domain.Day"/>
+      <TypeInfo FullName="org.optaplanner.examples.curriculumcourse.domain.Room"/>
+      <TypeInfo FullName="org.optaplanner.examples.curriculumcourse.domain.UnavailablePeriodPenalty"/>
+      <TypeInfo FullName="org.optaplanner.examples.curriculumcourse.domain.Lecture"/>
+      <TypeInfo FullName="org.optaplanner.examples.curriculumcourse.domain.CourseSchedule"/>
+    </CreatableTypes>
+    <Source>
+      <bean-definition BeanClass="org.optaplanner.examples.curriculumcourse.domain.CourseSchedule"
+                       xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
+    </Source>
+  </AdapterDataControl>
+  <AdapterDataControl id="RunScheduler"
+                      FactoryClass="oracle.adf.model.adapter.bean.BeanDCFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.bean.BeanDefinition"
+                      SupportsTransactions="false" SupportsSortCollection="true"
+                      SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true"
+                      Definition="run.RunScheduler" BeanClass="run.RunScheduler"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <CreatableTypes>
+      <TypeInfo FullName="java.awt.Insets"/>
+      <TypeInfo FullName="java.awt.Dimension"/>
+      <TypeInfo FullName="java.awt.event.ContainerEvent"/>
+      <TypeInfo FullName="java.awt.geom.AffineTransform"/>
+      <TypeInfo FullName="java.awt.Point"/>
+      <TypeInfo FullName="java.awt.Rectangle"/>
+      <TypeInfo FullName="java.awt.image.SampleModel"/>
+      <TypeInfo FullName="java.awt.image.ColorModel"/>
+      <TypeInfo FullName="java.awt.RenderingHints"/>
+      <TypeInfo FullName="java.awt.Color"/>
+      <TypeInfo FullName="java.io.InputStream"/>
+      <TypeInfo FullName="java.net.URI"/>
+      <TypeInfo FullName="java.security.PermissionCollection"/>
+      <TypeInfo FullName="java.security.Permission"/>
+      <TypeInfo FullName="java.io.OutputStream"/>
+      <TypeInfo FullName="java.net.ContentHandler"/>
+      <TypeInfo FullName="java.net.SocketAddress"/>
+      <TypeInfo FullName="java.net.Proxy"/>
+      <TypeInfo FullName="java.net.URLStreamHandler"/>
+      <TypeInfo FullName="java.net.URL"/>
+      <TypeInfo FullName="java.io.File"/>
+      <TypeInfo FullName="java.awt.font.LineMetrics"/>
+      <TypeInfo FullName="java.awt.font.FontRenderContext"/>
+      <TypeInfo FullName="java.awt.font.GlyphMetrics"/>
+      <TypeInfo FullName="java.awt.font.GlyphJustificationInfo"/>
+      <TypeInfo FullName="java.awt.font.GlyphVector"/>
+      <TypeInfo FullName="java.awt.Font"/>
+      <TypeInfo FullName="java.awt.Polygon"/>
+      <TypeInfo FullName="java.awt.ImageCapabilities"/>
+      <TypeInfo FullName="java.awt.DisplayMode"/>
+      <TypeInfo FullName="java.awt.GraphicsConfigTemplate"/>
+      <TypeInfo FullName="java.awt.BufferCapabilities"/>
+      <TypeInfo FullName="java.awt.image.renderable.RenderContext"/>
+      <TypeInfo FullName="java.awt.image.BufferedImage"/>
+      <TypeInfo FullName="java.awt.image.IndexColorModel"/>
+      <TypeInfo FullName="java.awt.image.VolatileImage"/>
+      <TypeInfo FullName="java.awt.Image"/>
+      <TypeInfo FullName="java.awt.datatransfer.DataFlavor"/>
+      <TypeInfo FullName="java.awt.datatransfer.FlavorEvent"/>
+      <TypeInfo FullName="java.awt.datatransfer.Clipboard"/>
+      <TypeInfo FullName="java.awt.AWTEvent"/>
+      <TypeInfo FullName="java.awt.Event"/>
+      <TypeInfo FullName="java.awt.EventQueue"/>
+      <TypeInfo FullName="java.beans.PropertyChangeEvent"/>
+      <TypeInfo FullName="java.awt.PrintJob"/>
+      <TypeInfo FullName="javax.accessibility.AccessibleStateSet"/>
+      <TypeInfo FullName="java.awt.Cursor"/>
+      <TypeInfo FullName="java.awt.event.FocusEvent"/>
+      <TypeInfo FullName="javax.accessibility.AccessibleRelation"/>
+      <TypeInfo FullName="javax.accessibility.AccessibleRelationSet"/>
+      <TypeInfo FullName="javax.accessibility.AccessibleContext"/>
+      <TypeInfo FullName="java.awt.MenuShortcut"/>
+      <TypeInfo FullName="java.awt.event.ActionEvent"/>
+      <TypeInfo FullName="java.awt.MenuComponent"/>
+      <TypeInfo FullName="java.awt.MenuItem"/>
+      <TypeInfo FullName="java.awt.Menu"/>
+      <TypeInfo FullName="java.awt.MenuBar"/>
+      <TypeInfo FullName="java.awt.event.WindowEvent"/>
+      <TypeInfo FullName="java.awt.image.BufferStrategy"/>
+      <TypeInfo FullName="java.awt.event.PaintEvent"/>
+      <TypeInfo FullName="java.awt.dnd.DropTargetDragEvent"/>
+      <TypeInfo FullName="java.awt.dnd.DropTargetEvent"/>
+      <TypeInfo FullName="java.awt.dnd.DropTargetDropEvent"/>
+      <TypeInfo FullName="java.awt.dnd.DropTarget"/>
+      <TypeInfo FullName="java.awt.event.ComponentEvent"/>
+      <TypeInfo FullName="java.awt.event.HierarchyEvent"/>
+      <TypeInfo FullName="java.awt.event.KeyEvent"/>
+      <TypeInfo FullName="java.awt.event.MouseEvent"/>
+      <TypeInfo FullName="java.awt.event.MouseWheelEvent"/>
+      <TypeInfo FullName="java.awt.event.InputMethodEvent"/>
+      <TypeInfo FullName="java.io.PrintStream"/>
+      <TypeInfo FullName="java.io.PrintWriter"/>
+      <TypeInfo FullName="java.awt.PopupMenu"/>
+      <TypeInfo FullName="java.awt.Frame"/>
+      <TypeInfo FullName="java.awt.JobAttributes"/>
+      <TypeInfo FullName="java.awt.PageAttributes"/>
+      <TypeInfo FullName="java.awt.dnd.DragSourceDragEvent"/>
+      <TypeInfo FullName="java.awt.dnd.DragSourceEvent"/>
+      <TypeInfo FullName="java.awt.dnd.DragSourceDropEvent"/>
+      <TypeInfo FullName="java.awt.dnd.DragGestureEvent"/>
+      <TypeInfo FullName="java.awt.dnd.DragSource"/>
+      <TypeInfo FullName="java.awt.dnd.DragSourceContext"/>
+      <TypeInfo FullName="java.awt.im.InputMethodHighlight"/>
+      <TypeInfo FullName="java.awt.Toolkit"/>
+      <TypeInfo FullName="java.awt.Window"/>
+      <TypeInfo FullName="java.awt.FocusTraversalPolicy"/>
+      <TypeInfo FullName="java.awt.Container"/>
+      <TypeInfo FullName="org.optaplanner.examples.common.persistence.AbstractSolutionImporter"/>
+      <TypeInfo FullName="org.optaplanner.examples.common.persistence.AbstractSolutionExporter"/>
+      <TypeInfo FullName="org.optaplanner.core.impl.score.trend.InitializingScoreTrend"/>
+      <TypeInfo FullName="org.optaplanner.core.impl.domain.policy.DescriptorPolicy"/>
+      <TypeInfo FullName="org.optaplanner.core.impl.domain.variable.descriptor.ShadowVariableDescriptor"/>
+      <TypeInfo FullName="java.beans.PropertyDescriptor"/>
+      <TypeInfo FullName="org.optaplanner.core.impl.domain.variable.descriptor.GenuineVariableDescriptor"/>
+      <TypeInfo FullName="org.optaplanner.core.impl.domain.solution.descriptor.SolutionDescriptor"/>
+      <TypeInfo FullName="org.optaplanner.core.impl.domain.entity.descriptor.EntityDescriptor"/>
+      <TypeInfo FullName="org.optaplanner.core.impl.domain.variable.descriptor.VariableDescriptor"/>
+      <TypeInfo FullName="javax.swing.plaf.ComponentUI"/>
+      <TypeInfo FullName="javax.swing.plaf.PopupMenuUI"/>
+      <TypeInfo FullName="javax.swing.event.ChangeEvent"/>
+      <TypeInfo FullName="javax.swing.event.PopupMenuEvent"/>
+      <TypeInfo FullName="javax.swing.MenuSelectionManager"/>
+      <TypeInfo FullName="javax.swing.event.MenuKeyEvent"/>
+      <TypeInfo FullName="javax.swing.InputVerifier"/>
+      <TypeInfo FullName="javax.swing.InputMap"/>
+      <TypeInfo FullName="javax.swing.ActionMap"/>
+      <TypeInfo FullName="javax.swing.event.AncestorEvent"/>
+      <TypeInfo FullName="javax.swing.plaf.RootPaneUI"/>
+      <TypeInfo FullName="javax.swing.plaf.MenuBarUI"/>
+      <TypeInfo FullName="javax.swing.event.MenuEvent"/>
+      <TypeInfo FullName="javax.swing.event.MenuDragMouseEvent"/>
+      <TypeInfo FullName="javax.swing.plaf.ButtonUI"/>
+      <TypeInfo FullName="java.awt.event.ItemEvent"/>
+      <TypeInfo FullName="javax.swing.plaf.ToolTipUI"/>
+      <TypeInfo FullName="javax.swing.JToolTip"/>
+      <TypeInfo FullName="javax.swing.AbstractButton"/>
+      <TypeInfo FullName="javax.swing.ButtonGroup"/>
+      <TypeInfo FullName="javax.swing.plaf.MenuItemUI"/>
+      <TypeInfo FullName="javax.swing.JMenuItem"/>
+      <TypeInfo FullName="javax.swing.JMenu"/>
+      <TypeInfo FullName="javax.swing.JMenuBar"/>
+      <TypeInfo FullName="javax.swing.JLayeredPane"/>
+      <TypeInfo FullName="javax.swing.JButton"/>
+      <TypeInfo FullName="javax.swing.JRootPane"/>
+      <TypeInfo FullName="javax.swing.JPopupMenu"/>
+      <TypeInfo FullName="javax.swing.JComponent"/>
+      <TypeInfo FullName="javax.swing.TransferHandler.TransferSupport"/>
+      <TypeInfo FullName="javax.swing.TransferHandler"/>
+      <TypeInfo FullName="org.optaplanner.examples.common.swingui.SolverAndPersistenceFrame"/>
+      <TypeInfo FullName="javax.swing.plaf.PanelUI"/>
+      <TypeInfo FullName="org.optaplanner.examples.common.swingui.SolutionPanel"/>
+      <TypeInfo FullName="org.optaplanner.core.impl.heuristic.selector.move.generic.ChangeMove"/>
+      <TypeInfo FullName="org.optaplanner.core.impl.heuristic.selector.move.generic.SwapMove"/>
+      <TypeInfo FullName="org.optaplanner.examples.common.business.SolutionBusiness"/>
+      <TypeInfo FullName="run.RunScheduler"/>
+      <TypeInfo FullName="org.optaplanner.examples.curriculumcourse.domain.Teacher"/>
+      <TypeInfo FullName="org.optaplanner.examples.curriculumcourse.domain.Student"/>
+      <TypeInfo FullName="org.optaplanner.examples.curriculumcourse.domain.Curriculum"/>
+      <TypeInfo FullName="org.optaplanner.examples.curriculumcourse.domain.Course"/>
+      <TypeInfo FullName="org.optaplanner.examples.curriculumcourse.domain.Timeslot"/>
+      <TypeInfo FullName="org.optaplanner.examples.curriculumcourse.domain.Period"/>
+      <TypeInfo FullName="org.optaplanner.examples.curriculumcourse.domain.Day"/>
+      <TypeInfo FullName="org.optaplanner.examples.curriculumcourse.domain.Room"/>
+      <TypeInfo FullName="org.optaplanner.examples.curriculumcourse.domain.UnavailablePeriodPenalty"/>
+      <TypeInfo FullName="org.optaplanner.examples.curriculumcourse.domain.Lecture"/>
+      <TypeInfo FullName="org.optaplanner.examples.curriculumcourse.domain.CourseSchedule"/>
+    </CreatableTypes>
+    <Source>
+      <bean-definition BeanClass="run.RunScheduler"
+                       xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
+    </Source>
+  </AdapterDataControl>
+  <AdapterDataControl id="Course"
+                      FactoryClass="oracle.adf.model.adapter.bean.BeanDCFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.bean.BeanDefinition"
+                      SupportsTransactions="false" SupportsSortCollection="true"
+                      SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true"
+                      Definition="org.optaplanner.examples.curriculumcourse.domain.Course"
+                      BeanClass="org.optaplanner.examples.curriculumcourse.domain.Course"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <CreatableTypes>
+      <TypeInfo FullName="org.optaplanner.examples.curriculumcourse.domain.Teacher"/>
+      <TypeInfo FullName="org.optaplanner.examples.curriculumcourse.domain.Student"/>
+      <TypeInfo FullName="org.optaplanner.examples.curriculumcourse.domain.Curriculum"/>
+      <TypeInfo FullName="org.optaplanner.examples.curriculumcourse.domain.Course"/>
+    </CreatableTypes>
+    <Source>
+      <bean-definition BeanClass="org.optaplanner.examples.curriculumcourse.domain.Course"
+                       xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
+    </Source>
+  </AdapterDataControl>
+</DataControlConfigs>

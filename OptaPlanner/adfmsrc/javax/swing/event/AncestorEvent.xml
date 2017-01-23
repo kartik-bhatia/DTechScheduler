@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="AncestorEvent" Package="javax.swing.event"
+          BeanClass="javax.swing.event.AncestorEvent" isJavaBased="true">
+  <Attribute Name="ID" IsUpdateable="0" Type="int"/>
+  <AccessorAttribute id="ancestor" IsCollection="false"
+                     BeanClass="java.awt.Container"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="ancestorParent" IsCollection="false"
+                     BeanClass="java.awt.Container"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="component" IsCollection="false"
+                     BeanClass="javax.swing.JComponent"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setSource"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="newSource" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="paramString"
+                  ReturnNodeName="Return"/>
+  <ConstructorMethod IsCollection="true" Type="javax.swing.event.AncestorEvent"
+                     BeanClass="javax.swing.event.AncestorEvent"
+                     id="AncestorEvent">
+    <ParameterInfo id="source" Type="javax.swing.JComponent"
+                   isStructured="true"/>
+    <ParameterInfo id="id" Type="int" isStructured="false"/>
+    <ParameterInfo id="ancestor" Type="java.awt.Container" isStructured="true"/>
+    <ParameterInfo id="ancestorParent" Type="java.awt.Container"
+                   isStructured="true"/>
+  </ConstructorMethod>
+</JavaBean>

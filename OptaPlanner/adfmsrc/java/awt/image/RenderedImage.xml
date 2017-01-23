@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="RenderedImage" Package="java.awt.image"
+          BeanClass="java.awt.image.RenderedImage" isJavaBased="true">
+  <Attribute Name="width" IsUpdateable="0" Type="int"/>
+  <Attribute Name="height" IsUpdateable="0" Type="int"/>
+  <Attribute Name="minX" IsUpdateable="0" Type="int"/>
+  <Attribute Name="minY" IsUpdateable="0" Type="int"/>
+  <Attribute Name="numXTiles" IsUpdateable="0" Type="int"/>
+  <Attribute Name="numYTiles" IsUpdateable="0" Type="int"/>
+  <Attribute Name="minTileX" IsUpdateable="0" Type="int"/>
+  <Attribute Name="minTileY" IsUpdateable="0" Type="int"/>
+  <Attribute Name="tileWidth" IsUpdateable="0" Type="int"/>
+  <Attribute Name="tileHeight" IsUpdateable="0" Type="int"/>
+  <Attribute Name="tileGridXOffset" IsUpdateable="0" Type="int"/>
+  <Attribute Name="tileGridYOffset" IsUpdateable="0" Type="int"/>
+  <AccessorAttribute id="sources" IsCollection="true"
+                     BeanClass="java.awt.image.RenderedImage"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="propertyNames" IsCollection="true"
+                     Type="java.lang.String[]"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="java.lang.String"/>
+  </AccessorAttribute>
+  <AccessorAttribute id="colorModel" IsCollection="false"
+                     BeanClass="java.awt.image.ColorModel"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="sampleModel" IsCollection="false"
+                     BeanClass="java.awt.image.SampleModel"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="data" IsCollection="false"
+                     BeanClass="java.awt.image.Raster"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object" id="getProperty"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="name" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.Raster"
+                  BeanClass="java.awt.image.Raster" id="getTile"
+                  ReturnNodeName="Raster">
+    <ParameterInfo id="tileX" Type="int" isStructured="false"/>
+    <ParameterInfo id="tileY" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.Raster"
+                  BeanClass="java.awt.image.Raster" id="getData"
+                  ReturnNodeName="Raster">
+    <ParameterInfo id="rect" Type="java.awt.Rectangle" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.image.WritableRaster"
+                  BeanClass="java.awt.image.WritableRaster" id="copyData"
+                  ReturnNodeName="WritableRaster">
+    <ParameterInfo id="raster" Type="java.awt.image.WritableRaster"
+                   isStructured="true"/>
+  </MethodAccessor>
+</JavaBean>

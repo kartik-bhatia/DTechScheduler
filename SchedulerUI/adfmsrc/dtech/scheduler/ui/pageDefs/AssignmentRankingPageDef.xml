@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.66.73" id="AssignmentRankingPageDef"
+                Package="dtech.scheduler.ui.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="SubjectNodeCollection"
+              id="SubjectNodeCollectionIterator"/>
+    <accessorIterator MasterBinding="SubjectNodeCollectionIterator"
+                      Binds="subjects" RangeSize="25"
+                      DataControl="SubjectNodeCollection"
+                      BeanClass="dtech.scheduler.model.pojo.SubjectNode"
+                      id="subjectsIterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="subjectsIterator" id="subjects">
+      <nodeDefinition DefName="dtech.scheduler.model.pojo.SubjectNode"
+                      Name="subjects0">
+        <AttrNames>
+          <Item Value="subjectName"/>
+        </AttrNames>
+        <Accessors>
+          <Item Value="assignmentNodes"/>
+        </Accessors>
+      </nodeDefinition>
+      <nodeDefinition DefName="dtech.scheduler.model.pojo.AssignmentNode"
+                      Name="subjects1">
+        <AttrNames>
+          <Item Value="assignmentTitle"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="subjectsIterator" id="subjects1">
+      <nodeDefinition DefName="dtech.scheduler.model.pojo.SubjectNode"
+                      Name="subjects10">
+        <AttrNames>
+          <Item Value="subjectName"/>
+        </AttrNames>
+        <Accessors>
+          <Item Value="assignmentNodes"/>
+        </Accessors>
+      </nodeDefinition>
+      <nodeDefinition DefName="dtech.scheduler.model.pojo.AssignmentNode"
+                      Name="subjects11">
+        <AttrNames>
+          <Item Value="assignmentTitle"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="subjectsIterator" id="Execute"
+            RequiresUpdateModel="true" Action="iteratorExecute"/>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="ButtonGroup" Package="javax.swing"
+          BeanClass="javax.swing.ButtonGroup" isJavaBased="true">
+  <Attribute Name="elements" IsUpdateable="0"
+             Type="java.util.Enumeration&lt;javax.swing.AbstractButton>"/>
+  <Attribute Name="buttonCount" IsUpdateable="0" Type="int"/>
+  <AccessorAttribute id="selection" IsCollection="false"
+                     BeanClass="javax.swing.ButtonModel"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="void" id="add"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="b" Type="javax.swing.AbstractButton"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="remove"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="b" Type="javax.swing.AbstractButton"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="clearSelection"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setSelected"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="m" Type="javax.swing.ButtonModel" isStructured="true"/>
+    <ParameterInfo id="b" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isSelected"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="m" Type="javax.swing.ButtonModel" isStructured="true"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true" Type="javax.swing.ButtonGroup"
+                     BeanClass="javax.swing.ButtonGroup" id="ButtonGroup"/>
+</JavaBean>

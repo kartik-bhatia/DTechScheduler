@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="DropTargetListener" Package="java.awt.dnd"
+          BeanClass="java.awt.dnd.DropTargetListener" isJavaBased="true">
+  <MethodAccessor IsCollection="false" Type="void" id="dragEnter"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dtde" Type="java.awt.dnd.DropTargetDragEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="dragOver"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dtde" Type="java.awt.dnd.DropTargetDragEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="dropActionChanged"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dtde" Type="java.awt.dnd.DropTargetDragEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="dragExit"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dte" Type="java.awt.dnd.DropTargetEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="drop"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dtde" Type="java.awt.dnd.DropTargetDropEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+</JavaBean>

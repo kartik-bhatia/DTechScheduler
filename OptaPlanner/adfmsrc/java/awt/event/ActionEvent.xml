@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="ActionEvent" Package="java.awt.event"
+          BeanClass="java.awt.event.ActionEvent" isJavaBased="true">
+  <Attribute Name="actionCommand" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="when" IsUpdateable="0" Type="long"/>
+  <Attribute Name="modifiers" IsUpdateable="0" Type="int"/>
+  <Attribute Name="ID" IsUpdateable="0" Type="int"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="paramString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setSource"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="newSource" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <ConstructorMethod IsCollection="true" Type="java.awt.event.ActionEvent"
+                     BeanClass="java.awt.event.ActionEvent" id="ActionEvent">
+    <ParameterInfo id="source" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="id" Type="int" isStructured="false"/>
+    <ParameterInfo id="command" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="when" Type="long" isStructured="false"/>
+    <ParameterInfo id="modifiers" Type="int" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.event.ActionEvent"
+                     BeanClass="java.awt.event.ActionEvent" id="ActionEvent">
+    <ParameterInfo id="source" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="id" Type="int" isStructured="false"/>
+    <ParameterInfo id="command" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="modifiers" Type="int" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.event.ActionEvent"
+                     BeanClass="java.awt.event.ActionEvent" id="ActionEvent">
+    <ParameterInfo id="source" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="id" Type="int" isStructured="false"/>
+    <ParameterInfo id="command" Type="java.lang.String" isStructured="false"/>
+  </ConstructorMethod>
+</JavaBean>

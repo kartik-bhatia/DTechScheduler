@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="WindowTranslucency" Package="java.awt.GraphicsDevice"
+          BeanClass="java.awt.GraphicsDevice.WindowTranslucency"
+          isJavaBased="true">
+  <MethodAccessor IsCollection="true"
+                  Type="java.awt.GraphicsDevice.WindowTranslucency"
+                  BeanClass="java.awt.GraphicsDevice.WindowTranslucency"
+                  id="values" ReturnNodeName="WindowTranslucency"
+                  CollectionBeanClass="UpdateableCollection"/>
+  <MethodAccessor IsCollection="false"
+                  Type="java.awt.GraphicsDevice.WindowTranslucency"
+                  BeanClass="java.awt.GraphicsDevice.WindowTranslucency"
+                  id="valueOf" ReturnNodeName="WindowTranslucency">
+    <ParameterInfo id="p0" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

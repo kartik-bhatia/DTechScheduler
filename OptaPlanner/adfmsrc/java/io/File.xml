@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="File" Package="java.io" BeanClass="java.io.File"
+          isJavaBased="true">
+  <Attribute Name="name" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="parent" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="path" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="absolute" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="absolutePath" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="canonicalPath" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="directory" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="file" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="hidden" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="totalSpace" IsUpdateable="0" Type="long"/>
+  <Attribute Name="freeSpace" IsUpdateable="0" Type="long"/>
+  <Attribute Name="usableSpace" IsUpdateable="0" Type="long"/>
+  <AccessorAttribute id="parentFile" IsCollection="false"
+                     BeanClass="java.io.File"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="absoluteFile" IsCollection="false"
+                     BeanClass="java.io.File"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="canonicalFile" IsCollection="false"
+                     BeanClass="java.io.File"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="java.net.URL"
+                  BeanClass="java.net.URL" id="toURL" ReturnNodeName="URL"/>
+  <MethodAccessor IsCollection="false" Type="java.net.URI"
+                  BeanClass="java.net.URI" id="toURI" ReturnNodeName="URI"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="canRead"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="canWrite"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="exists"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="long" id="lastModified"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="long" id="length"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="createNewFile"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="delete"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="deleteOnExit"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="true" Type="java.lang.String[]" id="list"
+                  ReturnNodeName="String"
+                  CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="java.lang.String"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="java.lang.String[]" id="list"
+                  ReturnNodeName="String"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="filter" Type="java.io.FilenameFilter"
+                   isStructured="true"/>
+    <Attribute Name="element" Type="java.lang.String"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="java.io.File"
+                  BeanClass="java.io.File" id="listFiles" ReturnNodeName="File"
+                  CollectionBeanClass="UpdateableCollection"/>
+  <MethodAccessor IsCollection="true" Type="java.io.File"
+                  BeanClass="java.io.File" id="listFiles" ReturnNodeName="File"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="filter" Type="java.io.FilenameFilter"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="java.io.File"
+                  BeanClass="java.io.File" id="listFiles" ReturnNodeName="File"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="filter" Type="java.io.FileFilter" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="mkdir"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="mkdirs"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="renameTo"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dest" Type="java.io.File" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="setLastModified"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="time" Type="long" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="setReadOnly"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="setWritable"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="writable" Type="boolean" isStructured="false"/>
+    <ParameterInfo id="ownerOnly" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="setWritable"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="writable" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="setReadable"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="readable" Type="boolean" isStructured="false"/>
+    <ParameterInfo id="ownerOnly" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="setReadable"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="readable" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="setExecutable"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="executable" Type="boolean" isStructured="false"/>
+    <ParameterInfo id="ownerOnly" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="setExecutable"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="executable" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="canExecute"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="true" Type="java.io.File"
+                  BeanClass="java.io.File" id="listRoots" ReturnNodeName="File"
+                  CollectionBeanClass="UpdateableCollection"/>
+  <MethodAccessor IsCollection="false" Type="java.io.File"
+                  BeanClass="java.io.File" id="createTempFile"
+                  ReturnNodeName="File">
+    <ParameterInfo id="prefix" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="suffix" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="directory" Type="java.io.File" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.io.File"
+                  BeanClass="java.io.File" id="createTempFile"
+                  ReturnNodeName="File">
+    <ParameterInfo id="prefix" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="suffix" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="compareTo"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="pathname" Type="java.io.File" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="obj" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="hashCode"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.file.Path"
+                  BeanClass="java.nio.file.Path" id="toPath"
+                  ReturnNodeName="Path"/>
+  <ConstructorMethod IsCollection="true" Type="java.io.File"
+                     BeanClass="java.io.File" id="File">
+    <ParameterInfo id="uri" Type="java.net.URI" isStructured="true"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.io.File"
+                     BeanClass="java.io.File" id="File">
+    <ParameterInfo id="parent" Type="java.io.File" isStructured="true"/>
+    <ParameterInfo id="child" Type="java.lang.String" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.io.File"
+                     BeanClass="java.io.File" id="File">
+    <ParameterInfo id="parent" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="child" Type="java.lang.String" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.io.File"
+                     BeanClass="java.io.File" id="File">
+    <ParameterInfo id="pathname" Type="java.lang.String" isStructured="false"/>
+  </ConstructorMethod>
+</JavaBean>

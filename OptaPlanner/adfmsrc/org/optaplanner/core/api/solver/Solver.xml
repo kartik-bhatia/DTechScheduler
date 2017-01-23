@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="Solver" Package="org.optaplanner.core.api.solver"
+          BeanClass="org.optaplanner.core.api.solver.Solver" isJavaBased="true">
+  <Attribute Name="timeMillisSpent" IsUpdateable="0" Type="long"/>
+  <Attribute Name="solving" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="terminateEarly" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="everyProblemFactChangeProcessed" IsUpdateable="0"
+             Type="boolean"/>
+  <AccessorAttribute id="bestSolution" IsCollection="false"
+                     BeanClass="org.optaplanner.core.api.domain.solution.Solution"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="scoreDirectorFactory" IsCollection="false"
+                     BeanClass="org.optaplanner.core.impl.score.director.ScoreDirectorFactory"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="void" id="solve"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="planningProblem"
+                   Type="org.optaplanner.core.api.domain.solution.Solution"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="terminateEarly"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="addProblemFactChange"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="problemFactChange"
+                   Type="org.optaplanner.core.impl.solver.ProblemFactChange"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addEventListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="eventListener"
+                   Type="org.optaplanner.core.api.solver.event.SolverEventListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeEventListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="eventListener"
+                   Type="org.optaplanner.core.api.solver.event.SolverEventListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+</JavaBean>

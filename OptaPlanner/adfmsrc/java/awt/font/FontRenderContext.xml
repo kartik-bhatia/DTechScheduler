@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="FontRenderContext" Package="java.awt.font"
+          BeanClass="java.awt.font.FontRenderContext" isJavaBased="true">
+  <Attribute Name="transformed" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="transformType" IsUpdateable="0" Type="int"/>
+  <Attribute Name="antiAliased" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="antiAliasingHint" IsUpdateable="0" Type="java.lang.Object"/>
+  <Attribute Name="fractionalMetricsHint" IsUpdateable="0"
+             Type="java.lang.Object"/>
+  <AccessorAttribute id="transform" IsCollection="false"
+                     BeanClass="java.awt.geom.AffineTransform"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="usesFractionalMetrics"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="obj" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="rhs" Type="java.awt.font.FontRenderContext"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="hashCode"
+                  ReturnNodeName="Return"/>
+  <ConstructorMethod IsCollection="true" Type="java.awt.font.FontRenderContext"
+                     BeanClass="java.awt.font.FontRenderContext"
+                     id="FontRenderContext">
+    <ParameterInfo id="tx" Type="java.awt.geom.AffineTransform"
+                   isStructured="true"/>
+    <ParameterInfo id="aaHint" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="fmHint" Type="java.lang.Object" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.font.FontRenderContext"
+                     BeanClass="java.awt.font.FontRenderContext"
+                     id="FontRenderContext">
+    <ParameterInfo id="tx" Type="java.awt.geom.AffineTransform"
+                   isStructured="true"/>
+    <ParameterInfo id="isAntiAliased" Type="boolean" isStructured="false"/>
+    <ParameterInfo id="usesFractionalMetrics" Type="boolean"
+                   isStructured="false"/>
+  </ConstructorMethod>
+</JavaBean>

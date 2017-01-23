@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="GlyphMetrics" Package="java.awt.font"
+          BeanClass="java.awt.font.GlyphMetrics" isJavaBased="true">
+  <Attribute Name="advance" IsUpdateable="0" Type="float"/>
+  <Attribute Name="advanceX" IsUpdateable="0" Type="float"/>
+  <Attribute Name="advanceY" IsUpdateable="0" Type="float"/>
+  <Attribute Name="LSB" IsUpdateable="0" Type="float"/>
+  <Attribute Name="RSB" IsUpdateable="0" Type="float"/>
+  <Attribute Name="type" IsUpdateable="0" Type="int"/>
+  <Attribute Name="standard" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="ligature" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="combining" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="component" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="whitespace" IsUpdateable="0" Type="boolean"/>
+  <AccessorAttribute id="bounds2D" IsCollection="false"
+                     BeanClass="java.awt.geom.Rectangle2D"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <ConstructorMethod IsCollection="true" Type="java.awt.font.GlyphMetrics"
+                     BeanClass="java.awt.font.GlyphMetrics" id="GlyphMetrics">
+    <ParameterInfo id="horizontal" Type="boolean" isStructured="false"/>
+    <ParameterInfo id="advanceX" Type="float" isStructured="false"/>
+    <ParameterInfo id="advanceY" Type="float" isStructured="false"/>
+    <ParameterInfo id="bounds" Type="java.awt.geom.Rectangle2D"
+                   isStructured="true"/>
+    <ParameterInfo id="glyphType" Type="byte" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.font.GlyphMetrics"
+                     BeanClass="java.awt.font.GlyphMetrics" id="GlyphMetrics">
+    <ParameterInfo id="advance" Type="float" isStructured="false"/>
+    <ParameterInfo id="bounds" Type="java.awt.geom.Rectangle2D"
+                   isStructured="true"/>
+    <ParameterInfo id="glyphType" Type="byte" isStructured="false"/>
+  </ConstructorMethod>
+</JavaBean>

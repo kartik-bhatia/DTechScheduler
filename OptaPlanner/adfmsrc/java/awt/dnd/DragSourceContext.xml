@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="DragSourceContext" Package="java.awt.dnd"
+          BeanClass="java.awt.dnd.DragSourceContext" isJavaBased="true">
+  <Attribute Name="sourceActions" IsUpdateable="0" Type="int"/>
+  <AccessorAttribute id="dragSource" IsCollection="false"
+                     BeanClass="java.awt.dnd.DragSource"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="component" IsCollection="false"
+                     BeanClass="java.awt.Component"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="trigger" IsCollection="false"
+                     BeanClass="java.awt.dnd.DragGestureEvent"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="cursor" IsCollection="false"
+                     BeanClass="java.awt.Cursor"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="transferable" IsCollection="false"
+                     BeanClass="java.awt.datatransfer.Transferable"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="void" id="addDragSourceListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dsl" Type="java.awt.dnd.DragSourceListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeDragSourceListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dsl" Type="java.awt.dnd.DragSourceListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="transferablesFlavorsChanged" ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="dragEnter"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dsde" Type="java.awt.dnd.DragSourceDragEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="dragOver"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dsde" Type="java.awt.dnd.DragSourceDragEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="dragExit"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dse" Type="java.awt.dnd.DragSourceEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="dropActionChanged"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dsde" Type="java.awt.dnd.DragSourceDragEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="dragDropEnd"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dsde" Type="java.awt.dnd.DragSourceDropEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="dragMouseMoved"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dsde" Type="java.awt.dnd.DragSourceDragEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true" Type="java.awt.dnd.DragSourceContext"
+                     BeanClass="java.awt.dnd.DragSourceContext"
+                     id="DragSourceContext">
+    <ParameterInfo id="dscp" Type="java.awt.dnd.peer.DragSourceContextPeer"
+                   isStructured="true"/>
+    <ParameterInfo id="trigger" Type="java.awt.dnd.DragGestureEvent"
+                   isStructured="true"/>
+    <ParameterInfo id="dragCursor" Type="java.awt.Cursor" isStructured="true"/>
+    <ParameterInfo id="dragImage" Type="java.awt.Image" isStructured="true"/>
+    <ParameterInfo id="offset" Type="java.awt.Point" isStructured="true"/>
+    <ParameterInfo id="t" Type="java.awt.datatransfer.Transferable"
+                   isStructured="true"/>
+    <ParameterInfo id="dsl" Type="java.awt.dnd.DragSourceListener"
+                   isStructured="true"/>
+  </ConstructorMethod>
+</JavaBean>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="AbstractSolutionImporter"
+          Package="org.optaplanner.examples.common.persistence"
+          BeanClass="org.optaplanner.examples.common.persistence.AbstractSolutionImporter"
+          isJavaBased="true">
+  <Attribute Name="inputFileDirectory" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="inputFileSuffix" IsUpdateable="0" Type="java.lang.String"/>
+  <AccessorAttribute id="inputDir" IsCollection="false" BeanClass="java.io.File"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="outputDir" IsCollection="false"
+                     BeanClass="java.io.File"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="void" id="convertAll"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="convert"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="inputFileName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="outputFileName" Type="java.lang.String"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="acceptInputFile"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="inputFile" Type="java.io.File" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean"
+                  id="acceptInputFileDuringBulkConvert" ReturnNodeName="Return">
+    <ParameterInfo id="inputFile" Type="java.io.File" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.api.domain.solution.Solution"
+                  BeanClass="org.optaplanner.core.api.domain.solution.Solution"
+                  id="readSolution" ReturnNodeName="Solution">
+    <ParameterInfo id="inputFile" Type="java.io.File" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String"
+                  id="getFlooredPossibleSolutionSize" ReturnNodeName="Return">
+    <ParameterInfo id="possibleSolutionSize" Type="java.math.BigInteger"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true"
+                     Type="org.optaplanner.examples.common.persistence.AbstractSolutionImporter"
+                     BeanClass="org.optaplanner.examples.common.persistence.AbstractSolutionImporter"
+                     id="AbstractSolutionImporter">
+    <ParameterInfo id="withoutDao" Type="boolean" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true"
+                     Type="org.optaplanner.examples.common.persistence.AbstractSolutionImporter"
+                     BeanClass="org.optaplanner.examples.common.persistence.AbstractSolutionImporter"
+                     id="AbstractSolutionImporter">
+    <ParameterInfo id="solutionDao"
+                   Type="org.optaplanner.examples.common.persistence.SolutionDao"
+                   isStructured="true"/>
+  </ConstructorMethod>
+</JavaBean>

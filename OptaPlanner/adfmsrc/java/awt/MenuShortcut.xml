@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="MenuShortcut" Package="java.awt" BeanClass="java.awt.MenuShortcut"
+          isJavaBased="true">
+  <Attribute Name="key" IsUpdateable="0" Type="int"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="usesShiftModifier"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="s" Type="java.awt.MenuShortcut" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="obj" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="hashCode"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <ConstructorMethod IsCollection="true" Type="java.awt.MenuShortcut"
+                     BeanClass="java.awt.MenuShortcut" id="MenuShortcut">
+    <ParameterInfo id="key" Type="int" isStructured="false"/>
+    <ParameterInfo id="useShiftModifier" Type="boolean" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.MenuShortcut"
+                     BeanClass="java.awt.MenuShortcut" id="MenuShortcut">
+    <ParameterInfo id="key" Type="int" isStructured="false"/>
+  </ConstructorMethod>
+</JavaBean>

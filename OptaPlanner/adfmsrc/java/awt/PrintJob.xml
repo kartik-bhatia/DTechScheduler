@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="PrintJob" Package="java.awt" BeanClass="java.awt.PrintJob"
+          isJavaBased="true">
+  <Attribute Name="pageResolution" IsUpdateable="0" Type="int"/>
+  <AccessorAttribute id="graphics" IsCollection="false"
+                     BeanClass="java.awt.Graphics"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="pageDimension" IsCollection="false"
+                     BeanClass="java.awt.Dimension"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="lastPageFirst"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="end"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="finalize"
+                  ReturnNodeName="Return"/>
+  <ConstructorMethod IsCollection="true" Type="java.awt.PrintJob"
+                     BeanClass="java.awt.PrintJob" id="PrintJob"/>
+</JavaBean>

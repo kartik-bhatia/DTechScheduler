@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="UserPrincipalLookupService" Package="java.nio.file.attribute"
+          BeanClass="java.nio.file.attribute.UserPrincipalLookupService"
+          isJavaBased="true">
+  <MethodAccessor IsCollection="false"
+                  Type="java.nio.file.attribute.UserPrincipal"
+                  BeanClass="java.nio.file.attribute.UserPrincipal"
+                  id="lookupPrincipalByName" ReturnNodeName="UserPrincipal">
+    <ParameterInfo id="name" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="java.nio.file.attribute.GroupPrincipal"
+                  BeanClass="java.nio.file.attribute.GroupPrincipal"
+                  id="lookupPrincipalByGroupName"
+                  ReturnNodeName="GroupPrincipal">
+    <ParameterInfo id="group" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

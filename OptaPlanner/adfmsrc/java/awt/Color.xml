@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="Color" Package="java.awt" BeanClass="java.awt.Color"
+          isJavaBased="true">
+  <Attribute Name="red" IsUpdateable="0" Type="int"/>
+  <Attribute Name="green" IsUpdateable="0" Type="int"/>
+  <Attribute Name="blue" IsUpdateable="0" Type="int"/>
+  <Attribute Name="alpha" IsUpdateable="0" Type="int"/>
+  <Attribute Name="RGB" IsUpdateable="0" Type="int"/>
+  <Attribute Name="transparency" IsUpdateable="0" Type="int"/>
+  <AccessorAttribute id="colorSpace" IsCollection="false"
+                     BeanClass="java.awt.color.ColorSpace"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.Color"
+                  BeanClass="java.awt.Color" id="brighter"
+                  ReturnNodeName="Color"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.Color"
+                  BeanClass="java.awt.Color" id="darker"
+                  ReturnNodeName="Color"/>
+  <MethodAccessor IsCollection="false" Type="int" id="hashCode"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="obj" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.Color"
+                  BeanClass="java.awt.Color" id="decode" ReturnNodeName="Color">
+    <ParameterInfo id="nm" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Color"
+                  BeanClass="java.awt.Color" id="getColor"
+                  ReturnNodeName="Color">
+    <ParameterInfo id="nm" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Color"
+                  BeanClass="java.awt.Color" id="getColor"
+                  ReturnNodeName="Color">
+    <ParameterInfo id="nm" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="v" Type="java.awt.Color" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Color"
+                  BeanClass="java.awt.Color" id="getColor"
+                  ReturnNodeName="Color">
+    <ParameterInfo id="nm" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="v" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="HSBtoRGB"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="hue" Type="float" isStructured="false"/>
+    <ParameterInfo id="saturation" Type="float" isStructured="false"/>
+    <ParameterInfo id="brightness" Type="float" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="float[]" id="RGBtoHSB"
+                  ReturnNodeName="float"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="r" Type="int" isStructured="false"/>
+    <ParameterInfo id="g" Type="int" isStructured="false"/>
+    <ParameterInfo id="b" Type="int" isStructured="false"/>
+    <ParameterInfo id="hsbvals" Type="float[]" isStructured="false"/>
+    <Attribute Name="element" Type="float"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Color"
+                  BeanClass="java.awt.Color" id="getHSBColor"
+                  ReturnNodeName="Color">
+    <ParameterInfo id="h" Type="float" isStructured="false"/>
+    <ParameterInfo id="s" Type="float" isStructured="false"/>
+    <ParameterInfo id="b" Type="float" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="float[]" id="getRGBComponents"
+                  ReturnNodeName="float"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="compArray" Type="float[]" isStructured="false"/>
+    <Attribute Name="element" Type="float"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="float[]" id="getRGBColorComponents"
+                  ReturnNodeName="float"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="compArray" Type="float[]" isStructured="false"/>
+    <Attribute Name="element" Type="float"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="float[]" id="getComponents"
+                  ReturnNodeName="float"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="compArray" Type="float[]" isStructured="false"/>
+    <Attribute Name="element" Type="float"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="float[]" id="getComponents"
+                  ReturnNodeName="float"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="cspace" Type="java.awt.color.ColorSpace"
+                   isStructured="true"/>
+    <ParameterInfo id="compArray" Type="float[]" isStructured="false"/>
+    <Attribute Name="element" Type="float"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="float[]" id="getColorComponents"
+                  ReturnNodeName="float"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="compArray" Type="float[]" isStructured="false"/>
+    <Attribute Name="element" Type="float"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="float[]" id="getColorComponents"
+                  ReturnNodeName="float"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="cspace" Type="java.awt.color.ColorSpace"
+                   isStructured="true"/>
+    <ParameterInfo id="compArray" Type="float[]" isStructured="false"/>
+    <Attribute Name="element" Type="float"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.PaintContext"
+                  BeanClass="java.awt.PaintContext" id="createContext"
+                  ReturnNodeName="PaintContext">
+    <ParameterInfo id="cm" Type="java.awt.image.ColorModel"
+                   isStructured="true"/>
+    <ParameterInfo id="r" Type="java.awt.Rectangle" isStructured="true"/>
+    <ParameterInfo id="r2d" Type="java.awt.geom.Rectangle2D"
+                   isStructured="true"/>
+    <ParameterInfo id="xform" Type="java.awt.geom.AffineTransform"
+                   isStructured="true"/>
+    <ParameterInfo id="hints" Type="java.awt.RenderingHints"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true" Type="java.awt.Color"
+                     BeanClass="java.awt.Color" id="Color">
+    <ParameterInfo id="cspace" Type="java.awt.color.ColorSpace"
+                   isStructured="true"/>
+    <ParameterInfo id="components" Type="float[]" isStructured="false"/>
+    <ParameterInfo id="alpha" Type="float" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.Color"
+                     BeanClass="java.awt.Color" id="Color">
+    <ParameterInfo id="r" Type="float" isStructured="false"/>
+    <ParameterInfo id="g" Type="float" isStructured="false"/>
+    <ParameterInfo id="b" Type="float" isStructured="false"/>
+    <ParameterInfo id="a" Type="float" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.Color"
+                     BeanClass="java.awt.Color" id="Color">
+    <ParameterInfo id="r" Type="float" isStructured="false"/>
+    <ParameterInfo id="g" Type="float" isStructured="false"/>
+    <ParameterInfo id="b" Type="float" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.Color"
+                     BeanClass="java.awt.Color" id="Color">
+    <ParameterInfo id="rgba" Type="int" isStructured="false"/>
+    <ParameterInfo id="hasalpha" Type="boolean" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.Color"
+                     BeanClass="java.awt.Color" id="Color">
+    <ParameterInfo id="rgb" Type="int" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.Color"
+                     BeanClass="java.awt.Color" id="Color">
+    <ParameterInfo id="r" Type="int" isStructured="false"/>
+    <ParameterInfo id="g" Type="int" isStructured="false"/>
+    <ParameterInfo id="b" Type="int" isStructured="false"/>
+    <ParameterInfo id="a" Type="int" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.Color"
+                     BeanClass="java.awt.Color" id="Color">
+    <ParameterInfo id="r" Type="int" isStructured="false"/>
+    <ParameterInfo id="g" Type="int" isStructured="false"/>
+    <ParameterInfo id="b" Type="int" isStructured="false"/>
+  </ConstructorMethod>
+</JavaBean>

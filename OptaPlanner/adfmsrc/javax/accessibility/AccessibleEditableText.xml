@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="AccessibleEditableText" Package="javax.accessibility"
+          BeanClass="javax.accessibility.AccessibleEditableText"
+          isJavaBased="true">
+  <Attribute Name="charCount" IsUpdateable="0" Type="int"/>
+  <Attribute Name="caretPosition" IsUpdateable="0" Type="int"/>
+  <Attribute Name="selectionStart" IsUpdateable="0" Type="int"/>
+  <Attribute Name="selectionEnd" IsUpdateable="0" Type="int"/>
+  <Attribute Name="selectedText" IsUpdateable="0" Type="java.lang.String"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setTextContents"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="s" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="insertTextAtIndex"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+    <ParameterInfo id="s" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="getTextRange"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="startIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="endIndex" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="delete"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="startIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="endIndex" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="cut"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="startIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="endIndex" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="paste"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="startIndex" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="replaceText"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="startIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="endIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="s" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="selectText"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="startIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="endIndex" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setAttributes"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="startIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="endIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="as" Type="javax.swing.text.AttributeSet"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getIndexAtPoint"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p" Type="java.awt.Point" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Rectangle"
+                  BeanClass="java.awt.Rectangle" id="getCharacterBounds"
+                  ReturnNodeName="Rectangle">
+    <ParameterInfo id="i" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="getAtIndex"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="part" Type="int" isStructured="false"/>
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String"
+                  id="getAfterIndex" ReturnNodeName="Return">
+    <ParameterInfo id="part" Type="int" isStructured="false"/>
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String"
+                  id="getBeforeIndex" ReturnNodeName="Return">
+    <ParameterInfo id="part" Type="int" isStructured="false"/>
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="javax.swing.text.AttributeSet"
+                  BeanClass="javax.swing.text.AttributeSet"
+                  id="getCharacterAttribute" ReturnNodeName="AttributeSet">
+    <ParameterInfo id="i" Type="int" isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

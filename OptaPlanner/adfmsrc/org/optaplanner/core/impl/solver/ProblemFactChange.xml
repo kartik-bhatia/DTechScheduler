@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="ProblemFactChange" Package="org.optaplanner.core.impl.solver"
+          BeanClass="org.optaplanner.core.impl.solver.ProblemFactChange"
+          isJavaBased="true">
+  <MethodAccessor IsCollection="false" Type="void" id="doChange"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="scoreDirector"
+                   Type="org.optaplanner.core.impl.score.director.ScoreDirector"
+                   isStructured="true"/>
+  </MethodAccessor>
+</JavaBean>

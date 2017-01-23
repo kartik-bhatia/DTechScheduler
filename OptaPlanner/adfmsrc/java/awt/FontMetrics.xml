@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="FontMetrics" Package="java.awt" BeanClass="java.awt.FontMetrics"
+          isJavaBased="true">
+  <Attribute Name="leading" IsUpdateable="0" Type="int"/>
+  <Attribute Name="ascent" IsUpdateable="0" Type="int"/>
+  <Attribute Name="descent" IsUpdateable="0" Type="int"/>
+  <Attribute Name="height" IsUpdateable="0" Type="int"/>
+  <Attribute Name="maxAscent" IsUpdateable="0" Type="int"/>
+  <Attribute Name="maxDescent" IsUpdateable="0" Type="int"/>
+  <Attribute Name="maxDecent" IsUpdateable="0" Type="int"/>
+  <Attribute Name="maxAdvance" IsUpdateable="0" Type="int"/>
+  <AccessorAttribute id="font" IsCollection="false" BeanClass="java.awt.Font"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="fontRenderContext" IsCollection="false"
+                     BeanClass="java.awt.font.FontRenderContext"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="widths" IsCollection="true" Type="int[]"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="int"/>
+  </AccessorAttribute>
+  <MethodAccessor IsCollection="false" Type="int" id="charWidth"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="codePoint" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="charWidth"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="ch" Type="char" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="stringWidth"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="str" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="charsWidth"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="data" Type="char[]" isStructured="false"/>
+    <ParameterInfo id="off" Type="int" isStructured="false"/>
+    <ParameterInfo id="len" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="bytesWidth"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="data" Type="byte[]" isStructured="false"/>
+    <ParameterInfo id="off" Type="int" isStructured="false"/>
+    <ParameterInfo id="len" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="hasUniformLineMetrics"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.font.LineMetrics"
+                  BeanClass="java.awt.font.LineMetrics" id="getLineMetrics"
+                  ReturnNodeName="LineMetrics">
+    <ParameterInfo id="str" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="context" Type="java.awt.Graphics" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.font.LineMetrics"
+                  BeanClass="java.awt.font.LineMetrics" id="getLineMetrics"
+                  ReturnNodeName="LineMetrics">
+    <ParameterInfo id="str" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="beginIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="limit" Type="int" isStructured="false"/>
+    <ParameterInfo id="context" Type="java.awt.Graphics" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.font.LineMetrics"
+                  BeanClass="java.awt.font.LineMetrics" id="getLineMetrics"
+                  ReturnNodeName="LineMetrics">
+    <ParameterInfo id="chars" Type="char[]" isStructured="false"/>
+    <ParameterInfo id="beginIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="limit" Type="int" isStructured="false"/>
+    <ParameterInfo id="context" Type="java.awt.Graphics" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.font.LineMetrics"
+                  BeanClass="java.awt.font.LineMetrics" id="getLineMetrics"
+                  ReturnNodeName="LineMetrics">
+    <ParameterInfo id="ci" Type="java.text.CharacterIterator"
+                   isStructured="true"/>
+    <ParameterInfo id="beginIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="limit" Type="int" isStructured="false"/>
+    <ParameterInfo id="context" Type="java.awt.Graphics" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.Rectangle2D"
+                  BeanClass="java.awt.geom.Rectangle2D" id="getStringBounds"
+                  ReturnNodeName="Rectangle2D">
+    <ParameterInfo id="str" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="context" Type="java.awt.Graphics" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.Rectangle2D"
+                  BeanClass="java.awt.geom.Rectangle2D" id="getStringBounds"
+                  ReturnNodeName="Rectangle2D">
+    <ParameterInfo id="str" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="beginIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="limit" Type="int" isStructured="false"/>
+    <ParameterInfo id="context" Type="java.awt.Graphics" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.Rectangle2D"
+                  BeanClass="java.awt.geom.Rectangle2D" id="getStringBounds"
+                  ReturnNodeName="Rectangle2D">
+    <ParameterInfo id="chars" Type="char[]" isStructured="false"/>
+    <ParameterInfo id="beginIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="limit" Type="int" isStructured="false"/>
+    <ParameterInfo id="context" Type="java.awt.Graphics" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.Rectangle2D"
+                  BeanClass="java.awt.geom.Rectangle2D" id="getStringBounds"
+                  ReturnNodeName="Rectangle2D">
+    <ParameterInfo id="ci" Type="java.text.CharacterIterator"
+                   isStructured="true"/>
+    <ParameterInfo id="beginIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="limit" Type="int" isStructured="false"/>
+    <ParameterInfo id="context" Type="java.awt.Graphics" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.Rectangle2D"
+                  BeanClass="java.awt.geom.Rectangle2D" id="getMaxCharBounds"
+                  ReturnNodeName="Rectangle2D">
+    <ParameterInfo id="context" Type="java.awt.Graphics" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+</JavaBean>

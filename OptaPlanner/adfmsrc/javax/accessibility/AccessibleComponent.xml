@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="AccessibleComponent" Package="javax.accessibility"
+          BeanClass="javax.accessibility.AccessibleComponent"
+          isJavaBased="true">
+  <Attribute Name="enabled" Type="boolean"/>
+  <Attribute Name="visible" Type="boolean"/>
+  <Attribute Name="showing" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="focusTraversable" IsUpdateable="0" Type="boolean"/>
+  <AccessorAttribute id="background" IsCollection="false"
+                     BeanClass="java.awt.Color"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="foreground" IsCollection="false"
+                     BeanClass="java.awt.Color"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="cursor" IsCollection="false"
+                     BeanClass="java.awt.Cursor"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="font" IsCollection="false" BeanClass="java.awt.Font"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="locationOnScreen" IsCollection="false"
+                     BeanClass="java.awt.Point"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="location" IsCollection="false"
+                     BeanClass="java.awt.Point"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="bounds" IsCollection="false"
+                     BeanClass="java.awt.Rectangle"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="size" IsCollection="false"
+                     BeanClass="java.awt.Dimension"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.FontMetrics"
+                  BeanClass="java.awt.FontMetrics" id="getFontMetrics"
+                  ReturnNodeName="FontMetrics">
+    <ParameterInfo id="f" Type="java.awt.Font" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="contains"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p" Type="java.awt.Point" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="javax.accessibility.Accessible"
+                  BeanClass="javax.accessibility.Accessible"
+                  id="getAccessibleAt" ReturnNodeName="Accessible">
+    <ParameterInfo id="p" Type="java.awt.Point" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="requestFocus"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="addFocusListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.FocusListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeFocusListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.FocusListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+</JavaBean>

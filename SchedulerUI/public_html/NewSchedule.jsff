@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+  <af:panelGroupLayout id="pgl4" styleClass="AFStretchWidth" layout="scroll">
+    <af:panelStretchLayout id="psl1" styleClass="AFStretchWidth"
+                           dimensionsFrom="children">
+      <f:facet name="bottom"/>
+      <f:facet name="center">
+        <af:panelGroupLayout id="pgl1">
+        
+        
+          <af:panelHeader text="Lectures" id="ph2">
+            
+                  <af:table value="#{bindings.lectureList.collectionModel}" var="row"
+                            rows="#{bindings.lectureList.rangeSize}"
+                            emptyText="#{bindings.lectureList.viewable ? 'No data to display.' : 'Access Denied.'}"
+                            fetchSize="#{bindings.lectureList.rangeSize}"
+                            rowBandingInterval="0" id="md1" styleClass="AFStretchWidth"
+                            columnStretching="column:courseName"
+                            selectedRowKeys="#{bindings.lectureList.collectionModel.selectedRow}"
+                            selectionListener="#{bindings.lectureList.collectionModel.makeCurrent}"
+                            rowSelection="single"
+                            disableColumnReordering="true">
+                    <af:column sortProperty="#{bindings.lectureList.hints.course.code.name}"
+                               sortable="false" headerText="Course Code" id="courseCode"
+                               width="300">
+                      <af:outputText value="#{row.course.bindings.code.inputValue}"
+                                     id="ot16"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.lectureList.hints.course.courseName.name}"
+                               sortable="false" headerText="Course Name" id="courseName"
+                               width="100">
+                      <af:outputText value="#{row.course.bindings.courseName.inputValue}"
+                                     id="ot2"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.lectureList.hints.course.studentSize.name}"
+                               sortable="false" headerText="Student Size"
+                               id="studentSize">
+                    
+                      <af:commandLink text="#{row.course.bindings.studentSize.inputValue}" id="cl1">
+                        <af:showPopupBehavior popupId="::StudentsPopup"/>
+                      </af:commandLink>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.lectureList.hints.period.label.name}"
+                               sortable="false" headerText="Period" id="period">
+                      <af:outputText value="#{row.period.bindings.label.inputValue}"
+                                     id="ot11"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.lectureList.hints.room.label.name}"
+                               sortable="false" headerText="Room" id="room">
+                      <af:outputText value="#{row.room.bindings.label.inputValue}"
+                                     id="ot10"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.lectureList.hints.teacher.label.name}"
+                               sortable="false" headerText="Teacher" id="teacherName">
+                      <af:outputText value="#{row.teacher.bindings.name.inputValue}"
+                                     id="ot3"/>
+                    </af:column>
+                  </af:table> 
+            </af:panelHeader>
+          
+          </af:panelGroupLayout>
+  
+      </f:facet>
+      <f:facet name="start"/>
+      <f:facet name="end"/>
+      <f:facet name="top">
+          <af:panelStretchLayout id="psl2" endWidth="100px">
+            <f:facet name="bottom"/>
+            <f:facet name="center"/>
+            <f:facet name="start"/>
+            <f:facet name="end">
+                <af:commandButton text="Back" id="back" action="toHome"/>
+            </f:facet>
+            <f:facet name="top">
+                <af:outputText value="DTech Scheduler" id="ot1"
+                         inlineStyle="color:Blue; font-family:'Arial Rounded MT Bold'; font-size:x-large; text-align:center;"/>
+            </f:facet>
+          </af:panelStretchLayout>    
+      </f:facet>
+    </af:panelStretchLayout>
+    
+    
+    <af:popup id="StudentsPopup" contentDelivery="immediate">
+      <af:panelWindow id="pw1" title="Students" modal="true"
+                      contentWidth="50">
+             <af:table partialTriggers="::md1"
+                        rows="#{bindings.studentList.rangeSize}"
+                        fetchSize="#{bindings.studentList.rangeSize}"
+                        emptyText="#{bindings.studentList.viewable ? 'No data to display.' : 'Access Denied.'}"
+                        var="row"
+                        value="#{bindings.studentList.collectionModel}"
+                        rowBandingInterval="0"
+                        selectedRowKeys="#{bindings.studentList.collectionModel.selectedRow}"
+                        selectionListener="#{bindings.studentList.collectionModel.makeCurrent}"
+                        rowSelection="none" id="t2">
+                <af:column headerText="#{bindings.studentList.hints.code.label}"
+                           sortProperty="#{bindings.studentList.hints.code.name}"
+                           sortable="false" id="c4">
+                  <af:outputText value="#{row.code}" id="ot7"/>
+                </af:column>
+                 
+       <!--         <af:column headerText="#{bindings.studentList.hints.name.label}"
+                           sortProperty="#{bindings.studentList.hints.name.name}"
+                           sortable="false" id="c2">
+                  <af:outputText value="#{row.name}" id="ot6"/>
+                </af:column>
+                 
+                <af:column headerText="#{bindings.studentList.hints.label.label}"
+                           sortProperty="#{bindings.studentList.hints.label.name}"
+                           sortable="false" id="c1">
+                  <af:outputText value="#{row.label}" id="ot9"/>
+                </af:column>
+                 
+                <af:column headerText="#{bindings.studentList.hints.id.label}"
+                           sortProperty="#{bindings.studentList.hints.id.name}"
+                           sortable="false" id="c10">
+                  <af:outputText value="#{row.id}" id="ot8">
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.studentList.hints.id.format}"/>
+                  </af:outputText>
+                </af:column> -->
+              </af:table>
+      
+      </af:panelWindow>
+    </af:popup>
+  </af:panelGroupLayout>
+</jsp:root>

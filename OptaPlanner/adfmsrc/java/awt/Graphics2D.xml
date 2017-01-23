@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="Graphics2D" Package="java.awt" BeanClass="java.awt.Graphics2D"
+          isJavaBased="true">
+  <AccessorAttribute id="deviceConfiguration" IsCollection="false"
+                     BeanClass="java.awt.GraphicsConfiguration"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="renderingHints" IsCollection="false"
+                     BeanClass="java.awt.RenderingHints"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="transform" IsCollection="false"
+                     BeanClass="java.awt.geom.AffineTransform"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="paint" IsCollection="false" BeanClass="java.awt.Paint"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="composite" IsCollection="false"
+                     BeanClass="java.awt.Composite"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="background" IsCollection="false"
+                     BeanClass="java.awt.Color"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="stroke" IsCollection="false"
+                     BeanClass="java.awt.Stroke"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="fontRenderContext" IsCollection="false"
+                     BeanClass="java.awt.font.FontRenderContext"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="color" IsCollection="false" BeanClass="java.awt.Color"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="font" IsCollection="false" BeanClass="java.awt.Font"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="fontMetrics" IsCollection="false"
+                     BeanClass="java.awt.FontMetrics"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="clipBounds" IsCollection="false"
+                     BeanClass="java.awt.Rectangle"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="clip" IsCollection="false" BeanClass="java.awt.Shape"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="clipRect" IsCollection="false"
+                     BeanClass="java.awt.Rectangle"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="void" id="draw3DRect"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+    <ParameterInfo id="raised" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="fill3DRect"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+    <ParameterInfo id="raised" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="draw"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="s" Type="java.awt.Shape" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="drawImage"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="img" Type="java.awt.Image" isStructured="true"/>
+    <ParameterInfo id="xform" Type="java.awt.geom.AffineTransform"
+                   isStructured="true"/>
+    <ParameterInfo id="obs" Type="java.awt.image.ImageObserver"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="drawImage"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="img" Type="java.awt.image.BufferedImage"
+                   isStructured="true"/>
+    <ParameterInfo id="op" Type="java.awt.image.BufferedImageOp"
+                   isStructured="true"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="drawRenderedImage"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="img" Type="java.awt.image.RenderedImage"
+                   isStructured="true"/>
+    <ParameterInfo id="xform" Type="java.awt.geom.AffineTransform"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="drawRenderableImage"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="img" Type="java.awt.image.renderable.RenderableImage"
+                   isStructured="true"/>
+    <ParameterInfo id="xform" Type="java.awt.geom.AffineTransform"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="drawString"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="str" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="drawString"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="str" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="x" Type="float" isStructured="false"/>
+    <ParameterInfo id="y" Type="float" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="drawString"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="iterator" Type="java.text.AttributedCharacterIterator"
+                   isStructured="true"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="drawString"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="iterator" Type="java.text.AttributedCharacterIterator"
+                   isStructured="true"/>
+    <ParameterInfo id="x" Type="float" isStructured="false"/>
+    <ParameterInfo id="y" Type="float" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="drawGlyphVector"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="g" Type="java.awt.font.GlyphVector" isStructured="true"/>
+    <ParameterInfo id="x" Type="float" isStructured="false"/>
+    <ParameterInfo id="y" Type="float" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="fill"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="s" Type="java.awt.Shape" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="hit"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="rect" Type="java.awt.Rectangle" isStructured="true"/>
+    <ParameterInfo id="s" Type="java.awt.Shape" isStructured="true"/>
+    <ParameterInfo id="onStroke" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setRenderingHint"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="hintKey" Type="java.awt.RenderingHints.Key"
+                   isStructured="true"/>
+    <ParameterInfo id="hintValue" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object"
+                  id="getRenderingHint" ReturnNodeName="Return">
+    <ParameterInfo id="hintKey" Type="java.awt.RenderingHints.Key"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setRenderingHints"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="hints" Type="java.util.Map" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addRenderingHints"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="hints" Type="java.util.Map" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="translate"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="translate"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="tx" Type="double" isStructured="false"/>
+    <ParameterInfo id="ty" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="rotate"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="theta" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="rotate"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="theta" Type="double" isStructured="false"/>
+    <ParameterInfo id="x" Type="double" isStructured="false"/>
+    <ParameterInfo id="y" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="scale"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="sx" Type="double" isStructured="false"/>
+    <ParameterInfo id="sy" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="shear"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="shx" Type="double" isStructured="false"/>
+    <ParameterInfo id="shy" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="transform"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="Tx" Type="java.awt.geom.AffineTransform"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="clip"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="s" Type="java.awt.Shape" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Graphics"
+                  BeanClass="java.awt.Graphics" id="create"
+                  ReturnNodeName="Graphics"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.Graphics"
+                  BeanClass="java.awt.Graphics" id="create"
+                  ReturnNodeName="Graphics">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setPaintMode"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setXORMode"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="c1" Type="java.awt.Color" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.FontMetrics"
+                  BeanClass="java.awt.FontMetrics" id="getFontMetrics"
+                  ReturnNodeName="FontMetrics">
+    <ParameterInfo id="f" Type="java.awt.Font" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Rectangle"
+                  BeanClass="java.awt.Rectangle" id="getClipBounds"
+                  ReturnNodeName="Rectangle">
+    <ParameterInfo id="r" Type="java.awt.Rectangle" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="clipRect"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setClip"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="copyArea"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+    <ParameterInfo id="dx" Type="int" isStructured="false"/>
+    <ParameterInfo id="dy" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="drawLine"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x1" Type="int" isStructured="false"/>
+    <ParameterInfo id="y1" Type="int" isStructured="false"/>
+    <ParameterInfo id="x2" Type="int" isStructured="false"/>
+    <ParameterInfo id="y2" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="fillRect"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="drawRect"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="clearRect"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="drawRoundRect"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+    <ParameterInfo id="arcWidth" Type="int" isStructured="false"/>
+    <ParameterInfo id="arcHeight" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="fillRoundRect"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+    <ParameterInfo id="arcWidth" Type="int" isStructured="false"/>
+    <ParameterInfo id="arcHeight" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="drawOval"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="fillOval"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="drawArc"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+    <ParameterInfo id="startAngle" Type="int" isStructured="false"/>
+    <ParameterInfo id="arcAngle" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="fillArc"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+    <ParameterInfo id="startAngle" Type="int" isStructured="false"/>
+    <ParameterInfo id="arcAngle" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="drawPolyline"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="xPoints" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="yPoints" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="nPoints" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="drawPolygon"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="xPoints" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="yPoints" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="nPoints" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="drawPolygon"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p" Type="java.awt.Polygon" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="fillPolygon"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="xPoints" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="yPoints" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="nPoints" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="fillPolygon"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p" Type="java.awt.Polygon" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="drawChars"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="data" Type="char[]" isStructured="false"/>
+    <ParameterInfo id="offset" Type="int" isStructured="false"/>
+    <ParameterInfo id="length" Type="int" isStructured="false"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="drawBytes"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="data" Type="byte[]" isStructured="false"/>
+    <ParameterInfo id="offset" Type="int" isStructured="false"/>
+    <ParameterInfo id="length" Type="int" isStructured="false"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="drawImage"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="img" Type="java.awt.Image" isStructured="true"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="observer" Type="java.awt.image.ImageObserver"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="drawImage"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="img" Type="java.awt.Image" isStructured="true"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+    <ParameterInfo id="observer" Type="java.awt.image.ImageObserver"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="drawImage"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="img" Type="java.awt.Image" isStructured="true"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="bgcolor" Type="java.awt.Color" isStructured="true"/>
+    <ParameterInfo id="observer" Type="java.awt.image.ImageObserver"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="drawImage"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="img" Type="java.awt.Image" isStructured="true"/>
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+    <ParameterInfo id="bgcolor" Type="java.awt.Color" isStructured="true"/>
+    <ParameterInfo id="observer" Type="java.awt.image.ImageObserver"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="drawImage"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="img" Type="java.awt.Image" isStructured="true"/>
+    <ParameterInfo id="dx1" Type="int" isStructured="false"/>
+    <ParameterInfo id="dy1" Type="int" isStructured="false"/>
+    <ParameterInfo id="dx2" Type="int" isStructured="false"/>
+    <ParameterInfo id="dy2" Type="int" isStructured="false"/>
+    <ParameterInfo id="sx1" Type="int" isStructured="false"/>
+    <ParameterInfo id="sy1" Type="int" isStructured="false"/>
+    <ParameterInfo id="sx2" Type="int" isStructured="false"/>
+    <ParameterInfo id="sy2" Type="int" isStructured="false"/>
+    <ParameterInfo id="observer" Type="java.awt.image.ImageObserver"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="drawImage"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="img" Type="java.awt.Image" isStructured="true"/>
+    <ParameterInfo id="dx1" Type="int" isStructured="false"/>
+    <ParameterInfo id="dy1" Type="int" isStructured="false"/>
+    <ParameterInfo id="dx2" Type="int" isStructured="false"/>
+    <ParameterInfo id="dy2" Type="int" isStructured="false"/>
+    <ParameterInfo id="sx1" Type="int" isStructured="false"/>
+    <ParameterInfo id="sy1" Type="int" isStructured="false"/>
+    <ParameterInfo id="sx2" Type="int" isStructured="false"/>
+    <ParameterInfo id="sy2" Type="int" isStructured="false"/>
+    <ParameterInfo id="bgcolor" Type="java.awt.Color" isStructured="true"/>
+    <ParameterInfo id="observer" Type="java.awt.image.ImageObserver"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="dispose"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="finalize"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="hitClip"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

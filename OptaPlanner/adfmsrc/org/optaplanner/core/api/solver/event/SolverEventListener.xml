@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="SolverEventListener"
+          Package="org.optaplanner.core.api.solver.event"
+          BeanClass="org.optaplanner.core.api.solver.event.SolverEventListener"
+          isJavaBased="true">
+  <MethodAccessor IsCollection="false" Type="void" id="bestSolutionChanged"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="event"
+                   Type="org.optaplanner.core.api.solver.event.BestSolutionChangedEvent&lt;SolutionG>"
+                   isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

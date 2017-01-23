@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="FocusTraversalPolicy" Package="java.awt"
+          BeanClass="java.awt.FocusTraversalPolicy" isJavaBased="true">
+  <MethodAccessor IsCollection="false" Type="java.awt.Component"
+                  BeanClass="java.awt.Component" id="getComponentAfter"
+                  ReturnNodeName="Component">
+    <ParameterInfo id="aContainer" Type="java.awt.Container"
+                   isStructured="true"/>
+    <ParameterInfo id="aComponent" Type="java.awt.Component"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Component"
+                  BeanClass="java.awt.Component" id="getComponentBefore"
+                  ReturnNodeName="Component">
+    <ParameterInfo id="aContainer" Type="java.awt.Container"
+                   isStructured="true"/>
+    <ParameterInfo id="aComponent" Type="java.awt.Component"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Component"
+                  BeanClass="java.awt.Component" id="getFirstComponent"
+                  ReturnNodeName="Component">
+    <ParameterInfo id="aContainer" Type="java.awt.Container"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Component"
+                  BeanClass="java.awt.Component" id="getLastComponent"
+                  ReturnNodeName="Component">
+    <ParameterInfo id="aContainer" Type="java.awt.Container"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Component"
+                  BeanClass="java.awt.Component" id="getDefaultComponent"
+                  ReturnNodeName="Component">
+    <ParameterInfo id="aContainer" Type="java.awt.Container"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Component"
+                  BeanClass="java.awt.Component" id="getInitialComponent"
+                  ReturnNodeName="Component">
+    <ParameterInfo id="window" Type="java.awt.Window" isStructured="true"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true" Type="java.awt.FocusTraversalPolicy"
+                     BeanClass="java.awt.FocusTraversalPolicy"
+                     id="FocusTraversalPolicy"/>
+</JavaBean>

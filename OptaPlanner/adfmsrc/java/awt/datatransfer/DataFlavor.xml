@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="DataFlavor" Package="java.awt.datatransfer"
+          BeanClass="java.awt.datatransfer.DataFlavor" isJavaBased="true">
+  <Attribute Name="mimeType" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="representationClass" IsUpdateable="0"
+             Type="java.lang.Class&lt;?>"/>
+  <Attribute Name="humanPresentableName" Type="java.lang.String"/>
+  <Attribute Name="primaryType" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="subType" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="mimeTypeSerializedObject" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="defaultRepresentationClass" IsUpdateable="0"
+             Type="java.lang.Class&lt;?>"/>
+  <Attribute Name="defaultRepresentationClassAsString" IsUpdateable="0"
+             Type="java.lang.String"/>
+  <Attribute Name="representationClassInputStream" IsUpdateable="0"
+             Type="boolean"/>
+  <Attribute Name="representationClassReader" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="representationClassCharBuffer" IsUpdateable="0"
+             Type="boolean"/>
+  <Attribute Name="representationClassByteBuffer" IsUpdateable="0"
+             Type="boolean"/>
+  <Attribute Name="representationClassSerializable" IsUpdateable="0"
+             Type="boolean"/>
+  <Attribute Name="representationClassRemote" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="flavorSerializedObjectType" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="flavorRemoteObjectType" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="flavorJavaFileListType" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="flavorTextType" IsUpdateable="0" Type="boolean"/>
+  <AccessorAttribute id="textPlainUnicodeFlavor" IsCollection="false"
+                     BeanClass="java.awt.datatransfer.DataFlavor"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.datatransfer.DataFlavor"
+                  BeanClass="java.awt.datatransfer.DataFlavor"
+                  id="selectBestTextFlavor" ReturnNodeName="DataFlavor">
+    <ParameterInfo id="availableFlavors"
+                   Type="java.awt.datatransfer.DataFlavor[]"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.io.Reader"
+                  BeanClass="java.io.Reader" id="getReaderForText"
+                  ReturnNodeName="Reader">
+    <ParameterInfo id="transferable" Type="java.awt.datatransfer.Transferable"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="getParameter"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="paramName" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="o" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="that" Type="java.awt.datatransfer.DataFlavor"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="s" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="hashCode"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="match"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="that" Type="java.awt.datatransfer.DataFlavor"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isMimeTypeEqual"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="mimeType" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isMimeTypeEqual"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dataFlavor" Type="java.awt.datatransfer.DataFlavor"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="writeExternal"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="os" Type="java.io.ObjectOutput" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="readExternal"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="is" Type="java.io.ObjectInput" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object" id="clone"
+                  ReturnNodeName="Return"/>
+  <ConstructorMethod IsCollection="true" Type="java.awt.datatransfer.DataFlavor"
+                     BeanClass="java.awt.datatransfer.DataFlavor"
+                     id="DataFlavor">
+    <ParameterInfo id="mimeType" Type="java.lang.String" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.datatransfer.DataFlavor"
+                     BeanClass="java.awt.datatransfer.DataFlavor"
+                     id="DataFlavor">
+    <ParameterInfo id="mimeType" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="humanPresentableName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="classLoader" Type="java.lang.ClassLoader"
+                   isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.datatransfer.DataFlavor"
+                     BeanClass="java.awt.datatransfer.DataFlavor"
+                     id="DataFlavor">
+    <ParameterInfo id="mimeType" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="humanPresentableName" Type="java.lang.String"
+                   isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.datatransfer.DataFlavor"
+                     BeanClass="java.awt.datatransfer.DataFlavor"
+                     id="DataFlavor">
+    <ParameterInfo id="representationClass" Type="java.lang.Class&lt;?>"
+                   isStructured="false"/>
+    <ParameterInfo id="humanPresentableName" Type="java.lang.String"
+                   isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.datatransfer.DataFlavor"
+                     BeanClass="java.awt.datatransfer.DataFlavor"
+                     id="DataFlavor"/>
+</JavaBean>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="Period" Package="org.optaplanner.examples.curriculumcourse.domain"
+          BeanClass="org.optaplanner.examples.curriculumcourse.domain.Period"
+          isJavaBased="true">
+  <Attribute Name="label" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="id" Type="java.lang.Long"/>
+  <AccessorAttribute id="day" IsCollection="false"
+                     BeanClass="org.optaplanner.examples.curriculumcourse.domain.Day"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="timeslot" IsCollection="false"
+                     BeanClass="org.optaplanner.examples.curriculumcourse.domain.Timeslot"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="int" id="compareTo"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="other"
+                   Type="org.optaplanner.examples.common.domain.AbstractPersistable"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isLessThan"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p"
+                   Type="org.optaplanner.examples.curriculumcourse.domain.Period"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true"
+                     Type="org.optaplanner.examples.curriculumcourse.domain.Period"
+                     BeanClass="org.optaplanner.examples.curriculumcourse.domain.Period"
+                     id="Period"/>
+</JavaBean>

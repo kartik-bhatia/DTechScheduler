@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="GlyphVector" Package="java.awt.font"
+          BeanClass="java.awt.font.GlyphVector" isJavaBased="true">
+  <Attribute Name="numGlyphs" IsUpdateable="0" Type="int"/>
+  <Attribute Name="layoutFlags" IsUpdateable="0" Type="int"/>
+  <AccessorAttribute id="font" IsCollection="false" BeanClass="java.awt.Font"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="fontRenderContext" IsCollection="false"
+                     BeanClass="java.awt.font.FontRenderContext"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="logicalBounds" IsCollection="false"
+                     BeanClass="java.awt.geom.Rectangle2D"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="visualBounds" IsCollection="false"
+                     BeanClass="java.awt.geom.Rectangle2D"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="outline" IsCollection="false"
+                     BeanClass="java.awt.Shape"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="void" id="performDefaultLayout"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="int" id="getGlyphCode"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="glyphIndex" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="int[]" id="getGlyphCodes"
+                  ReturnNodeName="int"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="beginGlyphIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="numEntries" Type="int" isStructured="false"/>
+    <ParameterInfo id="codeReturn" Type="int[]" isStructured="false"/>
+    <Attribute Name="element" Type="int"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getGlyphCharIndex"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="glyphIndex" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="int[]" id="getGlyphCharIndices"
+                  ReturnNodeName="int"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="beginGlyphIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="numEntries" Type="int" isStructured="false"/>
+    <ParameterInfo id="codeReturn" Type="int[]" isStructured="false"/>
+    <Attribute Name="element" Type="int"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Rectangle"
+                  BeanClass="java.awt.Rectangle" id="getPixelBounds"
+                  ReturnNodeName="Rectangle">
+    <ParameterInfo id="renderFRC" Type="java.awt.font.FontRenderContext"
+                   isStructured="true"/>
+    <ParameterInfo id="x" Type="float" isStructured="false"/>
+    <ParameterInfo id="y" Type="float" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Shape"
+                  BeanClass="java.awt.Shape" id="getOutline"
+                  ReturnNodeName="Shape">
+    <ParameterInfo id="x" Type="float" isStructured="false"/>
+    <ParameterInfo id="y" Type="float" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Shape"
+                  BeanClass="java.awt.Shape" id="getGlyphOutline"
+                  ReturnNodeName="Shape">
+    <ParameterInfo id="glyphIndex" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Shape"
+                  BeanClass="java.awt.Shape" id="getGlyphOutline"
+                  ReturnNodeName="Shape">
+    <ParameterInfo id="glyphIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="x" Type="float" isStructured="false"/>
+    <ParameterInfo id="y" Type="float" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.Point2D"
+                  BeanClass="java.awt.geom.Point2D" id="getGlyphPosition"
+                  ReturnNodeName="Point2D">
+    <ParameterInfo id="glyphIndex" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setGlyphPosition"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="glyphIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="newPos" Type="java.awt.geom.Point2D"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.AffineTransform"
+                  BeanClass="java.awt.geom.AffineTransform"
+                  id="getGlyphTransform" ReturnNodeName="AffineTransform">
+    <ParameterInfo id="glyphIndex" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setGlyphTransform"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="glyphIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="newTX" Type="java.awt.geom.AffineTransform"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="float[]" id="getGlyphPositions"
+                  ReturnNodeName="float"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="beginGlyphIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="numEntries" Type="int" isStructured="false"/>
+    <ParameterInfo id="positionReturn" Type="float[]" isStructured="false"/>
+    <Attribute Name="element" Type="float"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Shape"
+                  BeanClass="java.awt.Shape" id="getGlyphLogicalBounds"
+                  ReturnNodeName="Shape">
+    <ParameterInfo id="glyphIndex" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Shape"
+                  BeanClass="java.awt.Shape" id="getGlyphVisualBounds"
+                  ReturnNodeName="Shape">
+    <ParameterInfo id="glyphIndex" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Rectangle"
+                  BeanClass="java.awt.Rectangle" id="getGlyphPixelBounds"
+                  ReturnNodeName="Rectangle">
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+    <ParameterInfo id="renderFRC" Type="java.awt.font.FontRenderContext"
+                   isStructured="true"/>
+    <ParameterInfo id="x" Type="float" isStructured="false"/>
+    <ParameterInfo id="y" Type="float" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.font.GlyphMetrics"
+                  BeanClass="java.awt.font.GlyphMetrics" id="getGlyphMetrics"
+                  ReturnNodeName="GlyphMetrics">
+    <ParameterInfo id="glyphIndex" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="java.awt.font.GlyphJustificationInfo"
+                  BeanClass="java.awt.font.GlyphJustificationInfo"
+                  id="getGlyphJustificationInfo"
+                  ReturnNodeName="GlyphJustificationInfo">
+    <ParameterInfo id="glyphIndex" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="set" Type="java.awt.font.GlyphVector"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true" Type="java.awt.font.GlyphVector"
+                     BeanClass="java.awt.font.GlyphVector" id="GlyphVector"/>
+</JavaBean>

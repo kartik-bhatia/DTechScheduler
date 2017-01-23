@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="AccessibleContext" Package="javax.accessibility"
+          BeanClass="javax.accessibility.AccessibleContext" isJavaBased="true">
+  <Attribute Name="accessibleName" Type="java.lang.String"/>
+  <Attribute Name="accessibleDescription" Type="java.lang.String"/>
+  <Attribute Name="accessibleIndexInParent" IsUpdateable="0" Type="int"/>
+  <Attribute Name="accessibleChildrenCount" IsUpdateable="0" Type="int"/>
+  <Attribute Name="locale" IsUpdateable="0" Type="java.util.Locale"/>
+  <AccessorAttribute id="accessibleRole" IsCollection="false"
+                     BeanClass="javax.accessibility.AccessibleRole"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="accessibleStateSet" IsCollection="false"
+                     BeanClass="javax.accessibility.AccessibleStateSet"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="accessibleParent" IsCollection="false"
+                     BeanClass="javax.accessibility.Accessible"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="accessibleAction" IsCollection="false"
+                     BeanClass="javax.accessibility.AccessibleAction"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="accessibleComponent" IsCollection="false"
+                     BeanClass="javax.accessibility.AccessibleComponent"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="accessibleSelection" IsCollection="false"
+                     BeanClass="javax.accessibility.AccessibleSelection"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="accessibleText" IsCollection="false"
+                     BeanClass="javax.accessibility.AccessibleText"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="accessibleEditableText" IsCollection="false"
+                     BeanClass="javax.accessibility.AccessibleEditableText"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="accessibleValue" IsCollection="false"
+                     BeanClass="javax.accessibility.AccessibleValue"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="accessibleIcon" IsCollection="true"
+                     BeanClass="javax.accessibility.AccessibleIcon"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="accessibleRelationSet" IsCollection="false"
+                     BeanClass="javax.accessibility.AccessibleRelationSet"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="accessibleTable" IsCollection="false"
+                     BeanClass="javax.accessibility.AccessibleTable"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="javax.accessibility.Accessible"
+                  BeanClass="javax.accessibility.Accessible"
+                  id="getAccessibleChild" ReturnNodeName="Accessible">
+    <ParameterInfo id="i" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="addPropertyChangeListener" ReturnNodeName="Return">
+    <ParameterInfo id="listener" Type="java.beans.PropertyChangeListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="removePropertyChangeListener" ReturnNodeName="Return">
+    <ParameterInfo id="listener" Type="java.beans.PropertyChangeListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="firePropertyChange"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="propertyName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="oldValue" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="newValue" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true"
+                     Type="javax.accessibility.AccessibleContext"
+                     BeanClass="javax.accessibility.AccessibleContext"
+                     id="AccessibleContext"/>
+</JavaBean>

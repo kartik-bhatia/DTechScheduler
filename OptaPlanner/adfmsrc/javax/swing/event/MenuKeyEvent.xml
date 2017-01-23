@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="MenuKeyEvent" Package="javax.swing.event"
+          BeanClass="javax.swing.event.MenuKeyEvent" isJavaBased="true">
+  <Attribute Name="keyCode" Type="int"/>
+  <Attribute Name="keyChar" Type="char"/>
+  <Attribute Name="keyLocation" IsUpdateable="0" Type="int"/>
+  <Attribute Name="actionKey" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="shiftDown" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="controlDown" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="metaDown" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="altDown" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="altGraphDown" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="when" IsUpdateable="0" Type="long"/>
+  <Attribute Name="modifiers" Type="int"/>
+  <Attribute Name="modifiersEx" IsUpdateable="0" Type="int"/>
+  <Attribute Name="consumed" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="ID" IsUpdateable="0" Type="int"/>
+  <Attribute Name="extendedKeyCode" IsUpdateable="0" Type="int"/>
+  <AccessorAttribute id="path" IsCollection="true"
+                     BeanClass="javax.swing.MenuElement"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="menuSelectionManager" IsCollection="false"
+                     BeanClass="javax.swing.MenuSelectionManager"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="component" IsCollection="false"
+                     BeanClass="java.awt.Component"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="getKeyText"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="keyCode" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String"
+                  id="getKeyModifiersText" ReturnNodeName="Return">
+    <ParameterInfo id="modifiers" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="paramString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="consume"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String"
+                  id="getModifiersExText" ReturnNodeName="Return">
+    <ParameterInfo id="modifiers" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setSource"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="newSource" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="int" id="getExtendedKeyCodeForChar"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="c" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getMaskForButton"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="button" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true" Type="javax.swing.event.MenuKeyEvent"
+                     BeanClass="javax.swing.event.MenuKeyEvent"
+                     id="MenuKeyEvent">
+    <ParameterInfo id="source" Type="java.awt.Component" isStructured="true"/>
+    <ParameterInfo id="id" Type="int" isStructured="false"/>
+    <ParameterInfo id="when" Type="long" isStructured="false"/>
+    <ParameterInfo id="modifiers" Type="int" isStructured="false"/>
+    <ParameterInfo id="keyCode" Type="int" isStructured="false"/>
+    <ParameterInfo id="keyChar" Type="char" isStructured="false"/>
+    <ParameterInfo id="p" Type="javax.swing.MenuElement[]"
+                   isStructured="false"/>
+    <ParameterInfo id="m" Type="javax.swing.MenuSelectionManager"
+                   isStructured="true"/>
+  </ConstructorMethod>
+</JavaBean>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="InnerScoreDirectorFactory"
+          Package="org.optaplanner.core.impl.score.director"
+          BeanClass="org.optaplanner.core.impl.score.director.InnerScoreDirectorFactory"
+          isJavaBased="true">
+  <AccessorAttribute id="solutionDescriptor" IsCollection="false"
+                     BeanClass="org.optaplanner.core.impl.domain.solution.descriptor.SolutionDescriptor"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="scoreDefinition" IsCollection="false"
+                     BeanClass="org.optaplanner.core.impl.score.definition.ScoreDefinition"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="initializingScoreTrend" IsCollection="false"
+                     BeanClass="org.optaplanner.core.impl.score.trend.InitializingScoreTrend"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.impl.score.director.ScoreDirector"
+                  BeanClass="org.optaplanner.core.impl.score.director.ScoreDirector"
+                  id="buildScoreDirector" ReturnNodeName="InnerScoreDirector"/>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.impl.score.director.InnerScoreDirector"
+                  BeanClass="org.optaplanner.core.impl.score.director.InnerScoreDirector"
+                  id="buildScoreDirector" ReturnNodeName="InnerScoreDirector">
+    <ParameterInfo id="constraintMatchEnabledPreference" Type="boolean"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="assertScoreFromScratch"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="solution"
+                   Type="org.optaplanner.core.api.domain.solution.Solution"
+                   isStructured="true"/>
+  </MethodAccessor>
+</JavaBean>

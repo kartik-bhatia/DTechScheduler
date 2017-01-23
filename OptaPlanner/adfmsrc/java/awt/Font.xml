@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="Font" Package="java.awt" BeanClass="java.awt.Font"
+          isJavaBased="true">
+  <Attribute Name="family" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="PSName" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="name" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="fontName" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="style" IsUpdateable="0" Type="int"/>
+  <Attribute Name="size" IsUpdateable="0" Type="int"/>
+  <Attribute Name="size2D" IsUpdateable="0" Type="float"/>
+  <Attribute Name="plain" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="bold" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="italic" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="transformed" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="numGlyphs" IsUpdateable="0" Type="int"/>
+  <Attribute Name="missingGlyphCode" IsUpdateable="0" Type="int"/>
+  <Attribute Name="italicAngle" IsUpdateable="0" Type="float"/>
+  <AccessorAttribute id="peer" IsCollection="false"
+                     BeanClass="java.awt.peer.FontPeer"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="transform" IsCollection="false"
+                     BeanClass="java.awt.geom.AffineTransform"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="attributes" IsCollection="true" Type="java.util.Map"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="java.awt.font.TextAttribute, ?"/>
+  </AccessorAttribute>
+  <AccessorAttribute id="availableAttributes" IsCollection="true"
+                     BeanClass="java.text.AttributedCharacterIterator.Attribute"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.Font"
+                  BeanClass="java.awt.Font" id="getFont" ReturnNodeName="Font">
+    <ParameterInfo id="attributes" Type="java.util.Map" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Font"
+                  BeanClass="java.awt.Font" id="getFont" ReturnNodeName="Font">
+    <ParameterInfo id="nm" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Font"
+                  BeanClass="java.awt.Font" id="getFont" ReturnNodeName="Font">
+    <ParameterInfo id="nm" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="font" Type="java.awt.Font" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Font"
+                  BeanClass="java.awt.Font" id="createFont"
+                  ReturnNodeName="Font">
+    <ParameterInfo id="fontFormat" Type="int" isStructured="false"/>
+    <ParameterInfo id="fontStream" Type="java.io.InputStream"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Font"
+                  BeanClass="java.awt.Font" id="createFont"
+                  ReturnNodeName="Font">
+    <ParameterInfo id="fontFormat" Type="int" isStructured="false"/>
+    <ParameterInfo id="fontFile" Type="java.io.File" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="getFamily"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.util.Locale" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="getFontName"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.util.Locale" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="hasLayoutAttributes"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.Font"
+                  BeanClass="java.awt.Font" id="decode" ReturnNodeName="Font">
+    <ParameterInfo id="str" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="hashCode"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="obj" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="byte" id="getBaselineFor"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="c" Type="char" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Font"
+                  BeanClass="java.awt.Font" id="deriveFont"
+                  ReturnNodeName="Font">
+    <ParameterInfo id="style" Type="int" isStructured="false"/>
+    <ParameterInfo id="size" Type="float" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Font"
+                  BeanClass="java.awt.Font" id="deriveFont"
+                  ReturnNodeName="Font">
+    <ParameterInfo id="style" Type="int" isStructured="false"/>
+    <ParameterInfo id="trans" Type="java.awt.geom.AffineTransform"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Font"
+                  BeanClass="java.awt.Font" id="deriveFont"
+                  ReturnNodeName="Font">
+    <ParameterInfo id="size" Type="float" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Font"
+                  BeanClass="java.awt.Font" id="deriveFont"
+                  ReturnNodeName="Font">
+    <ParameterInfo id="trans" Type="java.awt.geom.AffineTransform"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Font"
+                  BeanClass="java.awt.Font" id="deriveFont"
+                  ReturnNodeName="Font">
+    <ParameterInfo id="style" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.Font"
+                  BeanClass="java.awt.Font" id="deriveFont"
+                  ReturnNodeName="Font">
+    <ParameterInfo id="attributes" Type="java.util.Map" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="canDisplay"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="c" Type="char" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="canDisplay"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="codePoint" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="canDisplayUpTo"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="str" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="canDisplayUpTo"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="text" Type="char[]" isStructured="false"/>
+    <ParameterInfo id="start" Type="int" isStructured="false"/>
+    <ParameterInfo id="limit" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="canDisplayUpTo"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="iter" Type="java.text.CharacterIterator"
+                   isStructured="true"/>
+    <ParameterInfo id="start" Type="int" isStructured="false"/>
+    <ParameterInfo id="limit" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="hasUniformLineMetrics"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.font.LineMetrics"
+                  BeanClass="java.awt.font.LineMetrics" id="getLineMetrics"
+                  ReturnNodeName="LineMetrics">
+    <ParameterInfo id="str" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="frc" Type="java.awt.font.FontRenderContext"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.font.LineMetrics"
+                  BeanClass="java.awt.font.LineMetrics" id="getLineMetrics"
+                  ReturnNodeName="LineMetrics">
+    <ParameterInfo id="str" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="beginIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="limit" Type="int" isStructured="false"/>
+    <ParameterInfo id="frc" Type="java.awt.font.FontRenderContext"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.font.LineMetrics"
+                  BeanClass="java.awt.font.LineMetrics" id="getLineMetrics"
+                  ReturnNodeName="LineMetrics">
+    <ParameterInfo id="chars" Type="char[]" isStructured="false"/>
+    <ParameterInfo id="beginIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="limit" Type="int" isStructured="false"/>
+    <ParameterInfo id="frc" Type="java.awt.font.FontRenderContext"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.font.LineMetrics"
+                  BeanClass="java.awt.font.LineMetrics" id="getLineMetrics"
+                  ReturnNodeName="LineMetrics">
+    <ParameterInfo id="ci" Type="java.text.CharacterIterator"
+                   isStructured="true"/>
+    <ParameterInfo id="beginIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="limit" Type="int" isStructured="false"/>
+    <ParameterInfo id="frc" Type="java.awt.font.FontRenderContext"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.Rectangle2D"
+                  BeanClass="java.awt.geom.Rectangle2D" id="getStringBounds"
+                  ReturnNodeName="Rectangle2D">
+    <ParameterInfo id="str" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="frc" Type="java.awt.font.FontRenderContext"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.Rectangle2D"
+                  BeanClass="java.awt.geom.Rectangle2D" id="getStringBounds"
+                  ReturnNodeName="Rectangle2D">
+    <ParameterInfo id="str" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="beginIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="limit" Type="int" isStructured="false"/>
+    <ParameterInfo id="frc" Type="java.awt.font.FontRenderContext"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.Rectangle2D"
+                  BeanClass="java.awt.geom.Rectangle2D" id="getStringBounds"
+                  ReturnNodeName="Rectangle2D">
+    <ParameterInfo id="chars" Type="char[]" isStructured="false"/>
+    <ParameterInfo id="beginIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="limit" Type="int" isStructured="false"/>
+    <ParameterInfo id="frc" Type="java.awt.font.FontRenderContext"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.Rectangle2D"
+                  BeanClass="java.awt.geom.Rectangle2D" id="getStringBounds"
+                  ReturnNodeName="Rectangle2D">
+    <ParameterInfo id="ci" Type="java.text.CharacterIterator"
+                   isStructured="true"/>
+    <ParameterInfo id="beginIndex" Type="int" isStructured="false"/>
+    <ParameterInfo id="limit" Type="int" isStructured="false"/>
+    <ParameterInfo id="frc" Type="java.awt.font.FontRenderContext"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.geom.Rectangle2D"
+                  BeanClass="java.awt.geom.Rectangle2D" id="getMaxCharBounds"
+                  ReturnNodeName="Rectangle2D">
+    <ParameterInfo id="frc" Type="java.awt.font.FontRenderContext"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.font.GlyphVector"
+                  BeanClass="java.awt.font.GlyphVector" id="createGlyphVector"
+                  ReturnNodeName="GlyphVector">
+    <ParameterInfo id="frc" Type="java.awt.font.FontRenderContext"
+                   isStructured="true"/>
+    <ParameterInfo id="str" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.font.GlyphVector"
+                  BeanClass="java.awt.font.GlyphVector" id="createGlyphVector"
+                  ReturnNodeName="GlyphVector">
+    <ParameterInfo id="frc" Type="java.awt.font.FontRenderContext"
+                   isStructured="true"/>
+    <ParameterInfo id="chars" Type="char[]" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.font.GlyphVector"
+                  BeanClass="java.awt.font.GlyphVector" id="createGlyphVector"
+                  ReturnNodeName="GlyphVector">
+    <ParameterInfo id="frc" Type="java.awt.font.FontRenderContext"
+                   isStructured="true"/>
+    <ParameterInfo id="ci" Type="java.text.CharacterIterator"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.font.GlyphVector"
+                  BeanClass="java.awt.font.GlyphVector" id="createGlyphVector"
+                  ReturnNodeName="GlyphVector">
+    <ParameterInfo id="frc" Type="java.awt.font.FontRenderContext"
+                   isStructured="true"/>
+    <ParameterInfo id="glyphCodes" Type="int[]" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.font.GlyphVector"
+                  BeanClass="java.awt.font.GlyphVector" id="layoutGlyphVector"
+                  ReturnNodeName="GlyphVector">
+    <ParameterInfo id="frc" Type="java.awt.font.FontRenderContext"
+                   isStructured="true"/>
+    <ParameterInfo id="text" Type="char[]" isStructured="false"/>
+    <ParameterInfo id="start" Type="int" isStructured="false"/>
+    <ParameterInfo id="limit" Type="int" isStructured="false"/>
+    <ParameterInfo id="flags" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true" Type="java.awt.Font"
+                     BeanClass="java.awt.Font" id="Font">
+    <ParameterInfo id="attributes" Type="java.util.Map" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.Font"
+                     BeanClass="java.awt.Font" id="Font">
+    <ParameterInfo id="name" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="style" Type="int" isStructured="false"/>
+    <ParameterInfo id="size" Type="int" isStructured="false"/>
+  </ConstructorMethod>
+</JavaBean>

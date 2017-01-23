@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="PropertyAccessor"
+          Package="org.optaplanner.core.impl.domain.common"
+          BeanClass="org.optaplanner.core.impl.domain.common.PropertyAccessor"
+          isJavaBased="true">
+  <Attribute Name="name" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="propertyType" IsUpdateable="0" Type="java.lang.Class&lt;?>"/>
+  <AccessorAttribute id="readMethod" IsCollection="true"
+                     Type="java.lang.reflect.Method"
+                     CollectionBeanClass="UpdateableSingleValue">
+    <Attribute Name="element" Type="java.lang.reflect.Method"/>
+  </AccessorAttribute>
+  <AccessorAttribute id="writeMethod" IsCollection="true"
+                     Type="java.lang.reflect.Method"
+                     CollectionBeanClass="UpdateableSingleValue">
+    <Attribute Name="element" Type="java.lang.reflect.Method"/>
+  </AccessorAttribute>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object"
+                  id="executeGetter" ReturnNodeName="Return">
+    <ParameterInfo id="bean" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="executeSetter"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="bean" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="value" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

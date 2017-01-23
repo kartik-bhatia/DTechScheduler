@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="Action" Package="javax.swing" BeanClass="javax.swing.Action"
+          isJavaBased="true">
+  <Attribute Name="enabled" Type="boolean"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object" id="getValue"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="key" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="putValue"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="key" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="value" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="addPropertyChangeListener" ReturnNodeName="Return">
+    <ParameterInfo id="listener" Type="java.beans.PropertyChangeListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="removePropertyChangeListener" ReturnNodeName="Return">
+    <ParameterInfo id="listener" Type="java.beans.PropertyChangeListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="actionPerformed"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="e" Type="java.awt.event.ActionEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+</JavaBean>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="Curriculum"
+          Package="org.optaplanner.examples.curriculumcourse.domain"
+          BeanClass="org.optaplanner.examples.curriculumcourse.domain.Curriculum"
+          isJavaBased="true">
+  <Attribute Name="code" Type="java.lang.String"/>
+  <Attribute Name="label" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="id" Type="java.lang.Long"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="int" id="compareTo"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="other"
+                   Type="org.optaplanner.examples.common.domain.AbstractPersistable"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true"
+                     Type="org.optaplanner.examples.curriculumcourse.domain.Curriculum"
+                     BeanClass="org.optaplanner.examples.curriculumcourse.domain.Curriculum"
+                     id="Curriculum"/>
+</JavaBean>

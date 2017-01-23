@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="ScoreDirector" Package="org.optaplanner.core.impl.score.director"
+          BeanClass="org.optaplanner.core.impl.score.director.ScoreDirector"
+          isJavaBased="true">
+  <Attribute Name="constraintMatchEnabled" IsUpdateable="0" Type="boolean"/>
+  <AccessorAttribute id="workingSolution" IsCollection="false"
+                     BeanClass="org.optaplanner.core.api.domain.solution.Solution"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="constraintMatchTotals" IsCollection="true"
+                     BeanClass="org.optaplanner.core.api.score.constraint.ConstraintMatchTotal"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.api.score.Score"
+                  BeanClass="org.optaplanner.core.api.score.Score"
+                  id="calculateScore" ReturnNodeName="Score"/>
+  <MethodAccessor IsCollection="false" Type="void" id="beforeEntityAdded"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="entity" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="afterEntityAdded"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="entity" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="beforeVariableChanged"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="entity" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="variableName" Type="java.lang.String"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="afterVariableChanged"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="entity" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="variableName" Type="java.lang.String"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="beforeVariableChanged"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="variableDescriptor"
+                   Type="org.optaplanner.core.impl.domain.variable.descriptor.VariableDescriptor"
+                   isStructured="true"/>
+    <ParameterInfo id="entity" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="afterVariableChanged"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="variableDescriptor"
+                   Type="org.optaplanner.core.impl.domain.variable.descriptor.VariableDescriptor"
+                   isStructured="true"/>
+    <ParameterInfo id="entity" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="changeVariableFacade"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="variableDescriptor"
+                   Type="org.optaplanner.core.impl.domain.variable.descriptor.VariableDescriptor"
+                   isStructured="true"/>
+    <ParameterInfo id="entity" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="newValue" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="beforeEntityRemoved"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="entity" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="afterEntityRemoved"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="entity" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="beforeProblemFactAdded"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="problemFact" Type="java.lang.Object"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="afterProblemFactAdded"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="problemFact" Type="java.lang.Object"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="beforeProblemFactChanged"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="problemFact" Type="java.lang.Object"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="afterProblemFactChanged"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="problemFact" Type="java.lang.Object"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="beforeProblemFactRemoved"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="problemFact" Type="java.lang.Object"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="afterProblemFactRemoved"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="problemFact" Type="java.lang.Object"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="dispose"
+                  ReturnNodeName="Return"/>
+</JavaBean>

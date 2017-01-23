@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="SolutionDescriptor"
+          Package="org.optaplanner.core.impl.domain.solution.descriptor"
+          BeanClass="org.optaplanner.core.impl.domain.solution.descriptor.SolutionDescriptor"
+          isJavaBased="true">
+  <Attribute Name="solutionClass" IsUpdateable="0"
+             Type="java.lang.Class&lt;? extends org.optaplanner.core.api.domain.solution.Solution>"/>
+  <AccessorAttribute id="solutionCloner" IsCollection="false"
+                     BeanClass="org.optaplanner.core.api.domain.solution.cloner.SolutionCloner"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="entityPropertyAccessorMap" IsCollection="true"
+                     Type="java.util.Map"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element"
+               Type="java.lang.String, org.optaplanner.core.impl.domain.common.PropertyAccessor"/>
+  </AccessorAttribute>
+  <AccessorAttribute id="entityCollectionPropertyAccessorMap"
+                     IsCollection="true" Type="java.util.Map"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element"
+               Type="java.lang.String, org.optaplanner.core.impl.domain.common.PropertyAccessor"/>
+  </AccessorAttribute>
+  <AccessorAttribute id="entityClassSet" IsCollection="true"
+                     Type="java.util.Set"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="java.lang.Class&lt;?>"/>
+  </AccessorAttribute>
+  <AccessorAttribute id="entityDescriptors" IsCollection="true"
+                     AddMethod="addEntityDescriptor"
+                     BeanClass="org.optaplanner.core.impl.domain.entity.descriptor.EntityDescriptor"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="AddMethod" Value="addEntityDescriptor"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="genuineEntityDescriptors" IsCollection="true"
+                     AddMethod="addEntityDescriptor"
+                     BeanClass="org.optaplanner.core.impl.domain.entity.descriptor.EntityDescriptor"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="AddMethod" Value="addEntityDescriptor"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="chainedVariableDescriptors" IsCollection="true"
+                     BeanClass="org.optaplanner.core.impl.domain.variable.descriptor.GenuineVariableDescriptor"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <MethodAccessor IsCollection="false" Type="void" id="addEntityDescriptor"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="entityDescriptor"
+                   Type="org.optaplanner.core.impl.domain.entity.descriptor.EntityDescriptor"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="processAnnotations"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="descriptorPolicy"
+                   Type="org.optaplanner.core.impl.domain.policy.DescriptorPolicy"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="afterAnnotationsProcessed" ReturnNodeName="Return">
+    <ParameterInfo id="descriptorPolicy"
+                   Type="org.optaplanner.core.impl.domain.policy.DescriptorPolicy"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.impl.domain.common.PropertyAccessor"
+                  BeanClass="org.optaplanner.core.impl.domain.common.PropertyAccessor"
+                  id="getPropertyAccessor" ReturnNodeName="PropertyAccessor">
+    <ParameterInfo id="propertyName" Type="java.lang.String"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean"
+                  id="hasEntityDescriptorStrict" ReturnNodeName="Return">
+    <ParameterInfo id="entityClass" Type="java.lang.Class&lt;?>"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.impl.domain.entity.descriptor.EntityDescriptor"
+                  BeanClass="org.optaplanner.core.impl.domain.entity.descriptor.EntityDescriptor"
+                  id="getEntityDescriptorStrict"
+                  ReturnNodeName="EntityDescriptor">
+    <ParameterInfo id="entityClass" Type="java.lang.Class&lt;?>"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="hasEntityDescriptor"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="entitySubclass" Type="java.lang.Class&lt;?>"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.impl.domain.entity.descriptor.EntityDescriptor"
+                  BeanClass="org.optaplanner.core.impl.domain.entity.descriptor.EntityDescriptor"
+                  id="findEntityDescriptorOrFail"
+                  ReturnNodeName="EntityDescriptor">
+    <ParameterInfo id="entitySubclass" Type="java.lang.Class&lt;?>"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.impl.domain.entity.descriptor.EntityDescriptor"
+                  BeanClass="org.optaplanner.core.impl.domain.entity.descriptor.EntityDescriptor"
+                  id="findEntityDescriptor" ReturnNodeName="EntityDescriptor">
+    <ParameterInfo id="entitySubclass" Type="java.lang.Class&lt;?>"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.impl.domain.variable.descriptor.GenuineVariableDescriptor"
+                  BeanClass="org.optaplanner.core.impl.domain.variable.descriptor.GenuineVariableDescriptor"
+                  id="findGenuineVariableDescriptor"
+                  ReturnNodeName="GenuineVariableDescriptor">
+    <ParameterInfo id="entity" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="variableName" Type="java.lang.String"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.impl.domain.variable.descriptor.GenuineVariableDescriptor"
+                  BeanClass="org.optaplanner.core.impl.domain.variable.descriptor.GenuineVariableDescriptor"
+                  id="findGenuineVariableDescriptorOrFail"
+                  ReturnNodeName="GenuineVariableDescriptor">
+    <ParameterInfo id="entity" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="variableName" Type="java.lang.String"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.impl.domain.variable.descriptor.VariableDescriptor"
+                  BeanClass="org.optaplanner.core.impl.domain.variable.descriptor.VariableDescriptor"
+                  id="findVariableDescriptor"
+                  ReturnNodeName="VariableDescriptor">
+    <ParameterInfo id="entity" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="variableName" Type="java.lang.String"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="org.optaplanner.core.impl.domain.variable.descriptor.VariableDescriptor"
+                  BeanClass="org.optaplanner.core.impl.domain.variable.descriptor.VariableDescriptor"
+                  id="findVariableDescriptorOrFail"
+                  ReturnNodeName="VariableDescriptor">
+    <ParameterInfo id="entity" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="variableName" Type="java.lang.String"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="java.util.Collection"
+                  id="getAllFacts" ReturnNodeName="Object"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="solution"
+                   Type="org.optaplanner.core.api.domain.solution.Solution"
+                   isStructured="true"/>
+    <Attribute Name="element" Type="java.lang.Object"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getEntityCount"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="solution"
+                   Type="org.optaplanner.core.api.domain.solution.Solution"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="java.util.List" id="getEntityList"
+                  ReturnNodeName="Object"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="solution"
+                   Type="org.optaplanner.core.api.domain.solution.Solution"
+                   isStructured="true"/>
+    <Attribute Name="element" Type="java.lang.Object"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="java.util.List"
+                  id="getEntityListByEntityClass" ReturnNodeName="Object"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="solution"
+                   Type="org.optaplanner.core.api.domain.solution.Solution"
+                   isStructured="true"/>
+    <ParameterInfo id="entityClass" Type="java.lang.Class&lt;?>"
+                   isStructured="false"/>
+    <Attribute Name="element" Type="java.lang.Object"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="long" id="getVariableCount"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="solution"
+                   Type="org.optaplanner.core.api.domain.solution.Solution"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getValueCount"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="solution"
+                   Type="org.optaplanner.core.api.domain.solution.Solution"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="long" id="getProblemScale"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="solution"
+                   Type="org.optaplanner.core.api.domain.solution.Solution"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int"
+                  id="countUninitializedVariables" ReturnNodeName="Return">
+    <ParameterInfo id="solution"
+                   Type="org.optaplanner.core.api.domain.solution.Solution"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isInitialized"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="scoreDirector"
+                   Type="org.optaplanner.core.impl.score.director.ScoreDirector"
+                   isStructured="true"/>
+    <ParameterInfo id="solution"
+                   Type="org.optaplanner.core.api.domain.solution.Solution"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int"
+                  id="countReinitializableVariables" ReturnNodeName="Return">
+    <ParameterInfo id="scoreDirector"
+                   Type="org.optaplanner.core.impl.score.director.ScoreDirector"
+                   isStructured="true"/>
+    <ParameterInfo id="solution"
+                   Type="org.optaplanner.core.api.domain.solution.Solution"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <ConstructorMethod IsCollection="true"
+                     Type="org.optaplanner.core.impl.domain.solution.descriptor.SolutionDescriptor"
+                     BeanClass="org.optaplanner.core.impl.domain.solution.descriptor.SolutionDescriptor"
+                     id="SolutionDescriptor">
+    <ParameterInfo id="solutionClass"
+                   Type="java.lang.Class&lt;? extends org.optaplanner.core.api.domain.solution.Solution>"
+                   isStructured="false"/>
+  </ConstructorMethod>
+</JavaBean>

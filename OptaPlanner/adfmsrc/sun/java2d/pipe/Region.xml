@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="Region" Package="sun.java2d.pipe"
+          BeanClass="sun.java2d.pipe.Region" isJavaBased="true">
+  <Attribute Name="loX" IsUpdateable="0" Type="int"/>
+  <Attribute Name="loY" IsUpdateable="0" Type="int"/>
+  <Attribute Name="hiX" IsUpdateable="0" Type="int"/>
+  <Attribute Name="hiY" IsUpdateable="0" Type="int"/>
+  <Attribute Name="width" IsUpdateable="0" Type="int"/>
+  <Attribute Name="height" IsUpdateable="0" Type="int"/>
+  <Attribute Name="empty" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="rectangular" IsUpdateable="0" Type="boolean"/>
+  <AccessorAttribute id="iterator" IsCollection="false"
+                     BeanClass="sun.java2d.pipe.RegionIterator"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="spanIterator" IsCollection="false"
+                     BeanClass="sun.java2d.pipe.SpanIterator"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="int" id="dimAdd"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="int" isStructured="false"/>
+    <ParameterInfo id="p1" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="clipAdd"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="int" isStructured="false"/>
+    <ParameterInfo id="p1" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="sun.java2d.pipe.Region"
+                  BeanClass="sun.java2d.pipe.Region" id="getInstance"
+                  ReturnNodeName="Region">
+    <ParameterInfo id="p0" Type="java.awt.Shape" isStructured="true"/>
+    <ParameterInfo id="p1" Type="java.awt.geom.AffineTransform"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="sun.java2d.pipe.Region"
+                  BeanClass="sun.java2d.pipe.Region" id="getInstance"
+                  ReturnNodeName="Region">
+    <ParameterInfo id="p0" Type="sun.java2d.pipe.Region" isStructured="true"/>
+    <ParameterInfo id="p1" Type="java.awt.Shape" isStructured="true"/>
+    <ParameterInfo id="p2" Type="java.awt.geom.AffineTransform"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="sun.java2d.pipe.Region"
+                  BeanClass="sun.java2d.pipe.Region" id="getInstance"
+                  ReturnNodeName="Region">
+    <ParameterInfo id="p0" Type="sun.java2d.pipe.Region" isStructured="true"/>
+    <ParameterInfo id="p1" Type="boolean" isStructured="false"/>
+    <ParameterInfo id="p2" Type="java.awt.Shape" isStructured="true"/>
+    <ParameterInfo id="p3" Type="java.awt.geom.AffineTransform"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="sun.java2d.pipe.Region"
+                  BeanClass="sun.java2d.pipe.Region" id="getInstance"
+                  ReturnNodeName="Region">
+    <ParameterInfo id="p0" Type="java.awt.Rectangle" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="sun.java2d.pipe.Region"
+                  BeanClass="sun.java2d.pipe.Region" id="getInstance"
+                  ReturnNodeName="Region">
+    <ParameterInfo id="p0" Type="int[]" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="sun.java2d.pipe.Region"
+                  BeanClass="sun.java2d.pipe.Region" id="getInstanceXYWH"
+                  ReturnNodeName="Region">
+    <ParameterInfo id="p0" Type="int" isStructured="false"/>
+    <ParameterInfo id="p1" Type="int" isStructured="false"/>
+    <ParameterInfo id="p2" Type="int" isStructured="false"/>
+    <ParameterInfo id="p3" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="sun.java2d.pipe.Region"
+                  BeanClass="sun.java2d.pipe.Region" id="getInstanceXYXY"
+                  ReturnNodeName="Region">
+    <ParameterInfo id="p0" Type="int" isStructured="false"/>
+    <ParameterInfo id="p1" Type="int" isStructured="false"/>
+    <ParameterInfo id="p2" Type="int" isStructured="false"/>
+    <ParameterInfo id="p3" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setOutputArea"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="java.awt.Rectangle" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setOutputArea"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="int[]" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setOutputAreaXYWH"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="int" isStructured="false"/>
+    <ParameterInfo id="p1" Type="int" isStructured="false"/>
+    <ParameterInfo id="p2" Type="int" isStructured="false"/>
+    <ParameterInfo id="p3" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setOutputAreaXYXY"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="int" isStructured="false"/>
+    <ParameterInfo id="p1" Type="int" isStructured="false"/>
+    <ParameterInfo id="p2" Type="int" isStructured="false"/>
+    <ParameterInfo id="p3" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="appendSpans"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="sun.java2d.pipe.SpanIterator"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="sun.java2d.pipe.Region"
+                  BeanClass="sun.java2d.pipe.Region" id="getTranslatedRegion"
+                  ReturnNodeName="Region">
+    <ParameterInfo id="p0" Type="int" isStructured="false"/>
+    <ParameterInfo id="p1" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="sun.java2d.pipe.Region"
+                  BeanClass="sun.java2d.pipe.Region" id="getIntersection"
+                  ReturnNodeName="Region">
+    <ParameterInfo id="p0" Type="java.awt.Rectangle" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="sun.java2d.pipe.Region"
+                  BeanClass="sun.java2d.pipe.Region" id="getIntersection"
+                  ReturnNodeName="Region">
+    <ParameterInfo id="p0" Type="sun.java2d.pipe.Region" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="sun.java2d.pipe.Region"
+                  BeanClass="sun.java2d.pipe.Region" id="getIntersectionXYWH"
+                  ReturnNodeName="Region">
+    <ParameterInfo id="p0" Type="int" isStructured="false"/>
+    <ParameterInfo id="p1" Type="int" isStructured="false"/>
+    <ParameterInfo id="p2" Type="int" isStructured="false"/>
+    <ParameterInfo id="p3" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="sun.java2d.pipe.Region"
+                  BeanClass="sun.java2d.pipe.Region" id="getIntersectionXYXY"
+                  ReturnNodeName="Region">
+    <ParameterInfo id="p0" Type="int" isStructured="false"/>
+    <ParameterInfo id="p1" Type="int" isStructured="false"/>
+    <ParameterInfo id="p2" Type="int" isStructured="false"/>
+    <ParameterInfo id="p3" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="sun.java2d.pipe.Region"
+                  BeanClass="sun.java2d.pipe.Region" id="getUnion"
+                  ReturnNodeName="Region">
+    <ParameterInfo id="p0" Type="sun.java2d.pipe.Region" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="sun.java2d.pipe.Region"
+                  BeanClass="sun.java2d.pipe.Region" id="getDifference"
+                  ReturnNodeName="Region">
+    <ParameterInfo id="p0" Type="sun.java2d.pipe.Region" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="sun.java2d.pipe.Region"
+                  BeanClass="sun.java2d.pipe.Region" id="getExclusiveOr"
+                  ReturnNodeName="Region">
+    <ParameterInfo id="p0" Type="sun.java2d.pipe.Region" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="sun.java2d.pipe.Region"
+                  BeanClass="sun.java2d.pipe.Region" id="getBoundsIntersection"
+                  ReturnNodeName="Region">
+    <ParameterInfo id="p0" Type="java.awt.Rectangle" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="sun.java2d.pipe.Region"
+                  BeanClass="sun.java2d.pipe.Region" id="getBoundsIntersection"
+                  ReturnNodeName="Region">
+    <ParameterInfo id="p0" Type="sun.java2d.pipe.Region" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="sun.java2d.pipe.Region"
+                  BeanClass="sun.java2d.pipe.Region"
+                  id="getBoundsIntersectionXYWH" ReturnNodeName="Region">
+    <ParameterInfo id="p0" Type="int" isStructured="false"/>
+    <ParameterInfo id="p1" Type="int" isStructured="false"/>
+    <ParameterInfo id="p2" Type="int" isStructured="false"/>
+    <ParameterInfo id="p3" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="sun.java2d.pipe.Region"
+                  BeanClass="sun.java2d.pipe.Region"
+                  id="getBoundsIntersectionXYXY" ReturnNodeName="Region">
+    <ParameterInfo id="p0" Type="int" isStructured="false"/>
+    <ParameterInfo id="p1" Type="int" isStructured="false"/>
+    <ParameterInfo id="p2" Type="int" isStructured="false"/>
+    <ParameterInfo id="p3" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="contains"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="int" isStructured="false"/>
+    <ParameterInfo id="p1" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isInsideXYWH"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="int" isStructured="false"/>
+    <ParameterInfo id="p1" Type="int" isStructured="false"/>
+    <ParameterInfo id="p2" Type="int" isStructured="false"/>
+    <ParameterInfo id="p3" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isInsideXYXY"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="int" isStructured="false"/>
+    <ParameterInfo id="p1" Type="int" isStructured="false"/>
+    <ParameterInfo id="p2" Type="int" isStructured="false"/>
+    <ParameterInfo id="p3" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isInsideQuickCheck"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="sun.java2d.pipe.Region" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean"
+                  id="intersectsQuickCheckXYXY" ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="int" isStructured="false"/>
+    <ParameterInfo id="p1" Type="int" isStructured="false"/>
+    <ParameterInfo id="p2" Type="int" isStructured="false"/>
+    <ParameterInfo id="p3" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="intersectsQuickCheck"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="sun.java2d.pipe.Region" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="encompasses"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="sun.java2d.pipe.Region" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="encompassesXYWH"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="int" isStructured="false"/>
+    <ParameterInfo id="p1" Type="int" isStructured="false"/>
+    <ParameterInfo id="p2" Type="int" isStructured="false"/>
+    <ParameterInfo id="p3" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="encompassesXYXY"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="int" isStructured="false"/>
+    <ParameterInfo id="p1" Type="int" isStructured="false"/>
+    <ParameterInfo id="p2" Type="int" isStructured="false"/>
+    <ParameterInfo id="p3" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="getBounds"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="int[]" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="clipBoxToBounds"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="int[]" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="sun.java2d.pipe.SpanIterator"
+                  BeanClass="sun.java2d.pipe.SpanIterator" id="getSpanIterator"
+                  ReturnNodeName="SpanIterator">
+    <ParameterInfo id="p0" Type="int[]" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="sun.java2d.pipe.SpanIterator"
+                  BeanClass="sun.java2d.pipe.SpanIterator" id="filter"
+                  ReturnNodeName="SpanIterator">
+    <ParameterInfo id="p0" Type="sun.java2d.pipe.SpanIterator"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="int" id="hashCode"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="clipScale"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="int" isStructured="false"/>
+    <ParameterInfo id="p1" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="sun.java2d.pipe.Region"
+                  BeanClass="sun.java2d.pipe.Region" id="getScaledRegion"
+                  ReturnNodeName="Region">
+    <ParameterInfo id="p0" Type="double" isStructured="false"/>
+    <ParameterInfo id="p1" Type="double" isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

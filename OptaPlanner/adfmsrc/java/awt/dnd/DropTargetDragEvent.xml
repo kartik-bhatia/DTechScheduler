@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="DropTargetDragEvent" Package="java.awt.dnd"
+          BeanClass="java.awt.dnd.DropTargetDragEvent" isJavaBased="true">
+  <Attribute Name="sourceActions" IsUpdateable="0" Type="int"/>
+  <Attribute Name="dropAction" IsUpdateable="0" Type="int"/>
+  <AccessorAttribute id="location" IsCollection="false"
+                     BeanClass="java.awt.Point"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="currentDataFlavors" IsCollection="true"
+                     BeanClass="java.awt.datatransfer.DataFlavor"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="currentDataFlavorsAsList" IsCollection="true"
+                     BeanClass="java.awt.datatransfer.DataFlavor"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="transferable" IsCollection="false"
+                     BeanClass="java.awt.datatransfer.Transferable"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="dropTargetContext" IsCollection="false"
+                     BeanClass="java.awt.dnd.DropTargetContext"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isDataFlavorSupported"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="df" Type="java.awt.datatransfer.DataFlavor"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="acceptDrag"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dragOperation" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="rejectDrag"
+                  ReturnNodeName="Return"/>
+  <ConstructorMethod IsCollection="true" Type="java.awt.dnd.DropTargetDragEvent"
+                     BeanClass="java.awt.dnd.DropTargetDragEvent"
+                     id="DropTargetDragEvent">
+    <ParameterInfo id="dtc" Type="java.awt.dnd.DropTargetContext"
+                   isStructured="true"/>
+    <ParameterInfo id="cursorLocn" Type="java.awt.Point" isStructured="true"/>
+    <ParameterInfo id="dropAction" Type="int" isStructured="false"/>
+    <ParameterInfo id="srcActions" Type="int" isStructured="false"/>
+  </ConstructorMethod>
+</JavaBean>

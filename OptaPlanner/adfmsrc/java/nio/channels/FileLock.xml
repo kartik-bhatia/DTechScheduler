@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="FileLock" Package="java.nio.channels"
+          BeanClass="java.nio.channels.FileLock" isJavaBased="true">
+  <Attribute Name="shared" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="valid" IsUpdateable="0" Type="boolean"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.channels.FileChannel"
+                  BeanClass="java.nio.channels.FileChannel" id="channel"
+                  ReturnNodeName="FileChannel"/>
+  <MethodAccessor IsCollection="false" Type="java.nio.channels.Channel"
+                  BeanClass="java.nio.channels.Channel" id="acquiredBy"
+                  ReturnNodeName="Channel"/>
+  <MethodAccessor IsCollection="false" Type="long" id="position"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="long" id="size"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="overlaps"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="position" Type="long" isStructured="false"/>
+    <ParameterInfo id="size" Type="long" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="release"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="close"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+</JavaBean>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="ImageConsumer" Package="java.awt.image"
+          BeanClass="java.awt.image.ImageConsumer" isJavaBased="true">
+  <MethodAccessor IsCollection="false" Type="void" id="setDimensions"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="width" Type="int" isStructured="false"/>
+    <ParameterInfo id="height" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setProperties"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="props" Type="java.util.Hashtable&lt;?, ?>"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setColorModel"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="model" Type="java.awt.image.ColorModel"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setHints"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="hintflags" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setPixels"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="model" Type="java.awt.image.ColorModel"
+                   isStructured="true"/>
+    <ParameterInfo id="pixels" Type="byte[]" isStructured="false"/>
+    <ParameterInfo id="off" Type="int" isStructured="false"/>
+    <ParameterInfo id="scansize" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setPixels"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+    <ParameterInfo id="w" Type="int" isStructured="false"/>
+    <ParameterInfo id="h" Type="int" isStructured="false"/>
+    <ParameterInfo id="model" Type="java.awt.image.ColorModel"
+                   isStructured="true"/>
+    <ParameterInfo id="pixels" Type="int[]" isStructured="false"/>
+    <ParameterInfo id="off" Type="int" isStructured="false"/>
+    <ParameterInfo id="scansize" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="imageComplete"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="status" Type="int" isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

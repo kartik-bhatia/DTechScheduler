@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="ReadableByteChannel" Package="java.nio.channels"
+          BeanClass="java.nio.channels.ReadableByteChannel" isJavaBased="true">
+  <Attribute Name="open" IsUpdateable="0" Type="boolean"/>
+  <MethodAccessor IsCollection="false" Type="int" id="read"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dst" Type="java.nio.ByteBuffer" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="close"
+                  ReturnNodeName="Return"/>
+</JavaBean>

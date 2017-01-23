@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="InputMethodHighlight" Package="java.awt.im"
+          BeanClass="java.awt.im.InputMethodHighlight" isJavaBased="true">
+  <Attribute Name="selected" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="state" IsUpdateable="0" Type="int"/>
+  <Attribute Name="variation" IsUpdateable="0" Type="int"/>
+  <AccessorAttribute id="style" IsCollection="true" Type="java.util.Map"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="java.awt.font.TextAttribute, ?"/>
+  </AccessorAttribute>
+  <ConstructorMethod IsCollection="true" Type="java.awt.im.InputMethodHighlight"
+                     BeanClass="java.awt.im.InputMethodHighlight"
+                     id="InputMethodHighlight">
+    <ParameterInfo id="selected" Type="boolean" isStructured="false"/>
+    <ParameterInfo id="state" Type="int" isStructured="false"/>
+    <ParameterInfo id="variation" Type="int" isStructured="false"/>
+    <ParameterInfo id="style" Type="java.util.Map" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.im.InputMethodHighlight"
+                     BeanClass="java.awt.im.InputMethodHighlight"
+                     id="InputMethodHighlight">
+    <ParameterInfo id="selected" Type="boolean" isStructured="false"/>
+    <ParameterInfo id="state" Type="int" isStructured="false"/>
+    <ParameterInfo id="variation" Type="int" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.im.InputMethodHighlight"
+                     BeanClass="java.awt.im.InputMethodHighlight"
+                     id="InputMethodHighlight">
+    <ParameterInfo id="selected" Type="boolean" isStructured="false"/>
+    <ParameterInfo id="state" Type="int" isStructured="false"/>
+  </ConstructorMethod>
+</JavaBean>

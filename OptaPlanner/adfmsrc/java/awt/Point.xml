@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="Point" Package="java.awt" BeanClass="java.awt.Point"
+          isJavaBased="true">
+  <Attribute Name="x" IsUpdateable="0" Type="double"/>
+  <Attribute Name="y" IsUpdateable="0" Type="double"/>
+  <AccessorAttribute id="location" IsCollection="false"
+                     BeanClass="java.awt.Point"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setLocation"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setLocation"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="double" isStructured="false"/>
+    <ParameterInfo id="y" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="move"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="translate"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="dx" Type="int" isStructured="false"/>
+    <ParameterInfo id="dy" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="obj" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setLocation"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p" Type="java.awt.geom.Point2D" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="double" id="distanceSq"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x1" Type="double" isStructured="false"/>
+    <ParameterInfo id="y1" Type="double" isStructured="false"/>
+    <ParameterInfo id="x2" Type="double" isStructured="false"/>
+    <ParameterInfo id="y2" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="double" id="distanceSq"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="px" Type="double" isStructured="false"/>
+    <ParameterInfo id="py" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="double" id="distanceSq"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="pt" Type="java.awt.geom.Point2D" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="double" id="distance"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="x1" Type="double" isStructured="false"/>
+    <ParameterInfo id="y1" Type="double" isStructured="false"/>
+    <ParameterInfo id="x2" Type="double" isStructured="false"/>
+    <ParameterInfo id="y2" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="double" id="distance"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="px" Type="double" isStructured="false"/>
+    <ParameterInfo id="py" Type="double" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="double" id="distance"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="pt" Type="java.awt.geom.Point2D" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.Object" id="clone"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="int" id="hashCode"
+                  ReturnNodeName="Return"/>
+  <ConstructorMethod IsCollection="true" Type="java.awt.Point"
+                     BeanClass="java.awt.Point" id="Point">
+    <ParameterInfo id="x" Type="int" isStructured="false"/>
+    <ParameterInfo id="y" Type="int" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.Point"
+                     BeanClass="java.awt.Point" id="Point">
+    <ParameterInfo id="p" Type="java.awt.Point" isStructured="true"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.Point"
+                     BeanClass="java.awt.Point" id="Point"/>
+</JavaBean>

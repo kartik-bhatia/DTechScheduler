@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="GraphicsDevice" Package="java.awt"
+          BeanClass="java.awt.GraphicsDevice" isJavaBased="true">
+  <Attribute Name="type" IsUpdateable="0" Type="int"/>
+  <Attribute Name="IDstring" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="fullScreenSupported" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="displayChangeSupported" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="availableAcceleratedMemory" IsUpdateable="0" Type="int"/>
+  <AccessorAttribute id="configurations" IsCollection="true"
+                     BeanClass="java.awt.GraphicsConfiguration"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="defaultConfiguration" IsCollection="false"
+                     BeanClass="java.awt.GraphicsConfiguration"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="fullScreenWindow" IsCollection="false"
+                     BeanClass="java.awt.Window"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="displayMode" IsCollection="false"
+                     BeanClass="java.awt.DisplayMode"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="displayModes" IsCollection="true"
+                     BeanClass="java.awt.DisplayMode"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.GraphicsConfiguration"
+                  BeanClass="java.awt.GraphicsConfiguration"
+                  id="getBestConfiguration"
+                  ReturnNodeName="GraphicsConfiguration">
+    <ParameterInfo id="gct" Type="java.awt.GraphicsConfigTemplate"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean"
+                  id="isWindowTranslucencySupported" ReturnNodeName="Return">
+    <ParameterInfo id="translucencyKind"
+                   Type="java.awt.GraphicsDevice.WindowTranslucency"
+                   isStructured="true"/>
+  </MethodAccessor>
+</JavaBean>

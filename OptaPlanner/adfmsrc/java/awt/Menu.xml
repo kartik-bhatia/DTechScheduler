@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.66.73"
+          id="Menu" Package="java.awt" BeanClass="java.awt.Menu"
+          isJavaBased="true">
+  <Attribute Name="tearOff" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="itemCount" IsUpdateable="0" Type="int"/>
+  <Attribute Name="label" Type="java.lang.String"/>
+  <Attribute Name="enabled" Type="boolean"/>
+  <Attribute Name="actionCommand" Type="java.lang.String"/>
+  <Attribute Name="name" Type="java.lang.String"/>
+  <AccessorAttribute id="accessibleContext" IsCollection="false"
+                     BeanClass="javax.accessibility.AccessibleContext"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="shortcut" IsCollection="false"
+                     BeanClass="java.awt.MenuShortcut"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="actionListeners" IsCollection="true"
+                     RemoveMethod="removeActionListener"
+                     AddMethod="addActionListener"
+                     BeanClass="java.awt.event.ActionListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeActionListener"/>
+      <Property Name="AddMethod" Value="addActionListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="parent" IsCollection="false"
+                     BeanClass="java.awt.MenuContainer"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="peer" IsCollection="false"
+                     BeanClass="java.awt.peer.MenuComponentPeer"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="font" IsCollection="false" BeanClass="java.awt.Font"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="void" id="addNotify"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="removeNotify"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="int" id="countItems"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.awt.MenuItem"
+                  BeanClass="java.awt.MenuItem" id="getItem"
+                  ReturnNodeName="MenuItem">
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.awt.MenuItem"
+                  BeanClass="java.awt.MenuItem" id="add"
+                  ReturnNodeName="MenuItem">
+    <ParameterInfo id="mi" Type="java.awt.MenuItem" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="add"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="label" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="insert"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="menuitem" Type="java.awt.MenuItem" isStructured="true"/>
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="insert"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="label" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addSeparator"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="insertSeparator"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="remove"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="remove"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="item" Type="java.awt.MenuComponent" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeAll"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="paramString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="enable"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="enable"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="b" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="disable"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="deleteShortcut"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="addActionListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.ActionListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeActionListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="l" Type="java.awt.event.ActionListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="T[]" id="getListeners"
+                  ReturnNodeName="T" CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="listenerType" Type="java.lang.Class&lt;T>"
+                   isStructured="false"/>
+    <Attribute Name="element" Type="T"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="postEvent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="evt" Type="java.awt.Event" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="dispatchEvent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="e" Type="java.awt.AWTEvent" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <ConstructorMethod IsCollection="true" Type="java.awt.Menu"
+                     BeanClass="java.awt.Menu" id="Menu">
+    <ParameterInfo id="label" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="tearOff" Type="boolean" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.Menu"
+                     BeanClass="java.awt.Menu" id="Menu">
+    <ParameterInfo id="label" Type="java.lang.String" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="java.awt.Menu"
+                     BeanClass="java.awt.Menu" id="Menu"/>
+</JavaBean>
