@@ -23,6 +23,7 @@ import org.optaplanner.examples.common.domain.AbstractPersistable;
 public class Teacher extends AbstractPersistable {
 
     private String code;
+    private String name;
 
     public String getCode() {
         return code;
@@ -41,4 +42,11 @@ public class Teacher extends AbstractPersistable {
         return code;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
 }

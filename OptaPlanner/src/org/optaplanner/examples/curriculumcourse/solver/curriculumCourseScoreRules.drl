@@ -10,7 +10,7 @@
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
+ * See the License for the specific language governing permissions and.
  * limitations under the License.
  */
 
@@ -30,6 +30,7 @@ import org.optaplanner.examples.curriculumcourse.domain.Teacher;
 import org.optaplanner.examples.curriculumcourse.domain.Timeslot;
 import org.optaplanner.examples.curriculumcourse.domain.UnavailablePeriodPenalty;
 import org.optaplanner.examples.curriculumcourse.domain.solver.CourseConflict;
+import org.optaplanner.examples.curriculumcourse.domain.AssignmentDependency;
 
 import java.util.List
 import java.util.Set
@@ -157,6 +158,32 @@ function boolean isPeriodConflictForStudent(Lecture l1, Lecture l2) {
         if (conflictCount > 0) return true;
         else return false;
 }
+
+/* checkRank */
+rule "checkRank"
+     when
+        $leftLecture : Lecture($leftId : id, period != null, $leftPeriod : period , $leftCourseName : course.CourseName)
+        $rightLecture : Lecture(id > $leftId, period != null, period != $leftPeriod, course.CourseName == $leftCourseName)
+        eval(isRankingNotOk($leftLecture, $rightLecture))
+    then
+    	System.out.println("RANKING NOT OK");
+        scoreHolder.addHardConstraintMatch(kcontext, - 1);
+end
+
+function boolean isRankingNotOk(Lecture l1, Lecture l2) {
+        System.out.println("Checking Ranking for : - ");
+        System.out.println("left lecture : " + l1.getCourse().getCode() + "  Subject: " + l1.getCourse().getCourseName());
+        System.out.println(" right lecture: " + l2.getCourse().getCode() + "  Subject: " + l2.getCourse().getCourseName());
+        if (l1.getPeriod().isLessThan(l2.getPeriod())) {
+            if(AssignmentDependency.isLeftRankLessThanRight(l1.getCourse().getCode(),l2.getCourse().getCode(), l2.getCourse().getCourseName()))
+                return false;
+            else 
+                return true;
+        }
+        else
+            return false;
+    }   
+
 // RoomCapacity: For each lecture, the number of students that attend the course should be less or equal
 // than the number of seats of all the rooms that host its lectures.
 // Each student above the capacity counts as 1 point of penalty.
@@ -167,6 +194,36 @@ rule "roomCapacity"
     then
         scoreHolder.addHardConstraintMatch(kcontext, ($capacity - $studentSize));
 end
+
+
+//Handling Null values
+//Add a hard constraint to increase score when there is a null value only for room or time
+//If a lecture cant fit it in a room , it should not be scheduled
+rule "handlingRoomNullValues"
+    when 
+        $lecture : Lecture (room == null , period != null)
+        
+    then 
+        System.out.println("REACHED Room Handling Null");
+        scoreHolder.addHardConstraintMatch(kcontext, -1);
+        
+end
+
+//Add a hard constraint to increase score when there is a null value only for room or time
+//If a lecture cant fit it in a room , it should not be scheduled
+rule "handlingPeriodNullValues"
+    when 
+        $lecture : Lecture (period == null , room != null)
+        
+    then 
+        System.out.println("REACHED Period Handling Null");
+        scoreHolder.addHardConstraintMatch(kcontext, -1);
+        
+end
+
+
+
+
 
 // ############################################################################
 // Soft constraints
@@ -224,4 +281,5 @@ end*/ //rule commented by Kartik as we dont care abt the curricula
         )
     then
         scoreHolder.addSoftConstraintMatch(kcontext, -($roomCount.intValue() - 1));
-end*/ //rule commented by Kartik 
+end*/ 
+//rule commented by Kartik 

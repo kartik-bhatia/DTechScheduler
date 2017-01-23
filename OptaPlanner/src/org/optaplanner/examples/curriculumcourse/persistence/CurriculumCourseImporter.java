@@ -43,10 +43,17 @@ public class CurriculumCourseImporter extends AbstractTxtSolutionImporter {
 
     private static final String INPUT_FILE_SUFFIX = "ctt";
     private static final String SPLIT_REGEX = "[\\ \\t]+";
-    private static final String ROOMS_INPUT_FILE = "../../flatfiles/rooms.ctt";
-    private static final String SLOTS_INPUT_FILE = "../../flatfiles/slots.ctt";
-    private static final String DATA_INPUT_FILE  = "../../mytestdata.csv"; 
+    //private static final String ROOMS_INPUT_FILE = "rooms.ctt";
+    //private static final String SLOTS_INPUT_FILE = "slots.ctt";
+    //private static final String DATA_INPUT_FILE  = "../mytestdata.csv"; 
     
+    private static final String ROOMS_INPUT_FILE = "/Users/kartikbhatia/Documents/Data/MyProjects/DTech/DTechScheduler/flatfiles/rooms.ctt";
+    private static final String SLOTS_INPUT_FILE = "/Users/kartikbhatia/Documents/Data/MyProjects/DTech/DTechScheduler/flatfiles/slots.ctt";
+    public static final String DATA_INPUT_FILE  = "/Users/kartikbhatia/Documents/Data/MyProjects/DTech/DTechScheduler/mytestdata_withnames.csv"; 
+    
+    
+    private static final String INPUT_START_DATE = "10/28/15";
+    private static final String INPUT_END_DATE = "11/05/15";
 
     public static void main(String[] args) {
         new CurriculumCourseImporter().convertAll();
@@ -164,8 +171,8 @@ public class CurriculumCourseImporter extends AbstractTxtSolutionImporter {
             //read the csv and get a listOf Failed Assignments
             ReadGradeSheet readGradeSheet = new ReadGradeSheet();
             List<Assignment> assignmentList = new ArrayList();
-            Date fromDate = readGradeSheet.convertStringToDate("01/14/16");
-    		Date toDate   = readGradeSheet.convertStringToDate("01/20/16");
+            Date fromDate = readGradeSheet.convertStringToDate(INPUT_START_DATE);
+    		Date toDate   = readGradeSheet.convertStringToDate(INPUT_END_DATE);
             assignmentList = readGradeSheet.getFailedAssignments(DATA_INPUT_FILE, fromDate, toDate);
             
             //convert the assignment List into Course List
@@ -179,7 +186,7 @@ public class CurriculumCourseImporter extends AbstractTxtSolutionImporter {
             		if (course.getCode().equals(assignment.getAssignmentTitle()))
             		{
             			assignmentAlreadyInCourseList = true;
-            			Student newStudent = findOrCreateStudent(studentMap,Integer.toString(assignment.getStudentId()));
+            			Student newStudent = findOrCreateStudent(studentMap,Integer.toString(assignment.getStudentId()),assignment.getStudentName());
             			course.getStudentList().add(newStudent);
             			course.setStudentSize(course.getStudentSize()+1);
             		}
@@ -191,14 +198,15 @@ public class CurriculumCourseImporter extends AbstractTxtSolutionImporter {
 	        		Course course = new Course();
 	                course.setId((long) i);            		
 	                course.setCode(assignment.getAssignmentTitle());
-	                course.setTeacher(findOrCreateTeacher(teacherMap, Integer.toString(assignment.getTeacherId())));
+	                course.setTeacher(findOrCreateTeacher(teacherMap, Integer.toString(assignment.getTeacherId()),assignment.getTeacherName()));
 	                course.setLectureSize(1);
 	                course.setMinWorkingDaySize(1);
 	                course.setCurriculumList(new ArrayList<Curriculum>());
 	                course.setStudentSize(1);
+                        course.setCourseName(assignment.getCourseName());
 	                
 	                List<Student> studentList = new ArrayList<Student>();
-	                Student newStudent = findOrCreateStudent(studentMap,Integer.toString(assignment.getStudentId()));
+	                Student newStudent = findOrCreateStudent(studentMap,Integer.toString(assignment.getStudentId()),assignment.getStudentName());
 	                studentList.add(newStudent);
 	                course.setStudent(studentList);
 	                
@@ -216,19 +224,20 @@ public class CurriculumCourseImporter extends AbstractTxtSolutionImporter {
         }
         
 
-        private static Teacher findOrCreateTeacher(Map<String, Teacher> teacherMap, String code) {
+        private static Teacher findOrCreateTeacher(Map<String, Teacher> teacherMap, String code, String teacherName) {
             Teacher teacher = teacherMap.get(code);
             if (teacher == null) {
                 teacher = new Teacher();
                 int id = teacherMap.size();
                 teacher.setId((long) id);
                 teacher.setCode(code);
+                teacher.setName(teacherName);
                 teacherMap.put(code, teacher);
             }
             return teacher;
         }
 
-        private static Student findOrCreateStudent(Map<String, Student> studentMap, String code ) {
+        private static Student findOrCreateStudent(Map<String, Student> studentMap, String code, String studentName) {
     //        List<Student> studentList = new ArrayList<>();
     //        for (int i = startIndex; i < codes.length; i++) {
     //            String code = codes[i];
@@ -238,6 +247,7 @@ public class CurriculumCourseImporter extends AbstractTxtSolutionImporter {
                     int id = studentMap.size();
                     student.setId((long) id);
                     student.setCode(code);
+                    student.setName(studentName);
                     studentMap.put(code, student);
                 }
             
@@ -266,6 +276,7 @@ public class CurriculumCourseImporter extends AbstractTxtSolutionImporter {
                       throws IOException {
                   
                   List<Room> roomList = new ArrayList<Room>(roomListSize);
+                  System.out.println(System.getProperty("user.dir"));
                   BufferedReader roomsBufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(ROOMS_INPUT_FILE), "UTF-8"));
                   int i = 0;
                   String line = roomsBufferedReader.readLine();

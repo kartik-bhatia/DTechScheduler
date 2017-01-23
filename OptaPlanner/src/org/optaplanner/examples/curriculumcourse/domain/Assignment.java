@@ -11,6 +11,7 @@ public class Assignment {
 	private String assignmentTitle;
 	private String grade;
 	private int studentId;
+        private String studentName;
 	private int teacherId;
 	private String courseName;
 	private String teacherName;
@@ -65,7 +66,14 @@ public class Assignment {
 		return ("StudentId=" + this.getStudentId() + "Subject = " + this.getCourseName() + " AssignmentTitle="+this.getAssignmentTitle() 
 				+ " Grade=" +this.getGrade());
 	}
-	
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
+    }
+
+    public String getStudentName() {
+        return studentName;
+    }
 }
 
 

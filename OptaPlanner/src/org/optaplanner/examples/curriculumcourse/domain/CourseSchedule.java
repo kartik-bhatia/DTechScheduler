@@ -30,10 +30,13 @@ import org.optaplanner.examples.common.domain.AbstractPersistable;
 import org.optaplanner.examples.curriculumcourse.domain.solver.CourseConflict;
 import org.optaplanner.persistence.xstream.impl.score.XStreamScoreConverter;
 
+import run.RunScheduler;
+
 @PlanningSolution
 @XStreamAlias("CourseSchedule")
 public class CourseSchedule extends AbstractPersistable implements Solution<HardSoftScore> {
 
+    
     private String name;
 
     private List<Teacher> teacherList;

@@ -6,20 +6,34 @@
     <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
              className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
     <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+    <factory nameSpace="http://xmlns.oracle.com/adfm/dvt"
+             className="oracle.adfinternal.view.faces.dvt.model.binding.FacesBindingFactory"/>
   </definitionFactories>
   <pageMap>
     <page path="/GenerateSchedule.jsff"
           usageId="dtech_scheduler_ui_GenerateSchedulePageDef"/>
     <page path="/LandingPage.jspx"
           usageId="dtech_scheduler_ui_LandingPagePageDef"/>
+    <page path="/NewSchedule.jsff"
+          usageId="dtech_scheduler_ui_NewSchedulePageDef"/>
+    <page path="/AssignmentRanking.jsff"
+          usageId="dtech_scheduler_ui_AssignmentRankingPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="dtech_scheduler_ui_GenerateSchedulePageDef"
           path="dtech.scheduler.ui.pageDefs.GenerateSchedulePageDef"/>
     <page id="dtech_scheduler_ui_LandingPagePageDef"
           path="dtech.scheduler.ui.pageDefs.LandingPagePageDef"/>
+    <page id="dtech_scheduler_ui_NewSchedulePageDef"
+          path="dtech.scheduler.ui.pageDefs.NewSchedulePageDef"/>
+    <page id="dtech_scheduler_ui_AssignmentRankingPageDef"
+          path="dtech.scheduler.ui.pageDefs.AssignmentRankingPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
+    <dc id="SubjectNodeCollection"
+        path="dtech.scheduler.model.SubjectNodeCollection"/>
+    <dc id="RunScheduler" path="org.RunScheduler"/>
+    <dc id="CourseSchedule" path="org.CourseSchedule"/>
     <dc id="RoomCollection" path="dtech.scheduler.model.RoomCollection"/>
     <dc id="SlotCollection" path="dtech.scheduler.model.SlotCollection"/>
   </dataControlUsages>

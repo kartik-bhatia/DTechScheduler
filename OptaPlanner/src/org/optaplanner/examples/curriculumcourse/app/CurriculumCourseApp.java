@@ -16,6 +16,10 @@
 
 package org.optaplanner.examples.curriculumcourse.app;
 
+import java.net.URL;
+
+import java.net.URLClassLoader;
+
 import org.optaplanner.core.api.solver.Solver;
 import org.optaplanner.core.api.solver.SolverFactory;
 import org.optaplanner.examples.common.app.CommonApp;
@@ -34,6 +38,14 @@ public class CurriculumCourseApp extends CommonApp {
             = "org/optaplanner/examples/curriculumcourse/solver/curriculumCourseSolverConfig.xml";
 
     public static void main(String[] args) {
+        ClassLoader cl = ClassLoader.getSystemClassLoader();
+
+                URL[] urls = ((URLClassLoader)cl).getURLs();
+
+                for(URL url: urls){
+                        System.out.println(url.getFile());
+                }
+        
         prepareSwingEnvironment();
         new CurriculumCourseApp().init();
     }

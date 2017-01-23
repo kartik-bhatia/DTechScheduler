@@ -23,14 +23,17 @@ public class SlotCollection {
     ArrayList<Slot> slots = new ArrayList<Slot>();
 
     // The name of the file to open.
-   // String fileName = "/Users/kartikbhatia/Documents/Data/MyProjects/DTech/DTechScheduler/flatfiles/slots.ctt";
-      String fileName = "../../flatfiles/slots.ctt";
+    String fileName = "/Users/kartikbhatia/Documents/Data/MyProjects/DTech/DTechScheduler/flatfiles/slots.ctt";
+   //   String fileName = ("../../flatfiles/slots.ctt");
+    
     // This will reference one line at a time
     String line = null;
 
 
     void readFile() throws IOException {
         try {
+            System.out.println(" OUT system dir : "+ System.getProperty("user.dir"));
+            
             // FileReader reads text files in the default encoding.
             FileReader fileReader = new FileReader(fileName);
 

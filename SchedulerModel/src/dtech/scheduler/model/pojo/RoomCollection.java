@@ -22,7 +22,8 @@ public class RoomCollection {
     ArrayList<Room> rooms = new ArrayList<Room> ();
     
     // The name of the file to open.
-    String fileName = "../../flatfiles/rooms.ctt";
+    //String fileName = "../../flatfiles/rooms.ctt";
+    String fileName = "/Users/kartikbhatia/Documents/Data/MyProjects/DTech/DTechScheduler/flatfiles/rooms.ctt";
     // This will reference one line at a time
     String line = null;
 

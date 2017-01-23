@@ -19,11 +19,11 @@
       ge0ffrey's main pc: 429
       ge0ffrey's old pc: 1152
     -->
-    <secondsSpentLimit>429</secondsSpentLimit>
+    <secondsSpentLimit>20</secondsSpentLimit>
     <!--<bestScoreLimit>-0hard/-999999soft</bestScoreLimit>-->
   </termination>
   <constructionHeuristic>
-    <constructionHeuristicType>FIRST_FIT_DECREASING</constructionHeuristicType>
+    <constructionHeuristicType>FIRST_FIT</constructionHeuristicType>
   </constructionHeuristic>
   <localSearch>
     <unionMoveSelector>

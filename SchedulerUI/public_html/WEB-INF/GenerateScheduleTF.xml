@@ -2,9 +2,50 @@
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
   <task-flow-definition id="GenerateScheduleTF">
     <default-activity id="__1">GenerateSchedule</default-activity>
+    <managed-bean id="__5">
+      <managed-bean-name id="__2">GenerateScheduleBean</managed-bean-name>
+      <managed-bean-class id="__4">dtech.scheduler.ui.bean.GenerateScheduleBean</managed-bean-class>
+      <managed-bean-scope id="__3">backingBean</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__21">
+      <managed-bean-name id="__20">AssignmentRankingBean</managed-bean-name>
+      <managed-bean-class id="__19">dtech.scheduler.ui.bean.AssignmentRankingBean</managed-bean-class>
+      <managed-bean-scope id="__22">backingBean</managed-bean-scope>
+    </managed-bean>
     <view id="GenerateSchedule">
       <page>/GenerateSchedule.jsff</page>
     </view>
+    <view id="NewSchedule">
+      <page>/NewSchedule.jsff</page>
+    </view>
+    <view id="AssignmentRanking">
+      <page>/AssignmentRanking.jsff</page>
+    </view>
+    <control-flow-rule id="__6">
+      <from-activity-id id="__7">GenerateSchedule</from-activity-id>
+      <control-flow-case id="__8">
+        <from-outcome id="__10">run</from-outcome>
+        <to-activity-id id="__9">NewSchedule</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__17">
+        <from-outcome id="__18">assignRanks</from-outcome>
+        <to-activity-id id="__16">AssignmentRanking</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__11">
+      <from-activity-id id="__12">NewSchedule</from-activity-id>
+      <control-flow-case id="__13">
+        <from-outcome id="__15">toHome</from-outcome>
+        <to-activity-id id="__14">GenerateSchedule</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__23">
+      <from-activity-id id="__24">AssignmentRanking</from-activity-id>
+      <control-flow-case id="__25">
+        <from-outcome id="__27">done</from-outcome>
+        <to-activity-id id="__26">GenerateSchedule</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
     <use-page-fragments/>
   </task-flow-definition>
 </adfc-config>

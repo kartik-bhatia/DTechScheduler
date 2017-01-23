@@ -18,6 +18,9 @@ import java.util.List;
 import javax.swing.JLabel;
 
 import au.com.bytecode.opencsv.CSVReader;
+import au.com.bytecode.opencsv.CSVWriter;
+
+import java.io.FileWriter;
 
 /**
  * class for ReadGradeSheet
@@ -29,18 +32,27 @@ public class ReadGradeSheet {
 
 	public static int threshhold = 75;
 	private String FILE_PATH; 
-	//		"/Users/kartikbhatia/Documents/Data/MyProjects/DTech/test.csv";
+            //		"/Users/kartikbhatia/Documents/Data/MyProjects/DTech/test.csv";
 	
 	//col number start from 0
-	private int STUDENT_ID_COL = 0;
-	private int TEACHER_ID_COL = 11;
-	private int TEACHER_NAME = 9;
-	private int COURSE_NAME_COL = 7;
-	private int ASSIGNMENT_TITLE_COL = 1;
-	private int DUEDATE_COL = 5;
-	private int GRADE_COL = 2;
+        
+	public static int STUDENT_ID_COL = 0;
+        public static int STUDENT_NAME_COL = 1;
+	public static int ASSIGNMENT_TITLE_COL = 2;
+        public static int GRADE_COL = 3;
+        public static int ASSIGNED_DATE_COL = 4;
+        public static int CLASS_LOCALID_COL = 5;
+        public static int DUEDATE_COL = 6;
+        public static int ASSIGNMENT_CATEGORY_COL = 7;
+        public static int COURSE_NAME_COL = 8;
+        public static int REG_WINDOW_COL = 9;
+	public static int TEACHER_FIRSTNAME = 10;
+        public static int TEACHER_LASTNAME = 11;
+        public static int TEACHER_ID_COL = 12;
 	
-	public List getFailedAssignments(String inputFilePath, Date fromDate, Date toDate) {
+	
+	
+	public List getFailedAssignments(String inputFilePath, Date fromDate, Date toDate) throws IOException {
 		CSVReader reader = null;
 		long totalCount = 0;
 		long rowsEligibleCount = 0;
@@ -72,9 +84,10 @@ public class ReadGradeSheet {
 									//put this in the array as a failed assignment
 									Assignment assignment  = new Assignment();
 									assignment.setStudentId(Integer.parseInt(row[STUDENT_ID_COL]));
+                                                                        assignment.setStudentName(row[STUDENT_NAME_COL]);
 									assignment.setTeacherId(Integer.parseInt(row[TEACHER_ID_COL]));
 									assignment.setCourseName(row[COURSE_NAME_COL]);
-									assignment.setTeacherName(row[TEACHER_NAME]);
+									assignment.setTeacherName(row[TEACHER_FIRSTNAME]+" "+row[TEACHER_LASTNAME]);
 									assignment.setAssignmentTitle(row[ASSIGNMENT_TITLE_COL]);
 									assignment.setDueDate(this.convertStringToDate(row[DUEDATE_COL]));
 									assignment.setGrade(row[GRADE_COL]);
@@ -89,9 +102,10 @@ public class ReadGradeSheet {
 									//put this in the array as a failed assignment
 									Assignment assignment  = new Assignment();
 									assignment.setStudentId(Integer.parseInt(row[STUDENT_ID_COL]));
+                                                                        assignment.setStudentName(row[STUDENT_NAME_COL]);
 									assignment.setTeacherId(Integer.parseInt(row[TEACHER_ID_COL]));
 									assignment.setCourseName(row[COURSE_NAME_COL]);
-									assignment.setTeacherName(row[TEACHER_NAME]);
+                                                                        assignment.setTeacherName(row[TEACHER_FIRSTNAME]+" "+row[TEACHER_LASTNAME]);
 									assignment.setAssignmentTitle(row[ASSIGNMENT_TITLE_COL]);
 									assignment.setDueDate(this.convertStringToDate(row[DUEDATE_COL]));
 									assignment.setGrade(row[GRADE_COL]);
@@ -129,6 +143,23 @@ public class ReadGradeSheet {
 			}
 	    }
 	    //System.out.println("Done.");
+            CSVWriter writer = new CSVWriter(new FileWriter("/Users/kartikbhatia/Documents/Data/MyProjects/DTech/DTechScheduler/filteredrows.csv"));
+            for (int i = 0 ; i<assignmentList.size() ;i++){
+                
+                Assignment assignment = (Assignment)assignmentList.get(i);
+                String[] str = new String[8];
+                str[0] = Integer.toString(assignment.getStudentId());
+                str[1] = assignment.getStudentName();
+                str[2] = Integer.toString(assignment.getTeacherId());
+                str[3] = assignment.getCourseName();
+                str[4] = assignment.getTeacherName();
+                str[5] = assignment.getAssignmentTitle();
+                str[6] = assignment.getDueDate().toString();
+                str[7] = assignment.getGrade();
+                writer.writeNext(str);
+            }
+            
+	    writer.close();
 	    System.out.println("totalProcessed = "+ totalCount + " rowsEligibleCount = " + rowsEligibleCount + " toBeScheduledCount = " + toBeScheduledCount);
 	    return assignmentList;
 	    

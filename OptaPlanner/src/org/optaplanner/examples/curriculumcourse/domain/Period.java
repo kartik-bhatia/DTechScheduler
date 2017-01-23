@@ -51,4 +51,18 @@ public class Period extends AbstractPersistable implements Labeled {
         return day + "-" + timeslot;
     }
 
+    public boolean isLessThan(Period p){
+        if (this.getDay().getDayIndex()<p.getDay().getDayIndex())
+            return true;
+        else
+        {
+            if(this.getDay().getDayIndex() == p.getDay().getDayIndex()) {
+                if(this.getTimeslot().getTimeslotIndex() < p.getTimeslot().getTimeslotIndex())
+                    return true;
+                else 
+                    return false;
+            }
+        }    
+        return false;
+    }
 }

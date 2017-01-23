@@ -17,6 +17,12 @@
                       RangeSize="25" DataControl="RoomCollection"
                       BeanClass="dtech.scheduler.model.pojo.Room"
                       id="roomsIterator"/>
+    <iterator Binds="root" RangeSize="25" DataControl="CourseSchedule"
+              id="CourseScheduleIterator"/>
+    <accessorIterator MasterBinding="CourseScheduleIterator" Binds="courseList"
+                      RangeSize="25" DataControl="CourseSchedule"
+                      BeanClass="org.optaplanner.examples.curriculumcourse.domain.Course"
+                      id="courseListIterator"/>
   </executables>
   <bindings>
     <methodAction id="saveSlots" RequiresUpdateModel="true"
@@ -46,5 +52,32 @@
                   Action="invokeMethod" MethodName="saveRooms"
                   IsViewObjectMethod="false" DataControl="RoomCollection"
                   InstanceName="RoomCollection.dataProvider"/>
+    <tree IterBinding="courseListIterator" id="courseList">
+      <nodeDefinition DefName="org.optaplanner.examples.curriculumcourse.domain.Course"
+                      Name="courseList0">
+        <AttrNames>
+          <Item Value="code"/>
+          <Item Value="lectureSize"/>
+          <Item Value="minWorkingDaySize"/>
+          <Item Value="studentSize"/>
+          <Item Value="id"/>
+        </AttrNames>
+        <Accessors>
+          <Item Value="teacher"/>
+        </Accessors>
+      </nodeDefinition>
+      <nodeDefinition DefName="org.optaplanner.examples.curriculumcourse.domain.Teacher">
+        <AttrNames>
+          <Item Value="code"/>
+          <Item Value="label"/>
+          <Item Value="id"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <methodAction id="generateAssignmentDependency" RequiresUpdateModel="true"
+                  Action="invokeMethod"
+                  MethodName="generateAssignmentDependency"
+                  IsViewObjectMethod="false" DataControl="RunScheduler"
+                  InstanceName="RunScheduler.dataProvider"/>
   </bindings>
 </pageDefinition>

@@ -2,11 +2,12 @@
 <jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
           xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
           xmlns:f="http://java.sun.com/jsf/core">
-  <af:panelGroupLayout id="pgl4">
-    <af:panelStretchLayout id="psl1">
+  <af:panelGroupLayout id="pgl4" halign="center">
+    <af:panelStretchLayout id="psl1" styleClass="AFStretchWidth"
+                           dimensionsFrom="children">
       <f:facet name="bottom"/>
       <f:facet name="center">
-        <af:panelGroupLayout id="pgl1" halign="center">
+        <af:panelGroupLayout id="pgl1" halign="center" layout="scroll">
           <af:panelGroupLayout id="pgl2" halign="end" layout="horizontal"
                                valign="bottom" styleClass="AFStretchWidth">
             <af:commandButton text="Parameters" id="cb2">
@@ -16,10 +17,32 @@
           </af:panelGroupLayout>
           <af:spacer width="10" height="50" id="s1"/>
           <af:inputFile label="Choose Grade Input File : " id="if1"
-                        inlineStyle="text-align:center;"/>
-          <af:inputDate label="Start Date" id="id1"/>
-          <af:inputDate label="End Date" id="id2"/>
-          <af:commandButton text="Generate Schedule" id="cb1"/>
+                        inlineStyle="text-align:center;"
+                        binding="#{backingBeanScope.GenerateScheduleBean.inputFile}"/>
+          <af:inputDate label="Start Date" id="id1"
+                        binding="#{backingBeanScope.GenerateScheduleBean.inputStartDate}"/>
+          <af:inputDate label="End Date" id="id2"
+                        binding="#{backingBeanScope.GenerateScheduleBean.inputEndDate}"/>
+          <af:spacer width="10" height="50" id="s2"/>
+          <af:commandButton text="Generate Schedule" id="cb1"
+                            
+                            action="run"
+                            actionListener="#{backingBeanScope.GenerateScheduleBean.generateSchedule}">
+            <af:setActionListener from="#{bindings.CourseSchedule.dataProvider}"
+                                  to="#{pageFlowScope.courseSchedule}"/>
+             <af:setActionListener from="Y"
+                                  to="#{pageFlowScope.Yes}"/>
+                                  
+          </af:commandButton>
+          <af:spacer width="10" height="100" id="s3"/>
+          <af:panelGroupLayout id="pgl6" halign="center" layout="horizontal">
+            <af:commandButton actionListener="#{bindings.generateAssignmentDependency.execute}"
+                              text="Generate Assignment Dependency File"
+                              disabled="#{!bindings.generateAssignmentDependency.enabled}"
+                              id="cb3"/>
+            <af:commandButton text="Rank Assignments" id="cb5"
+                              action="assignRanks"/>
+          </af:panelGroupLayout>
         </af:panelGroupLayout>
       </f:facet>
       <f:facet name="start"/>
@@ -33,17 +56,15 @@
       <af:panelWindow id="pw1" title="Parameters" modal="true"
                       contentWidth="350">
         <af:panelGroupLayout id="pgl3" layout="vertical">
-          <af:panelTabbed id="pt1">
+          <af:panelTabbed id="pt1" styleClass="AFStretchWidth">
             <af:showDetailItem text="Time Slots" id="sdi1">
-              <af:commandButton actionListener="#{bindings.saveSlots.execute}"
-                                text="saveSlots"
-                                disabled="#{!bindings.saveSlots.enabled}"
-                                id="cb4"/>
+              
               <af:table value="#{bindings.slots.collectionModel}" var="row"
                         rows="#{bindings.slots.rangeSize}"
                         emptyText="#{bindings.slots.viewable ? 'No data to display.' : 'Access Denied.'}"
                         fetchSize="#{bindings.slots.rangeSize}"
-                        rowBandingInterval="0" id="t3">
+                        rowBandingInterval="0" id="t3" columnStretching="multiple"
+                        styleClass="AFStretchWidth">
                 <af:column sortProperty="#{bindings.slots.hints.slotTime.name}"
                            sortable="false"
                            headerText="#{bindings.slots.hints.slotTime.label}"
@@ -69,21 +90,20 @@
                                             id="sbc3"/>
                 </af:column>
               </af:table>
+              <af:commandButton actionListener="#{bindings.saveSlots.execute}"
+                                text="saveSlots"
+                                disabled="#{!bindings.saveSlots.enabled}"
+                                id="cb4"/>
               </af:showDetailItem>
             <af:showDetailItem text="Rooms" id="sdi2">
-              <af:commandButton actionListener="#{bindings.Create.execute}"
-                                text="Create"
-                                disabled="#{!bindings.Create.enabled}"
-                                id="cb5"/>
-              <af:commandButton actionListener="#{bindings.saveRooms.execute}"
-                                text="saveRooms"
-                                disabled="#{!bindings.saveRooms.enabled}"
-                                id="cb3"/>
+             
               <af:table value="#{bindings.rooms.collectionModel}" var="row"
                         rows="#{bindings.rooms.rangeSize}"
                         emptyText="#{bindings.rooms.viewable ? 'No data to display.' : 'Access Denied.'}"
                         fetchSize="#{bindings.rooms.rangeSize}"
-                        rowBandingInterval="0" id="t1" partialTriggers="::cb5">
+                        rowBandingInterval="0" id="t1" partialTriggers="::cb5"
+                        columnStretching="column:c2"
+                        styleClass="AFStretchWidth">
                 <af:column sortProperty="#{bindings.rooms.hints.name.name}"
                            sortable="false"
                            headerText="#{bindings.rooms.hints.name.label}"
@@ -115,10 +135,12 @@
               </af:table>
             </af:showDetailItem>
           </af:panelTabbed>
-          <!--<af:panelGroupLayout id="pgl4" layout="horizontal">
-              <af:button text="OK" id="b2"/>
-              <af:button text="Cancel" id="b1"/>
-            </af:panelGroupLayout> -->
+          <af:panelGroupLayout id="pgl5" layout="horizontal" halign="end">
+              <af:commandButton text="Save" id="save"
+                                actionListener="#{backingBeanScope.GenerateScheduleBean.saveParameters}"/>
+              <af:commandButton text="Cancel" id="cancel"/>  
+         </af:panelGroupLayout>
+         
         </af:panelGroupLayout>
       </af:panelWindow>
     </af:popup>

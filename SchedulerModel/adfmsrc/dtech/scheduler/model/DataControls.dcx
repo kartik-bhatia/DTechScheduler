@@ -38,4 +38,23 @@
                        xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
     </Source>
   </AdapterDataControl>
+  <AdapterDataControl id="SubjectNodeCollection"
+                      FactoryClass="oracle.adf.model.adapter.bean.BeanDCFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.bean.BeanDefinition"
+                      SupportsTransactions="false" SupportsSortCollection="true"
+                      SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true"
+                      Definition="dtech.scheduler.model.pojo.SubjectNodeCollection"
+                      BeanClass="dtech.scheduler.model.pojo.SubjectNodeCollection"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <CreatableTypes>
+      <TypeInfo FullName="dtech.scheduler.model.pojo.AssignmentNode"/>
+      <TypeInfo FullName="dtech.scheduler.model.pojo.SubjectNode"/>
+      <TypeInfo FullName="dtech.scheduler.model.pojo.SubjectNodeCollection"/>
+    </CreatableTypes>
+    <Source>
+      <bean-definition BeanClass="dtech.scheduler.model.pojo.SubjectNodeCollection"
+                       xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
+    </Source>
+  </AdapterDataControl>
 </DataControlConfigs>

@@ -33,6 +33,7 @@ public class Course extends AbstractPersistable {
 
     private List<Curriculum> curriculumList;
     private int studentSize;
+    private String CourseName;
 
     public String getCode() {
         return code;
@@ -95,4 +96,11 @@ public class Course extends AbstractPersistable {
         return code + "{" + teacher + "}";
     }
 
+    public void setCourseName(String CourseName) {
+        this.CourseName = CourseName;
+    }
+
+    public String getCourseName() {
+        return CourseName;
+    }
 }
